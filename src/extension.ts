@@ -1,8 +1,14 @@
 import * as vscode from 'vscode';
-import { registerUpdateInfo } from './registerUpdateInfo';
 import { registerOutlineSymbolProvider } from './registerOutlineSymbol';
+import { registerUpdateInfo } from './registerUpdateInfo';
 
-export function activate(context: vscode.ExtensionContext): void {
-    registerUpdateInfo(context);
-    registerOutlineSymbolProvider(context);
+export const outputChannel = vscode.window.createOutputChannel('Cisco Config Highlight');
+
+export async function activate(context: vscode.ExtensionContext): Promise<void> {
+  try {
+    await registerUpdateInfo(context);
+  } catch (err) {
+    outputChannel.append(String(err));
+  }
+  registerOutlineSymbolProvider(context);
 }
