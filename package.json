@@ -1,128 +1,134 @@
 {
-    "name": "cisco-config-highlight",
-    "displayName": "Cisco Config Highlight",
-    "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
-    "version": "0.6.0",
-    "publisher": "Y-Ysss",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
-    },
-    "engines": {
-        "vscode": "^1.52.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "icon": "images/icon.png",
-    "activationEvents": [
-        "onLanguage:cisco"
-    ],
-    "main": "./out/extension.js",
-    "contributes": {
-        "languages": [
-            {
-                "id": "cisco",
-                "aliases": [
-                    "Cisco Config",
-                    "cisco"
-                ],
-                "extensions": [
-                    ".cisco",
-                    ".config"
-                ],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "cisco-config-highlight",
+  "displayName": "Cisco Config Highlight",
+  "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
+  "version": "0.6.0",
+  "publisher": "Y-Ysss",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "images/icon.png",
+  "activationEvents": [
+    "onLanguage:cisco"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "cisco",
+        "aliases": [
+          "Cisco Config",
+          "cisco"
         ],
-        "grammars": [
-            {
-                "language": "cisco",
-                "scopeName": "source.cisco",
-                "path": "./syntaxes/cisco.tmLanguage.json"
-            }
+        "extensions": [
+          ".cisco",
+          ".config"
         ],
-        "configuration": [
-            {
-                "title": "Cisco Config Highlight",
-                "properties": {
-                    "cisco-config-highlight.outline.showSymbolsInOutlinePanel": {
-                        "type": "boolean",
-                        "default": false,
-                        "description": "%configuration.properties.showSymbolsInOutlinePanel.description%"
-                    },
-                    "cisco-config-highlight.outline.symbolsList": {
-                        "type": "object",
-                        "properties": {
-                            "command": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.command.description%"
-                            },
-                            "ip_vrf": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.ipVrf.description%"
-                            },
-                            "router_bgp": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.routerBgp.description%"
-                            },
-                            "address_family": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.addressFamily.description%"
-                            },
-                            "class_map": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.classMap.description%"
-                            },
-                            "policy_map": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.policyMap.description%"
-                            },
-                            "interface": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.interface.description%"
-                            },
-                            "sub_interface": {
-                                "type": "boolean",
-                                "default": true,
-                                "description": "%configuration.properties.symbols.subInterface.description%"
-                            }
-                        },
-                        "additionalProperties": false,
-                        "default": {
-                            "command": true,
-                            "ip_vrf": true,
-                            "router_bgp": true,
-                            "address_family": true,
-                            "class_map": true,
-                            "policy_map": true,
-                            "interface": true,
-                            "sub_interface": true
-                        },
-                        "description": "%configuration.properties.showEnableDisableSymbols.description%"
-                    }
-                }
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./"
-    },
-    "dependencies": {
-        "semver": "^7.5.2"
-    },
-    "devDependencies": {
-        "@types/semver": "^7.5.2",
-        "@types/vscode": "^1.52.0",
-        "typescript": "^5.4.3"
-    }
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cisco",
+        "scopeName": "source.cisco",
+        "path": "./syntaxes/cisco.tmLanguage.json"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Cisco Config Highlight",
+        "properties": {
+          "cisco-config-highlight.outline.showSymbolsInOutlinePanel": {
+            "type": "boolean",
+            "default": false,
+            "description": "%configuration.properties.showSymbolsInOutlinePanel.description%"
+          },
+          "cisco-config-highlight.outline.symbolsList": {
+            "type": "object",
+            "properties": {
+              "command": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.command.description%"
+              },
+              "ip_vrf": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ipVrf.description%"
+              },
+              "router_bgp": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.routerBgp.description%"
+              },
+              "address_family": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.addressFamily.description%"
+              },
+              "class_map": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.classMap.description%"
+              },
+              "policy_map": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.policyMap.description%"
+              },
+              "interface": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.interface.description%"
+              },
+              "sub_interface": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.subInterface.description%"
+              }
+            },
+            "additionalProperties": false,
+            "default": {
+              "command": true,
+              "ip_vrf": true,
+              "router_bgp": true,
+              "address_family": true,
+              "class_map": true,
+              "policy_map": true,
+              "interface": true,
+              "sub_interface": true
+            },
+            "description": "%configuration.properties.showEnableDisableSymbols.description%"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs 'src/**/*.{js,ts}'"
+  },
+  "dependencies": {
+    "semver": "^7.5.2"
+  },
+  "devDependencies": {
+    "@types/semver": "^7.5.2",
+    "@types/vscode": "^1.52.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.4.0"
+  }
 }
