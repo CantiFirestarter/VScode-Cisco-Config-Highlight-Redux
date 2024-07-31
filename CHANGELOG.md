@@ -3,7 +3,7 @@
 
 [marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history)
 
-## 0.6.0 (Unreleased)
+## Prereleased 0.6.0 (2024-08-01)
 ### Added
 - Add syntax highlighting patterns.
   - entity.name.tag.crypto.ipsec-profile.name
@@ -42,7 +42,7 @@
 
   - Notice
   - If you have customized Token Colors, this change may cause the Token definitions to no longer match and your customizations may not take effect.
-  - Removed the `.csico` suffix from the Token Scopes mentioned in the README. This was done to minimize the impact of future similar subdivisions.
+  - Removed the `.cisco` suffix from the Token Scopes mentioned in the README. This was done to minimize the impact of future similar subdivisions.
 
   - Token Scopes
     - [before] keyword.other.config-keyword.add-remove
