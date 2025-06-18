@@ -508,6 +508,15 @@
 				},
 				{
 					"include": "#pool"
+				},
+				{
+					"include": "#policy-list"
+				},
+				{
+					"include": "#traffic-filter"
+				},
+				{
+					"include": "#community"
 				}
 			],
 			"repository": {
@@ -549,6 +558,18 @@
 				"pool": {
 					"match": "(?<=\\bpool\\s)(\\S+)\\b",
 					"name": "entity.name.tag.group.pool.name.cisco"
+				},
+				"policy-list": {
+					"match": "(?<=policy-list\\s)(\\S+)\\b",
+					"name": "entity.name.tag.group.policy-list.name.cisco"
+				},
+				"traffic-filter": {
+					"match": "(?<=traffic-filter\\s)(\\S+)\\b",
+					"name": "entity.name.tag.group.traffic-filter.name.cisco"
+				},
+				"community": {
+					"match": "(?<=community\\s)(\\S+)\\b",
+					"name": "entity.name.tag.group.community.name.cisco"
 				}
 			}
 		},
