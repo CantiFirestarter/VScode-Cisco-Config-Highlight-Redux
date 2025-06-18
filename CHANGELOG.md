@@ -3,6 +3,20 @@
 
 [marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history)
 
+## 0.6.1 (2025-06-19)
+### Added
+- Add syntax highlighting patterns.
+  - entity.name.tag.group.policy-list.name
+  - entity.name.tag.group.traffic-filter.name
+  - entity.name.tag.group.community.name
+
+### Changed
+- IPv6 regex now supports uppercase address representations.
+
+### Contributions to extension:
+- [@ReverseTelnet](https://github.com/ReverseTelnet)
+
+
 ## Prereleased 0.6.0 (2024-08-01)
 ### Added
 - Add syntax highlighting patterns.

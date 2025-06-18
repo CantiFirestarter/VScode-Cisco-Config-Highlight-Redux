@@ -10,6 +10,16 @@ This project is in the development stages.
 
 There's a possibility that definitions will change in the future.
 
+> [!NOTE]  
+> Changes (v0.5 → v0.6)  
+>
+> The semantic token scopes assigned to certain keyword categories have been subdivided.  
+> If you had defined a custom syntax color, this change introduces potential incompatibilities with tooling or themes that rely on scope definitions from version 0.5 or earlier.  
+>
+> If your implementation depends on specific scope tokens, please refer to the changelog for a detailed list of changes introduced in this version, and update your configuration accordingly.  
+> See [CHANGELOG.md](CHANGELOG.md)
+
+
 ## Features
 This extension provides some awesome features for Cisco config text, including:
 
@@ -49,6 +59,22 @@ Open the settings and add option strings to JSON.
 For more information on how to customize the settings.json file, please refer to the following URL.
 
 [Visual Studio Code Documentaion - Color Themes](https://code.visualstudio.com/docs/getstarted/themes)
+
+### Scope Hierarchy
+Tokens follow a hierarchical structure, which allows you to abbreviate scopes when customizing them.
+
+For example, consider the following two scopes:
+- `entity.name.class.interface.ethernet`
+- `entity.name.class.interface.loopback`
+
+If you specify these scopes in full, the customization will apply only to those specific tokens.
+
+However, if you use a higher-level scope such as:
+- `entity.name.class.interface`
+
+The customization will apply to all tokens under that scope.
+The higher (shallower) the level in the hierarchy, the broader the range of tokens affected.
+
 
 ### VSCode settings.json customize sample
 ``` json
@@ -127,6 +153,9 @@ entity.name.tag.group.pool.name
 entity.name.tag.group.prefix-list.name
 entity.name.tag.group.route-map.name
 entity.name.tag.group.service-policy.name
+entity.name.tag.group.policy-list.name
+entity.name.tag.group.traffic-filter.name
+entity.name.tag.group.community.name
 
 entity.name.tag.vrf.vrf-name
 entity.other.vrf.definition
