@@ -26,19 +26,25 @@ This extension provides some awesome features for Cisco config text, including:
 - Syntax highlighting
 - Config outline (Experimental)
 
+
+## Installation
+The extension for VS Code is available on the Visual Studio Marketplace and the Open VSX Registry:
+- [Visual Studio Marketplace - Cisco Config Highlight](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight)
+- [Open VSX Registry - Cisco Config Highlight](https://open-vsx.org/extension/Y-Ysss/cisco-config-highlight)
+
+
 ## Supported Platforms
 
-Syntaxes often used in Config are supported.
+Syntaxes commonly used in configuration files are supported.
 - IOS
 
-The following platforms provide similar highlighting for syntaxes that overlap with IOS.
-
-In the future, I would like to support the following platforms.
+The following platforms provide similar syntax highlighting for constructs that overlap with IOS:
 - NXOS
 - IOS-XR
 - IOS-XE
 - ASA
 
+I would like to expand support for these platforms in the future.
 
 
 ## Screenshot
@@ -258,9 +264,6 @@ If you want to enable highlighting in large files. Change the following settings
 ```
 However VSCode disable feature on large files for performance reasons, and forcing VSCode to syntax highlight large files may result in poor editor performance.
 
-## Installation
-
-[Visual Studio Marketplace - Cisco Config Highlight](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight)
 
 ## Recommended Extensions
 I recommend the following extensions to more beautiful look.
