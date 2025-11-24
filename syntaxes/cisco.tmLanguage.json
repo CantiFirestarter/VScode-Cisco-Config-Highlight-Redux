@@ -154,6 +154,26 @@
 				{
 					"name": "keyword.other.config-keyword.shutdown.cisco",
 					"match": "(^|\\s)(shutdown)(?=\\b|$)"
+				},
+				{
+					"name": "keyword.other.config-keyword.deny.cisco",
+					"match": "(^|\\s)(deny)(?=\\b|$)"
+				},
+				{
+					"name": "keyword.other.config-keyword.delete.cisco",
+					"match": "(^|\\s)(delete)(?=\\b|$)"
+				},
+				{
+					"name": "keyword.other.config-keyword.erase.cisco",
+					"match": "(^|\\s)(erase)(?=\\b|$)"
+				},
+				{
+					"name": "keyword.other.config-keyword.exit.cisco",
+					"match": "(^|\\s)(exit)(?=\\b|$)"
+				},
+				{
+					"name": "keyword.other.config-keyword.end.cisco",
+					"match": "(^|\\s)(end)(?=\\b|$)"
 				}
 			]
 		},
@@ -202,13 +222,16 @@
 					"include": "#bvi"
 				},
 				{
+					"include": "#app"
+				},
+				{
 					"include": "#management"
 				}
 			],
 			"repository": {
 				"ethernet": {
 					"name": "entity.name.class.interface.ethernet.cisco",
-					"match": "\\b(([Ff]ast|([Ff]ive|[Tt]en|[Tt]wenty[Ff]ive|[Ff](orty|ifty)|([Tt]wo)?[Hh]undred)?[Gg](ig)?(abit)?)?[Ee](th)?(ernet)?|Fa|Gi|Te|Fo|Fi)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
+					"match": "\\b(([Ff]ast|([Ff]ive|[Tt]en|[Tt]wenty[Ff]ive|[Ff](orty|ifty)|([Tt]wo)?[Hh]undred)?[Gg](ig)?(abit)?)?[Ee](th)?(ernet)?|Fa|Gi|Te|Fo|Fi|[Gg])(((\\d+[\\./])*)?\\d+(\\.\\d+)?)(-\\d+(\\.\\d+)?)?\\b"
 				},
 				"wireless": {
 					"name": "entity.name.class.interface.wireless.cisco",
@@ -236,7 +259,7 @@
 				},
 				"serial": {
 					"name": "entity.name.class.interface.serial.cisco",
-					"match": "\\b([Ss]erial)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
+					"match": "\\b([Ss]erial|[Ss])(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
 				},
 				"cellular": {
 					"name": "entity.name.class.interface.cellular.cisco",
@@ -261,6 +284,10 @@
 				"bvi": {
 					"name": "entity.name.class.interface.bvi.cisco",
 					"match": "\\b(BVI)(\\d+)?\\b"
+				},
+				"app": {
+					"name": "entity.name.class.interface.app.cisco",
+					"match": "\\b(([Aa]pp?[Gg](ig)?(abit)?)?[Ee](th)?(ernet)?|[Aa]p)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
 				},
 				"management": {
 					"name": "entity.name.class.interface.management.cisco",
@@ -443,8 +470,8 @@
 					"name": "string.other.secret.cisco"
 				},
 				"banner": {
-					"begin": "(?<=banner\\s(exec|login|motd)\\s)\\^",
-					"end": "\\^",
+					"begin": "(?<=banner\\s(exec|login|motd)\\s)\\^|@",
+					"end": "\\^|@",
 					"name": "comment.block.banner.cisco"
 				}
 			}
@@ -657,7 +684,7 @@
 			"repository": {
 				"unused": {
 					"name": "meta.function-call.command-disable.unused.cisco",
-					"match": "^\\s*?no\\s.*"
+					"match": "^\\s*?[Nn]o\\s.*"
 				},
 				"default": {
 					"name": "meta.function-call.command-disable.default.cisco",
