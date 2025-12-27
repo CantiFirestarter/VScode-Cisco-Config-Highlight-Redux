@@ -40,6 +40,18 @@
         }
       },
       {
+        "scope": "constant.numeric.ipv4-AD",
+        "settings": {
+          "foreground": "#c333ff"
+        }
+      },
+      {
+        "scope": "constant.numeric.ipv6-AD",
+        "settings": {
+          "foreground": "#c333ff"
+        }
+      },
+      {
         "scope": "constant.numeric.hex",
         "settings": {
           "foreground": "#2e74b5"
@@ -47,12 +59,6 @@
       },
       {
         "scope": "constant.numeric.integer",
-        "settings": {
-          "foreground": "#2e74b5"
-        }
-      },
-      {
-        "scope": "constant.numeric.ipv4.octet",
         "settings": {
           "foreground": "#2e74b5"
         }

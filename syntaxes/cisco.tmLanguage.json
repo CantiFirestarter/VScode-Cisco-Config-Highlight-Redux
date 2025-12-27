@@ -10,9 +10,6 @@
       "include": "#comment"
     },
     {
-      "include": "#separator"
-    },
-    {
       "include": "#interface_type"
     },
     {
@@ -37,10 +34,13 @@
       "include": "#address"
     },
     {
-      "include": "#command_hostname"
+      "include": "#numeric"
     },
     {
-      "include": "#numeric"
+      "include": "#separator"
+    },
+    {
+      "include": "#command_hostname"
     },
     {
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
@@ -57,6 +57,14 @@
     }
   ],
   "repository": {
+    "separator": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.cisco",
+          "match": "[|\\/:.,\\-<>]"
+        }
+      ]
+    },
     "keyword": {
       "patterns": [
         {
@@ -165,11 +173,11 @@
         },
         {
           "name": "keyword.other.config-keyword.group1.cisco",
-          "match": "(?i)(^|\\s)(aaa_server|access-log|acct-port|accounting|action|address|admission|advertise-v2|age|aes-ccm|allocation|ap|attach-policy|ascending|auth|auth-port|auth-proxy|authenticate-fail|authentication-server|authentication|authorization|arp|auto|auto-sync|aux|basic-summary-address|begin|block-unknown-source|bootpc|bootps|bootup|bpdufilter|bpduguard|broadcast|brief|bus|cache|capability-change|cck|ciphers|chassis-id|change|chain|chassis-id|cdp|certificate|cef|client|client-id|classless|coldstart|compress-config|config|config-copy|connection|contact|conflict|console|cor|counters|country|crypto|cs4|dead-criteria|datetime|debug|deauthenticate|destination|device|dhcp|dial-peer|disassociate|dot1Q|dot11-qos|dot11d|eap|edge|entries|enrollment|entity|exec-time|exec|extended|extendable|excluded-address|exclude|eq|file|finrst-timeout|flow-aggregation|flow-export|flow|flowcontrol|forward-protocol|fallback|flash|general-prefix|guest-mode|Guest|group|h-node|help-path|helper-address|host|icmp|include|included|indoor|ingress|infrastructure|inside|ipsec|irb|iso|key-management|key|level|linkdown|linkup|list|local|localtime|logging|login|log|location|mac-address|main-cpu|max|membership-termination|mgmt|msec|missing|min-length|minimal|mode|modulus|neighbor|next-hop|native|new-model|newinfo|nde-address|netbios-dgm|netbios-ns|netflow|network|nonegotiate|nat-transparency|nat|ofdm|optional|open|page|pad|password-encryption|passwords|password|pki|pool|port-security|primary|prefer|priority|prefix|proxy|proxy-arp|pvst|qos|ra|radius|range|rapid-pvst|ratelimit|recurring|redirects|recovery|redundancy|resource|router-id|routing|route|route-cache|running-config|rp|root|rogue-ap|run|secure-server|send|self-signed|selfsigned|Service-Type|session-id|section|secret|snmptrap|sso|start-stop|static|station-role|spanning-disabled|subscriber-loop-control|subnet-zero|subject-name|summary-address|summary|switch-over|syslog|tacacs+|tcp-timeout|time|timezone|traps|trunk|traffic-filter|translation|translations|transport|tries|threshold|tty|tkip|tracking|udp-encaps|udp-port|udp|unicast-flooding|unicast-routing|unreachables|update-calendar|update|usage|uptime|v3|vsa|vty|view|version|voice|wds|wep|wep128|wlan-wep|window-size|warmstart|wnm|write|wpa|Z)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(aaa_server|access-log|acct-port|accounting|action|address|admission|advertise-v2|age|aes-ccm|allocation|ap|attach-policy|ascending|auth|auth-port|auth-proxy|authenticate-fail|authentication-server|authentication|authorization|arp|auto|auto-sync|aux|basic-summary-address|begin|block-unknown-source|bootpc|bootps|bootup|bpdufilter|bpduguard|broadcast|brief|bus|cache|capability-change|cck|ciphers|change|chain|chassis-id|cdp|certificate|cef|client|client-id|classless|coldstart|compress-config|config|config-copy|connection|contact|conflict|console|cor|counters|country|crypto|cs4|dead-criteria|datetime|debug|deauthenticate|destination|device|dhcp|dial-peer|disassociate|dot1Q|dot11-qos|dot11d|eap|edge|entries|enrollment|entity|exec-time|exec|extended|extendable|excluded-address|exclude|eq|file|finrst-timeout|flow-aggregation|flow-export|flow|flowcontrol|forward-protocol|fallback|flash|general-prefix|guest-mode|Guest|group|h-node|help-path|helper-address|host|icmp|include|included|indoor|ingress|infrastructure|inside|ipsec|irb|iso|key-management|key|level|linkdown|linkup|list|local|localtime|logging|login|log|location|mac-address|main-cpu|max|membership-termination|mgmt|msec|missing|min-length|minimal|mode|modulus|neighbor|next-hop|native|new-model|newinfo|nde-address|netbios-dgm|netbios-ns|netflow|network|nonegotiate|nat-transparency|nat|ofdm|optional|open|page|pad|password-encryption|passwords|password|pki|pool|port-security|primary|prefer|priority|prefix|proxy|proxy-arp|pvst|qos|ra|radius|range|rapid-pvst|ratelimit|recurring|redirects|recovery|redundancy|resource|router-id|routing|route|route-cache|running-config|rp|root|rogue-ap|run|secure-server|send|self-signed|selfsigned|service-type|session-id|section|secret|snmptrap|sso|start-stop|static|station-role|spanning-disabled|subscriber-loop-control|subnet-zero|subject-name|summary-address|summary|switch-over|syslog|tacacs+|tcp-timeout|time|timezone|traps|trunk|traffic-filter|translation|translations|transport|tries|threshold|tty|tkip|tracking|udp-encaps|udp-port|udp|unicast-flooding|unicast-routing|unreachables|update-calendar|update|usage|uptime|v3|vsa|vty|view|version|voice|wds|wep|wep128|wlan-wep|window-size|warmstart|wnm|write|wpa|Z)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group2.cisco",
-          "match": "(?i)(^|\\s)(access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class|class-map|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|group2aaa|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|mbssid|Method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|OK\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|startup-config|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class|class-map|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|group2aaa|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|startup-config|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group3.cisco",
@@ -177,19 +185,15 @@
         },
         {
           "name": "keyword.other.config-keyword.group4.cisco",
-          "match": "(?i)(^|\\s)(addon|activate|active|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|optimize|on|on-success|permit|receive|relay|reload|RO|RW|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|YES|yes)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(addon|activate|active|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|optimize|on|on-success|permit|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group5.cisco",
-          "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|BVI|channel-misconfig|debugging|default-gateway|Dot11Radio|etherchannel|general-keys|if-authenticated|inspection|interval|IPDT_POLICY|label|link-local|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|general-keys|if-authenticated|inspection|interval|IPDT_POLICY|label|link-local|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
         },
         {
           "name": "keyword.other.config-keyword.group6.cisco",
           "match": "(?i)(^|\\s)(all|auto-summary|bgp|default|dscp|echo|eigrp|fragments|ftp|ftp-data|gopher|http|ident|imap|isakmp|ipv4|ipv6|lacp|log-input|nntp|ospf|pagp|ping|pop3|rip|scp|snmp|snmp-server|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
-        },
-        {
-          "name": "punctuation.separator.cisco",
-          "match": "[|\\/:.,\\-<>]"
         }
       ]
     },
@@ -323,11 +327,11 @@
       "repository": {
         "hex": {
           "name": "constant.numeric.hex.cisco",
-          "match": "\\b(0x)?[0-9A-F]{2}+?\\b"
+          "match": "\\b0x[0-9A-Fa-f]+\\b|(?<![:\\-.a-zA-Z])[0-9A-Fa-f]{2}(?![:\\-.0-9A-Fa-f]|[a-zA-Z])"
         },
         "integer": {
           "name": "constant.numeric.integer.cisco",
-          "match": "\\b-?\\d+\\b"
+          "match": "(?<!\\.)\\b\\d+\\b(?![\\.\\:@])"
         }
       }
     },
@@ -348,90 +352,97 @@
           "include": "#cidr"
         },
         {
+          "include": "#ipv4-AD"
+        },
+        {
+          "include": "#ipv6-AD"
+        },
+        {
           "include": "#ipv4-full"
         },
         {
-          "include": "#ipv6-condensed"
+          "include": "#ipv6-full"
         },
         {
-          "include": "#ipv6-full"
+          "include": "#ipv6-condensed"
         }
       ],
       "repository": {
         "mac": {
-          "name": "keyword.other.address.mac.cisco",
-          "match": "\\b([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})([:.-])([a-fA-F0-9]{2})\\b|\\b([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})([.])([a-fA-F0-9]{4})\\b",
-          "captures": {
-            "1": { "name": "keyword.other.address.mac.cisco" },
-            "2": { "name": "punctuation.separator.cisco" },
-            "3": { "name": "keyword.other.address.mac.cisco" },
-            "4": { "name": "punctuation.separator.cisco" },
-            "5": { "name": "keyword.other.address.mac.cisco" },
-            "6": { "name": "punctuation.separator.cisco" },
-            "7": { "name": "keyword.other.address.mac.cisco" },
-            "8": { "name": "punctuation.separator.cisco" },
-            "9": { "name": "keyword.other.address.mac.cisco" },
-            "10": { "name": "punctuation.separator.cisco" },
-            "11": { "name": "keyword.other.address.mac.cisco" }
-          }
+          "patterns": [
+            {
+              "name": "keyword.other.address.mac.cisco",
+              "comment": "Standard MAC format with enforced consistent separator: AA:BB:CC:DD:EE:FF / AA-BB-CC-DD-EE-FF / AA.BB.CC.DD.EE.FF",
+              "match": "\\b([0-9a-fA-F]{2})([:.-])([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})\\b",
+              "captures": {
+                "2": { "name": "punctuation.separator.cisco" },
+                "4": { "name": "punctuation.separator.cisco" },
+                "6": { "name": "punctuation.separator.cisco" },
+                "8": { "name": "punctuation.separator.cisco" },
+                "10": { "name": "punctuation.separator.cisco" }
+              }
+            },
+            {
+              "name": "keyword.other.address.mac.cisco",
+              "comment": "Cisco dotted MAC format: AABB.CCDD.EEFF",
+              "match": "\\b([0-9a-fA-F]{4})([.])([0-9a-fA-F]{4})([.])([0-9a-fA-F]{4})\\b",
+              "captures": {
+                "2": { "name": "punctuation.separator.cisco" },
+                "4": { "name": "punctuation.separator.cisco" }
+              }
+            }
+          ]
         },
         "cidr": {
           "name": "keyword.other.address.cidr.cisco",
-          "match": "(?<=/)(?:12[0-8]|1[01]\\d|[1-9]?\\d)\\b"
+          "match": "(?<=(?:(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)|[0-9a-fA-F]{1,4}|::)\\/)(?:12[0-8]|1[01]\\d|[1-9]?\\d)\\b"
+        },
+        "ipv4-AD": {
+          "name": "constant.numeric.ipv4-AD.cisco",
+          "match": "(?<=\\b(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\s)(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d?)$"
+        },
+        "ipv6-AD": {
+          "name": "constant.numeric.ipv6-AD.cisco",
+          "match": "(?<=(?:(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}::(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}|(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::)\\s)(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d?)$"
         },
         "ipv4-full": {
           "name": "keyword.other.address.ipv4.full.cisco",
           "match": "\\b(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\b",
           "captures": {
-            "1": { "name": "keyword.other.address.ipv4.full.cisco" },
             "2": { "name": "punctuation.separator.cisco" },
-            "3": { "name": "keyword.other.address.ipv4.full.cisco" },
             "4": { "name": "punctuation.separator.cisco" },
-            "5": { "name": "keyword.other.address.ipv4.full.cisco" },
-            "6": { "name": "punctuation.separator.cisco" },
-            "7": { "name": "keyword.other.address.ipv4.full.cisco" }
-          }
-        },
-        "ipv6-condensed": {
-          "name": "keyword.other.address.ipv6.condensed.cisco",
-          "match": "\\b([0-9a-fA-F]{1,4}(:){0,6}|[0-9A-Fa-f]{1,4}(::){0,1})\\b",
-          "captures": {
-            "1": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "2": { "name": "punctuation.separator.cisco" },
-            "3": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "4": { "name": "punctuation.separator.cisco" },
-            "5": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "6": { "name": "punctuation.separator.cisco" },
-            "7": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "8": { "name": "punctuation.separator.cisco" },
-            "9": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "10": { "name": "punctuation.separator.cisco" },
-            "11": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "12": { "name": "punctuation.separator.cisco" },
-            "13": { "name": "keyword.other.address.ipv6.condensed.cisco" },
-            "14": { "name": "punctuation.separator.cisco" },
-            "15": { "name": "keyword.other.address.ipv6.condensed.cisco" }
+            "6": { "name": "punctuation.separator.cisco" }
           }
         },
         "ipv6-full": {
           "name": "keyword.other.address.ipv6.full.cisco",
-          "match": "\\b([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})(:)([0-9a-fA-F]{1,4})\\b",
+          "match": "\\b([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})\\b",
           "captures": {
-            "1": { "name": "keyword.other.address.ipv6.full.cisco" },
             "2": { "name": "punctuation.separator.cisco" },
-            "3": { "name": "keyword.other.address.ipv6.full.cisco" },
             "4": { "name": "punctuation.separator.cisco" },
-            "5": { "name": "keyword.other.address.ipv6.full.cisco" },
             "6": { "name": "punctuation.separator.cisco" },
-            "7": { "name": "keyword.other.address.ipv6.full.cisco" },
             "8": { "name": "punctuation.separator.cisco" },
-            "9": { "name": "keyword.other.address.ipv6.full.cisco" },
             "10": { "name": "punctuation.separator.cisco" },
-            "11": { "name": "keyword.other.address.ipv6.full.cisco" },
             "12": { "name": "punctuation.separator.cisco" },
-            "13": { "name": "keyword.other.address.ipv6.full.cisco" },
-            "14": { "name": "punctuation.separator.cisco" },
-            "15": { "name": "keyword.other.address.ipv6.full.cisco" }
+            "14": { "name": "punctuation.separator.cisco" }
+          }
+        },
+        "ipv6-condensed": {
+          "comment": "IPv6 condensed format with :: compression. Matches addresses with hex groups and :: notation.",
+          "match": "(?:^|\\s|(?<=[^0-9a-fA-F:]))(?:(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}::(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}|(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::)(?=\\s|[^0-9a-fA-F:]|$)",
+          "captures": {
+            "0": {
+              "patterns": [
+                {
+                  "match": ":",
+                  "name": "punctuation.separator.cisco"
+                },
+                {
+                  "match": "[0-9a-fA-F]+",
+                  "name": "keyword.other.address.ipv6.condensed.cisco"
+                }
+              ]
+            }
           }
         }
       }
@@ -557,8 +568,8 @@
           "name": "string.other.secret.cisco"
         },
         "banner": {
-          "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)\\^|@",
-          "end": "\\^|@",
+          "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)(\\^|@)",
+          "end": "(\\^|@)",
           "name": "comment.block.banner.cisco"
         }
       }
