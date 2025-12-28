@@ -12,7 +12,7 @@
   "configuration.properties.symbols.subInterface.description": "Sub Interface 'interface {type, slot, port, etc...}.{number}'",
 
   "_comment_colors": "Token Colors - Main Settings",
-  "configuration.properties.colors.description": "Configure TextMate token colors by scope. Each property accepts a color (e.g. '#ff8800' or 'rgb(255,136,0)'). Changing these updates the Cisco-related entries in editor.tokenColorCustomizations automatically and may overwrite manual edits for those scopes. To reset or remove a color, delete its entry here (or reset this object) and the corresponding token color customization will be removed so the theme or default color is used.",
+  "configuration.properties.colors.description": "Set colors for Cisco token scopes. Each property accepts a color (e.g. '#ff8800' or 'rgb(255,136,0)'). Values are written into editor.tokenColorCustomizations.textMateRules; removing a key removes that scope so your theme/default applies. Defaults from syntaxes/textMateRules.json only apply when Apply All Token Rules is enabled.",
   "configuration.properties.applyAllTokenRules.description": "Apply all token scopes from syntaxes/textMateRules.json on activation and configuration changes. User color settings override these defaults by scope.",
 
   "_comment_colors_separator": "Token Colors - Separator",
