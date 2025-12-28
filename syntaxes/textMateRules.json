@@ -338,6 +338,12 @@
         }
       },
       {
+        "scope": "keyword.other.address.cidr",
+        "settings": {
+          "foreground": "#2e74b5"
+        }
+      },
+      {
         "scope": "keyword.other.address.ipv4.full",
         "settings": {
           "foreground": "#2e74b5"
