@@ -269,6 +269,11 @@
         {
           "name": "comment.line.config.cisco",
           "match": "^\\s*[!#].*"
+        },
+        {
+          "name": "comment.line.config.cisco",
+          "begin": "(?<=\\s)[!#]",
+          "end": "$"
         }
       ]
     },
@@ -557,8 +562,8 @@
     },
     "acl": {
       "patterns": [
-        { "include": "#access-list" },
         { "include": "#access-class" },
+        { "include": "#access-list" },
         { "include": "#access-group" }
       ],
       "repository": {
@@ -570,17 +575,6 @@
             },
             "3": {
               "name": "entity.name.tag.acl.access-list.name.cisco"
-            }
-          }
-        },
-        "access-class": {
-          "match": "(?i)(?<=access-class\\s)((in|out)\\s)?(\\S+)\\b",
-          "captures": {
-            "2": {
-              "name": "entity.name.acl.access-class.name.cisco"
-            },
-            "3": {
-              "name": "keyword.other.acl.access-class.type.cisco"
             }
           }
         },
