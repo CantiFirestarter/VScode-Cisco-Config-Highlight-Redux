@@ -2,7 +2,7 @@
 
 ## Visual Studio Marketplace Released Version History
 
-[marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history](https://marketplace.visualstudio.com/items?itemName=Y-Ysss.cisco-config-highlight&ssr=false#version-history)
+[marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog](https://marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog)
 
 ## 0.7.0 (2026-01-05)
 
@@ -205,6 +205,7 @@
 - Change Token Name Issue#2
   - Note: If you have customized the token color in Settings.json, the corresponding Token must be renamed to the new name.
   - Changed the category name of tokens whose category name was QoS to Group.
+
   ```
   entity.name.tag.qos.class.name.cisco --> entity.name.tag.group.class.name.cisco
   entity.name.tag.qos.service-policy.name.cisco --> entity.name.tag.group.service-policy.name.cisco
@@ -215,6 +216,7 @@
   ```
 
   - Changed the category name of some tokens whose category name is ACL to Group.
+
   ```
   keyword.other.acl.object-group.type.cisco --> keyword.other.group.object-group.type.cisco
   entity.name.tag.acl.object-group.name.cisco --> entity.name.tag.group.object-group.name.cisco
