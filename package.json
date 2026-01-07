@@ -622,25 +622,20 @@
     "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\"",
     "lint:fix": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
     "audit": "npm audit",
-    "audit:fix": "npm audit fix",
-    "apply-token-scopes": "node scripts/applyScopeRules.js",
-    "apply-token-scopes:ts": "ts-node scripts/applyScopeRules.ts",
-    "apply-token-scopes:dry-run": "node scripts/applyScopeRules.js --dry-run"
+    "audit:fix": "npm audit fix"
   },
   "dependencies": {
-    "@vscode/vsce": "^3.7.1",
     "semver": "^7.5.2"
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
     "@types/semver": "^7.7.1",
     "@types/vscode": "^1.107.0",
-    "esbuild": "^0.27.2",
+    "@vscode/vsce": "^3.7.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "prettier": "^3.7.4",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.52.0"
   },
