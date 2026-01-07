@@ -10,28 +10,17 @@
     "url": "https://github.com/Y-Ysss/vscode-cisco-config-highlight.git"
   },
   "engines": {
-    "vscode": "^1.63.0"
+    "vscode": "^1.107.0"
   },
-  "categories": [
-    "Programming Languages"
-  ],
+  "categories": ["Programming Languages"],
   "icon": "images/icon.png",
-  "activationEvents": [
-    "onLanguage:cisco"
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
         "id": "cisco",
-        "aliases": [
-          "Cisco Config",
-          "cisco"
-        ],
-        "extensions": [
-          ".cisco",
-          ".config"
-        ],
+        "aliases": ["Cisco Config", "cisco"],
+        "extensions": [".cisco", ".config", ".ios"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -42,14 +31,519 @@
         "path": "./syntaxes/cisco.tmLanguage.json"
       }
     ],
+    "commands": [
+      {
+        "command": "cisco-config-highlight.applyColors",
+        "title": "Cisco Config: Apply Token Colors",
+        "category": "Cisco Config Highlight"
+      }
+    ],
     "configuration": [
       {
         "title": "Cisco Config Highlight",
         "properties": {
+          "cisco-config-highlight.colors": {
+            "type": "object",
+            "default": {},
+            "markdownDescription": "%configuration.properties.colors.description%",
+            "properties": {
+              "separator": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.separator.description%"
+              },
+              "comment": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.comment.description%"
+              },
+              "comment.banner": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.comment.banner.description%"
+              },
+              "address.ipv4": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.address.ipv4.description%"
+              },
+              "address.ipv6": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.address.ipv6.description%"
+              },
+              "address.cidr": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.address.cidr.description%"
+              },
+              "address.mac": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.address.mac.description%"
+              },
+              "numeric.hex": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.numeric.hex.description%"
+              },
+              "numeric.integer": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.numeric.integer.description%"
+              },
+              "numeric.ipv4-AD": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.numeric.ipv4-AD.description%"
+              },
+              "numeric.ipv6-AD": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.numeric.ipv6-AD.description%"
+              },
+              "interface.ethernet": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.ethernet.description%"
+              },
+              "interface.wireless": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.wireless.description%"
+              },
+              "interface.loopback": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.loopback.description%"
+              },
+              "interface.portchannel": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.portchannel.description%"
+              },
+              "interface.tunnel": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.tunnel.description%"
+              },
+              "interface.vlan": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.vlan.description%"
+              },
+              "interface.null": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.null.description%"
+              },
+              "interface.serial": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.serial.description%"
+              },
+              "interface.cellular": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.cellular.description%"
+              },
+              "interface.virtual-template": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.virtual-template.description%"
+              },
+              "interface.dialer": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.dialer.description%"
+              },
+              "interface.async": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.async.description%"
+              },
+              "interface.bri": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.bri.description%"
+              },
+              "interface.bvi": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.bvi.description%"
+              },
+              "interface.app": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.app.description%"
+              },
+              "interface.management": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.management.description%"
+              },
+              "keyword.vlan": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.vlan.description%"
+              },
+              "keyword.switchport-mode.access": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.access.description%"
+              },
+              "keyword.switchport-mode.trunk": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.trunk.description%"
+              },
+              "keyword.switchport-mode.dynamic": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.dynamic.description%"
+              },
+              "keyword.add-remove.add": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.add-remove.add.description%"
+              },
+              "keyword.add-remove.remove": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.add-remove.remove.description%"
+              },
+              "keyword.add-remove.except": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.add-remove.except.description%"
+              },
+              "keyword.allowed-native": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.allowed-native.description%"
+              },
+              "keyword.any-all.any": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.any-all.any.description%"
+              },
+              "keyword.any-all.all": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.any-all.all.description%"
+              },
+              "keyword.permit": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.permit.description%"
+              },
+              "keyword.deny": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.deny.description%"
+              },
+              "keyword.status.up": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.status.up.description%"
+              },
+              "keyword.status.down": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.status.down.description%"
+              },
+              "keyword.status.deleted": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.status.deleted.description%"
+              },
+              "keyword.status.administratively-down": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.status.administratively-down.description%"
+              },
+              "keyword.match.any": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.match.any.description%"
+              },
+              "keyword.match.all": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.match.all.description%"
+              },
+              "keyword.in-out.in": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.in-out.in.description%"
+              },
+              "keyword.in-out.out": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.in-out.out.description%"
+              },
+              "keyword.input-output.input": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.input-output.input.description%"
+              },
+              "keyword.input-output.output": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.input-output.output.description%"
+              },
+              "keyword.inside-outside.inside": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.inside-outside.inside.description%"
+              },
+              "keyword.inside-outside.outside": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.inside-outside.outside.description%"
+              },
+              "keyword.shutdown": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.shutdown.description%"
+              },
+              "keyword.remark": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.remark.description%"
+              },
+              "vrf.declaration": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.declaration.description%"
+              },
+              "vrf.forwarding": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.forwarding.description%"
+              },
+              "vrf.definition": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.definition.description%"
+              },
+              "vrf.vrf-name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.vrf-name.description%"
+              },
+              "string.description": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.description.description%"
+              },
+              "string.remark": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.remark.description%"
+              },
+              "string.password": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.password.description%"
+              },
+              "string.secret": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.secret.description%"
+              },
+              "config-string.hostname": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-string.hostname.description%"
+              },
+              "config-string.domain-name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-string.domain-name.description%"
+              },
+              "config-string.username": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-string.username.description%"
+              },
+              "config-string.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-string.name.description%"
+              },
+              "config-string.logging-system-message": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-string.logging-system-message.description%"
+              },
+              "bgp.neighbor-peer-group.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.neighbor-peer-group.name.description%"
+              },
+              "bgp.peer-session.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.peer-session.name.description%"
+              },
+              "bgp.peer-policy.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.peer-policy.name.description%"
+              },
+              "bgp.peer-group.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.peer-group.name.description%"
+              },
+              "group.class.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.class.name.description%"
+              },
+              "group.service-policy.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.service-policy.name.description%"
+              },
+              "group.policy-map.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.policy-map.name.description%"
+              },
+              "group.class-map.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.class-map.name.description%"
+              },
+              "group.route-map.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.route-map.name.description%"
+              },
+              "group.prefix-list.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.prefix-list.name.description%"
+              },
+              "group.acl.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.acl.name.description%"
+              },
+              "group.object-group.type": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.object-group.type.description%"
+              },
+              "group.object-group.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.object-group.name.description%"
+              },
+              "group.pool.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.pool.name.description%"
+              },
+              "group.policy-list.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.policy-list.name.description%"
+              },
+              "group.traffic-filter.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.traffic-filter.name.description%"
+              },
+              "group.community.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.community.name.description%"
+              },
+              "acl.access-list.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.acl.access-list.name.description%"
+              },
+              "acl.access-class.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.acl.access-class.name.description%"
+              },
+              "acl.access-group.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.acl.access-group.name.description%"
+              },
+              "crypto.crypto-map.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.crypto-map.name.description%"
+              },
+              "crypto.transform-set.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.transform-set.name.description%"
+              },
+              "crypto.ipsec-profile.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.ipsec-profile.name.description%"
+              },
+              "crypto.isakmp-profile.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.isakmp-profile.name.description%"
+              },
+              "crypto.keyring.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.keyring.name.description%"
+              },
+              "command_hostname.user-mode": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command_hostname.user-mode.description%"
+              },
+              "command_hostname.privileged-mode": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command_hostname.privileged-mode.description%"
+              },
+              "config-param.first": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-param.first.description%"
+              },
+              "config-param.second": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.config-param.second.description%"
+              },
+              "command-disable.unused": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command-disable.unused.description%"
+              },
+              "command-disable.default": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command-disable.default.description%"
+              }
+            },
+            "additionalProperties": false
+          },
+          "cisco-config-highlight.applyAllTokenRules": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "%configuration.properties.applyAllTokenRules.description%"
+          },
           "cisco-config-highlight.outline.showSymbolsInOutlinePanel": {
             "type": "boolean",
             "default": false,
-            "description": "%configuration.properties.showSymbolsInOutlinePanel.description%"
+            "markdownDescription": "%configuration.properties.showSymbolsInOutlinePanel.description%"
           },
           "cisco-config-highlight.outline.symbolsList": {
             "type": "object",
@@ -106,7 +600,7 @@
               "interface": true,
               "sub_interface": true
             },
-            "description": "%configuration.properties.showEnableDisableSymbols.description%"
+            "markdownDescription": "%configuration.properties.showEnableDisableSymbols.description%"
           }
         }
       }
@@ -116,19 +610,34 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs 'src/**/*.{js,ts}'"
+    "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\"",
+    "lint:fix": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "apply-token-scopes": "node scripts/applyScopeRules.js",
+    "apply-token-scopes:ts": "ts-node scripts/applyScopeRules.ts",
+    "apply-token-scopes:dry-run": "node scripts/applyScopeRules.js --dry-run"
   },
   "dependencies": {
+    "@vscode/vsce": "^3.7.1",
     "semver": "^7.5.2"
   },
   "devDependencies": {
-    "@types/semver": "^7.5.2",
-    "@types/vscode": "^1.52.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.3",
-    "typescript-eslint": "^7.4.0"
+    "@types/node": "^25.0.3",
+    "@types/semver": "^7.7.1",
+    "@types/vscode": "^1.107.0",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0"
+  },
+  "__metadata": {
+    "installedTimestamp": 1765500322524,
+    "targetPlatform": "undefined",
+    "size": 445484
   }
 }

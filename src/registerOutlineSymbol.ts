@@ -55,13 +55,15 @@ class CiscoConfigDocumentSymbolProvider implements vscode.DocumentSymbolProvider
         .get('outline.showSymbolsInOutlinePanel', false);
       if (!enabledOutlinePanel) {
         reject(
-          'Cisco Config Highlight: The outline panel view of the symbol is disabled.',
+          new Error(
+            'Cisco Config Highlight: The outline panel view of the symbol is disabled.',
+          ),
         );
       }
       const text = document.getText();
       const patterns = getSettingsOptions();
       if (!patterns.bool) {
-        reject('Cisco Config Highlight: Symbol is not selected.');
+        reject(new Error('Cisco Config Highlight: Symbol is not selected.'));
       }
       let category_name = '';
       let parent_name = '';
@@ -99,7 +101,7 @@ class CiscoConfigDocumentSymbolProvider implements vscode.DocumentSymbolProvider
             new vscode.DocumentSymbol(
               info.category_name,
               '',
-              info.parent_kind ? info.parent_kind : vscode.SymbolKind.Namespace,
+              info.parent_kind ?? vscode.SymbolKind.Namespace,
               position,
               position,
             ),

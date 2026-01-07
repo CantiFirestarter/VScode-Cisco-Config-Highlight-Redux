@@ -1,670 +1,636 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Cisco Config",
-	"patterns": [
-		{
-			"include": "#unused"
-		},
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#interface_type"
-		},
-		{
-			"include": "#interface"
-		},
-		{
-			"include": "#vrf"
-		},
-		{
-			"include": "#string"
-		},
-		{
-			"include": "#group"
-		},
-		{
-			"include": "#acl"
-		},
-		{
-			"include": "#crypto"
-		},
-		{
-			"include": "#address"
-		},
-		{
-			"include": "#command_hostname"
-		},
-		{
-			"include": "#numeric"
-		},
-		{
-			"comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
-			"include": "#bgp"
-		},
-		{
-			"include": "#keyword"
-		},
-		{
-			"include": "#param1"
-		},
-		{
-			"include": "#param1"
-		}
-	],
-	"repository": {
-		"keyword": {
-			"patterns": [
-				{
-					"name": "keyword.other.config-keyword.vlan.cisco",
-					"match": "(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1[Qq])(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.switchport-mode.access.cisco",
-					"match": "(^|\\s)(access)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.switchport-mode.trunk.cisco",
-					"match": "(^|\\s)(trunk)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.switchport-mode.dynamic.cisco",
-					"match": "(^|\\s)(dynamic\\s(auto|desirable))(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.add-remove.add.cisco",
-					"match": "(^|\\s)(add)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.add-remove.remove.cisco",
-					"match": "(^|\\s)(remove)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.add-remove.except.cisco",
-					"match": "(^|\\s)(except)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.allowed-native.cisco",
-					"match": "(^|\\s)(allowed|native)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.any-all.any.cisco",
-					"match": "(^|\\s)(any)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.any-all.all.cisco",
-					"match": "(^|\\s)(all)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.permit-deny.permit.cisco",
-					"match": "(^|\\s)(permit)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.permit-deny.deny.cisco",
-					"match": "(^|\\s)(deny)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.status.up.cisco",
-					"match": "(^|\\s)([Uu]p)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.status.down.cisco",
-					"match": "(^|\\s)([Dd]own)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.status.deleted.cisco",
-					"match": "(^|\\s)([Dd]eleted)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.status.administratively-down.cisco",
-					"match": "(^|\\s)([Aa]dministratively(-down)?)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.match.any.cisco",
-					"match": "(^|\\s)(match-(any))(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.match.all.cisco",
-					"match": "(^|\\s)(match-(all))(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.in-out.in.cisco",
-					"match": "(^|\\s)(in)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.in-out.out.cisco",
-					"match": "(^|\\s)(out)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.input-output.input.cisco",
-					"match": "(^|\\s)(input)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.input-output.output.cisco",
-					"match": "(^|\\s)(output)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.inside-outside.inside.cisco",
-					"match": "(^|\\s)(inside)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.inside-outside.outside.cisco",
-					"match": "(^|\\s)(outside)(?=\\s|$)"
-				},
-				{
-					"name": "keyword.other.config-keyword.shutdown.cisco",
-					"match": "(^|\\s)(shutdown)(?=\\b|$)"
-				}
-			]
-		},
-		"interface_type": {
-			"patterns": [
-				{
-					"include": "#ethernet"
-				},
-				{
-					"include": "#wireless"
-				},
-				{
-					"include": "#loopback"
-				},
-				{
-					"include": "#port-channel"
-				},
-				{
-					"include": "#tunnel"
-				},
-				{
-					"include": "#vlan"
-				},
-				{
-					"include": "#null"
-				},
-				{
-					"include": "#serial"
-				},
-				{
-					"include": "#cellular"
-				},
-				{
-					"include": "#virtual-template"
-				},
-				{
-					"include": "#dialer"
-				},
-				{
-					"include": "#async"
-				},
-				{
-					"include": "#bri"
-				},
-				{
-					"include": "#bvi"
-				},
-				{
-					"include": "#management"
-				}
-			],
-			"repository": {
-				"ethernet": {
-					"name": "entity.name.class.interface.ethernet.cisco",
-					"match": "\\b(([Ff]ast|([Ff]ive|[Tt]en|[Tt]wenty[Ff]ive|[Ff](orty|ifty)|([Tt]wo)?[Hh]undred)?[Gg](ig)?(abit)?)?[Ee](th)?(ernet)?|Fa|Gi|Te|Fo|Fi)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-				},
-				"wireless": {
-					"name": "entity.name.class.interface.wireless.cisco",
-					"match": "\\b([Dd]ot11[Rr]adio)(([0-1]([\\./]\\d)?(\\.\\d+)?)\\b(\\.\\d+)?)?\\b"
-				},
-				"loopback": {
-					"name": "entity.name.class.interface.loopback.cisco",
-					"match": "\\b([Ll]oopback|Lo)(\\d+)?\\b"
-				},
-				"port-channel": {
-					"name": "entity.name.class.interface.portchannel.cisco",
-					"match": "\\b([Pp]ort-?[Cc]hannel|Po)(12[0-8]|1[0-1][0-9]|[1-9][0-9]|[1-9])?\\b"
-				},
-				"tunnel": {
-					"name": "entity.name.class.interface.tunnel.cisco",
-					"match": "\\b([Tt]unnel|Tu)(\\d+)?\\b"
-				},
-				"vlan": {
-					"name": "entity.name.class.interface.vlan.cisco",
-					"match": "\\b(VLAN|[Vv]lan)(409[0-4]|40[0-8][0-9]|[1-3][0-9]{3}|[1-9][0-9]{1,2}|[1-9])?\\b"
-				},
-				"null": {
-					"name": "entity.name.class.interface.null.cisco",
-					"match": "\\b([Nn]ull)(\\d+)?\\b"
-				},
-				"serial": {
-					"name": "entity.name.class.interface.serial.cisco",
-					"match": "\\b([Ss]erial)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-				},
-				"cellular": {
-					"name": "entity.name.class.interface.cellular.cisco",
-					"match": "\\b([Cc]ellular)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-				},
-				"virtual-template": {
-					"name": "entity.name.class.interface.virtual-template.cisco",
-					"match": "\\b([Vv]irtual-[Tt]emplate)(\\d+)?\\b"
-				},
-				"dialer": {
-					"name": "entity.name.class.interface.dialer.cisco",
-					"match": "\\b([Dd]ialer)(\\d+)?\\b"
-				},
-				"async": {
-					"name": "entity.name.class.interface.async.cisco",
-					"match": "\\b([Aa]sync)(\\d+)?\\b"
-				},
-				"bri": {
-					"name": "entity.name.class.interface.bri.cisco",
-					"match": "\\b(BRI)(\\d+)?\\b"
-				},
-				"bvi": {
-					"name": "entity.name.class.interface.bvi.cisco",
-					"match": "\\b(BVI)(\\d+)?\\b"
-				},
-				"management": {
-					"name": "entity.name.class.interface.management.cisco",
-					"match": "\\b(Management|[Mm]gmt)((\\d+[\\./])*)?(\\d+)?\\b"
-				}
-			}
-		},
-		"numeric": {
-			"patterns": [
-				{
-					"include": "#integer"
-				},
-				{
-					"include": "#hex"
-				}
-			],
-			"repository": {
-				"hex": {
-					"name": "constant.numeric.hex.cisco",
-					"match": "\\b(0x)?[0-9A-F]{2}+?\\b"
-				},
-				"integer": {
-					"name": "constant.numeric.integer.cisco",
-					"match": "\\b-?\\d+\\b"
-				}
-			}
-		},
-		"comment": {
-			"patterns": [
-				{
-					"name": "comment.line.config.cisco",
-					"match": "^\\s*[!#].*"
-				}
-			]
-		},
-		"address": {
-			"patterns": [
-				{
-					"include": "#cidr"
-				},
-				{
-					"include": "#ipv4-full"
-				},
-				{
-					"include": "#ipv6-condensed"
-				},
-				{
-					"include": "#ipv6-full"
-				},
-				{
-					"include": "#mac"
-				}
-			],
-			"repository": {
-				"cidr": {
-					"name": "keyword.other.address.ipv4.cidr.cisco",
-					"match": "\\b((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])/(\\d|[1-2]\\d|3[0-2])\\b"
-				},
-				"ipv4-full": {
-					"name": "keyword.other.address.ipv4.full.cisco",
-					"match": "\\b((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\b"
-				},
-				"ipv6-condensed": {
-					"name": "keyword.other.address.ipv6.condensed.cisco",
-					"match": "\\b(([0-9a-fA-F]{1,4}:){6}(:[0-9a-fA-F]{1,4}|((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9a-fA-F]{1,4}:){5}(((:[0-9a-fA-F]{1,4}){1,2})|:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3})|:))|(([0-9a-fA-F]{1,4}:){4}(((:[0-9a-fA-F]{1,4}){1,3})|((:[0-9a-fA-F]{1,4})?:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-fA-F]{1,4}:){3}(((:[0-9a-fA-F]{1,4}){1,4})|((:[0-9a-fA-F]{1,4}){0,2}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-fA-F]{1,4}:){2}(((:[0-9a-fA-F]{1,4}){1,5})|((:[0-9a-fA-F]{1,4}){0,3}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(([0-9a-fA-F]{1,4}:){1}(((:[0-9a-fA-F]{1,4}){1,6})|((:[0-9a-fA-F]{1,4}){0,4}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))|(:(((:[0-9a-fA-F]{1,4}){1,7})|((:[0-9a-fA-F]{1,4}){0,5}:((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)){3}))|:))\\b"
-				},
-				"ipv6-full": {
-					"name": "keyword.other.address.ipv6.full.cisco",
-					"match": "\\b([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}\\b"
-				},
-				"mac": {
-					"name": "keyword.other.address.mac.cisco",
-					"match": "\\b([a-fA-F0-9]{2}[:.-]?){5}[a-fA-F0-9]{2}\\b"
-				}
-			}
-		},
-		"command_hostname": {
-			"patterns": [
-				{
-					"name": "meta.function-call.command_hostname.user-mode.cisco",
-					"match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?#"
-				},
-				{
-					"name": "meta.function-call.command_hostname.privileged-mode.cisco",
-					"match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?>"
-				}
-			]
-		},
-		"param1": {
-			"patterns": [
-				{
-					"name": "punctuation.config-param.first.cisco",
-					"match": "(?<=^\\s*?)\\S+"
-				}
-			]
-		},
-		"vrf": {
-			"patterns": [
-				{
-					"comment": "((?<=vrf\\s)(?!.*forwarding)|(?<=vrf\\sforwarding\\s))\\S+",
-					"match": "(vrf)\\s((forwarding|definition)\\s)?(\\S+)",
-					"captures": {
-						"1": {
-							"name": "entity.name.class.vrf.declaration.cisco"
-						},
-						"2": {
-							"name": "entity.other.vrf.forwarding.cisco"
-						},
-						"3": {
-							"name": "entity.other.vrf.definition.cisco"
-						},
-						"4": {
-							"name": "entity.name.tag.vrf.vrf-name.cisco"
-						}
-					}
-				}
-			]
-		},
-		"string": {
-			"patterns": [
-				{
-					"include": "#hostname"
-				},
-				{
-					"include": "#description"
-				},
-				{
-					"include": "#remark"
-				},
-				{
-					"include": "#domain-name"
-				},
-				{
-					"include": "#username"
-				},
-				{
-					"include": "#logging-system-message"
-				},
-				{
-					"include": "#password"
-				},
-				{
-					"include": "#secret"
-				},
-				{
-					"include": "#banner"
-				}
-			],
-			"repository": {
-				"description": {
-					"match": "(?<=(description|Description:))\\s(.*)$",
-					"name": "string.other.description.cisco"
-				},
-				"remark": {
-					"match": "(?<=remark)\\s(.*)$",
-					"name": "string.other.remark.cisco"
-				},
-				"hostname": {
-					"match": "(?<=hostname\\s)[0-9a-zA-Z\\-]+\\b",
-					"name": "entity.name.tag.config-string.hostname.cisco"
-				},
-				"domain-name": {
-					"match": "(?<=ip\\sdomain\\sname\\s)\\S+\\b",
-					"name": "entity.name.tag.config-string.domain-name.cisco"
-				},
-				"username": {
-					"match": "(?<=username\\s)(\\S+)\\b",
-					"name": "entity.name.tag.config-string.username.cisco"
-				},
-				"logging-system-message": {
-					"match": "(?<=%)\\S+-\\d-\\S+(?=:)",
-					"name": "entity.name.tag.config-string.logging-system-message.cisco"
-				},
-				"password": {
-					"match": "(?<=password\\s\\d+\\s)(\\S+)$",
-					"name": "string.other.password.cisco"
-				},
-				"secret": {
-					"match": "(?<=secret\\s\\d+\\s)(\\S+)$",
-					"name": "string.other.secret.cisco"
-				},
-				"banner": {
-					"begin": "(?<=banner\\s(exec|login|motd)\\s)\\^",
-					"end": "\\^",
-					"name": "comment.block.banner.cisco"
-				}
-			}
-		},
-		"bgp": {
-			"patterns": [
-				{
-					"include": "#neighbor-peer-group"
-				},
-				{
-					"include": "#peer-session"
-				},
-				{
-					"include": "#peer-policy"
-				},
-				{
-					"include": "#peer-group"
-				}
-			],
-			"repository": {
-				"neighbor-peer-group": {
-					"match": "(?<=neighbor\\s)(\\S+)\\b",
-					"name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
-				},
-				"peer-session": {
-					"match": "(?<=peer-session\\s)(\\S+)\\b",
-					"name": "entity.name.tag.bgp.peer-session.name.cisco"
-				},
-				"peer-policy": {
-					"match": "(?<=peer-policy\\s)(\\S+)\\b",
-					"name": "entity.name.tag.bgp.peer-policy.name.cisco"
-				},
-				"peer-group": {
-					"match": "(?<=peer-group\\s)(\\S+)\\b",
-					"name": "entity.name.tag.bgp.peer-group.name.cisco"
-				}
-			}
-		},
-		"group": {
-			"patterns": [
-				{
-					"include": "#class"
-				},
-				{
-					"include": "#service-policy"
-				},
-				{
-					"include": "#policy-map"
-				},
-				{
-					"include": "#class-map"
-				},
-				{
-					"include": "#route-map"
-				},
-				{
-					"include": "#prefix-list"
-				},
-				{
-					"include": "#object-group"
-				},
-				{
-					"include": "#pool"
-				},
-				{
-					"include": "#policy-list"
-				},
-				{
-					"include": "#traffic-filter"
-				},
-				{
-					"include": "#community"
-				}
-			],
-			"repository": {
-				"class": {
-					"match": "(?<=class\\s(.*\\s)?)(\\S+)$",
-					"name": "entity.name.tag.group.class.name.cisco"
-				},
-				"service-policy": {
-					"match": "(?<=service-policy\\s(.*\\s)?)(\\S+)$",
-					"name": "entity.name.tag.group.service-policy.name.cisco"
-				},
-				"policy-map": {
-					"match": "(?<=policy-map\\s(.*\\s)?)(\\S+)$",
-					"name": "entity.name.tag.group.policy-map.name.cisco"
-				},
-				"class-map": {
-					"match": "(?<=class-map\\s(.*\\s)?)(\\S+)$",
-					"name": "entity.name.tag.group.class-map.name.cisco"
-				},
-				"route-map": {
-					"match": "(?<=route-map\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.route-map.name.cisco"
-				},
-				"prefix-list": {
-					"match": "(?<=prefix-list\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.prefix-list.name.cisco"
-				},
-				"object-group": {
-					"match": "(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
-					"captures": {
-						"2": {
-							"name": "keyword.other.group.object-group.type.cisco"
-						},
-						"3": {
-							"name": "entity.name.tag.group.object-group.name.cisco"
-						}
-					}
-				},
-				"pool": {
-					"match": "(?<=\\bpool\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.pool.name.cisco"
-				},
-				"policy-list": {
-					"match": "(?<=policy-list\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.policy-list.name.cisco"
-				},
-				"traffic-filter": {
-					"match": "(?<=traffic-filter\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.traffic-filter.name.cisco"
-				},
-				"community": {
-					"match": "(?<=community\\s)(\\S+)\\b",
-					"name": "entity.name.tag.group.community.name.cisco"
-				}
-			}
-		},
-		"acl": {
-			"patterns": [
-				{
-					"include": "#access-list"
-				},
-				{
-					"include": "#access-group"
-				}
-			],
-			"repository": {
-				"access-list": {
-					"match": "(?<=access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
-					"captures": {
-						"2": {
-							"name": "keyword.other.acl.access-list.type.cisco"
-						},
-						"3": {
-							"name": "entity.name.tag.acl.access-list.name.cisco"
-						}
-					}
-				},
-				"access-group": {
-					"match": "(?<=access-group\\s)((name)\\s)?(\\S+)\\b",
-					"captures": {
-						"3": {
-							"name": "entity.name.tag.acl.access-group.name.cisco"
-						}
-					}
-				}
-			}
-		},
-		"crypto": {
-			"patterns": [
-				{
-					"include": "#crypto-map"
-				},
-				{
-					"include": "#transform-set"
-				},
-				{
-					"include": "#ipsec-profile"
-				},
-				{
-					"include": "#isakmp-profile"
-				},
-				{
-					"include": "#keyring"
-				}
-			],
-			"repository": {
-				"crypto-map": {
-					"match": "(?<=\\bcrypto\\smap\\s)(\\S+)\\b",
-					"name": "entity.name.tag.crypto.crypto-map.name.cisco"
-				},
-				"transform-set": {
-					"match": "(?<=\\btransform-set\\s)(\\S+\\s?)+\\b",
-					"name": "entity.name.tag.crypto.transform-set.name.cisco"
-				},
-				"ipsec-profile": {
-					"match": "(?<=\\bipsec\\sprofile\\s)(\\S+)\\b",
-					"name": "entity.name.tag.crypto.ipsec-profile.name.cisco"
-				},
-				"isakmp-profile": {
-					"match": "(?<=\\bisakmp\\sprofile\\s)(\\S+)\\b",
-					"name": "entity.name.tag.crypto.isakmp-profile.name.cisco"
-				},
-				"keyring": {
-					"match": "(?<=\\bkeyring\\s)(\\S+)\\b",
-					"name": "entity.name.tag.crypto.keyring.name.cisco"
-				}
-			}
-		},
-		"unused": {
-			"patterns": [
-				{
-					"include": "#unused"
-				},
-				{
-					"include": "#default"
-				}
-			],
-			"repository": {
-				"unused": {
-					"name": "meta.function-call.command-disable.unused.cisco",
-					"match": "^\\s*?no\\s.*"
-				},
-				"default": {
-					"name": "meta.function-call.command-disable.default.cisco",
-					"match": "^\\s*?default\\s.*"
-				}
-			}
-		}
-	},
-	"scopeName": "source.cisco"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Cisco Config",
+  "scopeName": "source.cisco",
+  "patterns": [
+    { "include": "#unused_line" },
+    { "include": "#comment" },
+    { "include": "#interface_type" },
+    { "include": "#interface" },
+    { "include": "#vrf" },
+    { "include": "#string" },
+    { "include": "#group" },
+    { "include": "#acl" },
+    { "include": "#crypto" },
+    { "include": "#address" },
+    { "include": "#command_hostname" },
+    { "include": "#numeric" },
+    { "include": "#separator" },
+    {
+      "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
+      "include": "#bgp"
+    },
+    { "include": "#keyword" },
+    { "include": "#param1" },
+    { "include": "#param2" }
+  ],
+  "repository": {
+    "separator": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.cisco",
+          "match": "[|\\/:.,\\-<>]"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.other.config-keyword.vlan.cisco",
+          "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1[Qq])(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.switchport-mode.access.cisco",
+          "match": "(?i)(^|\\s)(access)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.switchport-mode.trunk.cisco",
+          "match": "(?i)(^|\\s)(trunk)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.switchport-mode.dynamic.cisco",
+          "match": "(?i)(^|\\s)(dynamic\\s(auto|desirable))(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.add-remove.add.cisco",
+          "match": "(?i)(^|\\s)(add)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.add-remove.remove.cisco",
+          "match": "(?i)(^|\\s)(remove)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.add-remove.except.cisco",
+          "match": "(?i)(^|\\s)(except)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.allowed-native.cisco",
+          "match": "(?i)(^|\\s)(allowed|native)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.any-all.any.cisco",
+          "match": "(?i)(^|\\s)(any)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.any-all.all.cisco",
+          "match": "(?i)(^|\\s)(all)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.permit-deny.permit.cisco",
+          "match": "(?i)(^|\\s)(permit)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.permit-deny.deny.cisco",
+          "match": "(?i)(^|\\s)(deny)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.status.up.cisco",
+          "match": "(?i)(^|\\s)(up)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.status.down.cisco",
+          "match": "(?i)(^|\\s)(down)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.status.deleted.cisco",
+          "match": "(?i)(^|\\s)(deleted)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.status.administratively-down.cisco",
+          "match": "(?i)(^|\\s)(administratively(-down)?)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.match.any.cisco",
+          "match": "(?i)(^|\\s)(match-(any))(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.match.all.cisco",
+          "match": "(?i)(^|\\s)(match-(all))(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.in-out.in.cisco",
+          "match": "(?i)(^|\\s)(in)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.in-out.out.cisco",
+          "match": "(?i)(^|\\s)(out)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.input-output.input.cisco",
+          "match": "(?i)(^|\\s)(input)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.input-output.output.cisco",
+          "match": "(?i)(^|\\s)(output)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.inside-outside.inside.cisco",
+          "match": "(?i)(^|\\s)(inside)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.inside-outside.outside.cisco",
+          "match": "(?i)(^|\\s)(outside)(?=\\s|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.shutdown.cisco",
+          "match": "(?i)(^|\\s)(shutdown)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.remark.cisco",
+          "match": "(?i)(^|\\s)(remark)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group1.cisco",
+          "match": "(?i)(^|\\s)(aaa_server|access-log|acct-port|accounting|action|address|admission|advertise-v2|age|aes-ccm|allocation|ap|attach-policy|ascending|auth|auth-port|auth-proxy|authenticate-fail|authentication-server|authentication|authorization|arp|auto|auto-sync|aux|basic-summary-address|begin|block-unknown-source|bootpc|bootps|bootup|bpdufilter|bpduguard|broadcast|brief|bus|cache|capability-change|cck|ciphers|change|chain|chassis-id|cdp|certificate|cef|client|client-id|classless|coldstart|compress-config|config|config-copy|connection|contact|conflict|console|cor|counters|country|crypto|cs4|dead-criteria|datetime|debug|deauthenticate|destination|device|dhcp|dial-peer|disassociate|dot1Q|dot11-qos|dot11d|eap|edge|entries|enrollment|entity|exec-time|exec|extended|extendable|excluded-address|exclude|eq|file|finrst-timeout|flow-aggregation|flow-export|flow|flowcontrol|forward-protocol|fallback|flash|general-prefix|guest-mode|Guest|group|h-node|help-path|helper-address|host|icmp|include|included|indoor|ingress|infrastructure|inside|ipsec|irb|iso|key-management|key|level|linkdown|linkup|list|local|localtime|logging|login|log|location|mac-address|main-cpu|max|membership-termination|mgmt|msec|missing|min-length|minimal|mode|modulus|neighbor|next-hop|native|new-model|newinfo|nde-address|netbios-dgm|netbios-ns|netflow|network|nonegotiate|nat-transparency|nat|ofdm|optional|open|page|pad|password-encryption|passwords|password|pki|pool|port-security|primary|prefer|priority|preempt|prefix|proxy|proxy-arp|pvst|qos|ra|radius|range|rapid-pvst|ratelimit|recurring|redirects|recovery|redundancy|resource|router-id|routing|route|route-cache|running-config|rp|root|rogue-ap|run|secure-server|send|self-signed|selfsigned|service-type|session-id|section|secret|snmptrap|sso|start-stop|static|station-role|spanning-disabled|subscriber-loop-control|subnet-zero|subject-name|summary-address|summary|switch-over|syslog|tacacs+|tcp-timeout|time|timezone|traps|trunk|traffic-filter|translation|translations|transport|tries|threshold|tty|tkip|tracking|type|udp-encaps|udp-port|udp|unicast-flooding|unicast-routing|unreachables|update-calendar|update|usage|uptime|v3|vsa|vty|view|version|voice|wds|wep|wep128|wlan-wep|window-size|warmstart|wnm|write|wpa|Z)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group2.cisco",
+          "match": "(?i)(^|\\s)(access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class|class-map|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|group2aaa|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|startup-config|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group3.cisco",
+          "match": "(?i)(^|\\s)(timeout|inactive|exec-timeout|session-timeout|outside|out|exceed-action|drop|expired|failure|stop-record|boot-end-marker|error|reset|end|unassigned|unset|shutdown|system-shutdown|exit|none|limit|down|removal|removed|on-failure|cause|gbic-invalid|off|clear|standby|violation|misconfig|exit-address-family|exception|crashinfo|zeroize|erase|ignore|max-fail|theft|delete)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group4.cisco",
+          "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|optimize|on|on-success|permit|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group5.cisco",
+          "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|general-keys|if-authenticated|inspection|interval|IPDT_POLICY|label|link-local|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+        },
+        {
+          "name": "keyword.other.config-keyword.group6.cisco",
+          "match": "(?i)(^|\\s)(all|auto-summary|bgp|default|dscp|echo|eigrp|fragments|ftp|ftp-data|gopher|http|ident|imap|isakmp|ipv4|ipv6|lacp|log-input|nntp|ospf|pagp|ping|pop3|rip|scp|snmp|snmp-server|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
+        }
+      ]
+    },
+    "interface_type": {
+      "patterns": [
+        { "include": "#ethernet" },
+        { "include": "#wireless" },
+        { "include": "#loopback" },
+        { "include": "#port-channel" },
+        { "include": "#tunnel" },
+        { "include": "#vlan" },
+        { "include": "#null" },
+        { "include": "#serial" },
+        { "include": "#cellular" },
+        { "include": "#virtual-template" },
+        { "include": "#dialer" },
+        { "include": "#async" },
+        { "include": "#bri" },
+        { "include": "#bvi" },
+        { "include": "#app" },
+        { "include": "#management" }
+      ],
+      "repository": {
+        "ethernet": {
+          "name": "entity.name.class.interface.ethernet.cisco",
+          "match": "(?i)\\b((fast|(five|ten|twentyfive|f(orty|ifty)|(two)?hundred)?g(ig)?(abit)?)?e(th)?(ernet)?|fa|gi|te|fo|fi|g)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)(-\\d+(\\.\\d+)?)?\\b"
+        },
+        "wireless": {
+          "name": "entity.name.class.interface.wireless.cisco",
+          "match": "(?i)\\b(dot11radio)(([0-1]([\\./]\\d)?(\\.\\d+)?)\\b(\\.\\d+)?)?\\b"
+        },
+        "loopback": {
+          "name": "entity.name.class.interface.loopback.cisco",
+          "match": "(?i)\\b(loopback|lo)(\\d+)?\\b"
+        },
+        "port-channel": {
+          "name": "entity.name.class.interface.portchannel.cisco",
+          "match": "(?i)\\b(port-?channel|po)(12[0-8]|1[0-1][0-9]|[1-9][0-9]|[1-9])?\\b"
+        },
+        "tunnel": {
+          "name": "entity.name.class.interface.tunnel.cisco",
+          "match": "(?i)\\b(tunnel|tu)(\\d+)?\\b"
+        },
+        "vlan": {
+          "name": "entity.name.class.interface.vlan.cisco",
+          "match": "(?i)\\b(vlan)(409[0-4]|40[0-8][0-9]|[1-3][0-9]{3}|[1-9][0-9]{1,2}|[1-9])?\\b"
+        },
+        "null": {
+          "name": "entity.name.class.interface.null.cisco",
+          "match": "(?i)\\b(null)(\\d+)?\\b"
+        },
+        "serial": {
+          "name": "entity.name.class.interface.serial.cisco",
+          "match": "(?i)\\b(serial|s)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
+        },
+        "cellular": {
+          "name": "entity.name.class.interface.cellular.cisco",
+          "match": "(?i)\\b(cellular)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
+        },
+        "virtual-template": {
+          "name": "entity.name.class.interface.virtual-template.cisco",
+          "match": "(?i)\\b(virtual-template)(\\d+)?\\b"
+        },
+        "dialer": {
+          "name": "entity.name.class.interface.dialer.cisco",
+          "match": "(?i)\\b(dialer)(\\d+)?\\b"
+        },
+        "async": {
+          "name": "entity.name.class.interface.async.cisco",
+          "match": "(?i)\\b(async)(\\d+)?\\b"
+        },
+        "bri": {
+          "name": "entity.name.class.interface.bri.cisco",
+          "match": "(?i)\\b(bri)(\\d+)?\\b"
+        },
+        "bvi": {
+          "name": "entity.name.class.interface.bvi.cisco",
+          "match": "(?i)\\b(bvi)(\\d+)?\\b"
+        },
+        "app": {
+          "name": "entity.name.class.interface.app.cisco",
+          "match": "(?i)\\b((app?g(ig)?(abit)?)?e(th)?(ernet)?|ap)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
+        },
+        "management": {
+          "name": "entity.name.class.interface.management.cisco",
+          "match": "(?i)\\b(management|mgmt)((\\d+[\\./])*)?(\\d+)?\\b"
+        }
+      }
+    },
+    "numeric": {
+      "patterns": [{ "include": "#integer" }, { "include": "#hex" }],
+      "repository": {
+        "hex": {
+          "name": "constant.numeric.hex.cisco",
+          "match": "\\b0x[0-9A-Fa-f]+\\b|(?<![:\\-.a-zA-Z])[0-9A-Fa-f]{2}(?![:\\-.0-9A-Fa-f]|[a-zA-Z])"
+        },
+        "integer": {
+          "name": "constant.numeric.integer.cisco",
+          "match": "(?<!\\.)\\b\\d+\\b(?![\\.\\:@])"
+        }
+      }
+    },
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.config.cisco",
+          "match": "^\\s*[!#].*"
+        },
+        {
+          "name": "comment.line.config.cisco",
+          "begin": "(?<=\\s)[!#]",
+          "end": "$"
+        }
+      ]
+    },
+    "address": {
+      "patterns": [
+        { "include": "#mac" },
+        { "include": "#cidr" },
+        { "include": "#ipv4-AD" },
+        { "include": "#ipv6-AD" },
+        { "include": "#ipv4-full" },
+        { "include": "#ipv6-full" },
+        { "include": "#ipv6-condensed" }
+      ],
+      "repository": {
+        "mac": {
+          "patterns": [
+            {
+              "name": "keyword.other.address.mac.cisco",
+              "comment": "Standard MAC format with enforced consistent separator: AA:BB:CC:DD:EE:FF / AA-BB-CC-DD-EE-FF / AA.BB.CC.DD.EE.FF",
+              "match": "\\b([0-9a-fA-F]{2})([:.-])([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})(\\2)([0-9a-fA-F]{2})\\b",
+              "captures": {
+                "2": { "name": "punctuation.separator.cisco" },
+                "4": { "name": "punctuation.separator.cisco" },
+                "6": { "name": "punctuation.separator.cisco" },
+                "8": { "name": "punctuation.separator.cisco" },
+                "10": { "name": "punctuation.separator.cisco" }
+              }
+            },
+            {
+              "name": "keyword.other.address.mac.cisco",
+              "comment": "Cisco dotted MAC format: AABB.CCDD.EEFF",
+              "match": "\\b([0-9a-fA-F]{4})([.])([0-9a-fA-F]{4})([.])([0-9a-fA-F]{4})\\b",
+              "captures": {
+                "2": { "name": "punctuation.separator.cisco" },
+                "4": { "name": "punctuation.separator.cisco" }
+              }
+            }
+          ]
+        },
+        "cidr": {
+          "name": "keyword.other.address.cidr.cisco",
+          "match": "(?<=(?:(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)|[0-9a-fA-F]{1,4}|::)\\/)(?:12[0-8]|1[01]\\d|[1-9]?\\d)\\b"
+        },
+        "ipv4-AD": {
+          "name": "constant.numeric.ipv4-AD.cisco",
+          "match": "(?<=\\b(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\.(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\s)(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d?)$"
+        },
+        "ipv6-AD": {
+          "name": "constant.numeric.ipv6-AD.cisco",
+          "match": "(?<=(?:(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}::(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}|(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::)\\s)(?:25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d?)$"
+        },
+        "ipv4-full": {
+          "name": "keyword.other.address.ipv4.full.cisco",
+          "match": "\\b(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)(\\.)(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]?\\d)\\b",
+          "captures": {
+            "2": { "name": "punctuation.separator.cisco" },
+            "4": { "name": "punctuation.separator.cisco" },
+            "6": { "name": "punctuation.separator.cisco" }
+          }
+        },
+        "ipv6-full": {
+          "name": "keyword.other.address.ipv6.full.cisco",
+          "match": "\\b([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})(:)([0-9A-Fa-f]{1,4})\\b",
+          "captures": {
+            "2": { "name": "punctuation.separator.cisco" },
+            "4": { "name": "punctuation.separator.cisco" },
+            "6": { "name": "punctuation.separator.cisco" },
+            "8": { "name": "punctuation.separator.cisco" },
+            "10": { "name": "punctuation.separator.cisco" },
+            "12": { "name": "punctuation.separator.cisco" },
+            "14": { "name": "punctuation.separator.cisco" }
+          }
+        },
+        "ipv6-condensed": {
+          "comment": "IPv6 condensed format with :: compression. Matches addresses with hex groups and :: notation.",
+          "match": "(?:^|\\s|(?<=[^0-9a-fA-F:]))(?:(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}::(?:[0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{0,4}|(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::)(?=\\s|[^0-9a-fA-F:]|$)",
+          "captures": {
+            "0": {
+              "patterns": [
+                {
+                  "match": ":",
+                  "name": "punctuation.separator.cisco"
+                },
+                {
+                  "match": "[0-9a-fA-F]+",
+                  "name": "keyword.other.address.ipv6.condensed.cisco"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "command_hostname": {
+      "patterns": [
+        {
+          "name": "meta.function-call.command_hostname.user-mode.cisco",
+          "match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?#"
+        },
+        {
+          "name": "meta.function-call.command_hostname.privileged-mode.cisco",
+          "match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?>"
+        }
+      ]
+    },
+    "param1": {
+      "patterns": [
+        {
+          "name": "punctuation.config-param.first.cisco",
+          "match": "(?<=^\\s*)\\S+"
+        }
+      ]
+    },
+    "param2": {
+      "patterns": [
+        {
+          "name": "punctuation.config-param.second.cisco",
+          "match": "(?<=^\\s*\\S+\\s+)\\S+"
+        }
+      ]
+    },
+    "vrf": {
+      "patterns": [
+        {
+          "comment": "((?<=vrf\\s)(?!.*forwarding)|(?<=vrf\\sforwarding\\s))\\S+",
+          "match": "(?i)(vrf)\\s((forwarding|definition)\\s)?(\\S+)",
+          "captures": {
+            "1": { "name": "entity.name.class.vrf.declaration.cisco" },
+            "2": { "name": "entity.other.vrf.forwarding.cisco" },
+            "3": { "name": "entity.other.vrf.definition.cisco" },
+            "4": { "name": "entity.name.tag.vrf.vrf-name.cisco" }
+          }
+        }
+      ]
+    },
+    "string": {
+      "patterns": [
+        { "include": "#hostname" },
+        { "include": "#description" },
+        { "include": "#remark" },
+        { "include": "#domain-name" },
+        { "include": "#username" },
+        { "include": "#name" },
+        { "include": "#logging-system-message" },
+        { "include": "#password" },
+        { "include": "#secret" },
+        { "include": "#banner" }
+      ],
+      "repository": {
+        "description": {
+          "match": "(?i)(?<=(description))\\s(.*)$",
+          "name": "string.other.description.cisco"
+        },
+        "remark": {
+          "match": "(?i)(?<=remark)\\s(.*)$",
+          "name": "string.other.remark.cisco"
+        },
+        "hostname": {
+          "match": "(?i)(?<=hostname\\s)[0-9a-zA-Z\\-]+\\b",
+          "name": "entity.name.tag.config-string.hostname.cisco"
+        },
+        "domain-name": {
+          "match": "(?i)(?<=ip\\sdomain\\sname\\s)\\S+\\b",
+          "name": "entity.name.tag.config-string.domain-name.cisco"
+        },
+        "username": {
+          "match": "(?i)(?<=username\\s)(\\S+)\\b",
+          "name": "entity.name.tag.config-string.username.cisco"
+        },
+        "name": {
+          "match": "(?i)(?<=name\\s)(\\S+)\\b",
+          "name": "entity.name.tag.config-string.name.cisco"
+        },
+        "logging-system-message": {
+          "match": "(?<=%)\\S+-\\d-\\S+(?=:)",
+          "name": "entity.name.tag.config-string.logging-system-message.cisco"
+        },
+        "password": {
+          "match": "(?i)(?<=password\\s\\d+\\s)(\\S+)$",
+          "name": "string.other.password.cisco"
+        },
+        "secret": {
+          "match": "(?i)(?<=secret\\s\\d+\\s)(\\S+)$",
+          "name": "string.other.secret.cisco"
+        },
+        "banner": {
+          "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)(\\^|@)",
+          "end": "(\\^|@)",
+          "name": "comment.block.banner.cisco"
+        }
+      }
+    },
+    "bgp": {
+      "patterns": [
+        { "include": "#neighbor-peer-group" },
+        { "include": "#peer-session" },
+        { "include": "#peer-policy" },
+        { "include": "#peer-group" }
+      ],
+      "repository": {
+        "neighbor-peer-group": {
+          "match": "(?i)(?<=neighbor\\s)(\\S+)\\b",
+          "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
+        },
+        "peer-session": {
+          "match": "(?i)(?<=peer-session\\s)(\\S+)\\b",
+          "name": "entity.name.tag.bgp.peer-session.name.cisco"
+        },
+        "peer-policy": {
+          "match": "(?i)(?<=peer-policy\\s)(\\S+)\\b",
+          "name": "entity.name.tag.bgp.peer-policy.name.cisco"
+        },
+        "peer-group": {
+          "match": "(?i)(?<=peer-group\\s)(\\S+)\\b",
+          "name": "entity.name.tag.bgp.peer-group.name.cisco"
+        }
+      }
+    },
+    "group": {
+      "patterns": [
+        { "include": "#class" },
+        { "include": "#service-policy" },
+        { "include": "#policy-map" },
+        { "include": "#class-map" },
+        { "include": "#route-map" },
+        { "include": "#prefix-list" },
+        { "include": "#object-group" },
+        { "include": "#pool" },
+        { "include": "#policy-list" },
+        { "include": "#traffic-filter" },
+        { "include": "#community" }
+      ],
+      "repository": {
+        "class": {
+          "match": "(?i)(?<=class\\s(.*\\s)?)(\\S+)$",
+          "name": "entity.name.tag.group.class.name.cisco"
+        },
+        "service-policy": {
+          "match": "(?i)(?<=service-policy\\s(.*\\s)?)(\\S+)$",
+          "name": "entity.name.tag.group.service-policy.name.cisco"
+        },
+        "policy-map": {
+          "match": "(?i)(?<=policy-map\\s(.*\\s)?)(\\S+)$",
+          "name": "entity.name.tag.group.policy-map.name.cisco"
+        },
+        "class-map": {
+          "match": "(?i)(?<=class-map\\s(.*\\s)?)(\\S+)$",
+          "name": "entity.name.tag.group.class-map.name.cisco"
+        },
+        "route-map": {
+          "match": "(?i)(?<=route-map\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.route-map.name.cisco"
+        },
+        "prefix-list": {
+          "match": "(?i)(?<=prefix-list\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.prefix-list.name.cisco"
+        },
+        "object-group": {
+          "match": "(?i)(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
+          "captures": {
+            "2": {
+              "name": "keyword.other.group.object-group.type.cisco"
+            },
+            "3": {
+              "name": "entity.name.tag.group.object-group.name.cisco"
+            }
+          }
+        },
+        "pool": {
+          "match": "(?i)(?<=\\bpool\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.pool.name.cisco"
+        },
+        "policy-list": {
+          "match": "(?i)(?<=policy-list\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.policy-list.name.cisco"
+        },
+        "traffic-filter": {
+          "match": "(?i)(?<=traffic-filter\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.traffic-filter.name.cisco"
+        },
+        "community": {
+          "match": "(?i)(?<=community\\s)(\\S+)\\b",
+          "name": "entity.name.tag.group.community.name.cisco"
+        }
+      }
+    },
+    "acl": {
+      "patterns": [
+        { "include": "#access-class" },
+        { "include": "#access-list" },
+        { "include": "#access-group" }
+      ],
+      "repository": {
+        "access-list": {
+          "match": "(?i)(?<=access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
+          "captures": {
+            "2": {
+              "name": "keyword.other.acl.access-list.type.cisco"
+            },
+            "3": {
+              "name": "entity.name.tag.acl.access-list.name.cisco"
+            }
+          }
+        },
+        "access-group": {
+          "match": "(?i)(?<=access-group\\s)((name)\\s)?(\\S+)\\b",
+          "captures": {
+            "3": {
+              "name": "entity.name.tag.acl.access-group.name.cisco"
+            }
+          }
+        }
+      }
+    },
+    "crypto": {
+      "patterns": [
+        { "include": "#crypto-map" },
+        { "include": "#transform-set" },
+        { "include": "#ipsec-profile" },
+        { "include": "#isakmp-profile" },
+        { "include": "#keyring" }
+      ],
+      "repository": {
+        "crypto-map": {
+          "match": "(?i)(?<=\\bcrypto\\smap\\s)(\\S+)\\b",
+          "name": "entity.name.tag.crypto.crypto-map.name.cisco"
+        },
+        "transform-set": {
+          "match": "(?i)(?<=\\btransform-set\\s)(\\S+\\s?)+\\b",
+          "name": "entity.name.tag.crypto.transform-set.name.cisco"
+        },
+        "ipsec-profile": {
+          "match": "(?i)(?<=\\bipsec\\sprofile\\s)(\\S+)\\b",
+          "name": "entity.name.tag.crypto.ipsec-profile.name.cisco"
+        },
+        "isakmp-profile": {
+          "match": "(?i)(?<=\\bisakmp\\sprofile\\s)(\\S+)\\b",
+          "name": "entity.name.tag.crypto.isakmp-profile.name.cisco"
+        },
+        "keyring": {
+          "match": "(?i)(?<=\\bkeyring\\s)(\\S+)\\b",
+          "name": "entity.name.tag.crypto.keyring.name.cisco"
+        }
+      }
+    },
+    "unused_line": {
+      "patterns": [{ "include": "#unused" }, { "include": "#default" }],
+      "repository": {
+        "unused": {
+          "name": "meta.function-call.command-disable.unused.cisco",
+          "match": "(?i)^\\s*?no\\s.*"
+        },
+        "default": {
+          "name": "meta.function-call.command-disable.default.cisco",
+          "match": "(?i)^\\s*?default\\s.*"
+        }
+      }
+    }
+  }
 }
