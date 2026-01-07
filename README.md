@@ -12,6 +12,8 @@ There's a possibility that definitions will change in the future.
 
 I'm new at this, so there may be some inconsistencies in documentation as I make changes from main fork of this extension.
 
+I also hope to make further improvement and functionality to the extension as a whole as I'm able to do so.
+
 > [!NOTE]  
 > Changes (v0.6 → v0.7)
 >
