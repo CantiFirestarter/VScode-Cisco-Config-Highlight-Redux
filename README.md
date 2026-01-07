@@ -10,7 +10,7 @@ This project is in the development stages.
 
 There's a possibility that definitions will change in the future.
 
-I'm new at this, so there may be some inconsistencies in documtation as I make changes from main fork of this extention.
+I'm new at this, so there may be some inconsistencies in documentation as I make changes from main fork of this extension.
 
 > [!NOTE]  
 > Changes (v0.6 → v0.7)
@@ -63,18 +63,21 @@ Note: Screenshots are using a custom theme ([CantiFirestarter/Daybreak Asuna The
 
 ## Token Color Customizations
 
-The color of syntax highlighting depends on the theme you have enabled.
+The extension automatically applies token colors on activation. Configure colors via extension settings or by editing `settings.json` directly. For best results with custom themes, see [VS Code Color Themes](https://code.visualstudio.com/docs/getstarted/themes).
 
-All highlighting settings are not enabled in VSCode's default theme. For a better experience, I recommend using a custom theme.
+**Two ways to customize:**
 
-If the colors are not defined in the currently activated theme, or if you want to customize the colors and style to your liking, you will need to edit the `settings.json`.
+1. **Extension settings (recommended):** Use `cisco-config-highlight.colors.*` keys—simple, fast, and syncs automatically.
+2. **Manual textMateRules:** Use `editor.tokenColorCustomizations` for advanced styling (bold, italic, underline) and fine-grained control.
 
-Open the settings and add option strings to JSON.
-(You can open the `settings.json` file by typing `Preferences: Open Settings (JSON)` in the command palette.)
+Both methods work together; your textMateRules are preserved and can override extension colors when needed.
 
-For more information on how to customize the settings.json file, please refer to the following URL.
+### Quick Setup
 
-[Visual Studio Code Documentaion - Color Themes](https://code.visualstudio.com/docs/getstarted/themes)
+- Enable defaults: turn on `cisco-config-highlight.applyAllTokenRules` to load the extension’s baseline colors.
+- Customize colors fast: set keys under `cisco-config-highlight.colors.*` (e.g. `interface.ethernet`, `address.ipv4`, `keyword.vlan`). These map to the scopes listed below.
+- Discover scopes: run “Developer: Inspect Editor Tokens and Scopes” and click a token in a Cisco file to copy its scope.
+- Fine-tune with theme rules: add `editor.tokenColorCustomizations.textMateRules` entries for `foreground` and `fontStyle` where needed. Your rules override defaults; extension-managed colors follow your settings.
 
 ### Scope Hierarchy
 
@@ -94,31 +97,27 @@ However, if you use a higher-level scope such as:
 The customization will apply to all tokens under that scope.
 The higher (shallower) the level in the hierarchy, the broader the range of tokens affected.
 
-### VSCode settings.json customize sample
+### Configure via Extension Settings
+
+In v0.7+, the extension reads `cisco-config-highlight.colors.*` settings and `applyAllTokenRules` to apply colors automatically on startup and when config changes.
+
+Example `settings.json`:
 
 ```json
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "entity.name.class.interface.ethernet",
-                "settings": {
-                    "foreground": "#328f16",
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": [
-                    "keyword.other.address",
-                    "constant.numeric"
-                ],
-                "settings": {
-                    "foreground": "#cc0ca2",
-                    "fontStyle": "underline"
-                }
-            }
-        ]
+    "cisco-config-highlight.applyAllTokenRules": true,
+    "cisco-config-highlight.colors": {
+        "interface.ethernet": "#328f16",
+        "interface.loopback": "#33df33",
+        "address.ipv4": "#2e74b5",
+        "keyword.permit": "#9933ff",
+        "keyword.deny": "#ff3333",
+        "comment": "#339933"
     }
 ```
+
+- **Enable defaults:** Turn on `applyAllTokenRules` to load sensible default colors.
+- **Override:** Set keys under `colors.*` to customize. These override defaults.
+- **Real-time:** Changes apply on save; or run "Cisco Config: Apply Token Colors" from the Command Palette.
 
 ## Token Scopes List
 
@@ -128,6 +127,8 @@ comment.line.config
 
 constant.numeric.hex
 constant.numeric.integer
+constant.numeric.ipv4-AD
+constant.numeric.ipv6-AD
 
 entity.name.class.interface.async
 entity.name.class.interface.bri
@@ -148,6 +149,7 @@ entity.name.class.vrf.declaration
 
 entity.name.tag.acl.access-group.name
 entity.name.tag.acl.access-list.name
+entity.name.tag.acl.access-class.name
 
 entity.name.tag.bgp.neighbor-peer-group.name
 entity.name.tag.bgp.peer-group.name
@@ -158,6 +160,7 @@ entity.name.tag.config-string.domain-name
 entity.name.tag.config-string.hostname
 entity.name.tag.config-string.logging-system-message
 entity.name.tag.config-string.username
+entity.name.tag.config-string.name
 
 entity.name.tag.crypto.crypto-map.name
 entity.name.tag.crypto.transform-set.name
@@ -205,6 +208,13 @@ keyword.other.config-keyword.match.any
 keyword.other.config-keyword.permit-deny.deny
 keyword.other.config-keyword.permit-deny.permit
 keyword.other.config-keyword.shutdown
+keyword.other.config-keyword.remark
+keyword.other.config-keyword.group1
+keyword.other.config-keyword.group2
+keyword.other.config-keyword.group3
+keyword.other.config-keyword.group4
+keyword.other.config-keyword.group5
+keyword.other.config-keyword.group6
 keyword.other.config-keyword.status.administratively-down
 keyword.other.config-keyword.status.deleted
 keyword.other.config-keyword.status.down
@@ -220,7 +230,9 @@ meta.function-call.command_hostname.user-mode
 meta.function-call.command-disable.default
 meta.function-call.command-disable.unused
 
+punctuation.separator
 punctuation.config-param.first
+punctuation.config-param.second
 
 string.other.description
 string.other.password
