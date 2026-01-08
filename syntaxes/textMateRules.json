@@ -148,19 +148,19 @@
       {
         "scope": "entity.name.tag.acl.access-class.name",
         "settings": {
-          "foreground": "#fff000"
+          "foreground": "#FF6363"
         }
       },
       {
         "scope": "entity.name.tag.acl.access-group.name",
         "settings": {
-          "foreground": "#fff000"
+          "foreground": "#FF6363"
         }
       },
       {
         "scope": "entity.name.tag.acl.access-list.name",
         "settings": {
-          "foreground": "#fff000"
+          "foreground": "#FF6363"
         }
       },
       {

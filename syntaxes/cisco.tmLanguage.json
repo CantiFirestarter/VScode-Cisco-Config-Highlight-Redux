@@ -588,7 +588,7 @@
       ],
       "repository": {
         "access-list": {
-          "match": "(?i)(?<=access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
+          "match": "(?i)(?<=(ip\\s)?access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
           "captures": {
             "2": {
               "name": "keyword.other.acl.access-list.type.cisco"
@@ -602,10 +602,10 @@
           "match": "(?i)(?<=access-class\\s)((in|out)\\s)?(\\S+)\\b",
           "captures": {
             "2": {
-              "name": "entity.name.acl.access-class.name.cisco"
+              "name": "keyword.other.acl.access-class.type.cisco"
             },
             "3": {
-              "name": "keyword.other.acl.access-class.type.cisco"
+              "name": "entity.name.acl.access-class.name.cisco"
             }
           }
         },
