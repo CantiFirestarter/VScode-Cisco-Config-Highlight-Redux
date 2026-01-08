@@ -315,24 +315,12 @@ const scopeMappings: ScopeMapping[] = [
     scope: 'entity.name.tag.acl.access-list.name',
   },
   {
-    configKey: 'acl.access-list.type',
-    scope: 'keyword.other.acl.access-list.type',
-  },
-  {
     configKey: 'acl.access-class.name',
     scope: 'entity.name.tag.acl.access-class.name',
   },
   {
-    configKey: 'acl.access-class.type',
-    scope: 'keyword.other.acl.access-class.type',
-  },
-  {
     configKey: 'acl.access-group.name',
     scope: 'entity.name.tag.acl.access-group.name',
-  },
-  {
-    configKey: 'acl.access-group.type',
-    scope: 'keyword.other.acl.access-group.type',
   },
   // Crypto
   {

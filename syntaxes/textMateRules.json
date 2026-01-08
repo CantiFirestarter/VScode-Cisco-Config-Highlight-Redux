@@ -332,24 +332,6 @@
         }
       },
       {
-        "scope": "keyword.other.acl.access-list.type",
-        "settings": {
-          "foreground": "#33DF33"
-        }
-      },
-      {
-        "scope": "keyword.other.acl.access-class.type",
-        "settings": {
-          "foreground": "#33DF33"
-        }
-      },
-      {
-        "scope": "keyword.other.acl.access-group.type",
-        "settings": {
-          "foreground": "#33DF33"
-        }
-      },
-      {
         "scope": "keyword.other.address.cidr",
         "settings": {
           "foreground": "#2e74b5"

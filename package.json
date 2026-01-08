@@ -476,30 +476,15 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.acl.access-list.name.description%"
               },
-              "acl.access-list.type": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.acl.access-list.type.description%"
-              },
               "acl.access-class.name": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.acl.access-class.name.description%"
               },
-              "acl.access-class.type": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.acl.access-class.type.description%"
-              },
               "acl.access-group.name": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.acl.access-group.name.description%"
-              },
-              "acl.access-group.type": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.acl.access-group.type.description%"
               },
               "crypto.crypto-map.name": {
                 "type": "string",

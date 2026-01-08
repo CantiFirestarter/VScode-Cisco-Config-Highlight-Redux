@@ -588,7 +588,7 @@
       ],
       "repository": {
         "access-list": {
-          "match": "(?i)(?<=(ip\\s)?access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
+          "match": "(?i)(?<=(?:ip\\s)?access-list\\s)((extended|standard)\\s)?(\\S+)\\b",
           "captures": {
             "2": {
               "name": "keyword.other.acl.access-list.type.cisco"

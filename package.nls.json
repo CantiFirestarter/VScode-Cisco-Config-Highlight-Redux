@@ -122,11 +122,8 @@
 
   "_comment_colors_acl": "Token Colors - ACL",
   "configuration.properties.colors.acl.access-list.name.description": "entity.name.tag.acl.access-list.name",
-  "configuration.properties.colors.acl.access-list.type.description": "keyword.other.acl.access-list.type",
   "configuration.properties.colors.acl.access-class.name.description": "entity.name.tag.acl.access-class.name",
-  "configuration.properties.colors.acl.access-class.type.description": "keyword.other.acl.access-class.type",
   "configuration.properties.colors.acl.access-group.name.description": "entity.name.tag.acl.access-group.name",
-  "configuration.properties.colors.acl.access-group.type.description": "keyword.other.acl.access-group.type",
 
   "_comment_colors_crypto": "Token Colors - Crypto",
   "configuration.properties.colors.crypto.crypto-map.name.description": "entity.name.tag.crypto.crypto-map.name",
