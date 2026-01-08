@@ -568,7 +568,7 @@
       {
         "scope": "meta.function-call.arp-insp-val",
         "settings": {
-          "foreground": "#2A52BE"
+          "foreground": "#007BFF"
         }
       },
       {
