@@ -313,5 +313,5 @@ If you have any requests or issues, please start an Issue or PullRequest on GitH
 
 ## License
 
-MIT License Copyright  (c) 2021 Original Y-Ysss
+MIT License Copyright  (c) 2021 Original Y-Ysss\
 MIT License Copyright  (c) 2026 Fork CantiFirestarter
