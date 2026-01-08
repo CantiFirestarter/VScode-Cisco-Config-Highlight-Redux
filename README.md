@@ -56,8 +56,8 @@ The following platforms provide similar syntax highlighting for constructs that 
 - IOS-XE
 - ASA
 
->[!NOTE]
->Cisco IOS syntax is rather extensive. Do to this, extensive coverage of syntax is a work in progress.
+> [!NOTE]
+> Cisco IOS syntax categorization is expansive in scope. For this reason, syntax coverage is a work in progress.
 
 ## Screenshot
 
@@ -71,9 +71,9 @@ The extension automatically applies token colors on activation. Configure colors
 **Two ways to customize:**
 
 1. **Extension settings (recommended):** Use `cisco-config-highlight.colors.*` keys—simple, fast, and syncs automatically.
->[!NOTE]
->Not all tokens have been reviewed for color allotment.\
->Unreviewed tokens use interim value of white `#ffffff`.
+   > [!NOTE]
+   > Not all tokens have been reviewed for color allotment.\
+   > Unreviewed tokens use interim value of white `#ffffff`.
 2. **Manual textMateRules:** Use `editor.tokenColorCustomizations` for advanced styling (bold, italic, underline) and fine-grained control.
 
 Both methods work together; your textMateRules are preserved and can override extension colors when needed.
@@ -136,6 +136,7 @@ constant.numeric.integer
 constant.numeric.ipv4-AD
 constant.numeric.ipv6-AD
 
+entity.name.class.interface.app
 entity.name.class.interface.async
 entity.name.class.interface.bri
 entity.name.class.interface.bvi
@@ -153,9 +154,9 @@ entity.name.class.interface.vlan
 entity.name.class.interface.wireless
 entity.name.class.vrf.declaration
 
+entity.name.tag.acl.access-class.name
 entity.name.tag.acl.access-group.name
 entity.name.tag.acl.access-list.name
-entity.name.tag.acl.access-class.name
 
 entity.name.tag.bgp.neighbor-peer-group.name
 entity.name.tag.bgp.peer-group.name
@@ -165,33 +166,36 @@ entity.name.tag.bgp.peer-session.name
 entity.name.tag.config-string.domain-name
 entity.name.tag.config-string.hostname
 entity.name.tag.config-string.logging-system-message
-entity.name.tag.config-string.username
 entity.name.tag.config-string.name
+entity.name.tag.config-string.username
 
 entity.name.tag.crypto.crypto-map.name
-entity.name.tag.crypto.transform-set.name
 entity.name.tag.crypto.ipsec-profile.name
 entity.name.tag.crypto.isakmp-profile.name
 entity.name.tag.crypto.keyring.name
+entity.name.tag.crypto.transform-set.name
 
 entity.name.tag.group.class-map.name
 entity.name.tag.group.class.name
+entity.name.tag.group.community.name
 entity.name.tag.group.object-group.name
+entity.name.tag.group.policy-list.name
 entity.name.tag.group.policy-map.name
 entity.name.tag.group.pool.name
 entity.name.tag.group.prefix-list.name
 entity.name.tag.group.route-map.name
 entity.name.tag.group.service-policy.name
-entity.name.tag.group.policy-list.name
 entity.name.tag.group.traffic-filter.name
-entity.name.tag.group.community.name
 
 entity.name.tag.vrf.vrf-name
 entity.other.vrf.definition
 entity.other.vrf.forwarding
 
+keyword.other.acl.access-class.type
+keyword.other.acl.access-group.type
 keyword.other.acl.access-list.type
-keyword.other.address.ipv4.cidr
+
+keyword.other.address.cidr
 keyword.other.address.ipv4.full
 keyword.other.address.ipv6.condensed
 keyword.other.address.ipv6.full
@@ -203,6 +207,12 @@ keyword.other.config-keyword.add-remove.remove
 keyword.other.config-keyword.allowed-native
 keyword.other.config-keyword.any-all.all
 keyword.other.config-keyword.any-all.any
+keyword.other.config-keyword.group1
+keyword.other.config-keyword.group2
+keyword.other.config-keyword.group3
+keyword.other.config-keyword.group4
+keyword.other.config-keyword.group5
+keyword.other.config-keyword.group6
 keyword.other.config-keyword.in-out.in
 keyword.other.config-keyword.in-out.out
 keyword.other.config-keyword.input-output.input
@@ -213,14 +223,8 @@ keyword.other.config-keyword.match.all
 keyword.other.config-keyword.match.any
 keyword.other.config-keyword.permit-deny.deny
 keyword.other.config-keyword.permit-deny.permit
-keyword.other.config-keyword.shutdown
 keyword.other.config-keyword.remark
-keyword.other.config-keyword.group1
-keyword.other.config-keyword.group2
-keyword.other.config-keyword.group3
-keyword.other.config-keyword.group4
-keyword.other.config-keyword.group5
-keyword.other.config-keyword.group6
+keyword.other.config-keyword.shutdown
 keyword.other.config-keyword.status.administratively-down
 keyword.other.config-keyword.status.deleted
 keyword.other.config-keyword.status.down
@@ -231,14 +235,15 @@ keyword.other.config-keyword.switchport-mode.trunk
 keyword.other.config-keyword.vlan
 keyword.other.group.object-group.type
 
-meta.function-call.command_hostname.privileged-mode
-meta.function-call.command_hostname.user-mode
+meta.function-call.arp-insp-val
 meta.function-call.command-disable.default
 meta.function-call.command-disable.unused
+meta.function-call.command_hostname.privileged-mode
+meta.function-call.command_hostname.user-mode
 
-punctuation.separator
 punctuation.config-param.first
 punctuation.config-param.second
+punctuation.separator
 
 string.other.description
 string.other.password
