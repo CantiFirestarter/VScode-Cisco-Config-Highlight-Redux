@@ -56,7 +56,8 @@ The following platforms provide similar syntax highlighting for constructs that 
 - IOS-XE
 - ASA
 
-[NOTICE] Cisco IOS syntax is rather extensive. Do to this, extensive coverage of syntax is a work in progress.
+>[!NOTE]
+>Cisco IOS syntax is rather extensive. Do to this, extensive coverage of syntax is a work in progress.
 
 ## Screenshot
 
@@ -70,7 +71,9 @@ The extension automatically applies token colors on activation. Configure colors
 **Two ways to customize:**
 
 1. **Extension settings (recommended):** Use `cisco-config-highlight.colors.*` keys—simple, fast, and syncs automatically.
-   > [NOTE] Not all values have been assigned a custom color yet. Anything that appears a bright white ("#fff") is a token not yet been evaluated for fitting color.
+>[!NOTE]
+>Not all tokens have been reviewed for color allotment.\
+>Unreviewed tokens use interim value of white `#ffffff`.
 2. **Manual textMateRules:** Use `editor.tokenColorCustomizations` for advanced styling (bold, italic, underline) and fine-grained control.
 
 Both methods work together; your textMateRules are preserved and can override extension colors when needed.
