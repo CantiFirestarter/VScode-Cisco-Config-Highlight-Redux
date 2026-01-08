@@ -334,13 +334,19 @@
       {
         "scope": "keyword.other.acl.access-list.type",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#33DF33"
         }
       },
       {
         "scope": "keyword.other.acl.access-class.type",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#33DF33"
+        }
+      },
+      {
+        "scope": "keyword.other.acl.access-group.type",
+        "settings": {
+          "foreground": "#33DF33"
         }
       },
       {
