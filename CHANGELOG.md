@@ -4,6 +4,31 @@
 
 [marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog](https://marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog)
 
+## 0.7.16 (2026-01-11)
+
+### Added
+
+- Enhanced ACL matching patterns with support for IPv6 in access-list, access-class, and access-group
+- New token color configurations for ACL access-list and access-class types
+- Support for additional ACL type properties and syntax highlighting improvements
+
+### Changed
+
+- Updated project dependencies and devDependencies for better compatibility
+- License updates and revised copyright information in README
+- Enhanced README documentation with improved syntax coverage notes and token color customization details
+- Version updates in package.json and related files
+
+### Fixed
+
+- Regex patterns for password and secret matching with enhanced color settings
+- Foreground colors for domain name, pool name, and ARP inspection value function calls
+- Syntax highlighting corrections for various configuration elements
+- Removed unused ACL token color configurations
+- Fixed typos, formatting issues, and hyperlink corrections in README
+- Corrected syntax highlighting for ARP inspection and access-list matching
+- Fixed missing commas in configuration files
+
 ## 0.7.0 (2026-01-05)
 
 ### Added

@@ -12,7 +12,7 @@ This is a Fork of [Y-Ysss/vscode-cisco-config-highlight](https://github.com/Y-Ys
 
 I'm new at this, so there may be some inconsistencies in documentation as I make changes from main fork of this extension.
 
-I also hope to make further improvement and functionality to the extension as a whole as I'm able to do so.
+I also hope to make further improvement and functionality to the extension as a whole. To that extent, small patches will be issued but not indicated. Once a feature set is fully fleshed out, they will be noted to verison changes.
 
 > [!NOTE]  
 > Changes (v0.6 → v0.7)
