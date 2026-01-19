@@ -66,7 +66,10 @@
         { "include": "#bri" },
         { "include": "#bvi" },
         { "include": "#app" },
-        { "include": "#management" }
+        { "include": "#management" },
+        { "include": "#service-engine" },
+        { "include": "#embedded-service-engine" },
+        { "include": "#atm" }
       ],
       "repository": {
         "ethernet": {
@@ -132,6 +135,18 @@
         "management": {
           "name": "entity.name.class.interface.management.cisco",
           "match": "(?i)\\b(management|mgmt)((\\d+[\\./])*)?(\\d+)?\\b"
+        },
+        "service-engine": {
+          "name": "entity.name.class.interface.service-engine.cisco",
+          "match": "(?i)\\b(service-engine|se)((\\d+[\\./])*)?(\\d+)?\\b"
+        },
+        "embedded-service-engine": {
+          "name": "entity.name.class.interface.embedded-service-engine.cisco",
+          "match": "(?i)\\b(embedded-service-engine|ese)((\\d+[\\./])*)?(\\d+)?\\b"
+        },
+        "atm": {
+          "name": "entity.name.class.interface.atm.cisco",
+          "match": "(?i)\\b(atm)((\\d+[\\./])*)?(\\d+)?(\\.\\d+)?\\b"
         }
       }
     },
