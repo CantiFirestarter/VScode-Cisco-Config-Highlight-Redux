@@ -51,102 +51,182 @@
     },
     "interface_type": {
       "patterns": [
-        { "include": "#ethernet" },
-        { "include": "#wireless" },
-        { "include": "#loopback" },
-        { "include": "#port-channel" },
-        { "include": "#tunnel" },
-        { "include": "#vlan" },
-        { "include": "#null" },
-        { "include": "#serial" },
-        { "include": "#cellular" },
-        { "include": "#virtual-template" },
-        { "include": "#dialer" },
-        { "include": "#async" },
-        { "include": "#bri" },
-        { "include": "#bvi" },
         { "include": "#app" },
-        { "include": "#management" },
         { "include": "#service-engine" },
         { "include": "#embedded-service-engine" },
-        { "include": "#atm" }
+        { "include": "#ethernet" },
+        { "include": "#fiberchannel" },
+        { "include": "#pos" },
+        { "include": "#dpt" },
+        { "include": "#lre" },
+        { "include": "#token-ring" },
+        { "include": "#bundle-ether" },
+        { "include": "#port-channel" },
+        { "include": "#multilink" },
+        { "include": "#mfr" },
+        { "include": "#pseudowire" },
+        { "include": "#sdwan" },
+        { "include": "#wireless" },
+        { "include": "#management" },
+        { "include": "#serial" },
+        { "include": "#async" },
+        { "include": "#atm" },
+        { "include": "#bri" },
+        { "include": "#tunnel" },
+        { "include": "#tunnel-bridge" },
+        { "include": "#lisp" },
+        { "include": "#nve" },
+        { "include": "#vasi" },
+        { "include": "#loopback" },
+        { "include": "#vlan" },
+        { "include": "#bdi" },
+        { "include": "#bvi" },
+        { "include": "#cellular" },
+        { "include": "#dialer" },
+        { "include": "#virtual-template" },
+        { "include": "#group-async" },
+        { "include": "#null" }
       ],
       "repository": {
-        "ethernet": {
-          "name": "entity.name.class.interface.ethernet.cisco",
-          "match": "(?i)\\b((fast|(five|ten|twentyfive|f(orty|ifty)|(two)?hundred)?g(ig)?(abit)?)?e(th)?(ernet)?|fa|gi|te|fo|fi|g)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)(-\\d+(\\.\\d+)?)?\\b"
-        },
-        "wireless": {
-          "name": "entity.name.class.interface.wireless.cisco",
-          "match": "(?i)\\b(dot11radio)(([0-1]([\\./]\\d)?(\\.\\d+)?)\\b(\\.\\d+)?)?\\b"
-        },
-        "loopback": {
-          "name": "entity.name.class.interface.loopback.cisco",
-          "match": "(?i)\\b(loopback|lo)(\\d+)?\\b"
-        },
-        "port-channel": {
-          "name": "entity.name.class.interface.portchannel.cisco",
-          "match": "(?i)\\b(port-?channel|po)(12[0-8]|1[0-1][0-9]|[1-9][0-9]|[1-9])?\\b"
-        },
-        "tunnel": {
-          "name": "entity.name.class.interface.tunnel.cisco",
-          "match": "(?i)\\b(tunnel|tu)(\\d+)?\\b"
-        },
-        "vlan": {
-          "name": "entity.name.class.interface.vlan.cisco",
-          "match": "(?i)\\b(vlan)(409[0-4]|40[0-8][0-9]|[1-3][0-9]{3}|[1-9][0-9]{1,2}|[1-9])?\\b"
-        },
-        "null": {
-          "name": "entity.name.class.interface.null.cisco",
-          "match": "(?i)\\b(null)(\\d+)?\\b"
-        },
-        "serial": {
-          "name": "entity.name.class.interface.serial.cisco",
-          "match": "(?i)\\b(serial|s)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-        },
-        "cellular": {
-          "name": "entity.name.class.interface.cellular.cisco",
-          "match": "(?i)\\b(cellular)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-        },
-        "virtual-template": {
-          "name": "entity.name.class.interface.virtual-template.cisco",
-          "match": "(?i)\\b(virtual-template)(\\d+)?\\b"
-        },
-        "dialer": {
-          "name": "entity.name.class.interface.dialer.cisco",
-          "match": "(?i)\\b(dialer)(\\d+)?\\b"
+        "app": {
+          "match": "(?i)\\b(app-?gigabitethernet|app-?g(ig)?|ap)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.app.cisco"
         },
         "async": {
-          "name": "entity.name.class.interface.async.cisco",
-          "match": "(?i)\\b(async)(\\d+)?\\b"
-        },
-        "bri": {
-          "name": "entity.name.class.interface.bri.cisco",
-          "match": "(?i)\\b(bri)(\\d+)?\\b"
-        },
-        "bvi": {
-          "name": "entity.name.class.interface.bvi.cisco",
-          "match": "(?i)\\b(bvi)(\\d+)?\\b"
-        },
-        "app": {
-          "name": "entity.name.class.interface.app.cisco",
-          "match": "(?i)\\b((app?g(ig)?(abit)?)?e(th)?(ernet)?|ap)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b"
-        },
-        "management": {
-          "name": "entity.name.class.interface.management.cisco",
-          "match": "(?i)\\b(management|mgmt)((\\d+[\\./])*)?(\\d+)?\\b"
-        },
-        "service-engine": {
-          "name": "entity.name.class.interface.service-engine.cisco",
-          "match": "(?i)\\b(service-engine|se)((\\d+[\\./])*)?(\\d+)?\\b"
-        },
-        "embedded-service-engine": {
-          "name": "entity.name.class.interface.embedded-service-engine.cisco",
-          "match": "(?i)\\b(embedded-service-engine|ese)((\\d+[\\./])*)?(\\d+)?\\b"
+          "match": "(?i)\\b(async|as)(((\\d+[\\./])*)?\\d+)\\b",
+          "name": "entity.name.class.interface.async.cisco"
         },
         "atm": {
-          "name": "entity.name.class.interface.atm.cisco",
-          "match": "(?i)\\b(atm)((\\d+[\\./])*)?(\\d+)?(\\.\\d+)?\\b"
+          "match": "(?i)\\b(atm)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.atm.cisco"
+        },
+        "bdi": {
+          "match": "(?i)\\b(bdi)(\\d+)?(\\.\\d+)?\\b",
+          "name": "entity.name.class.interface.bdi.cisco"
+        },
+        "bri": {
+          "match": "(?i)\\b(bri)(((\\d+[\\./])*)?\\d+(\\:\\d+)?)\\b",
+          "name": "entity.name.class.interface.bri.cisco"
+        },
+        "bundle-ether": {
+          "match": "(?i)\\b(bundle-ether|be)(\\d+)?(\\.\\d+)?\\b",
+          "name": "entity.name.class.interface.bundle-ether.cisco"
+        },
+        "bvi": {
+          "match": "(?i)\\b(bvi)(\\d+)?(\\.\\d+)?\\b",
+          "name": "entity.name.class.interface.bvi.cisco"
+        },
+        "cellular": {
+          "match": "(?i)\\b(cellular)(((\\d+[\\./])*)?\\d+)\\b",
+          "name": "entity.name.class.interface.cellular.cisco"
+        },
+        "dialer": {
+          "match": "(?i)\\b(dialer|di)(\\d+)?\\b",
+          "name": "entity.name.class.interface.dialer.cisco"
+        },
+        "dpt": {
+          "match": "(?i)\\b(dpt)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.dpt.cisco"
+        },
+        "embedded-service-engine": {
+          "match": "(?i)\\b(embedded-service-engine|ese)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.embedded-service-engine.cisco"
+        },
+        "ethernet": {
+          "match": "(?i)\\b((fast|(five|ten|twentyfive|f(orty|ifty)|(two|four)?hundred)?g(ig)?(abit)?)?e(th)?(ernet)?|fa|gi|te|tf|fo|fi|hu|fh|f|g)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)(-\\d+(\\.\\d+)?)?\\b",
+          "name": "entity.name.class.interface.ethernet.cisco"
+        },
+        "fiberchannel": {
+          "match": "(?i)\\b(fc|fiberchannel)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.fiberchannel.cisco"
+        },
+        "group-async": {
+          "match": "(?i)\\b(group-async)(\\d+)?\\b",
+          "name": "entity.name.class.interface.group-async.cisco"
+        },
+        "lisp": {
+          "match": "(?i)\\b(lisp)(\\d+)?\\b",
+          "name": "entity.name.class.interface.lisp.cisco"
+        },
+        "loopback": {
+          "match": "(?i)\\b(loopback|lo)(\\d+)?\\b",
+          "name": "entity.name.class.interface.loopback.cisco"
+        },
+        "lre": {
+          "match": "(?i)\\b(lre)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.lre.cisco"
+        },
+        "management": {
+          "match": "(?i)\\b(management|mgmt)(\\d+)?\\b",
+          "name": "entity.name.class.interface.management.cisco"
+        },
+        "mfr": {
+          "match": "(?i)\\b(mfr)(\\d+)?(\\.\\d+)?\\b",
+          "name": "entity.name.class.interface.mfr.cisco"
+        },
+        "multilink": {
+          "match": "(?i)\\b(multilink|mu)(\\d+)?\\b",
+          "name": "entity.name.class.interface.multilink.cisco"
+        },
+        "null": {
+          "match": "(?i)\\b(null)0\\b",
+          "name": "entity.name.class.interface.null.cisco"
+        },
+        "nve": {
+          "match": "(?i)\\b(nve)(\\d+)?\\b",
+          "name": "entity.name.class.interface.nve.cisco"
+        },
+        "port-channel": {
+          "match": "(?i)\\b(port-?channel|po)(\\d+)?(\\.\\d+)?\\b",
+          "name": "entity.name.class.interface.portchannel.cisco"
+        },
+        "pos": {
+          "match": "(?i)\\b(pos)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.pos.cisco"
+        },
+        "pseudowire": {
+          "match": "(?i)\\b(pseudowire|pw)(\\d+)?\\b",
+          "name": "entity.name.class.interface.pseudowire.cisco"
+        },
+        "sdwan": {
+          "match": "(?i)\\b(sdwan-system-intf|service-ext)(\\d+)?\\b",
+          "name": "entity.name.class.interface.sdwan.cisco"
+        },
+        "serial": {
+          "match": "(?i)\\b(serial|s)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)?\\b",
+          "name": "entity.name.class.interface.serial.cisco"
+        },
+        "service-engine": {
+          "match": "(?i)\\b(service-engine|se)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.service-engine.cisco"
+        },
+        "token-ring": {
+          "match": "(?i)\\b(tokenring|tr)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.tokenring.cisco"
+        },
+        "tunnel": {
+          "match": "(?i)\\b(tunnel|tu)(\\d+)?\\b",
+          "name": "entity.name.class.interface.tunnel.cisco"
+        },
+        "tunnel-bridge": {
+          "match": "(?i)\\b(tunnel-bridge)(\\d+)?\\b",
+          "name": "entity.name.class.interface.tunnel-bridge.cisco"
+        },
+        "vasi": {
+          "match": "(?i)\\b(vasileft|vasiright)(\\d+)?\\b",
+          "name": "entity.name.class.interface.vasi.cisco"
+        },
+        "virtual-template": {
+          "match": "(?i)\\b(virtual-template|vt)(\\d+)?\\b",
+          "name": "entity.name.class.interface.virtual-template.cisco"
+        },
+        "vlan": {
+          "match": "(?i)\\b(vlan)(409[0-4]|40[0-8][0-9]|[1-3][0-9]{3}|[1-9][0-9]{1,2}|[1-9])?\\b",
+          "name": "entity.name.class.interface.vlan.cisco"
+        },
+        "wireless": {
+          "match": "(?i)\\b(wlan-gigabitethernet|wireless-ethernet|dot11radio)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.wireless.cisco"
         }
       }
     },
