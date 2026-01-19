@@ -20,7 +20,7 @@ export default tseslint.config(
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: './config/tsconfig.json',
+        project: './tsconfig.json',
       },
     },
     rules: {
