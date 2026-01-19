@@ -73,7 +73,6 @@
         { "include": "#atm" },
         { "include": "#bri" },
         { "include": "#tunnel" },
-        { "include": "#tunnel-bridge" },
         { "include": "#lisp" },
         { "include": "#nve" },
         { "include": "#vasi" },
@@ -207,10 +206,6 @@
         "tunnel": {
           "match": "(?i)\\b(tunnel|tu)(\\d+)?\\b",
           "name": "entity.name.class.interface.tunnel.cisco"
-        },
-        "tunnel-bridge": {
-          "match": "(?i)\\b(tunnel-bridge)(\\d+)?\\b",
-          "name": "entity.name.class.interface.tunnel-bridge.cisco"
         },
         "vasi": {
           "match": "(?i)\\b(vasileft|vasiright)(\\d+)?\\b",
