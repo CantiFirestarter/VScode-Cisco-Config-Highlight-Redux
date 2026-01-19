@@ -226,6 +226,48 @@ const scopeMappings: ScopeMapping[] = [
     configKey: 'interface.management',
     scope: 'entity.name.class.interface.management',
   },
+  { configKey: 'interface.atm', scope: 'entity.name.class.interface.atm' },
+  { configKey: 'interface.bdi', scope: 'entity.name.class.interface.bdi' },
+  {
+    configKey: 'interface.bundle-ether',
+    scope: 'entity.name.class.interface.bundle-ether',
+  },
+  { configKey: 'interface.dpt', scope: 'entity.name.class.interface.dpt' },
+  {
+    configKey: 'interface.embedded-service-engine',
+    scope: 'entity.name.class.interface.embedded-service-engine',
+  },
+  {
+    configKey: 'interface.fiberchannel',
+    scope: 'entity.name.class.interface.fiberchannel',
+  },
+  {
+    configKey: 'interface.group-async',
+    scope: 'entity.name.class.interface.group-async',
+  },
+  { configKey: 'interface.lisp', scope: 'entity.name.class.interface.lisp' },
+  { configKey: 'interface.lre', scope: 'entity.name.class.interface.lre' },
+  { configKey: 'interface.mfr', scope: 'entity.name.class.interface.mfr' },
+  {
+    configKey: 'interface.multilink',
+    scope: 'entity.name.class.interface.multilink',
+  },
+  { configKey: 'interface.nve', scope: 'entity.name.class.interface.nve' },
+  { configKey: 'interface.pos', scope: 'entity.name.class.interface.pos' },
+  {
+    configKey: 'interface.pseudowire',
+    scope: 'entity.name.class.interface.pseudowire',
+  },
+  { configKey: 'interface.sdwan', scope: 'entity.name.class.interface.sdwan' },
+  {
+    configKey: 'interface.service-engine',
+    scope: 'entity.name.class.interface.service-engine',
+  },
+  {
+    configKey: 'interface.tokenring',
+    scope: 'entity.name.class.interface.tokenring',
+  },
+  { configKey: 'interface.vasi', scope: 'entity.name.class.interface.vasi' },
   // Numeric
   { configKey: 'numeric.hex', scope: 'constant.numeric.hex' },
   { configKey: 'numeric.integer', scope: 'constant.numeric.integer' },

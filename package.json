@@ -191,6 +191,96 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.interface.management.description%"
               },
+              "interface.atm": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.atm.description%"
+              },
+              "interface.bdi": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.bdi.description%"
+              },
+              "interface.bundle-ether": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.bundle-ether.description%"
+              },
+              "interface.dpt": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.dpt.description%"
+              },
+              "interface.embedded-service-engine": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.embedded-service-engine.description%"
+              },
+              "interface.fiberchannel": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.fiberchannel.description%"
+              },
+              "interface.group-async": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.group-async.description%"
+              },
+              "interface.lisp": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.lisp.description%"
+              },
+              "interface.lre": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.lre.description%"
+              },
+              "interface.mfr": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.mfr.description%"
+              },
+              "interface.multilink": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.multilink.description%"
+              },
+              "interface.nve": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.nve.description%"
+              },
+              "interface.pos": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.pos.description%"
+              },
+              "interface.pseudowire": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.pseudowire.description%"
+              },
+              "interface.sdwan": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.sdwan.description%"
+              },
+              "interface.service-engine": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.service-engine.description%"
+              },
+              "interface.tokenring": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.tokenring.description%"
+              },
+              "interface.vasi": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.interface.vasi.description%"
+              },
               "keyword.vlan": {
                 "type": "string",
                 "format": "color",
