@@ -30,7 +30,7 @@
           ".config",
           ".ios"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./config/language-configuration.json"
       }
     ],
     "grammars": [
@@ -847,10 +847,10 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "lint": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\"",
-    "lint:fix": "eslint -c eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
+    "compile": "tsc -p ./config",
+    "watch": "tsc -watch -p ./config",
+    "lint": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\"",
+    "lint:fix": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
     "audit": "npm audit",
     "audit:fix": "npm audit fix"
   },
