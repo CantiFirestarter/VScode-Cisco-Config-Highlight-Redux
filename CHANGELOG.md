@@ -4,6 +4,17 @@
 
 [marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog](https://marketplace.visualstudio.com/items/CantiFirestarter.cisco-config-highlight-redux/changelog)
 
+## 0.7.20 (2026-01-19)
+
+### Added
+
+- Syntax highlighting for additional interface families including service-engine/embedded-service-engine, FiberChannel, POS, DPT, LRE, token-ring, bundle-ether, multilink, MFR, pseudowire, SD-WAN system/service-ext, ATM, BDI, group-async, LISP, NVE, VASI, and expanded AppGigEthernet aliases
+- New token color configuration options and default scopes for the new interface types in both the schema and TextMate token rules
+
+### Changed
+
+- Reordered and refined interface matching to prioritize specific types, broaden ethernet/wireless/management aliases (e.g., new 200G/400G abbreviations and wlan-gigabitethernet), allow dotted port-channel subinterfaces, and limit null interface matching to `null0` to reduce false positives
+
 ## 0.7.16 (2026-01-11)
 
 ### Added
