@@ -120,10 +120,6 @@
     "scope": "comment.line.config"
   },
   {
-    "configKey": "config-param.first",
-    "scope": "meta.function-call.command_hostname.config"
-  },
-  {
     "configKey": "config-string.domain-name",
     "scope": "entity.name.tag.config-string.domain-name"
   },

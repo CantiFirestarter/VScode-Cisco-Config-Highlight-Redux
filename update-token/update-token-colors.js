@@ -22,6 +22,111 @@ function writeJsonFile(filePath, data) {
   fs.writeFileSync(filePath, content, 'utf8');
 }
 
+function removeOrderedWrite(filePath, keysToRemove) {
+  const originalContent = fs.readFileSync(filePath, 'utf8');
+  const lines = originalContent.split('\n');
+  const removeSet = new Set(keysToRemove);
+
+  // Filter out lines that match keys to remove
+  let filteredLines = lines.filter(line => {
+    const match = line.match(/^\s*"([^"]+)":\s*/);
+    if (match && removeSet.has(match[1])) {
+      return false; // Remove this line
+    }
+    return true;
+  });
+
+  // Clean up multiple blank lines
+  const cleanedLines = [];
+  let lastWasBlank = false;
+  filteredLines.forEach(line => {
+    const isBlank = line.trim() === '';
+    if (isBlank && lastWasBlank) {
+      // Skip consecutive blank lines
+      return;
+    }
+    cleanedLines.push(line);
+    lastWasBlank = isBlank;
+  });
+
+  fs.writeFileSync(filePath, cleanedLines.join('\n'), 'utf8');
+}
+
+function removeOrderedWrite(filePath, keysToRemove) {
+  const originalContent = fs.readFileSync(filePath, 'utf8');
+  const lines = originalContent.split('\n');
+  const removeSet = new Set(keysToRemove);
+
+  // Filter out lines that match keys to remove
+  let filteredLines = lines.filter(line => {
+    const match = line.match(/^\s*"([^"]+)":\s*/);
+    if (match && removeSet.has(match[1])) {
+      return false; // Remove this line
+    }
+    return true;
+  });
+
+  // Clean up multiple blank lines
+  const cleanedLines = [];
+  let lastWasBlank = false;
+  filteredLines.forEach(line => {
+    const isBlank = line.trim() === '';
+    if (isBlank && lastWasBlank) {
+      // Skip consecutive blank lines
+      return;
+    }
+    cleanedLines.push(line);
+    lastWasBlank = isBlank;
+  });
+
+  fs.writeFileSync(filePath, cleanedLines.join('\n'), 'utf8');
+}
+
+function preserveOrderedWrite(filePath, newKeys) {
+  // Read original file to preserve key order and spacing
+  const originalContent = fs.readFileSync(filePath, 'utf8');
+  const lines = originalContent.split('\n');
+
+  // Find insertion point (before closing brace)
+  let insertIndex = lines.length - 1;
+  while (insertIndex > 0 && !lines[insertIndex].trim().startsWith('}')) {
+    insertIndex--;
+  }
+
+  // Find the last non-comment, non-brace line before insertion point
+  let lastKeyIndex = insertIndex - 1;
+  while (
+    lastKeyIndex > 0 &&
+    (lines[lastKeyIndex].trim() === '' || lines[lastKeyIndex].trim() === '}')
+  ) {
+    lastKeyIndex--;
+  }
+
+  // Check if we need to add comma to last line
+  const lastLine = lines[lastKeyIndex];
+  const needsComma =
+    lastLine.trim() &&
+    !lastLine.trim().endsWith(',') &&
+    !lastLine.trim().startsWith('"_comment');
+
+  if (needsComma && newKeys.length > 0) {
+    lines[lastKeyIndex] = lastLine.replace(/([^,\s])(\s*)$/, '$1,$2');
+  }
+
+  // Add new keys right before the closing brace
+  const newLines = [];
+  newKeys.forEach(({ key, value }) => {
+    newLines.push(`  "${key}": "${value}"`);
+  });
+
+  if (newLines.length > 0) {
+    // Add blank line before new entries for spacing
+    lines.splice(insertIndex, 0, '', ...newLines);
+  }
+
+  fs.writeFileSync(filePath, lines.join('\n'), 'utf8');
+}
+
 function extractScopesFromTextMateRules(filePath) {
   const data = readJsonFile(filePath);
   const rules = data['editor.tokenColorCustomizations']?.textMateRules || [];
@@ -133,34 +238,73 @@ function updatePackageJson(mappings) {
 }
 
 function updatePackageNls(mappings) {
-  const nls = readJsonFile(packageNlsPath);
-  const seen = new Set();
+  const existingNls = readJsonFile(packageNlsPath);
+  const newKeys = [];
+  const keysToRemove = [];
 
-  mappings.forEach(({ configKey, scope }) => {
-    const nlsKey = `configuration.properties.colors.${configKey}.description`;
-    if (!seen.has(nlsKey) && !nls[nlsKey]) {
-      nls[nlsKey] = scope;
-    }
-    seen.add(nlsKey);
+  // Build set of valid color description keys from mappings
+  const validColorKeys = new Set();
+  mappings.forEach(({ configKey }) => {
+    validColorKeys.add(`configuration.properties.colors.${configKey}.description`);
   });
 
-  return nls;
+  // Find new keys to add
+  mappings.forEach(({ configKey, scope }) => {
+    const nlsKey = `configuration.properties.colors.${configKey}.description`;
+    if (!existingNls[nlsKey]) {
+      newKeys.push({ key: nlsKey, value: scope });
+    }
+  });
+
+  // Find obsolete color keys to remove (any color key that doesn't match current mappings)
+  Object.keys(existingNls).forEach(key => {
+    // Match pattern: configuration.properties.colors.<anything>.description
+    // But exclude: configuration.properties.colors.description (the main description)
+    if (
+      key.match(/^configuration\.properties\.colors\..+\.description$/) &&
+      key !== 'configuration.properties.colors.description' &&
+      !validColorKeys.has(key)
+    ) {
+      keysToRemove.push(key);
+    }
+  });
+
+  return { existingNls, newKeys, keysToRemove };
 }
 
 function updatePackageNlsJa(mappings) {
-  const nls = readJsonFile(packageNlsJaPath);
-  const seen = new Set();
+  const existingNls = readJsonFile(packageNlsJaPath);
+  const newKeys = [];
+  const keysToRemove = [];
 
-  // Simple placeholder: use scope name as Japanese description
-  mappings.forEach(({ configKey, scope }) => {
-    const nlsKey = `configuration.properties.colors.${configKey}.description`;
-    if (!seen.has(nlsKey) && !nls[nlsKey]) {
-      nls[nlsKey] = scope; // Placeholder; user should translate
-    }
-    seen.add(nlsKey);
+  // Build set of valid color description keys from mappings
+  const validColorKeys = new Set();
+  mappings.forEach(({ configKey }) => {
+    validColorKeys.add(`configuration.properties.colors.${configKey}.description`);
   });
 
-  return nls;
+  // Find new keys to add
+  mappings.forEach(({ configKey, scope }) => {
+    const nlsKey = `configuration.properties.colors.${configKey}.description`;
+    if (!existingNls[nlsKey]) {
+      newKeys.push({ key: nlsKey, value: scope });
+    }
+  });
+
+  // Find obsolete color keys to remove (any color key that doesn't match current mappings)
+  Object.keys(existingNls).forEach(key => {
+    // Match pattern: configuration.properties.colors.<anything>.description
+    // But exclude: configuration.properties.colors.description (the main description)
+    if (
+      key.match(/^configuration\.properties\.colors\..+\.description$/) &&
+      key !== 'configuration.properties.colors.description' &&
+      !validColorKeys.has(key)
+    ) {
+      keysToRemove.push(key);
+    }
+  });
+
+  return { existingNls, newKeys, keysToRemove };
 }
 
 function main() {
@@ -176,28 +320,75 @@ function main() {
     if (mappings.length > 5) {
       console.log(`  ... and ${mappings.length - 5} more`);
     }
+
+    const { newKeys: nlsNewKeys, keysToRemove: nlsRemoveKeys } =
+      updatePackageNls(mappings);
+    const { newKeys: nlsJaNewKeys, keysToRemove: nlsJaRemoveKeys } =
+      updatePackageNlsJa(mappings);
+
+    console.log(`\nWould add ${nlsNewKeys.length} new keys to package.nls.json`);
+    if (nlsRemoveKeys.length > 0) {
+      console.log(
+        `Would remove ${nlsRemoveKeys.length} obsolete keys from package.nls.json`,
+      );
+    }
+    console.log(`Would add ${nlsJaNewKeys.length} new keys to package.nls.ja.json`);
+    if (nlsJaRemoveKeys.length > 0) {
+      console.log(
+        `Would remove ${nlsJaRemoveKeys.length} obsolete keys from package.nls.ja.json`,
+      );
+    }
+
     console.log(`\nWould update:`);
     console.log(`  - ${path.relative(repoRoot, scopeMappingsPath)}`);
     console.log(`  - ${path.relative(repoRoot, packageJsonPath)}`);
-    console.log(`  - ${path.relative(repoRoot, packageNlsPath)}`);
-    console.log(`  - ${path.relative(repoRoot, packageNlsJaPath)}`);
+    if (nlsNewKeys.length > 0 || nlsRemoveKeys.length > 0) {
+      console.log(`  - ${path.relative(repoRoot, packageNlsPath)}`);
+    }
+    if (nlsJaNewKeys.length > 0 || nlsJaRemoveKeys.length > 0) {
+      console.log(`  - ${path.relative(repoRoot, packageNlsJaPath)}`);
+    }
     return;
   }
 
   const updatedPkg = updatePackageJson(mappings);
-  const updatedNls = updatePackageNls(mappings);
-  const updatedNlsJa = updatePackageNlsJa(mappings);
+  const { newKeys: nlsNewKeys, keysToRemove: nlsRemoveKeys } =
+    updatePackageNls(mappings);
+  const { newKeys: nlsJaNewKeys, keysToRemove: nlsJaRemoveKeys } =
+    updatePackageNlsJa(mappings);
 
   writeJsonFile(scopeMappingsPath, mappings);
   writeJsonFile(packageJsonPath, updatedPkg);
-  writeJsonFile(packageNlsPath, updatedNls);
-  writeJsonFile(packageNlsJaPath, updatedNlsJa);
+
+  if (nlsRemoveKeys.length > 0) {
+    removeOrderedWrite(packageNlsPath, nlsRemoveKeys);
+  }
+
+  if (nlsNewKeys.length > 0) {
+    preserveOrderedWrite(packageNlsPath, nlsNewKeys);
+  }
+
+  if (nlsJaRemoveKeys.length > 0) {
+    removeOrderedWrite(packageNlsJaPath, nlsJaRemoveKeys);
+  }
+
+  if (nlsJaNewKeys.length > 0) {
+    preserveOrderedWrite(packageNlsJaPath, nlsJaNewKeys);
+  }
 
   console.log(`Updated ${mappings.length} scope mappings`);
   console.log(`  - ${path.relative(repoRoot, scopeMappingsPath)}`);
   console.log(`  - ${path.relative(repoRoot, packageJsonPath)}`);
-  console.log(`  - ${path.relative(repoRoot, packageNlsPath)}`);
-  console.log(`  - ${path.relative(repoRoot, packageNlsJaPath)}`);
+  if (nlsRemoveKeys.length > 0 || nlsNewKeys.length > 0) {
+    console.log(
+      `  - ${path.relative(repoRoot, packageNlsPath)} (added ${nlsNewKeys.length}, removed ${nlsRemoveKeys.length})`,
+    );
+  }
+  if (nlsJaRemoveKeys.length > 0 || nlsJaNewKeys.length > 0) {
+    console.log(
+      `  - ${path.relative(repoRoot, packageNlsJaPath)} (added ${nlsJaNewKeys.length}, removed ${nlsJaRemoveKeys.length})`,
+    );
+  }
 }
 
 try {
