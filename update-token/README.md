@@ -44,7 +44,7 @@ When you run the script, it:
 ### Preview Changes (Dry Run)
 
 ```bash
-node scripts/update-token-colors.js --dry-run
+node update-token/update-token-colors.js --dry-run
 ```
 
 Shows what would be updated without modifying files:
@@ -56,7 +56,7 @@ Shows what would be updated without modifying files:
 ### Apply Changes
 
 ```bash
-node scripts/update-token-colors.js
+node update-token/update-token-colors.js
 ```
 
 Updates all files in place:
@@ -82,10 +82,10 @@ Updates all files in place:
 ### 2. Run the script
 
 ```bash
-node scripts/update-token-colors.js --dry-run
+node update-token/update-token-colors.js --dry-run
 # Review changes...
 
-node scripts/update-token-colors.js
+node update-token/update-token-colors.js
 # Apply changes
 ```
 
