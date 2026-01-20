@@ -2,7 +2,7 @@
   "name": "cisco-config-highlight-redux",
   "displayName": "Cisco Config Highlight: Redux",
   "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
-  "version": "0.7.22",
+  "version": "0.7.23",
   "publisher": "CantiFirestarter",
   "license": "MIT",
   "repository": {
@@ -61,10 +61,10 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.separator.description%"
               },
-              "comment": {
+              "comment.line": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.comment.description%"
+                "markdownDescription": "%configuration.properties.colors.comment.line.description%"
               },
               "comment.banner": {
                 "type": "string",
@@ -551,11 +551,6 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.bgp.peer-group.name.description%"
               },
-              "group.class.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.class.name.description%"
-              },
               "group.service-policy.name": {
                 "type": "string",
                 "format": "color",
@@ -580,11 +575,6 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.prefix-list.name.description%"
-              },
-              "group.acl.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.acl.name.description%"
               },
               "group.object-group.type": {
                 "type": "string",
@@ -620,26 +610,6 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.qos.class.name.description%"
-              },
-              "group.qos.service-policy.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.qos.service-policy.name.description%"
-              },
-              "group.qos.policy-map.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.qos.policy-map.name.description%"
-              },
-              "group.routing.route-map.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.routing.route-map.name.description%"
-              },
-              "group.resource.pool.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.resource.pool.name.description%"
               },
               "acl.access-list.name": {
                 "type": "string",
@@ -726,21 +696,6 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.arp-insp-val.description%"
               },
-              "arp-insp-val.src-mac": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.arp-insp-val.src-mac.description%"
-              },
-              "arp-insp-val.dst-mac": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.arp-insp-val.dst-mac.description%"
-              },
-              "arp-insp-val.ip": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.arp-insp-val.ip.description%"
-              },
               "command_hostname.user-mode": {
                 "type": "string",
                 "format": "color",
@@ -756,10 +711,20 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.config-param.first.description%"
               },
-              "config-param.second": {
+              "command_hostname.config-if": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.config-param.second.description%"
+                "markdownDescription": "%configuration.properties.colors.command_hostname.config-if.description%"
+              },
+              "command_hostname.config-router": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command_hostname.config-router.description%"
+              },
+              "command_hostname.config-line": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.command_hostname.config-line.description%"
               },
               "command-disable.unused": {
                 "type": "string",

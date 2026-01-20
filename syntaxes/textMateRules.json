@@ -244,7 +244,7 @@
       {
         "scope": "entity.name.class.vrf.declaration",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#8A3324"
         }
       },
       {
@@ -268,25 +268,25 @@
       {
         "scope": "entity.name.tag.bgp.neighbor-peer-group.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#1ABC9C"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-group.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#6610F2"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-policy.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#D98880"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-session.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#95A5A6"
         }
       },
       {
@@ -304,13 +304,13 @@
       {
         "scope": "entity.name.tag.config-string.logging-system-message",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#F8F8FF"
         }
       },
       {
         "scope": "entity.name.tag.config-string.username",
         "settings": {
-          "foreground": "#FF003C"
+          "foreground": "#DD1144"
         }
       },
       {
@@ -350,87 +350,87 @@
         }
       },
       {
-        "scope": "entity.name.tag.group.class-map.name",
+        "scope": "entity.name.tag.group.qos.class-map.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.class.name",
+        "scope": "entity.name.tag.group.qos.class.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.object-group.name",
+        "scope": "entity.name.tag.group.security.object-group.name.name",
+        "settings": {
+          "foreground": "#E8DAEF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.group.qos.policy-map.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.policy-map.name",
-        "settings": {
-          "foreground": "#fff"
-        }
-      },
-      {
-        "scope": "entity.name.tag.group.pool.name",
+        "scope": "entity.name.tag.group.resource.pool.name",
         "settings": {
           "foreground": "#39FF14"
         }
       },
       {
-        "scope": "entity.name.tag.group.prefix-list.name",
+        "scope": "entity.name.tag.group.routing.prefix-list.name.cisco",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.route-map.name",
+        "scope": "entity.name.tag.group.routing.route-map.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.service-policy.name",
+        "scope": "entity.name.tag.group.qos.service-policy.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.policy-list.name",
+        "scope": "entity.name.tag.group.resource.policy-list.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.traffic-filter.name",
+        "scope": "entity.name.tag.group.traffic.traffic-filter.name",
         "settings": {
           "foreground": "#fff"
         }
       },
       {
-        "scope": "entity.name.tag.group.community.name",
+        "scope": "entity.name.tag.group.bgp.community.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#F368E0"
         }
       },
       {
         "scope": "entity.name.tag.vrf.vrf-name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FFCC80"
         }
       },
       {
         "scope": "entity.other.vrf.definition",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#8D6E63"
         }
       },
       {
         "scope": "entity.other.vrf.forwarding",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#B87333"
         }
       },
       {
@@ -514,19 +514,19 @@
       {
         "scope": "keyword.other.config-keyword.add-remove.add",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#98FB98"
         }
       },
       {
         "scope": "keyword.other.config-keyword.add-remove.except",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#8E76AD"
         }
       },
       {
         "scope": "keyword.other.config-keyword.add-remove.remove",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#D87093"
         }
       },
       {
@@ -538,13 +538,13 @@
       {
         "scope": "keyword.other.config-keyword.any-all.all",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#8E44AD"
         }
       },
       {
         "scope": "keyword.other.config-keyword.any-all.any",
         "settings": {
-          "foreground": "#dd1144"
+          "foreground": "#D980FA"
         }
       },
       {
@@ -574,25 +574,25 @@
       {
         "scope": "keyword.other.config-keyword.inside-outside.inside",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "keyword.other.config-keyword.inside-outside.outside",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FF00FF"
         }
       },
       {
         "scope": "keyword.other.config-keyword.match.all",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#BB86FC"
         }
       },
       {
         "scope": "keyword.other.config-keyword.match.any",
         "settings": {
-          "foreground": "#9933ff"
+          "foreground": "#9FA8DA"
         }
       },
       {
@@ -688,25 +688,25 @@
       {
         "scope": "keyword.other.config-keyword.status.administratively-down",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#C0392B"
         }
       },
       {
         "scope": "keyword.other.config-keyword.status.deleted",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#696969"
         }
       },
       {
         "scope": "keyword.other.config-keyword.status.down",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FF3131"
         }
       },
       {
         "scope": "keyword.other.config-keyword.status.up",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#32CD32"
         }
       },
       {
@@ -736,7 +736,7 @@
       {
         "scope": "keyword.other.group.object-group.type",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#5F9EA0"
         }
       },
       {
@@ -746,21 +746,45 @@
         }
       },
       {
+        "scope": "meta.function-call.command_hostname.config-if",
+        "settings": {
+          "foreground": "#27AE60"
+        }
+      },
+      {
+        "scope": "meta.function-call.command_hostname.config-router",
+        "settings": {
+          "foreground": "#27AE60"
+        }
+      },
+      {
+        "scope": "meta.function-call.command_hostname.config-line",
+        "settings": {
+          "foreground": "#27AE60"
+        }
+      },
+      {
+        "scope": "meta.function-call.command_hostname.config",
+        "settings": {
+          "foreground": "#1E90FF"
+        }
+      },
+      {
         "scope": "meta.function-call.command_hostname.privileged-mode",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#E74C3C"
         }
       },
       {
         "scope": "meta.function-call.command_hostname.user-mode",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FFF5E1"
         }
       },
       {
         "scope": "meta.function-call.command-disable.default",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#607D8B"
         }
       },
       {

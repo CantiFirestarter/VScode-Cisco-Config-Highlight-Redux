@@ -591,12 +591,28 @@
     "command_hostname": {
       "patterns": [
         {
-          "name": "meta.function-call.command_hostname.user-mode.cisco",
-          "match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?#"
+          "name": "meta.function-call.command_hostname.config-if.cisco",
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*\\([^\\r\\n]*config-if[^\\r\\n]*\\)#"
+        },
+        {
+          "name": "meta.function-call.command_hostname.config-router.cisco",
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*\\([^\\r\\n]*config-router[^\\r\\n]*\\)#"
+        },
+        {
+          "name": "meta.function-call.command_hostname.config-line.cisco",
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*\\([^\\r\\n]*config-line[^\\r\\n]*\\)#"
+        },
+        {
+          "name": "meta.function-call.command_hostname.config.cisco",
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*\\([^\\r\\n]*config[^\\r\\n]*\\)#"
         },
         {
           "name": "meta.function-call.command_hostname.privileged-mode.cisco",
-          "match": "^(?!\\s)[0-9a-zA-Z\\-]+(\\(.*\\))?>"
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*(?:\\([^\\r\\n)]*\\))?#"
+        },
+        {
+          "name": "meta.function-call.command_hostname.user-mode.cisco",
+          "match": "^(?!\\s)[0-9A-Za-z][0-9A-Za-z._-]*(?:\\([^\\r\\n)]*\\))?>"
         }
       ]
     },

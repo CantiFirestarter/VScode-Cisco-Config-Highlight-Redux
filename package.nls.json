@@ -20,6 +20,7 @@
 
   "_comment_colors_comments": "Token Colors - Comments",
   "configuration.properties.colors.comment.description": "comment.line.config",
+  "configuration.properties.colors.comment.line.description": "comment.line.config",
   "configuration.properties.colors.comment.banner.description": "comment.block.banner",
 
   "_comment_colors_addresses": "Token Colors - Addresses",
@@ -187,6 +188,10 @@
   "configuration.properties.colors.arp-insp-val.ip.description": "constant.other.arp-insp-val.ip",
 
   "_comment_colors_command": "Token Colors - Command Hostname",
+  "configuration.properties.colors.command_hostname.config-if.description": "meta.function-call.command_hostname.config-if",
+  "configuration.properties.colors.command_hostname.config-router.description": "meta.function-call.command_hostname.config-router",
+  "configuration.properties.colors.command_hostname.config-line.description": "meta.function-call.command_hostname.config-line",
+  "configuration.properties.colors.command_hostname.config.description": "meta.function-call.command_hostname.config",
   "configuration.properties.colors.command_hostname.user-mode.description": "meta.function-call.command_hostname.user-mode",
   "configuration.properties.colors.command_hostname.privileged-mode.description": "meta.function-call.command_hostname.privileged-mode",
 
