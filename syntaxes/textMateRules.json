@@ -322,43 +322,43 @@
       {
         "scope": "entity.name.tag.crypto.crypto-map.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#00FFFF"
         }
       },
       {
         "scope": "entity.name.tag.crypto.transform-set.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#7FFFD4"
         }
       },
       {
         "scope": "entity.name.tag.crypto.ipsec-profile.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#7B68EE"
         }
       },
       {
         "scope": "entity.name.tag.crypto.isakmp-profile.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#9370DB"
         }
       },
       {
         "scope": "entity.name.tag.crypto.keyring.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#F4A460"
         }
       },
       {
         "scope": "entity.name.tag.group.qos.class-map.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#F2CA19"
         }
       },
       {
         "scope": "entity.name.tag.group.qos.class.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#DB7093"
         }
       },
       {
@@ -370,7 +370,7 @@
       {
         "scope": "entity.name.tag.group.qos.policy-map.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FFA07A"
         }
       },
       {
@@ -380,33 +380,33 @@
         }
       },
       {
-        "scope": "entity.name.tag.group.routing.prefix-list.name.cisco",
+        "scope": "entity.name.tag.group.routing.prefix-list.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#FFA07A"
         }
       },
       {
         "scope": "entity.name.tag.group.routing.route-map.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#7FFFD4"
         }
       },
       {
         "scope": "entity.name.tag.group.qos.service-policy.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#DA70D6"
         }
       },
       {
         "scope": "entity.name.tag.group.resource.policy-list.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#BA55D3"
         }
       },
       {
         "scope": "entity.name.tag.group.traffic.traffic-filter.name",
         "settings": {
-          "foreground": "#fff"
+          "foreground": "#F08080"
         }
       },
       {
