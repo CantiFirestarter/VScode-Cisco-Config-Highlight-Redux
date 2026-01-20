@@ -183,9 +183,6 @@
 
   "_comment_colors_arp": "Token Colors - ARP",
   "configuration.properties.colors.arp-insp-val.description": "meta.function-call.arp-insp-val",
-  "configuration.properties.colors.arp-insp-val.src-mac.description": "constant.other.arp-insp-val.src-mac",
-  "configuration.properties.colors.arp-insp-val.dst-mac.description": "constant.other.arp-insp-val.dst-mac",
-  "configuration.properties.colors.arp-insp-val.ip.description": "constant.other.arp-insp-val.ip",
 
   "_comment_colors_command": "Token Colors - Command Hostname",
   "configuration.properties.colors.command_hostname.config-if.description": "meta.function-call.command_hostname.config-if",
@@ -194,10 +191,6 @@
   "configuration.properties.colors.command_hostname.config.description": "meta.function-call.command_hostname.config",
   "configuration.properties.colors.command_hostname.user-mode.description": "meta.function-call.command_hostname.user-mode",
   "configuration.properties.colors.command_hostname.privileged-mode.description": "meta.function-call.command_hostname.privileged-mode",
-
-  "_comment_colors_config_param": "Token Colors - Config Parameters",
-  "configuration.properties.colors.config-param.first.description": "punctuation.config-param.first",
-  "configuration.properties.colors.config-param.second.description": "punctuation.config-param.second",
 
   "_comment_colors_command_disable": "Token Colors - Command Disable",
   "configuration.properties.colors.command-disable.unused.description": "meta.function-call.command-disable.unused",
