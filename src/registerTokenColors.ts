@@ -30,7 +30,7 @@ function loadScopeMappings(context: vscode.ExtensionContext): ScopeMapping[] {
   try {
     const filePath = context.asAbsolutePath('config/scopeMappings.json');
     const content = fs.readFileSync(filePath, 'utf8');
-    const parsed = JSON.parse(content);
+    const parsed: unknown = JSON.parse(content);
     if (!Array.isArray(parsed)) {
       throw new Error('scopeMappings.json must be an array');
     }
