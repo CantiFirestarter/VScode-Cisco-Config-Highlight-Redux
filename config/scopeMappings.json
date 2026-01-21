@@ -1,117 +1,5 @@
 [
   {
-    "configKey": "acl.access-class.name",
-    "scope": "entity.name.tag.acl.access-class.name"
-  },
-  {
-    "configKey": "acl.access-class.type",
-    "scope": "keyword.other.acl.access-class.type"
-  },
-  {
-    "configKey": "acl.access-group.name",
-    "scope": "entity.name.tag.acl.access-group.name"
-  },
-  {
-    "configKey": "acl.access-group.type",
-    "scope": "keyword.other.acl.access-group.type"
-  },
-  {
-    "configKey": "acl.access-list.name",
-    "scope": "entity.name.tag.acl.access-list.name"
-  },
-  {
-    "configKey": "acl.access-list.type",
-    "scope": "keyword.other.acl.access-list.type"
-  },
-  {
-    "configKey": "acl.icmp-type",
-    "scope": "keyword.other.acl.icmp-type"
-  },
-  {
-    "configKey": "acl.option",
-    "scope": "keyword.other.acl.option"
-  },
-  {
-    "configKey": "acl.port-operator",
-    "scope": "keyword.other.acl.port-operator"
-  },
-  {
-    "configKey": "acl.protocol",
-    "scope": "keyword.other.acl.protocol"
-  },
-  {
-    "configKey": "acl.tcp-flag",
-    "scope": "keyword.other.acl.tcp-flag"
-  },
-  {
-    "configKey": "address.cidr",
-    "scope": "keyword.other.address.cidr"
-  },
-  {
-    "configKey": "address.ipv4",
-    "scope": "keyword.other.address.ipv4.full"
-  },
-  {
-    "configKey": "address.ipv6",
-    "scope": "keyword.other.address.ipv6.condensed"
-  },
-  {
-    "configKey": "address.ipv6",
-    "scope": "keyword.other.address.ipv6.full"
-  },
-  {
-    "configKey": "address.mac",
-    "scope": "keyword.other.address.mac"
-  },
-  {
-    "configKey": "arp-insp-val",
-    "scope": "meta.function-call.arp-insp-val"
-  },
-  {
-    "configKey": "bgp.neighbor-peer-group.name",
-    "scope": "entity.name.tag.bgp.neighbor-peer-group.name"
-  },
-  {
-    "configKey": "bgp.peer-group.name",
-    "scope": "entity.name.tag.bgp.peer-group.name"
-  },
-  {
-    "configKey": "bgp.peer-policy.name",
-    "scope": "entity.name.tag.bgp.peer-policy.name"
-  },
-  {
-    "configKey": "bgp.peer-session.name",
-    "scope": "entity.name.tag.bgp.peer-session.name"
-  },
-  {
-    "configKey": "command_hostname.config-if",
-    "scope": "meta.function-call.command_hostname.config-if"
-  },
-  {
-    "configKey": "command_hostname.config-line",
-    "scope": "meta.function-call.command_hostname.config-line"
-  },
-  {
-    "configKey": "command_hostname.config-router",
-    "scope": "meta.function-call.command_hostname.config-router"
-  },
-  {
-    "configKey": "command_hostname.privileged-mode",
-    "scope": "meta.function-call.command_hostname.privileged-mode"
-  },
-  {
-    "configKey": "command_hostname.user-mode",
-    "scope": "meta.function-call.command_hostname.user-mode"
-  },
-  {
-    "configKey": "command-disable.default",
-    "scope": "meta.function-call.command-disable.default"
-  },
-  {
-    "configKey": "command-disable.unused",
-    "scope": "meta.function-call.command-disable.unused"
-  },
-  {
     "configKey": "comment.banner",
     "scope": "comment.block.banner"
   },
@@ -120,92 +8,20 @@
     "scope": "comment.line.config"
   },
   {
-    "configKey": "config-string.domain-name",
-    "scope": "entity.name.tag.config-string.domain-name"
+    "configKey": "numeric.hex",
+    "scope": "constant.numeric.hex"
   },
   {
-    "configKey": "config-string.hostname",
-    "scope": "entity.name.tag.config-string.hostname"
+    "configKey": "numeric.integer",
+    "scope": "constant.numeric.integer"
   },
   {
-    "configKey": "config-string.logging-system-message",
-    "scope": "entity.name.tag.config-string.logging-system-message"
+    "configKey": "numeric.ipv4-AD",
+    "scope": "constant.numeric.ipv4-AD"
   },
   {
-    "configKey": "config-string.name",
-    "scope": "entity.name.tag.config-string.name"
-  },
-  {
-    "configKey": "config-string.username",
-    "scope": "entity.name.tag.config-string.username"
-  },
-  {
-    "configKey": "crypto.crypto-map.name",
-    "scope": "entity.name.tag.crypto.crypto-map.name"
-  },
-  {
-    "configKey": "crypto.ipsec-profile.name",
-    "scope": "entity.name.tag.crypto.ipsec-profile.name"
-  },
-  {
-    "configKey": "crypto.isakmp-profile.name",
-    "scope": "entity.name.tag.crypto.isakmp-profile.name"
-  },
-  {
-    "configKey": "crypto.keyring.name",
-    "scope": "entity.name.tag.crypto.keyring.name"
-  },
-  {
-    "configKey": "crypto.transform-set.name",
-    "scope": "entity.name.tag.crypto.transform-set.name"
-  },
-  {
-    "configKey": "group.class-map.name",
-    "scope": "entity.name.tag.group.qos.class-map.name"
-  },
-  {
-    "configKey": "group.community.name",
-    "scope": "entity.name.tag.group.bgp.community.name"
-  },
-  {
-    "configKey": "group.object-group.name",
-    "scope": "entity.name.tag.group.security.object-group.name.name"
-  },
-  {
-    "configKey": "group.object-group.type",
-    "scope": "keyword.other.group.object-group.type"
-  },
-  {
-    "configKey": "group.policy-list.name",
-    "scope": "entity.name.tag.group.resource.policy-list.name"
-  },
-  {
-    "configKey": "group.policy-map.name",
-    "scope": "entity.name.tag.group.qos.policy-map.name"
-  },
-  {
-    "configKey": "group.pool.name",
-    "scope": "entity.name.tag.group.resource.pool.name"
-  },
-  {
-    "configKey": "group.qos.class.name",
-    "scope": "entity.name.tag.group.qos.class.name"
-  },
-  {
-    "configKey": "group.route-map.name",
-    "scope": "entity.name.tag.group.routing.route-map.name"
-  },
-  {
-    "configKey": "group.routing.prefix-list.name",
-    "scope": "entity.name.tag.group.routing.prefix-list.name"
-  },
-  {
-    "configKey": "group.service-policy.name",
-    "scope": "entity.name.tag.group.qos.service-policy.name"
-  },
-  {
-    "configKey": "group.traffic-filter.name",
-    "scope": "entity.name.tag.group.traffic.traffic-filter.name"
+    "configKey": "numeric.ipv6-AD",
+    "scope": "constant.numeric.ipv6-AD"
   },
   {
     "configKey": "interface.app",
@@ -344,6 +160,186 @@
     "scope": "entity.name.class.interface.wireless"
   },
   {
+    "configKey": "vrf.declaration",
+    "scope": "entity.name.class.vrf.declaration"
+  },
+  {
+    "configKey": "acl.access-class.name",
+    "scope": "entity.name.tag.acl.access-class.name"
+  },
+  {
+    "configKey": "acl.access-group.name",
+    "scope": "entity.name.tag.acl.access-group.name"
+  },
+  {
+    "configKey": "acl.access-list.name",
+    "scope": "entity.name.tag.acl.access-list.name"
+  },
+  {
+    "configKey": "bgp.neighbor-peer-group.name",
+    "scope": "entity.name.tag.bgp.neighbor-peer-group.name"
+  },
+  {
+    "configKey": "bgp.peer-group.name",
+    "scope": "entity.name.tag.bgp.peer-group.name"
+  },
+  {
+    "configKey": "bgp.peer-policy.name",
+    "scope": "entity.name.tag.bgp.peer-policy.name"
+  },
+  {
+    "configKey": "bgp.peer-session.name",
+    "scope": "entity.name.tag.bgp.peer-session.name"
+  },
+  {
+    "configKey": "config-string.domain-name",
+    "scope": "entity.name.tag.config-string.domain-name"
+  },
+  {
+    "configKey": "config-string.hostname",
+    "scope": "entity.name.tag.config-string.hostname"
+  },
+  {
+    "configKey": "config-string.logging-system-message",
+    "scope": "entity.name.tag.config-string.logging-system-message"
+  },
+  {
+    "configKey": "config-string.name",
+    "scope": "entity.name.tag.config-string.name"
+  },
+  {
+    "configKey": "config-string.username",
+    "scope": "entity.name.tag.config-string.username"
+  },
+  {
+    "configKey": "crypto.crypto-map.name",
+    "scope": "entity.name.tag.crypto.crypto-map.name"
+  },
+  {
+    "configKey": "crypto.ipsec-profile.name",
+    "scope": "entity.name.tag.crypto.ipsec-profile.name"
+  },
+  {
+    "configKey": "crypto.isakmp-profile.name",
+    "scope": "entity.name.tag.crypto.isakmp-profile.name"
+  },
+  {
+    "configKey": "crypto.keyring.name",
+    "scope": "entity.name.tag.crypto.keyring.name"
+  },
+  {
+    "configKey": "crypto.transform-set.name",
+    "scope": "entity.name.tag.crypto.transform-set.name"
+  },
+  {
+    "configKey": "group.bgp.community.name",
+    "scope": "entity.name.tag.group.bgp.community.name"
+  },
+  {
+    "configKey": "group.qos.class-map.name",
+    "scope": "entity.name.tag.group.qos.class-map.name"
+  },
+  {
+    "configKey": "group.qos.class.name",
+    "scope": "entity.name.tag.group.qos.class.name"
+  },
+  {
+    "configKey": "group.qos.policy-map.name",
+    "scope": "entity.name.tag.group.qos.policy-map.name"
+  },
+  {
+    "configKey": "group.qos.service-policy.name",
+    "scope": "entity.name.tag.group.qos.service-policy.name"
+  },
+  {
+    "configKey": "group.resource.policy-list.name",
+    "scope": "entity.name.tag.group.resource.policy-list.name"
+  },
+  {
+    "configKey": "group.resource.pool.name",
+    "scope": "entity.name.tag.group.resource.pool.name"
+  },
+  {
+    "configKey": "group.routing.prefix-list.name",
+    "scope": "entity.name.tag.group.routing.prefix-list.name"
+  },
+  {
+    "configKey": "group.routing.route-map.name",
+    "scope": "entity.name.tag.group.routing.route-map.name"
+  },
+  {
+    "configKey": "group.security.object-group.name.name",
+    "scope": "entity.name.tag.group.security.object-group.name.name"
+  },
+  {
+    "configKey": "group.traffic.traffic-filter.name",
+    "scope": "entity.name.tag.group.traffic.traffic-filter.name"
+  },
+  {
+    "configKey": "vrf.vrf-name",
+    "scope": "entity.name.tag.vrf.vrf-name"
+  },
+  {
+    "configKey": "vrf.definition",
+    "scope": "entity.other.vrf.definition"
+  },
+  {
+    "configKey": "vrf.forwarding",
+    "scope": "entity.other.vrf.forwarding"
+  },
+  {
+    "configKey": "acl.access-class.type",
+    "scope": "keyword.other.acl.access-class.type"
+  },
+  {
+    "configKey": "acl.access-group.type",
+    "scope": "keyword.other.acl.access-group.type"
+  },
+  {
+    "configKey": "acl.access-list.type",
+    "scope": "keyword.other.acl.access-list.type"
+  },
+  {
+    "configKey": "acl.icmp-type",
+    "scope": "keyword.other.acl.icmp-type"
+  },
+  {
+    "configKey": "acl.option",
+    "scope": "keyword.other.acl.option"
+  },
+  {
+    "configKey": "acl.port-operator",
+    "scope": "keyword.other.acl.port-operator"
+  },
+  {
+    "configKey": "acl.protocol",
+    "scope": "keyword.other.acl.protocol"
+  },
+  {
+    "configKey": "acl.tcp-flag",
+    "scope": "keyword.other.acl.tcp-flag"
+  },
+  {
+    "configKey": "address.cidr",
+    "scope": "keyword.other.address.cidr"
+  },
+  {
+    "configKey": "address.ipv4.full",
+    "scope": "keyword.other.address.ipv4.full"
+  },
+  {
+    "configKey": "address.ipv6.condensed",
+    "scope": "keyword.other.address.ipv6.condensed"
+  },
+  {
+    "configKey": "address.ipv6.full",
+    "scope": "keyword.other.address.ipv6.full"
+  },
+  {
+    "configKey": "address.mac",
+    "scope": "keyword.other.address.mac"
+  },
+  {
     "configKey": "keyword.add-remove.add",
     "scope": "keyword.other.config-keyword.add-remove.add"
   },
@@ -378,10 +374,6 @@
   {
     "configKey": "keyword.control-actions",
     "scope": "keyword.other.config-keyword.control-actions"
-  },
-  {
-    "configKey": "keyword.deny",
-    "scope": "keyword.other.config-keyword.permit-deny.deny"
   },
   {
     "configKey": "keyword.in-out.in",
@@ -444,7 +436,11 @@
     "scope": "keyword.other.config-keyword.operational-states"
   },
   {
-    "configKey": "keyword.permit",
+    "configKey": "keyword.permit-deny.deny",
+    "scope": "keyword.other.config-keyword.permit-deny.deny"
+  },
+  {
+    "configKey": "keyword.permit-deny.permit",
     "scope": "keyword.other.config-keyword.permit-deny.permit"
   },
   {
@@ -492,20 +488,44 @@
     "scope": "keyword.other.config-keyword.vlan"
   },
   {
-    "configKey": "numeric.hex",
-    "scope": "constant.numeric.hex"
+    "configKey": "group.object-group.type",
+    "scope": "keyword.other.group.object-group.type"
   },
   {
-    "configKey": "numeric.integer",
-    "scope": "constant.numeric.integer"
+    "configKey": "arp-insp-val",
+    "scope": "meta.function-call.arp-insp-val"
   },
   {
-    "configKey": "numeric.ipv4-AD",
-    "scope": "constant.numeric.ipv4-AD"
+    "configKey": "command-disable.default",
+    "scope": "meta.function-call.command-disable.default"
   },
   {
-    "configKey": "numeric.ipv6-AD",
-    "scope": "constant.numeric.ipv6-AD"
+    "configKey": "command-disable.unused",
+    "scope": "meta.function-call.command-disable.unused"
+  },
+  {
+    "configKey": "command_hostname.config",
+    "scope": "meta.function-call.command_hostname.config"
+  },
+  {
+    "configKey": "command_hostname.config-if",
+    "scope": "meta.function-call.command_hostname.config-if"
+  },
+  {
+    "configKey": "command_hostname.config-line",
+    "scope": "meta.function-call.command_hostname.config-line"
+  },
+  {
+    "configKey": "command_hostname.config-router",
+    "scope": "meta.function-call.command_hostname.config-router"
+  },
+  {
+    "configKey": "command_hostname.privileged-mode",
+    "scope": "meta.function-call.command_hostname.privileged-mode"
+  },
+  {
+    "configKey": "command_hostname.user-mode",
+    "scope": "meta.function-call.command_hostname.user-mode"
   },
   {
     "configKey": "separator",
@@ -526,21 +546,5 @@
   {
     "configKey": "string.secret",
     "scope": "string.other.secret"
-  },
-  {
-    "configKey": "vrf.declaration",
-    "scope": "entity.name.class.vrf.declaration"
-  },
-  {
-    "configKey": "vrf.definition",
-    "scope": "entity.other.vrf.definition"
-  },
-  {
-    "configKey": "vrf.forwarding",
-    "scope": "entity.other.vrf.forwarding"
-  },
-  {
-    "configKey": "vrf.vrf-name",
-    "scope": "entity.name.tag.vrf.vrf-name"
   }
 ]

@@ -204,6 +204,9 @@ def preserve_ordered_write(file_path, new_keys):
             while last_key_index > section_index and lines[last_key_index].strip() == "":
                 last_key_index -= 1
 
+            # Find insertion point (after last key, before any blank lines)
+            insert_position = last_key_index + 1
+
             # Add comma if needed
             if last_key_index > section_index:
                 last_line = lines[last_key_index]
@@ -211,19 +214,16 @@ def preserve_ordered_write(file_path, new_keys):
                     lines[last_key_index] = re.sub(r"([^,\s])(\s*)$", r"\1,\2", last_line)
 
             # Insert new keys
-            follower = lines[end_index].strip() if end_index < len(lines) else "}"
             new_lines = []
-            # Add blank line before new keys if next line is a comment section
-            if follower.startswith('"_comment'):
-                new_lines.append("\n")
             for idx, item in enumerate(keys_to_add):
                 is_last = idx == len(keys_to_add) - 1
                 # If the next line is a closing brace, avoid trailing comma
-                if is_last and follower.startswith('}'):
+                next_line = lines[end_index].strip() if end_index < len(lines) else "}"
+                if is_last and next_line.startswith('}'):
                     new_lines.append(f'  "{item["key"]}": "{item["value"]}"\n')
                 else:
                     new_lines.append(f'  "{item["key"]}": "{item["value"]}",\n')
-            lines = lines[:end_index] + new_lines + lines[end_index:]
+            lines = lines[:insert_position] + new_lines + lines[insert_position:]
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.writelines(lines)
@@ -341,6 +341,9 @@ def update_package_json(mappings):
     ]
     for key in keys_to_remove:
         del colors_obj["properties"][key]
+
+    # Sort properties alphabetically for consistent ordering
+    colors_obj["properties"] = dict(sorted(colors_obj["properties"].items()))
 
     return pkg
 
