@@ -81,23 +81,22 @@ def preserve_ordered_write(file_path, new_keys):
 
     # Categorize new keys by prefix
     categories = {
-        "separator": [],
+        "command-disable": [],
         "comment": [],
-        "address": [],
-        "numeric": [],
         "interface": [],
-        "keyword": [],
         "vrf": [],
         "string": [],
         "config-string": [],
-        "bgp": [],
         "group": [],
         "acl": [],
         "crypto": [],
+        "address": [],
         "arp-insp-val": [],
         "command_hostname": [],
-        "config-param": [],
-        "command-disable": [],
+        "numeric": [],
+        "separator": [],
+        "bgp": [],
+        "keyword": [],
         "other": [],
     }
 
