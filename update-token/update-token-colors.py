@@ -117,8 +117,37 @@ def preserve_ordered_write(file_path, new_keys):
         if not keys_to_add:
             continue
 
-        # Find section marker
+        # Determine preferred section marker and label
+        sample_key = keys_to_add[0]["key"]
         section_marker = f"_comment_colors_{category.replace('_', '-')}"
+        category_label = " ".join(word.capitalize() for word in category.split("-"))
+
+        # Overrides to align with existing NLS section names
+        overrides = {
+            "separator": ("_comment_colors_separator", "Separator"),
+            "comment": ("_comment_colors_comments", "Comments"),
+            "address": ("_comment_colors_addresses", "Addresses"),
+            "numeric": ("_comment_colors_numeric", "Numeric"),
+            "interface": ("_comment_colors_interfaces", "Interfaces"),
+            "keyword": ("_comment_colors_keywords", "Keywords"),
+            "vrf": ("_comment_colors_vrf", "VRF"),
+            "string": ("_comment_colors_strings", "Strings"),
+            "config-string": ("_comment_colors_config_strings", "Config Strings"),
+            "bgp": ("_comment_colors_bgp", "BGP"),
+            "group": ("_comment_colors_groups", "Groups"),
+            "acl": ("_comment_colors_acl", "ACL"),
+            "crypto": ("_comment_colors_crypto", "Crypto"),
+            "arp-insp-val": ("_comment_colors_arp", "ARP"),
+            "command_hostname": ("_comment_colors_command", "Command Hostname"),
+            "command-disable": ("_comment_colors_command_disable", "Command Disable"),
+        }
+
+        # Special-case extended Groups if we detect group.qos.* keys
+        if category == "group" and ".group.qos." in sample_key:
+            section_marker = "_comment_colors_groups_extended"
+            category_label = "Groups Extended"
+        elif category in overrides:
+            section_marker, category_label = overrides[category]
         section_index = -1
 
         for i, line in enumerate(lines):
@@ -147,17 +176,18 @@ def preserve_ordered_write(file_path, new_keys):
             ):
                 lines[last_key_index] = re.sub(r"([^,\s])(\s*)$", r"\1,\2", last_line)
 
-            # Generate category label
-            category_label = " ".join(
-                word.capitalize() for word in category.split("-")
-            )
+            # category_label and section_marker already determined above
 
             new_lines = [
                 "\n",
                 f'  "{section_marker}": "Token Colors - {category_label}",\n',
             ]
-            for item in keys_to_add:
-                new_lines.append(f'  "{item["key"]}": "{item["value"]}",\n')
+            for idx, item in enumerate(keys_to_add):
+                is_last = idx == len(keys_to_add) - 1
+                if is_last:
+                    new_lines.append(f'  "{item["key"]}": "{item["value"]}"\n')
+                else:
+                    new_lines.append(f'  "{item["key"]}": "{item["value"]}",\n')
 
             lines = lines[:insert_index] + new_lines + lines[insert_index:]
         else:
@@ -181,9 +211,18 @@ def preserve_ordered_write(file_path, new_keys):
                     lines[last_key_index] = re.sub(r"([^,\s])(\s*)$", r"\1,\2", last_line)
 
             # Insert new keys
-            new_lines = [
-                f'  "{item["key"]}": "{item["value"]}",\n' for item in keys_to_add
-            ]
+            follower = lines[end_index].strip() if end_index < len(lines) else "}"
+            new_lines = []
+            # Add blank line before new keys if next line is a comment section
+            if follower.startswith('"_comment'):
+                new_lines.append("\n")
+            for idx, item in enumerate(keys_to_add):
+                is_last = idx == len(keys_to_add) - 1
+                # If the next line is a closing brace, avoid trailing comma
+                if is_last and follower.startswith('}'):
+                    new_lines.append(f'  "{item["key"]}": "{item["value"]}"\n')
+                else:
+                    new_lines.append(f'  "{item["key"]}": "{item["value"]}",\n')
             lines = lines[:end_index] + new_lines + lines[end_index:]
 
     with open(file_path, "w", encoding="utf-8") as f:
