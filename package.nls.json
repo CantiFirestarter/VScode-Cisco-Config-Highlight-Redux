@@ -19,7 +19,6 @@
   "configuration.properties.colors.separator.description": "punctuation.separator",
 
   "_comment_colors_comments": "Token Colors - Comments",
-  "configuration.properties.colors.comment.description": "comment.line.config",
   "configuration.properties.colors.comment.line.description": "comment.line.config",
   "configuration.properties.colors.comment.banner.description": "comment.block.banner",
 
