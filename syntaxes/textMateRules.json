@@ -328,7 +328,7 @@
       {
         "scope": "entity.name.tag.crypto.transform-set.name",
         "settings": {
-          "foreground": "#7FFFD4"
+          "foreground": "#00FFFF"
         }
       },
       {
@@ -340,7 +340,7 @@
       {
         "scope": "entity.name.tag.crypto.isakmp-profile.name",
         "settings": {
-          "foreground": "#9370DB"
+          "foreground": "#7B68EE"
         }
       },
       {
