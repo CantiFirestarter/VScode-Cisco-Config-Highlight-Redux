@@ -259,6 +259,9 @@ def generate_config_key_from_scope(scope):
         return scope.replace("keyword.other.config-keyword.", "keyword.")
     elif scope.startswith("keyword.other.group."):
         return scope.replace("keyword.other.group.", "group.")
+    elif scope.startswith("keyword.other.address."):
+        # Handle address variants: ipv6.condensed, ipv6.full, ipv4.full, etc.
+        return scope.replace("keyword.other.", "")
     elif scope.startswith("keyword.other."):
         return scope.replace("keyword.other.", "")
     elif scope.startswith("meta.function-call."):
