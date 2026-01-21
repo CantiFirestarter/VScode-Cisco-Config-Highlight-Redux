@@ -280,7 +280,7 @@
       {
         "scope": "entity.name.tag.bgp.peer-policy.name",
         "settings": {
-          "foreground": "#D98880"
+          "foreground": "#DB7093"
         }
       },
       {
@@ -538,13 +538,13 @@
       {
         "scope": "keyword.other.config-keyword.any-all.all",
         "settings": {
-          "foreground": "#8E44AD"
+          "foreground": "#0BDA51"
         }
       },
       {
         "scope": "keyword.other.config-keyword.any-all.any",
         "settings": {
-          "foreground": "#D980FA"
+          "foreground": "#0BDA51"
         }
       },
       {
