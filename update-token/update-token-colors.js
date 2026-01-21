@@ -458,8 +458,9 @@ function main() {
     }
     if (nlsRemoveKeys.length > 0) {
       console.log(
-        `Would remove ${nlsRemoveKeys.length} obsolete keys from package.nls.json`,
+        `Would remove ${nlsRemoveKeys.length} obsolete keys from package.nls.json:`,
       );
+      nlsRemoveKeys.forEach(key => console.log(`  - ${key}`));
     }
     console.log(`Would add ${nlsJaNewKeys.length} new keys to package.nls.ja.json`);
     if (nlsJaUpdateKeys.length > 0) {
