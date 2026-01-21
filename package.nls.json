@@ -153,8 +153,6 @@
   "configuration.properties.colors.group.policy-list.name.description": "entity.name.tag.group.policy-list.name",
   "configuration.properties.colors.group.traffic-filter.name.description": "entity.name.tag.group.traffic-filter.name",
   "configuration.properties.colors.group.community.name.description": "entity.name.tag.group.community.name",
-
-  "_comment_colors_groups_extended": "Token Colors - Groups Extended",
   "configuration.properties.colors.group.qos.class.name.description": "entity.name.tag.group.qos.class.name",
   "configuration.properties.colors.group.qos.service-policy.name.description": "entity.name.tag.group.qos.service-policy.name",
   "configuration.properties.colors.group.qos.policy-map.name.description": "entity.name.tag.group.qos.policy-map.name",
