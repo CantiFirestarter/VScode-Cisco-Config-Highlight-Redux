@@ -135,9 +135,9 @@
           "match": "(?i)\\b((fast|(five|ten|twentyfive|f(orty|ifty)|(two|four)?hundred)?g(ig)?(abit)?)?e(th)?(ernet)?|fa|gi|te|tf|fo|fi|hu|fh|f|g)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)(-\\d+(\\.\\d+)?)?\\b",
           "name": "entity.name.class.interface.ethernet.cisco"
         },
-        "fiberchannel": {
-          "match": "(?i)\\b(fc|fiberchannel)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
-          "name": "entity.name.class.interface.fiberchannel.cisco"
+        "fibrechannel": {
+          "match": "(?i)\\b(fc|vfc)(((\\d+[\\./])*)?\\d+(\\.\\d+)?)\\b",
+          "name": "entity.name.class.interface.fibrechannel.cisco"
         },
         "group-async": {
           "match": "(?i)\\b(group-async)(\\d+)?\\b",
@@ -188,7 +188,7 @@
           "name": "entity.name.class.interface.pseudowire.cisco"
         },
         "sdwan": {
-          "match": "(?i)\\b(sdwan-system-intf|service-ext)(\\d+)?\\b",
+          "match": "(?i)\\b(sdwan-system-intf|sdwan|service-ext)(\\d+)?\\b",
           "name": "entity.name.class.interface.sdwan.cisco"
         },
         "serial": {

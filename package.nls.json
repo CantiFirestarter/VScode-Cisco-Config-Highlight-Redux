@@ -57,7 +57,6 @@
   "configuration.properties.colors.interface.bundle-ether.description": "entity.name.class.interface.bundle-ether",
   "configuration.properties.colors.interface.dpt.description": "entity.name.class.interface.dpt",
   "configuration.properties.colors.interface.embedded-service-engine.description": "entity.name.class.interface.embedded-service-engine",
-  "configuration.properties.colors.interface.fiberchannel.description": "entity.name.class.interface.fiberchannel",
   "configuration.properties.colors.interface.group-async.description": "entity.name.class.interface.group-async",
   "configuration.properties.colors.interface.lisp.description": "entity.name.class.interface.lisp",
   "configuration.properties.colors.interface.lre.description": "entity.name.class.interface.lre",
@@ -70,6 +69,7 @@
   "configuration.properties.colors.interface.service-engine.description": "entity.name.class.interface.service-engine",
   "configuration.properties.colors.interface.tokenring.description": "entity.name.class.interface.tokenring",
   "configuration.properties.colors.interface.vasi.description": "entity.name.class.interface.vasi",
+  "configuration.properties.colors.interface.fibrechannel.description": "entity.name.class.interface.fibrechannel",
 
   "_comment_colors_keywords": "Token Colors - Keywords",
   "configuration.properties.colors.keyword.vlan.description": "keyword.other.config-keyword.vlan",

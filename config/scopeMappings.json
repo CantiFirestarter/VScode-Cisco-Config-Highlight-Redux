@@ -72,8 +72,8 @@
     "scope": "entity.name.class.interface.ethernet"
   },
   {
-    "configKey": "interface.fiberchannel",
-    "scope": "entity.name.class.interface.fiberchannel"
+    "configKey": "interface.fibrechannel",
+    "scope": "entity.name.class.interface.fibrechannel"
   },
   {
     "configKey": "interface.group-async",

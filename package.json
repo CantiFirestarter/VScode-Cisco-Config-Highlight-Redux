@@ -381,10 +381,10 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.interface.ethernet.description%"
               },
-              "interface.fiberchannel": {
+              "interface.fibrechannel": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.interface.fiberchannel.description%"
+                "markdownDescription": "%configuration.properties.colors.interface.fibrechannel.description%"
               },
               "interface.group-async": {
                 "type": "string",
