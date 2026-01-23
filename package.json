@@ -746,7 +746,7 @@
           },
           "cisco-config-highlight.applyAllTokenRules": {
             "type": "boolean",
-            "default": false,
+            "default": true,
             "markdownDescription": "%configuration.properties.applyAllTokenRules.description%"
           },
           "cisco-config-highlight.outline.showSymbolsInOutlinePanel": {

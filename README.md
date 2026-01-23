@@ -82,7 +82,6 @@ Both methods work together; your textMateRules are preserved and can override ex
 
 ### Quick Setup
 
-- Enable defaults: turn on `cisco-config-highlight.applyAllTokenRules` to load the extension’s baseline colors.
 - Customize colors fast: set keys under `cisco-config-highlight.colors.*` (e.g. `interface.ethernet`, `address.ipv4`, `keyword.vlan`). These map to the scopes listed below.
 - Discover scopes: run “Developer: Inspect Editor Tokens and Scopes” and click a token in a Cisco file to copy its scope.
 - Fine-tune with theme rules: add `editor.tokenColorCustomizations.textMateRules` entries for `foreground` and `fontStyle` where needed. Your rules override defaults; extension-managed colors follow your settings.
@@ -123,7 +122,7 @@ Example `settings.json`:
     }
 ```
 
-- **Enable defaults:** Turn on `applyAllTokenRules` to load sensible default colors.
+- **Defaults:** `applyAllTokenRules` is enabled by default to load predefined colors.
 - **Override:** Set keys under `colors.*` to customize. These override defaults.
 - **Real-time:** Changes apply on save; or run "Cisco Config: Apply Token Colors" from the Command Palette.
 
