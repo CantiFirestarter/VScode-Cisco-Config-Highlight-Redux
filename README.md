@@ -126,21 +126,21 @@ Example `settings.json`:
 - **Override:** Set keys under `colors.*` to customize. These override defaults.
 - **Real-time:** Changes apply on save; or run "Cisco Config: Apply Token Colors" from the Command Palette.
 
-## Token Scopes List
+## Token Scopes List (Updated 1-23-26)
 
 ```
 comment.block.banner
 comment.line.config
 
-constant.numeric.hex
-constant.numeric.integer
 constant.numeric.ipv4-AD
 constant.numeric.ipv6-AD
+constant.numeric.hex
+constant.numeric.integer
 
-entity.name.class.interface.app
 entity.name.class.interface.async
 entity.name.class.interface.bri
 entity.name.class.interface.bvi
+entity.name.class.interface.app
 entity.name.class.interface.cellular
 entity.name.class.interface.dialer
 entity.name.class.interface.ethernet
@@ -153,6 +153,24 @@ entity.name.class.interface.tunnel
 entity.name.class.interface.virtual-template
 entity.name.class.interface.vlan
 entity.name.class.interface.wireless
+entity.name.class.interface.atm
+entity.name.class.interface.bdi
+entity.name.class.interface.bundle-ether
+entity.name.class.interface.dpt
+entity.name.class.interface.embedded-service-engine
+entity.name.class.interface.fibrechannel
+entity.name.class.interface.group-async
+entity.name.class.interface.lisp
+entity.name.class.interface.lre
+entity.name.class.interface.mfr
+entity.name.class.interface.multilink
+entity.name.class.interface.nve
+entity.name.class.interface.pos
+entity.name.class.interface.pseudowire
+entity.name.class.interface.sdwan
+entity.name.class.interface.service-engine
+entity.name.class.interface.tokenring
+entity.name.class.interface.vasi
 entity.name.class.vrf.declaration
 
 entity.name.tag.acl.access-class.name
@@ -167,34 +185,39 @@ entity.name.tag.bgp.peer-session.name
 entity.name.tag.config-string.domain-name
 entity.name.tag.config-string.hostname
 entity.name.tag.config-string.logging-system-message
-entity.name.tag.config-string.name
 entity.name.tag.config-string.username
+entity.name.tag.config-string.name
 
 entity.name.tag.crypto.crypto-map.name
+entity.name.tag.crypto.transform-set.name
 entity.name.tag.crypto.ipsec-profile.name
 entity.name.tag.crypto.isakmp-profile.name
 entity.name.tag.crypto.keyring.name
-entity.name.tag.crypto.transform-set.name
 
-entity.name.tag.group.class-map.name
-entity.name.tag.group.class.name
-entity.name.tag.group.community.name
-entity.name.tag.group.object-group.name
-entity.name.tag.group.policy-list.name
-entity.name.tag.group.policy-map.name
-entity.name.tag.group.pool.name
-entity.name.tag.group.prefix-list.name
-entity.name.tag.group.route-map.name
-entity.name.tag.group.service-policy.name
-entity.name.tag.group.traffic-filter.name
+entity.name.tag.group.qos.class-map.name
+entity.name.tag.group.qos.class.name
+entity.name.tag.group.security.object-group.name.name
+entity.name.tag.group.qos.policy-map.name
+entity.name.tag.group.resource.pool.name
+entity.name.tag.group.routing.prefix-list.name
+entity.name.tag.group.routing.route-map.name
+entity.name.tag.group.qos.service-policy.name
+entity.name.tag.group.resource.policy-list.name
+entity.name.tag.group.traffic.traffic-filter.name
+entity.name.tag.group.bgp.community.name
 
 entity.name.tag.vrf.vrf-name
 entity.other.vrf.definition
 entity.other.vrf.forwarding
 
+keyword.other.acl.access-list.type
 keyword.other.acl.access-class.type
 keyword.other.acl.access-group.type
-keyword.other.acl.access-list.type
+keyword.other.acl.protocol
+keyword.other.acl.tcp-flag
+keyword.other.acl.icmp-type
+keyword.other.acl.option
+keyword.other.acl.port-operator
 
 keyword.other.address.cidr
 keyword.other.address.ipv4.full
@@ -208,12 +231,6 @@ keyword.other.config-keyword.add-remove.remove
 keyword.other.config-keyword.allowed-native
 keyword.other.config-keyword.any-all.all
 keyword.other.config-keyword.any-all.any
-keyword.other.config-keyword.group1
-keyword.other.config-keyword.group2
-keyword.other.config-keyword.group3
-keyword.other.config-keyword.group4
-keyword.other.config-keyword.group5
-keyword.other.config-keyword.group6
 keyword.other.config-keyword.in-out.in
 keyword.other.config-keyword.in-out.out
 keyword.other.config-keyword.input-output.input
@@ -224,8 +241,19 @@ keyword.other.config-keyword.match.all
 keyword.other.config-keyword.match.any
 keyword.other.config-keyword.permit-deny.deny
 keyword.other.config-keyword.permit-deny.permit
-keyword.other.config-keyword.remark
 keyword.other.config-keyword.shutdown
+keyword.other.config-keyword.remark
+keyword.other.config-keyword.network-protocols.security-aaa
+keyword.other.config-keyword.network-protocols.wireless
+keyword.other.config-keyword.network-protocols.ip-routing
+keyword.other.config-keyword.network-protocols.system-logging
+keyword.other.config-keyword.network-protocols.layer2
+keyword.other.config-keyword.network-protocols.mgmt-interfaces
+keyword.other.config-keyword.config-commands
+keyword.other.config-keyword.operational-states
+keyword.other.config-keyword.control-actions
+keyword.other.config-keyword.advanced-options
+keyword.other.config-keyword.routing-protocols
 keyword.other.config-keyword.status.administratively-down
 keyword.other.config-keyword.status.deleted
 keyword.other.config-keyword.status.down
@@ -237,13 +265,15 @@ keyword.other.config-keyword.vlan
 keyword.other.group.object-group.type
 
 meta.function-call.arp-insp-val
-meta.function-call.command-disable.default
-meta.function-call.command-disable.unused
+meta.function-call.command_hostname.config-if
+meta.function-call.command_hostname.config-router
+meta.function-call.command_hostname.config-line
+meta.function-call.command_hostname.config
 meta.function-call.command_hostname.privileged-mode
 meta.function-call.command_hostname.user-mode
+meta.function-call.command-disable.default
+meta.function-call.command-disable.unused
 
-punctuation.config-param.first
-punctuation.config-param.second
 punctuation.separator
 
 string.other.description
