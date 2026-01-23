@@ -55,7 +55,7 @@
         { "include": "#service-engine" },
         { "include": "#embedded-service-engine" },
         { "include": "#ethernet" },
-        { "include": "#fiberchannel" },
+        { "include": "#fibrechannel" },
         { "include": "#pos" },
         { "include": "#dpt" },
         { "include": "#lre" },
