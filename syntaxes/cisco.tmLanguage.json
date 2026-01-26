@@ -266,7 +266,7 @@
           "name": "entity.name.tag.config-string.hostname.cisco"
         },
         "domain-name": {
-          "match": "(?i)(?<=ip\\sdomain-name\\s)\\S+\\b",
+          "match": "(?i)(?<=ip(\\sdomain-name\\s|\\sdomain\\sname\\s))\\S+\\b",
           "name": "entity.name.tag.config-string.domain-name.cisco"
         },
         "username": {
