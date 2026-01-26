@@ -292,7 +292,7 @@
       {
         "scope": "entity.name.tag.config-string.domain-name",
         "settings": {
-          "foreground": "#FFD700"
+          "foreground": "#1E90FF"
         }
       },
       {
@@ -316,7 +316,7 @@
       {
         "scope": "entity.name.tag.config-string.name",
         "settings": {
-          "foreground": "#1E90FF"
+          "foreground": "#FF6363"
         }
       },
       {
