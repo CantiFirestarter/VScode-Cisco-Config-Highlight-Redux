@@ -1,7 +1,7 @@
 # Token Color Update Script
 
 > [!NOTE]
-> The use of this script is entend for use after adding or taking away tokens from the cisco.tmLanuage.json, and then updating textMateRules.json with the reflective changes. It is done this way, because a color for the token in textMateRules.json still needs to be seleceted.
+> The use of this script is entend for use after adding or taking away tokens from the cisco.tmLanuage.json, and then updating textMateRules.json with the reflective changes. It is done this way, because new tokens need color assignment within the textMateRules.json file. Meaning that process should be handled by hand.
 
 ## Overview
 
