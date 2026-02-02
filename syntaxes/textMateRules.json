@@ -244,7 +244,7 @@
       {
         "scope": "entity.name.class.vrf.declaration",
         "settings": {
-          "foreground": "#8A3324"
+          "foreground": "#A50B5E"
         }
       },
       {
@@ -268,19 +268,19 @@
       {
         "scope": "entity.name.tag.bgp.neighbor-peer-group.name",
         "settings": {
-          "foreground": "#1ABC9C"
+          "foreground": "#00CED1"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-group.name",
         "settings": {
-          "foreground": "#6610F2"
+          "foreground": "#00CED1"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-policy.name",
         "settings": {
-          "foreground": "#DB7093"
+          "foreground": "#FF355E"
         }
       },
       {
@@ -334,19 +334,19 @@
       {
         "scope": "entity.name.tag.crypto.ipsec-profile.name",
         "settings": {
-          "foreground": "#7B68EE"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.name.tag.crypto.isakmp-profile.name",
         "settings": {
-          "foreground": "#7B68EE"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.name.tag.crypto.keyring.name",
         "settings": {
-          "foreground": "#F4A460"
+          "foreground": "#FF355E"
         }
       },
       {
@@ -362,15 +362,15 @@
         }
       },
       {
-        "scope": "entity.name.tag.group.security.object-group.name.name",
+        "scope": "entity.name.tag.group.security.object-group.name",
         "settings": {
-          "foreground": "#E8DAEF"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.name.tag.group.qos.policy-map.name",
         "settings": {
-          "foreground": "#DB7093"
+          "foreground": "#FF355E"
         }
       },
       {
@@ -382,55 +382,55 @@
       {
         "scope": "entity.name.tag.group.routing.prefix-list.name",
         "settings": {
-          "foreground": "#FFA07A"
+          "foreground": "#FF355E"
         }
       },
       {
         "scope": "entity.name.tag.group.routing.route-map.name",
         "settings": {
-          "foreground": "#7FFFD4"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.name.tag.group.qos.service-policy.name",
         "settings": {
-          "foreground": "#DB7093"
+          "foreground": "#FF355E"
         }
       },
       {
         "scope": "entity.name.tag.group.resource.policy-list.name",
         "settings": {
-          "foreground": "#DB7093"
+          "foreground": "#FF355E"
         }
       },
       {
         "scope": "entity.name.tag.group.traffic.traffic-filter.name",
         "settings": {
-          "foreground": "#F08080"
+          "foreground": "#FF355E"
         }
       },
       {
         "scope": "entity.name.tag.group.bgp.community.name",
         "settings": {
-          "foreground": "#F368E0"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.name.tag.vrf.vrf-name",
         "settings": {
-          "foreground": "#FFCC80"
+          "foreground": "#1E90FF"
         }
       },
       {
         "scope": "entity.other.vrf.definition",
         "settings": {
-          "foreground": "#8D6E63"
+          "foreground": "#FFBF00"
         }
       },
       {
         "scope": "entity.other.vrf.forwarding",
         "settings": {
-          "foreground": "#B87333"
+          "foreground": "#FFBF00"
         }
       },
       {
@@ -472,7 +472,7 @@
       {
         "scope": "keyword.other.acl.option",
         "settings": {
-          "foreground": "#9370DB"
+          "foreground": "#C54B8C"
         }
       },
       {
@@ -538,19 +538,19 @@
       {
         "scope": "keyword.other.config-keyword.any-all.all",
         "settings": {
-          "foreground": "#0BDA51"
+          "foreground": "#33DF33"
         }
       },
       {
         "scope": "keyword.other.config-keyword.any-all.any",
         "settings": {
-          "foreground": "#0BDA51"
+          "foreground": "#33DF33"
         }
       },
       {
         "scope": "keyword.other.config-keyword.in-out.in",
         "settings": {
-          "foreground": "#33df33"
+          "foreground": "#33DF33"
         }
       },
       {
@@ -562,25 +562,25 @@
       {
         "scope": "keyword.other.config-keyword.input-output.input",
         "settings": {
-          "foreground": "#6A5ACD"
+          "foreground": "#0BDA51"
         }
       },
       {
         "scope": "keyword.other.config-keyword.input-output.output",
         "settings": {
-          "foreground": "#CD5C5C"
+          "foreground": "#E52B50"
         }
       },
       {
         "scope": "keyword.other.config-keyword.inside-outside.inside",
         "settings": {
-          "foreground": "#1E90FF"
+          "foreground": "#0BDA51"
         }
       },
       {
         "scope": "keyword.other.config-keyword.inside-outside.outside",
         "settings": {
-          "foreground": "#FF00FF"
+          "foreground": "#E52B50"
         }
       },
       {

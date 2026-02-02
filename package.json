@@ -311,10 +311,10 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.routing.route-map.name.description%"
               },
-              "group.security.object-group.name.name": {
+              "group.security.object-group.name": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.security.object-group.name.name.description%"
+                "markdownDescription": "%configuration.properties.colors.group.security.object-group.name.description%"
               },
               "group.traffic.traffic-filter.name": {
                 "type": "string",

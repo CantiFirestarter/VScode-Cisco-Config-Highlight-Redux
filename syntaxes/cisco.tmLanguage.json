@@ -228,8 +228,8 @@
     "vrf": {
       "patterns": [
         {
-          "comment": "((?<=vrf\\s)(?!.*forwarding)|(?<=vrf\\sforwarding\\s))\\S+",
-          "match": "(?i)(vrf)\\s((forwarding|definition)\\s)?(\\S+)",
+          "comment": "VRF declaration with optional forwarding/definition keyword",
+          "match": "(?i)(?:^|\\s)(vrf)\\s(?:(forwarding)|(definition))?\\s?(\\S+)",
           "captures": {
             "1": { "name": "entity.name.class.vrf.declaration.cisco" },
             "2": { "name": "entity.other.vrf.forwarding.cisco" },

@@ -268,8 +268,8 @@
     "scope": "entity.name.tag.group.routing.route-map.name"
   },
   {
-    "configKey": "group.security.object-group.name.name",
-    "scope": "entity.name.tag.group.security.object-group.name.name"
+    "configKey": "group.security.object-group.name",
+    "scope": "entity.name.tag.group.security.object-group.name"
   },
   {
     "configKey": "group.traffic.traffic-filter.name",
