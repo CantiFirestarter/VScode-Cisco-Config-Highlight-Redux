@@ -836,7 +836,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.control-actions.cisco",
-              "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|nonegotiate|optimize|on|on-success|permit|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|allowed|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|gt|in|insertion|maximum|nonegotiate|optimize|on|on-success|passive|permit|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
             }
           ]
         },
