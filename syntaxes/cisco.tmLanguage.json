@@ -49,7 +49,7 @@
         }
       ]
     },
-      "string": {
+    "string": {
       "patterns": [
         { "include": "#hostname" },
         { "include": "#description" },
