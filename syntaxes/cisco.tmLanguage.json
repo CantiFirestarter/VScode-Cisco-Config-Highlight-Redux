@@ -5,9 +5,9 @@
   "patterns": [
     { "include": "#unused_line" },
     { "include": "#comment" },
+        { "include": "#string" },
     { "include": "#interface_type" },
     { "include": "#vrf" },
-    { "include": "#string" },
     { "include": "#group" },
     { "include": "#acl" },
     { "include": "#crypto" },
@@ -802,7 +802,7 @@
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
               "name": "keyword.other.config-keyword.network-protocols.system-logging.cisco",
-              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|native|nde-address|netflow|new-model|newinfo|object-group|object|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|secondary|section|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|time|timeout|timezone|traps|transport|tries|update|update-calendar|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|nde-address|netflow|new-model|newinfo|object-group|object|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|secondary|section|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|time|timeout|timezone|traps|transport|tries|update|update-calendar|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
             },
             {
               "comment": "Layer 2 Switching & Connectivity - Spanning Tree, CDP, Trunking, VLANs, MAC",
