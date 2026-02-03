@@ -49,6 +49,63 @@
         }
       ]
     },
+      "string": {
+      "patterns": [
+        { "include": "#hostname" },
+        { "include": "#description" },
+        { "include": "#remark" },
+        { "include": "#domain-name" },
+        { "include": "#username" },
+        { "include": "#name" },
+        { "include": "#logging-system-message" },
+        { "include": "#password" },
+        { "include": "#secret" },
+        { "include": "#banner" }
+      ],
+      "repository": {
+        "description": {
+          "match": "(?i)(?<=(description))\\s(.*)$",
+          "name": "string.other.description.cisco"
+        },
+        "remark": {
+          "match": "(?i)(?<=remark)\\s(.*)$",
+          "name": "string.other.remark.cisco"
+        },
+        "hostname": {
+          "match": "(?i)(?<=hostname\\s)[0-9a-zA-Z\\-]+\\b",
+          "name": "entity.name.tag.config-string.hostname.cisco"
+        },
+        "domain-name": {
+          "match": "(?i)(?<=ip(\\sdomain-name\\s|\\sdomain\\sname\\s))\\S+\\b",
+          "name": "entity.name.tag.config-string.domain-name.cisco"
+        },
+        "username": {
+          "match": "(?i)(?<=username\\s)(\\S+)\\b",
+          "name": "entity.name.tag.config-string.username.cisco"
+        },
+        "name": {
+          "match": "(?i)(?<=name\\s)(\\S+)\\b",
+          "name": "entity.name.tag.config-string.name.cisco"
+        },
+        "logging-system-message": {
+          "match": "(?<=%)\\S+-\\d-\\S+(?=:)",
+          "name": "entity.name.tag.config-string.logging-system-message.cisco"
+        },
+        "password": {
+          "match": "(?i)(?<=password\\s)(?:\\d+\\s)?(\\S+)$",
+          "name": "string.other.password.cisco"
+        },
+        "secret": {
+          "match": "(?i)(?<=secret\\s)(?:\\d+\\s)?(\\S+)$",
+          "name": "string.other.secret.cisco"
+        },
+        "banner": {
+          "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)(\\^|@)",
+          "end": "(\\^|@)",
+          "name": "comment.block.banner.cisco"
+        }
+      }
+    },
     "interface_type": {
       "patterns": [
         { "include": "#app" },
@@ -238,63 +295,6 @@
           }
         }
       ]
-    },
-    "string": {
-      "patterns": [
-        { "include": "#hostname" },
-        { "include": "#description" },
-        { "include": "#remark" },
-        { "include": "#domain-name" },
-        { "include": "#username" },
-        { "include": "#name" },
-        { "include": "#logging-system-message" },
-        { "include": "#password" },
-        { "include": "#secret" },
-        { "include": "#banner" }
-      ],
-      "repository": {
-        "description": {
-          "match": "(?i)(?<=(description))\\s(.*)$",
-          "name": "string.other.description.cisco"
-        },
-        "remark": {
-          "match": "(?i)(?<=remark)\\s(.*)$",
-          "name": "string.other.remark.cisco"
-        },
-        "hostname": {
-          "match": "(?i)(?<=hostname\\s)[0-9a-zA-Z\\-]+\\b",
-          "name": "entity.name.tag.config-string.hostname.cisco"
-        },
-        "domain-name": {
-          "match": "(?i)(?<=ip(\\sdomain-name\\s|\\sdomain\\sname\\s))\\S+\\b",
-          "name": "entity.name.tag.config-string.domain-name.cisco"
-        },
-        "username": {
-          "match": "(?i)(?<=username\\s)(\\S+)\\b",
-          "name": "entity.name.tag.config-string.username.cisco"
-        },
-        "name": {
-          "match": "(?i)(?<=name\\s)(\\S+)\\b",
-          "name": "entity.name.tag.config-string.name.cisco"
-        },
-        "logging-system-message": {
-          "match": "(?<=%)\\S+-\\d-\\S+(?=:)",
-          "name": "entity.name.tag.config-string.logging-system-message.cisco"
-        },
-        "password": {
-          "match": "(?i)(?<=password\\s)(?:\\d+\\s)?(\\S+)$",
-          "name": "string.other.password.cisco"
-        },
-        "secret": {
-          "match": "(?i)(?<=secret\\s)(?:\\d+\\s)?(\\S+)$",
-          "name": "string.other.secret.cisco"
-        },
-        "banner": {
-          "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)(\\^|@)",
-          "end": "(\\^|@)",
-          "name": "comment.block.banner.cisco"
-        }
-      }
     },
     "group": {
       "patterns": [{ "include": "#group-modules" }],
