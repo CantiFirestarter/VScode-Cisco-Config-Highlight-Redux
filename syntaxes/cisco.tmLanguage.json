@@ -695,7 +695,7 @@
         },
         {
           "name": "keyword.other.config-keyword.allowed-native.cisco",
-          "match": "(?i)(^|\\s)(allowed|native)(?=\\s|$)"
+          "match": "(?i)(?<=trunk\\s)(allowed|native)(?=\\s|$)"
         },
         {
           "name": "keyword.other.config-keyword.any-all.any.cisco",
