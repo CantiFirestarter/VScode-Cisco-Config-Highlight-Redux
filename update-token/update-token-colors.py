@@ -83,9 +83,9 @@ def preserve_ordered_write(file_path, new_keys):
     categories = {
         "command-disable": [],
         "comment": [],
+        "string": [],
         "interface": [],
         "vrf": [],
-        "string": [],
         "config-string": [],
         "group": [],
         "acl": [],
