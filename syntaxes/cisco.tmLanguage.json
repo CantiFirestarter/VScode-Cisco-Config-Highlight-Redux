@@ -5,7 +5,7 @@
   "patterns": [
     { "include": "#unused_line" },
     { "include": "#comment" },
-        { "include": "#string" },
+    { "include": "#string" },
     { "include": "#interface_type" },
     { "include": "#vrf" },
     { "include": "#group" },
