@@ -12,19 +12,26 @@ export function registerOutlineSymbolProvider(context: vscode.ExtensionContext) 
 }
 
 const regExpJoin = (delimiter: string, list: RegExp[]): RegExp => {
+  const flags = new Set<string>();
+  list.forEach(item => {
+    item.flags.split('').forEach(flag => flags.add(flag));
+  });
   return new RegExp(
     list
       .map((item: RegExp) => {
         return item.source;
       })
       .join(delimiter),
+    Array.from(flags).join(''),
   );
 };
 
 const regexPattern = (name: string): RegExp => {
   const d = symbolsInfo[name];
-  return RegExp(
+  const flags = new Set<string>([...d.pattern.flags, ...d.item_pattern.flags]);
+  return new RegExp(
     `(?<index_${name}>${d.pattern.source})(?<submatch_${name}>${d.item_pattern.source})`,
+    Array.from(flags).join(''),
   );
 };
 
