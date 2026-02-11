@@ -13,6 +13,9 @@ export default tseslint.config(
   // Disable rules that conflict with Prettier formatting
   prettierConfig,
   {
+    ignores: ['**/*.mjs'],
+  },
+  {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       prettier: prettierPlugin,
@@ -21,6 +24,7 @@ export default tseslint.config(
       parser: tseslint.parser,
       parserOptions: {
         project: './tsconfig.json',
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
