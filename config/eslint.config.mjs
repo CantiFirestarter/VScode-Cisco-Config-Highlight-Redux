@@ -5,6 +5,7 @@ import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import tseslint from 'typescript-eslint';
+import { fileURLToPath } from 'node:url';
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -20,7 +21,7 @@ export default tseslint.config(
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: './config/tsconfig.json',
+        project: fileURLToPath(new URL('./tsconfig.json', import.meta.url)),
       },
     },
     rules: {
