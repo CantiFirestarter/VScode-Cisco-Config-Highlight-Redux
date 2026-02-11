@@ -1,22 +1,56 @@
 {
   "name": "cisco-config-highlight-redux",
-  "displayName": "Cisco Config Highlight: Redux",
-  "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
   "version": "0.7.47",
-  "publisher": "CantiFirestarter",
-  "license": "MIT",
+  "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
+  "homepage": "https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux#readme",
+  "bugs": {
+    "url": "https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux.git"
+    "url": "git+https://github.com/CantiFirestarter/vscode-cisco-config-highlight-redux.git"
+  },
+  "license": "MIT",
+  "author": "Canti Firestarter",
+  "type": "commonjs",
+  "main": "./out/extension.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./config",
+    "watch": "tsc -watch -p ./config",
+    "lint": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\"",
+    "lint:fix": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix"
+  },
+  "dependencies": {
+    "semver": "^7.7.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.2.3",
+    "@types/semver": "^7.7.1",
+    "@types/vscode": "^1.108.1",
+    "@vscode/vsce": "^3.7.1",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0"
   },
   "engines": {
     "vscode": "^1.108.0"
   },
+  "displayName": "Cisco Config Highlight: Redux",
+  "publisher": "CantiFirestarter",
   "categories": [
     "Programming Languages"
   ],
   "icon": "images/icon.png",
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -814,35 +848,5 @@
         }
       }
     ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./config",
-    "watch": "tsc -watch -p ./config",
-    "lint": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\"",
-    "lint:fix": "eslint -c config/eslint.config.mjs \"src/**/*.{js,ts}\" --fix",
-    "audit": "npm audit",
-    "audit:fix": "npm audit fix"
-  },
-  "dependencies": {
-    "semver": "^7.7.3"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/node": "^25.0.9",
-    "@types/semver": "^7.7.1",
-    "@types/vscode": "^1.108.1",
-    "@vscode/vsce": "^3.7.1",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.0"
-  },
-  "__metadata": {
-    "installedTimestamp": 1765500322524,
-    "targetPlatform": "undefined",
-    "size": 445484
   }
 }
