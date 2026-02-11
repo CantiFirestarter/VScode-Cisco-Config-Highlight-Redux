@@ -796,6 +796,146 @@
                 "type": "boolean",
                 "default": true,
                 "description": "%configuration.properties.symbols.subInterface.description%"
+              },
+              "router_ospf": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.routerOspf.description%"
+              },
+              "router_eigrp": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.routerEigrp.description%"
+              },
+              "router_rip": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.routerRip.description%"
+              },
+              "router_isis": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.routerIsis.description%"
+              },
+              "service_policy": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.servicePolicy.description%"
+              },
+              "interface_range": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.interfaceRange.description%"
+              },
+              "ip_access_list": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ipAccessList.description%"
+              },
+              "ipv6_access_list": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ipv6AccessList.description%"
+              },
+              "access_list": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.accessList.description%"
+              },
+              "crypto_map": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.cryptoMap.description%"
+              },
+              "crypto_isakmp": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.cryptoIsakmp.description%"
+              },
+              "crypto_ikev2": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.cryptoIkev2.description%"
+              },
+              "ipsec_profile": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ipsecProfile.description%"
+              },
+              "keyring": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.keyring.description%"
+              },
+              "aaa_authentication": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.aaaAuthentication.description%"
+              },
+              "aaa_authorization": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.aaaAuthorization.description%"
+              },
+              "aaa_accounting": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.aaaAccounting.description%"
+              },
+              "line_vty": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.lineVty.description%"
+              },
+              "line_con": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.lineCon.description%"
+              },
+              "line_aux": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.lineAux.description%"
+              },
+              "username": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.username.description%"
+              },
+              "vlan": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.vlan.description%"
+              },
+              "spanning_tree": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.spanningTree.description%"
+              },
+              "switchport": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.switchport.description%"
+              },
+              "snmp_server": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.snmpServer.description%"
+              },
+              "logging": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.logging.description%"
+              },
+              "ntp": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ntp.description%"
+              },
+              "ip_dhcp_pool": {
+                "type": "boolean",
+                "default": true,
+                "description": "%configuration.properties.symbols.ipDhcpPool.description%"
               }
             },
             "additionalProperties": false,
@@ -807,7 +947,35 @@
               "class_map": true,
               "policy_map": true,
               "interface": true,
-              "sub_interface": true
+              "sub_interface": true,
+              "router_ospf": true,
+              "router_eigrp": true,
+              "router_rip": true,
+              "router_isis": true,
+              "service_policy": true,
+              "interface_range": true,
+              "ip_access_list": true,
+              "ipv6_access_list": true,
+              "access_list": true,
+              "crypto_map": true,
+              "crypto_isakmp": true,
+              "crypto_ikev2": true,
+              "ipsec_profile": true,
+              "keyring": true,
+              "aaa_authentication": true,
+              "aaa_authorization": true,
+              "aaa_accounting": true,
+              "line_vty": true,
+              "line_con": true,
+              "line_aux": true,
+              "username": true,
+              "vlan": true,
+              "spanning_tree": true,
+              "switchport": true,
+              "snmp_server": true,
+              "logging": true,
+              "ntp": true,
+              "ip_dhcp_pool": true
             },
             "markdownDescription": "%configuration.properties.showEnableDisableSymbols.description%"
           }
