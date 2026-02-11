@@ -4,11 +4,7 @@
 import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import tseslint from 'typescript-eslint';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -16,9 +12,6 @@ export default tseslint.config(
   ...tseslint.configs.stylisticTypeChecked,
   // Disable rules that conflict with Prettier formatting
   prettierConfig,
-  {
-    ignores: ['**/*.mjs'],
-  },
   {
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -28,7 +21,6 @@ export default tseslint.config(
       parser: tseslint.parser,
       parserOptions: {
         project: './config/tsconfig.json',
-        tsconfigRootDir: path.join(__dirname, '..'),
       },
     },
     rules: {
