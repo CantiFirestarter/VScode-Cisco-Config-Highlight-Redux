@@ -6,9 +6,9 @@
     { "include": "#unused_line" },
     { "include": "#comment" },
     { "include": "#string" },
+    { "include": "#group" },
     { "include": "#interface_type" },
     { "include": "#vrf" },
-    { "include": "#group" },
     { "include": "#acl" },
     { "include": "#crypto" },
     { "include": "#address" },
@@ -103,6 +103,100 @@
           "begin": "(?i)(?<=banner\\s(exec|login|motd)\\s)(\\^|@)",
           "end": "(\\^|@)",
           "name": "comment.block.banner.cisco"
+        }
+      }
+    },
+    "group": {
+      "patterns": [{ "include": "#group-modules" }],
+      "repository": {
+        "group-modules": {
+          "patterns": [
+            { "include": "#qos-module" },
+            { "include": "#routing-module" },
+            { "include": "#bgp-module" },
+            { "include": "#security-module" },
+            { "include": "#traffic-module" },
+            { "include": "#resource-module" }
+          ]
+        },
+        "qos-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=class\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.class.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=service-policy\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.service-policy.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=policy-map\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.policy-map.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=class-map\\s(.*\\s)?)(\\S+)$",
+              "name": "entity.name.tag.group.qos.class-map.name.cisco"
+            }
+          ]
+        },
+        "routing-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=route-map\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.routing.route-map.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=prefix-list\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.routing.prefix-list.name.cisco"
+            }
+          ]
+        },
+        "bgp-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=community\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.bgp.community.name.cisco"
+            }
+          ]
+        },
+        "security-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
+              "captures": {
+                "2": {
+                  "name": "keyword.other.group.security.object-group.type.cisco"
+                },
+                "3": {
+                  "name": "entity.name.tag.group.security.object-group.name.cisco"
+                }
+              }
+            }
+          ]
+        },
+        "traffic-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=traffic-filter\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.traffic.traffic-filter.name.cisco"
+            }
+          ]
+        },
+        "resource-module": {
+          "patterns": [
+            {
+              "match": "(?i)(?<=dhcp\\sserver\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.resource.dhcp-server.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=\\bpool\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.resource.pool.name.cisco"
+            },
+            {
+              "match": "(?i)(?<=policy-list\\s)(\\S+)\\b",
+              "name": "entity.name.tag.group.resource.policy-list.name.cisco"
+            }
+          ]
         }
       }
     },
@@ -295,96 +389,6 @@
           }
         }
       ]
-    },
-    "group": {
-      "patterns": [{ "include": "#group-modules" }],
-      "repository": {
-        "group-modules": {
-          "patterns": [
-            { "include": "#qos-module" },
-            { "include": "#routing-module" },
-            { "include": "#bgp-module" },
-            { "include": "#security-module" },
-            { "include": "#traffic-module" },
-            { "include": "#resource-module" }
-          ]
-        },
-        "qos-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=class\\s(.*\\s)?)(\\S+)$",
-              "name": "entity.name.tag.group.qos.class.name.cisco"
-            },
-            {
-              "match": "(?i)(?<=service-policy\\s(.*\\s)?)(\\S+)$",
-              "name": "entity.name.tag.group.qos.service-policy.name.cisco"
-            },
-            {
-              "match": "(?i)(?<=policy-map\\s(.*\\s)?)(\\S+)$",
-              "name": "entity.name.tag.group.qos.policy-map.name.cisco"
-            },
-            {
-              "match": "(?i)(?<=class-map\\s(.*\\s)?)(\\S+)$",
-              "name": "entity.name.tag.group.qos.class-map.name.cisco"
-            }
-          ]
-        },
-        "routing-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=route-map\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.routing.route-map.name.cisco"
-            },
-            {
-              "match": "(?i)(?<=prefix-list\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.routing.prefix-list.name.cisco"
-            }
-          ]
-        },
-        "bgp-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=community\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.bgp.community.name.cisco"
-            }
-          ]
-        },
-        "security-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=object-group\\s)((service|network)\\s)?(\\S+)\\b",
-              "captures": {
-                "2": {
-                  "name": "keyword.other.group.security.object-group.type.cisco"
-                },
-                "3": {
-                  "name": "entity.name.tag.group.security.object-group.name.cisco"
-                }
-              }
-            }
-          ]
-        },
-        "traffic-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=traffic-filter\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.traffic.traffic-filter.name.cisco"
-            }
-          ]
-        },
-        "resource-module": {
-          "patterns": [
-            {
-              "match": "(?i)(?<=\\bpool\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.resource.pool.name.cisco"
-            },
-            {
-              "match": "(?i)(?<=policy-list\\s)(\\S+)\\b",
-              "name": "entity.name.tag.group.resource.policy-list.name.cisco"
-            }
-          ]
-        }
-      }
     },
     "acl": {
       "patterns": [
