@@ -252,6 +252,10 @@
     "scope": "entity.name.tag.group.qos.service-policy.name"
   },
   {
+    "configKey": "group.resource.dhcp-server.name",
+    "scope": "entity.name.tag.group.resource.dhcp-server.name"
+  },
+  {
     "configKey": "group.resource.policy-list.name",
     "scope": "entity.name.tag.group.resource.policy-list.name"
   },

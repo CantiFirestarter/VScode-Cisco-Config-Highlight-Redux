@@ -180,6 +180,7 @@
   "configuration.properties.colors.group.routing.prefix-list.name.description": "entity.name.tag.group.routing.prefix-list.name",
   "configuration.properties.colors.group.traffic.traffic-filter.name.description": "entity.name.tag.group.traffic.traffic-filter.name",
   "configuration.properties.colors.group.security.object-group.name.description": "entity.name.tag.group.security.object-group.name",
+  "configuration.properties.colors.group.resource.dhcp-server.name.description": "entity.name.tag.group.resource.dhcp-server.name",
 
   "_comment_colors_acl": "Token Colors - ACL",
   "configuration.properties.colors.acl.access-list.name.description": "entity.name.tag.acl.access-list.name",

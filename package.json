@@ -291,6 +291,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.qos.service-policy.name.description%"
               },
+              "group.resource.dhcp-server.name": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.resource.dhcp-server.name.description%"
+              },
               "group.resource.policy-list.name": {
                 "type": "string",
                 "format": "color",
