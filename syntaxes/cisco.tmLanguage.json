@@ -820,7 +820,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.config-commands.cisco",
-              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|domain-name|domain|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service|server|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
             }
           ]
         },
@@ -844,7 +844,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.advanced-options.cisco",
-              "match": "(?i)(^|\\s)(address-family|allow-hint|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|extended|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-local|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(address-family|allow-hint|autoconfig|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|extended|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-local|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
             }
           ]
         },
