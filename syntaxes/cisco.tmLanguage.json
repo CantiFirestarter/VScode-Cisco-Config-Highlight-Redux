@@ -444,7 +444,7 @@
         },
         "acl-options": {
           "name": "keyword.other.acl.option.cisco",
-          "match": "(?i)\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)(?=\\s|\\b|$)"
+          "match": "(?i)(?<!-)\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)(?=\\s|\\b|$)"
         },
         "acl-port-operators": {
           "name": "keyword.other.acl.port-operator.cisco",
