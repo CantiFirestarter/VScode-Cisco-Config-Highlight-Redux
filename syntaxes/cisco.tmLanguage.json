@@ -84,8 +84,11 @@
           "name": "entity.name.tag.config-string.username.cisco"
         },
         "name": {
-          "match": "(?i)(?<=name\\s)(\\S+)\\b",
-          "name": "entity.name.tag.config-string.name.cisco"
+          "match": "(?i)(^|\\s)(name)\\s(\\S+)\\b",
+          "captures": {
+            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "3": { "name": "entity.name.tag.config-string.name.cisco" }
+          }
         },
         "logging-system-message": {
           "match": "(?<=%)\\S+-\\d-\\S+(?=:)",
@@ -816,7 +819,7 @@
             {
               "comment": "Management Interfaces (VTY/Console) - Line Access, Sessions, Execution",
               "name": "keyword.other.config-keyword.network-protocols.mgmt-interfaces.cisco",
-              "match": "(?i)(^|\\s)(aux|bus|client|client-id|conflict|console|exec-time|exec|msec|tty|vty)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(aux|bus|client-id|client|conflict|console|exec-timeout|exec-time|exec|msec|tty|vty)(?=\\b|$)"
             }
           ]
         },
@@ -832,7 +835,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.operational-states.cisco",
-              "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exec-timeout|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|running-config|session-timeout|shutdown|standby|startup-config|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|running-config|session-timeout|shutdown|standby|startup-config|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
             }
           ]
         },
