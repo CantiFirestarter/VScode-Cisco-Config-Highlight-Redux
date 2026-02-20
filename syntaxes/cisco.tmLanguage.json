@@ -11,6 +11,7 @@
     { "include": "#vrf" },
     { "include": "#acl" },
     { "include": "#crypto" },
+    { "include": "#ip_sla" },
     { "include": "#address" },
     { "include": "#arp_insp_val" },
     { "include": "#command_hostname" },
@@ -451,8 +452,11 @@
           "match": "(?i)\\b(alternate-address|conversion-error|datagram-conversion-error|domain-name-reply|domain-name-request|echo-reply|echo|information-reply|information-request|ipv6-i-am-here|ipv6-where-are-you|mask-reply|mask-request|mobile-host-redirect|mobile-redirect|mobile-registration-reply|mobile-registration-request|parameter-problem|photuris|redirect|router-advertisement|router-solicitation|skip|source-quench|time-exceeded|timestamp-reply|timestamp-request|traceroute|unreachable)(?=\\s|\\b|$)"
         },
         "acl-options": {
-          "name": "keyword.other.acl.option.cisco",
-          "match": "(?i)(?<!-)\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)(?=\\s|\\b|$)"
+          "match": "(?i)^(?:\\s*(?:ipv6\\s+)?(?:ip\\s+)?access-list\\b.*\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)\\b|\\s*(?:permit|deny|dynamic)\\b.*\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)\\b)",
+          "captures": {
+            "1": { "name": "keyword.other.acl.option.cisco" },
+            "2": { "name": "keyword.other.acl.option.cisco" }
+          }
         },
         "acl-port-operators": {
           "name": "keyword.other.acl.port-operator.cisco",
@@ -488,6 +492,135 @@
         "keyring": {
           "match": "(?i)(?<=\\bkeyring\\s)(\\S+)\\b",
           "name": "entity.name.tag.crypto.keyring.name.cisco"
+        }
+      }
+    },
+    "ip_sla": {
+      "patterns": [
+        { "include": "#ip-sla-operation" },
+        { "include": "#ip-sla-monitor-operation" },
+        { "include": "#ip-sla-schedule" },
+        { "include": "#ip-sla-monitor-schedule" },
+        { "include": "#ip-sla-group-schedule" },
+        { "include": "#ip-sla-reaction-configuration" },
+        { "include": "#ip-sla-logging" },
+        { "include": "#ip-sla-responder" },
+        { "include": "#track-ip-sla" },
+        { "include": "#ip-sla-operation-line" },
+        { "include": "#ip-sla-schedule-line" },
+        { "include": "#ip-sla-reaction-line" }
+      ],
+      "repository": {
+        "ip-sla-operation": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla)\\s+(\\d+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
+          }
+        },
+        "ip-sla-monitor-operation": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+monitor)\\s+(\\d+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
+          }
+        },
+        "ip-sla-schedule": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+schedule)\\s+(\\d+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
+          }
+        },
+        "ip-sla-monitor-schedule": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+monitor\\s+schedule)\\s+(\\d+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
+          }
+        },
+        "ip-sla-group-schedule": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+group\\s+schedule)\\s+(\\S+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.group-name.cisco" }
+          }
+        },
+        "ip-sla-reaction-configuration": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+reaction-configuration)\\s+(\\d+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
+          }
+        },
+        "ip-sla-logging": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+logging\\s+traps)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" }
+          }
+        },
+        "ip-sla-responder": {
+          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+responder)(?:\\s+(tcp-connect|udp-echo|ip|all))?\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "keyword.other.ip-sla.responder-type.cisco" }
+          }
+        },
+        "track-ip-sla": {
+          "match": "(?i)^\\s*(track)\\s+(\\d+)\\s+(ip\\s+sla)\\s+(\\d+)\\s*(reachability|state)?\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "entity.name.tag.ip-sla.track-id.cisco" },
+            "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "4": { "name": "entity.name.tag.ip-sla.operation-id.cisco" },
+            "5": { "name": "keyword.other.ip-sla.track-condition.cisco" }
+          }
+        },
+        "ip-sla-operation-line": {
+          "begin": "(?i)^\\s*ip\\s+sla(?:\\s+monitor)?\\s+\\d+\\s*$",
+          "end": "(?=^\\S|\\z)",
+          "patterns": [
+            { "include": "#ip-sla-operation-types" },
+            { "include": "#ip-sla-operation-options" }
+          ]
+        },
+        "ip-sla-operation-types": {
+          "match": "(?i)^\\s*(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|http|get-url|dns|dhcp|ftp|jitter|path-echo|ethernet|voip|mpls-lsp-ping|mpls-pseudowire)\\b",
+          "name": "keyword.other.ip-sla.operation-type.cisco"
+        },
+        "ip-sla-operation-options": {
+          "match": "(?i)^\\s*(control|data-size|dest-ipaddr|dest-port|dscp|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|threshold|timeout|tos|verify-data|vrf)\\b",
+          "name": "keyword.other.ip-sla.option.cisco"
+        },
+        "ip-sla-schedule-line": {
+          "begin": "(?i)^\\s*ip\\s+sla(?:\\s+monitor)?\\s+schedule\\s+\\d+\\s",
+          "end": "$",
+          "patterns": [{ "include": "#ip-sla-schedule-options" }]
+        },
+        "ip-sla-schedule-options": {
+          "match": "(?i)\\b(ageout|life|recurring|start-time|forever|now|pending)\\b",
+          "name": "keyword.other.ip-sla.schedule-option.cisco"
+        },
+        "ip-sla-reaction-line": {
+          "begin": "(?i)^\\s*ip\\s+sla\\s+reaction-configuration\\s+\\d+\\s",
+          "end": "$",
+          "patterns": [
+            { "include": "#ip-sla-reaction-options" },
+            { "include": "#ip-sla-reaction-thresholds" },
+            { "include": "#ip-sla-reaction-types" }
+          ]
+        },
+        "ip-sla-reaction-options": {
+          "match": "(?i)\\b(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger|none)\\b",
+          "name": "keyword.other.ip-sla.reaction-option.cisco"
+        },
+        "ip-sla-reaction-thresholds": {
+          "match": "(?i)\\b(rising|falling|delta)\\b",
+          "name": "keyword.other.ip-sla.reaction-threshold.cisco"
+        },
+        "ip-sla-reaction-types": {
+          "match": "(?i)\\b(timeout|connection-loss|verify-error|packet-loss|jitter|latency)\\b",
+          "name": "keyword.other.ip-sla.reaction-type.cisco"
         }
       }
     },
@@ -814,7 +947,7 @@
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
               "name": "keyword.other.config-keyword.network-protocols.system-logging.cisco",
-              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|nde-address|netflow|new-model|newinfo|object-group|object|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|secondary|section|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|time|timeout|timezone|traps|transport|tries|update|update-calendar|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|finrst-timeout|flash|flow|flow-aggregation|flow-export|include|included|linkdown|linkup|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|modulus|nde-address|netflow|new-model|newinfo|object-group|object|optional|pad|page|prefer|preempt|primary|recovery|recurring|redundancy|resource|secondary|section|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|timezone|traps|transport|tries|update-calendar|uptime|usage|v3|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
             },
             {
               "comment": "Layer 2 Switching & Connectivity - Spanning Tree, CDP, Trunking, VLANs, MAC",

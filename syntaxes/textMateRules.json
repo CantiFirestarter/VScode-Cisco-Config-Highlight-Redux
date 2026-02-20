@@ -422,6 +422,24 @@
         }
       },
       {
+        "scope": "entity.name.tag.ip-sla.group-name",
+        "settings": {
+          "foreground": "#1E90FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.operation-id",
+        "settings": {
+          "foreground": "#1E90FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.track-id",
+        "settings": {
+          "foreground": "#FF355E"
+        }
+      },
+      {
         "scope": "entity.name.tag.vrf.vrf-name",
         "settings": {
           "foreground": "#1E90FF"
@@ -737,6 +755,54 @@
         "scope": "keyword.other.config-keyword.vlan",
         "settings": {
           "foreground": "#33df33"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.operation-type",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.option",
+        "settings": {
+          "foreground": "#C54B8C"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.reaction-option",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.reaction-threshold",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.reaction-type",
+        "settings": {
+          "foreground": "#FF1493"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.responder-type",
+        "settings": {
+          "foreground": "#FFA500"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.schedule-option",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.track-condition",
+        "settings": {
+          "foreground": "#33DF33"
         }
       },
       {

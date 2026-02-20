@@ -181,6 +181,19 @@
   "configuration.properties.colors.keyword.switchport-mode.access.description": "keyword.other.config-keyword.switchport-mode.access",
   "configuration.properties.colors.keyword.switchport-mode.dynamic.description": "keyword.other.config-keyword.switchport-mode.dynamic",
   "configuration.properties.colors.keyword.switchport-mode.trunk.description": "keyword.other.config-keyword.switchport-mode.trunk",
-  "configuration.properties.colors.keyword.vlan.description": "keyword.other.config-keyword.vlan"
+  "configuration.properties.colors.keyword.vlan.description": "keyword.other.config-keyword.vlan",
+
+  "_comment_colors_other": "Token Colors - Other",
+  "configuration.properties.colors.ip-sla.group-name.description": "entity.name.tag.ip-sla.group-name",
+  "configuration.properties.colors.ip-sla.operation-id.description": "entity.name.tag.ip-sla.operation-id",
+  "configuration.properties.colors.ip-sla.track-id.description": "entity.name.tag.ip-sla.track-id",
+  "configuration.properties.colors.ip-sla.operation-type.description": "keyword.other.ip-sla.operation-type",
+  "configuration.properties.colors.ip-sla.option.description": "keyword.other.ip-sla.option",
+  "configuration.properties.colors.ip-sla.reaction-option.description": "keyword.other.ip-sla.reaction-option",
+  "configuration.properties.colors.ip-sla.reaction-threshold.description": "keyword.other.ip-sla.reaction-threshold",
+  "configuration.properties.colors.ip-sla.reaction-type.description": "keyword.other.ip-sla.reaction-type",
+  "configuration.properties.colors.ip-sla.responder-type.description": "keyword.other.ip-sla.responder-type",
+  "configuration.properties.colors.ip-sla.schedule-option.description": "keyword.other.ip-sla.schedule-option",
+  "configuration.properties.colors.ip-sla.track-condition.description": "keyword.other.ip-sla.track-condition"
 }
   

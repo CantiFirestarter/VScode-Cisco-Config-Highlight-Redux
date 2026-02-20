@@ -280,6 +280,18 @@
     "scope": "entity.name.tag.group.traffic.traffic-filter.name"
   },
   {
+    "configKey": "ip-sla.group-name",
+    "scope": "entity.name.tag.ip-sla.group-name"
+  },
+  {
+    "configKey": "ip-sla.operation-id",
+    "scope": "entity.name.tag.ip-sla.operation-id"
+  },
+  {
+    "configKey": "ip-sla.track-id",
+    "scope": "entity.name.tag.ip-sla.track-id"
+  },
+  {
     "configKey": "vrf.vrf-name",
     "scope": "entity.name.tag.vrf.vrf-name"
   },
@@ -494,6 +506,38 @@
   {
     "configKey": "group.object-group.type",
     "scope": "keyword.other.group.object-group.type"
+  },
+  {
+    "configKey": "ip-sla.operation-type",
+    "scope": "keyword.other.ip-sla.operation-type"
+  },
+  {
+    "configKey": "ip-sla.option",
+    "scope": "keyword.other.ip-sla.option"
+  },
+  {
+    "configKey": "ip-sla.reaction-option",
+    "scope": "keyword.other.ip-sla.reaction-option"
+  },
+  {
+    "configKey": "ip-sla.reaction-threshold",
+    "scope": "keyword.other.ip-sla.reaction-threshold"
+  },
+  {
+    "configKey": "ip-sla.reaction-type",
+    "scope": "keyword.other.ip-sla.reaction-type"
+  },
+  {
+    "configKey": "ip-sla.responder-type",
+    "scope": "keyword.other.ip-sla.responder-type"
+  },
+  {
+    "configKey": "ip-sla.schedule-option",
+    "scope": "keyword.other.ip-sla.schedule-option"
+  },
+  {
+    "configKey": "ip-sla.track-condition",
+    "scope": "keyword.other.ip-sla.track-condition"
   },
   {
     "configKey": "arp-insp-val",
