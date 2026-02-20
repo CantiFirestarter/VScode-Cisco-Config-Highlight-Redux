@@ -450,16 +450,14 @@
           "match": "(?i)\\b(administratively-prohibited|alternate-address|conversion-error|datagram-conversion-error|domain-name-reply|domain-name-request|echo-reply|echo|information-reply|information-request|ipv6-i-am-here|ipv6-where-are-you|mask-reply|mask-request|mobile-host-redirect|mobile-redirect|mobile-registration-reply|mobile-registration-request|parameter-problem|photuris|redirect|router-advertisement|router-solicitation|skip|source-quench|time-exceeded|timestamp-reply|timestamp-request|traceroute|unreachable)(?=\\s|\\b|$)"
         },
         "acl-options": {
-          "match": "(?i)^(?:\\s*(?:ipv6\\s+)?(?:ip\\s+)?access-list\\b.*\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)\\b|\\s*(?:permit|deny|dynamic)\\b.*\\b(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)\\b)",
+          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)(?=\\s|$)",
           "captures": {
-            "1": { "name": "keyword.other.acl.option.cisco" },
             "2": { "name": "keyword.other.acl.option.cisco" }
           }
         },
         "acl-port-operators": {
-          "match": "(?i)^\\s*(?:(?:\\d+\\s+)?(?:permit|deny|dynamic)\\b.*?\\b(eq|gt|lt|neq|range)\\b|(?:ipv6\\s+)?(?:ip\\s+)?access-list\\b.*?\\b(eq|gt|lt|neq|range)\\b)",
+          "match": "(?i)(^|\\s)(eq|gt|lt|neq|range)(?=\\s|$)",
           "captures": {
-            "1": { "name": "keyword.other.acl.port-operator.cisco" },
             "2": { "name": "keyword.other.acl.port-operator.cisco" }
           }
         }
