@@ -434,6 +434,48 @@
         }
       },
       {
+        "scope": "entity.name.tag.ip-sla.sla-id",
+        "settings": {
+          "foreground": "#1E90FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.monitor",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.schedule",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.monitor-schedule",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.reaction-configuration",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.logging",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ip-sla.responder",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
         "scope": "entity.name.tag.ip-sla.track-id",
         "settings": {
           "foreground": "#FF355E"
@@ -764,6 +806,12 @@
         }
       },
       {
+        "scope": "keyword.other.ip-sla.group-schedule",
+        "settings": {
+          "foreground": "#CC66FF"
+        }
+      },
+      {
         "scope": "keyword.other.ip-sla.operation-type",
         "settings": {
           "foreground": "#00CED1"
@@ -809,6 +857,12 @@
         "scope": "keyword.other.ip-sla.track-condition",
         "settings": {
           "foreground": "#33DF33"
+        }
+      },
+      {
+        "scope": "keyword.other.ip-sla.track",
+        "settings": {
+          "foreground": "#3333FF"
         }
       },
       {

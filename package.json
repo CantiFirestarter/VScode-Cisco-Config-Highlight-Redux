@@ -506,6 +506,26 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.group-name.description%"
               },
+              "ip-sla.group-schedule": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.group-schedule.description%"
+              },
+              "ip-sla.logging": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.logging.description%"
+              },
+              "ip-sla.monitor": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.monitor.description%"
+              },
+              "ip-sla.monitor-schedule": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.monitor-schedule.description%"
+              },
               "ip-sla.operation-id": {
                 "type": "string",
                 "format": "color",
@@ -520,6 +540,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.option.description%"
+              },
+              "ip-sla.reaction-configuration": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.reaction-configuration.description%"
               },
               "ip-sla.reaction-option": {
                 "type": "string",
@@ -536,15 +561,35 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.reaction-type.description%"
               },
+              "ip-sla.responder": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.responder.description%"
+              },
               "ip-sla.responder-type": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.responder-type.description%"
               },
+              "ip-sla.schedule": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.schedule.description%"
+              },
               "ip-sla.schedule-option": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.schedule-option.description%"
+              },
+              "ip-sla.sla-id": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.sla-id.description%"
+              },
+              "ip-sla.track": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.track.description%"
               },
               "ip-sla.track-condition": {
                 "type": "string",

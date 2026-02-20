@@ -284,8 +284,36 @@
     "scope": "entity.name.tag.ip-sla.group-name"
   },
   {
+    "configKey": "ip-sla.logging",
+    "scope": "entity.name.tag.ip-sla.logging"
+  },
+  {
+    "configKey": "ip-sla.monitor",
+    "scope": "entity.name.tag.ip-sla.monitor"
+  },
+  {
+    "configKey": "ip-sla.monitor-schedule",
+    "scope": "entity.name.tag.ip-sla.monitor-schedule"
+  },
+  {
     "configKey": "ip-sla.operation-id",
     "scope": "entity.name.tag.ip-sla.operation-id"
+  },
+  {
+    "configKey": "ip-sla.reaction-configuration",
+    "scope": "entity.name.tag.ip-sla.reaction-configuration"
+  },
+  {
+    "configKey": "ip-sla.responder",
+    "scope": "entity.name.tag.ip-sla.responder"
+  },
+  {
+    "configKey": "ip-sla.schedule",
+    "scope": "entity.name.tag.ip-sla.schedule"
+  },
+  {
+    "configKey": "ip-sla.sla-id",
+    "scope": "entity.name.tag.ip-sla.sla-id"
   },
   {
     "configKey": "ip-sla.track-id",
@@ -512,6 +540,10 @@
     "scope": "keyword.other.ip-sla.command"
   },
   {
+    "configKey": "ip-sla.group-schedule",
+    "scope": "keyword.other.ip-sla.group-schedule"
+  },
+  {
     "configKey": "ip-sla.operation-type",
     "scope": "keyword.other.ip-sla.operation-type"
   },
@@ -538,6 +570,10 @@
   {
     "configKey": "ip-sla.schedule-option",
     "scope": "keyword.other.ip-sla.schedule-option"
+  },
+  {
+    "configKey": "ip-sla.track",
+    "scope": "keyword.other.ip-sla.track"
   },
   {
     "configKey": "ip-sla.track-condition",

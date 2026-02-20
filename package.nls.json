@@ -229,5 +229,14 @@
   "configuration.properties.colors.ip-sla.responder-type.description": "keyword.other.ip-sla.responder-type",
   "configuration.properties.colors.ip-sla.schedule-option.description": "keyword.other.ip-sla.schedule-option",
   "configuration.properties.colors.ip-sla.track-condition.description": "keyword.other.ip-sla.track-condition",
-  "configuration.properties.colors.ip-sla.command.description": "keyword.other.ip-sla.command"
+  "configuration.properties.colors.ip-sla.command.description": "keyword.other.ip-sla.command",
+  "configuration.properties.colors.ip-sla.logging.description": "entity.name.tag.ip-sla.logging",
+  "configuration.properties.colors.ip-sla.monitor.description": "entity.name.tag.ip-sla.monitor",
+  "configuration.properties.colors.ip-sla.monitor-schedule.description": "entity.name.tag.ip-sla.monitor-schedule",
+  "configuration.properties.colors.ip-sla.reaction-configuration.description": "entity.name.tag.ip-sla.reaction-configuration",
+  "configuration.properties.colors.ip-sla.responder.description": "entity.name.tag.ip-sla.responder",
+  "configuration.properties.colors.ip-sla.schedule.description": "entity.name.tag.ip-sla.schedule",
+  "configuration.properties.colors.ip-sla.sla-id.description": "entity.name.tag.ip-sla.sla-id",
+  "configuration.properties.colors.ip-sla.group-schedule.description": "keyword.other.ip-sla.group-schedule",
+  "configuration.properties.colors.ip-sla.track.description": "keyword.other.ip-sla.track"
 }
