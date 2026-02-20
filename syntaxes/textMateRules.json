@@ -442,37 +442,37 @@
       {
         "scope": "entity.name.tag.ip-sla.monitor",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.ip-sla.schedule",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.ip-sla.monitor-schedule",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.ip-sla.reaction-configuration",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.ip-sla.logging",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.ip-sla.responder",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {
@@ -808,7 +808,7 @@
       {
         "scope": "keyword.other.ip-sla.group-schedule",
         "settings": {
-          "foreground": "#FDFF00"
+          "foreground": "#FF43A4"
         }
       },
       {

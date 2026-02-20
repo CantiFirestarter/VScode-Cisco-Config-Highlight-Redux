@@ -600,7 +600,7 @@
           "name": "keyword.other.ip-sla.option.cisco"
         },
         "ip-sla-schedule-line": {
-          "begin": "(?i)(?:^|\\s)(sla(?:\\s+monitor)?\\s+schedule\\s+\\d+\\s)",
+          "begin": "(?i)(?:^|\\s)(sla\\s+(?:(?:monitor\\s+)?schedule\\s+\\d+|group\\s+schedule\\s+\\S+(?:\\s+\\d+)+)\\s)",
           "end": "$",
           "patterns": [{ "include": "#ip-sla-schedule-options" }]
         },
