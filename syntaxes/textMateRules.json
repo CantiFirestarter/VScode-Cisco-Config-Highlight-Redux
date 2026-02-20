@@ -758,6 +758,12 @@
         }
       },
       {
+        "scope": "keyword.other.ip-sla.command",
+        "settings": {
+          "foreground": "#FF8C66"
+        }
+      },
+      {
         "scope": "keyword.other.ip-sla.operation-type",
         "settings": {
           "foreground": "#00CED1"

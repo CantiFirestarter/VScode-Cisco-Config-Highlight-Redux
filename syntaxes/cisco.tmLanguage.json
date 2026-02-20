@@ -512,72 +512,72 @@
       ],
       "repository": {
         "ip-sla-operation": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla)\\s+(\\d+)\\b",
+          "match": "(?i)(?:^|\\s)(sla)\\s+(\\d+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
           }
         },
         "ip-sla-monitor-operation": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+monitor)\\s+(\\d+)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+monitor)\\s+(\\d+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
           }
         },
         "ip-sla-schedule": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+schedule)\\s+(\\d+)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+schedule)\\s+(\\d+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
           }
         },
         "ip-sla-monitor-schedule": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+monitor\\s+schedule)\\s+(\\d+)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+monitor\\s+schedule)\\s+(\\d+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
           }
         },
         "ip-sla-group-schedule": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+group\\s+schedule)\\s+(\\S+)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+group\\s+schedule)\\s+(\\S+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.group-name.cisco" }
           }
         },
         "ip-sla-reaction-configuration": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+reaction-configuration)\\s+(\\d+)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+reaction-configuration)\\s+(\\d+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.operation-id.cisco" }
           }
         },
         "ip-sla-logging": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+logging\\s+traps)\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+logging\\s+traps)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" }
+            "1": { "name": "keyword.other.ip-sla.command.cisco" }
           }
         },
         "ip-sla-responder": {
-          "match": "(?i)(?:^|\\s)(ip\\s+sla\\s+responder)(?:\\s+(tcp-connect|udp-echo|ip|all))?\\b",
+          "match": "(?i)(?:^|\\s)(sla\\s+responder)(?:\\s+(tcp-connect|udp-echo|ip|all))?\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": { "name": "keyword.other.ip-sla.command.cisco" },
             "2": { "name": "keyword.other.ip-sla.responder-type.cisco" }
           }
         },
         "track-ip-sla": {
-          "match": "(?i)^\\s*(track)\\s+(\\d+)\\s+(ip\\s+sla)\\s+(\\d+)\\s*(reachability|state)?\\b",
+          "match": "(?i)^\\s*(track)\\s+(\\d+)\\s+(?:ip\\s+)?(sla)\\s+(\\d+)\\s*(reachability|state)?\\b",
           "captures": {
             "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.track-id.cisco" },
-            "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "3": { "name": "keyword.other.ip-sla.command.cisco" },
             "4": { "name": "entity.name.tag.ip-sla.operation-id.cisco" },
             "5": { "name": "keyword.other.ip-sla.track-condition.cisco" }
           }
         },
         "ip-sla-operation-line": {
-          "begin": "(?i)^\\s*ip\\s+sla(?:\\s+monitor)?\\s+\\d+\\s*$",
+          "begin": "(?i)(?:^|\\s)(sla(?:\\s+monitor)?\\s+\\d+\\s*$)",
           "end": "(?=^\\S|\\z)",
           "patterns": [
             { "include": "#ip-sla-operation-types" },
@@ -593,7 +593,7 @@
           "name": "keyword.other.ip-sla.option.cisco"
         },
         "ip-sla-schedule-line": {
-          "begin": "(?i)^\\s*ip\\s+sla(?:\\s+monitor)?\\s+schedule\\s+\\d+\\s",
+          "begin": "(?i)(?:^|\\s)(sla(?:\\s+monitor)?\\s+schedule\\s+\\d+\\s)",
           "end": "$",
           "patterns": [{ "include": "#ip-sla-schedule-options" }]
         },
@@ -602,7 +602,7 @@
           "name": "keyword.other.ip-sla.schedule-option.cisco"
         },
         "ip-sla-reaction-line": {
-          "begin": "(?i)^\\s*ip\\s+sla\\s+reaction-configuration\\s+\\d+\\s",
+          "begin": "(?i)(?:^|\\s)(sla\\s+reaction-configuration\\s+\\d+\\s)",
           "end": "$",
           "patterns": [
             { "include": "#ip-sla-reaction-options" },

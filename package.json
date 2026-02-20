@@ -496,6 +496,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.interface.wireless.description%"
               },
+              "ip-sla.command": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.command.description%"
+              },
               "ip-sla.group-name": {
                 "type": "string",
                 "format": "color",

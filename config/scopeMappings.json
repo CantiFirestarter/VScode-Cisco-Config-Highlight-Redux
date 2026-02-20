@@ -508,6 +508,10 @@
     "scope": "keyword.other.group.object-group.type"
   },
   {
+    "configKey": "ip-sla.command",
+    "scope": "keyword.other.ip-sla.command"
+  },
+  {
     "configKey": "ip-sla.operation-type",
     "scope": "keyword.other.ip-sla.operation-type"
   },

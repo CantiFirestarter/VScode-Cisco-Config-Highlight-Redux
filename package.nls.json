@@ -228,5 +228,6 @@
   "configuration.properties.colors.ip-sla.reaction-type.description": "keyword.other.ip-sla.reaction-type",
   "configuration.properties.colors.ip-sla.responder-type.description": "keyword.other.ip-sla.responder-type",
   "configuration.properties.colors.ip-sla.schedule-option.description": "keyword.other.ip-sla.schedule-option",
-  "configuration.properties.colors.ip-sla.track-condition.description": "keyword.other.ip-sla.track-condition"
+  "configuration.properties.colors.ip-sla.track-condition.description": "keyword.other.ip-sla.track-condition",
+  "configuration.properties.colors.ip-sla.command.description": "keyword.other.ip-sla.command"
 }
