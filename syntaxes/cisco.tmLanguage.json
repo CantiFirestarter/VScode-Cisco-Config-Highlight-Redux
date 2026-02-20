@@ -412,13 +412,11 @@
       ],
       "repository": {
         "access-list": {
-          "match": "(?i)(ipv6\\s+)?(ip\\s+)?(access-list)\\s+(?:(extended|standard)\\s+)?(\\S+)\\b",
+          "match": "(?i)^\\s*(access-list)\\s+(?!\\d+\\s+(?:permit|deny|dynamic)\\b)(?:(extended|standard)\\s+)?(\\S+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.routing-protocols.cisco" },
-            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
-            "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
-            "4": { "name": "keyword.other.acl.access-list.type.cisco" },
-            "5": { "name": "entity.name.tag.acl.access-list.name.cisco" }
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": { "name": "keyword.other.acl.access-list.type.cisco" },
+            "3": { "name": "entity.name.tag.acl.access-list.name.cisco" }
           }
         },
         "access-class": {
