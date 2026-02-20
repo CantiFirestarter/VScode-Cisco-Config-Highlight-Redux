@@ -818,7 +818,7 @@
       "patterns": [
         {
           "name": "keyword.other.config-keyword.vlan.cisco",
-          "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1[Qq])(?=\\s|$)"
+          "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1q)(?=\\s|$)"
         },
         {
           "name": "keyword.other.config-keyword.switchport-mode.access.cisco",
@@ -948,7 +948,7 @@
             {
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
-              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|mode|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
             },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
