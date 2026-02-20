@@ -776,10 +776,60 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.dynamic.description%"
               },
+              "keyword.switchport-mode.mode": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.mode.description%"
+              },
               "keyword.switchport-mode.trunk": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.switchport-mode.trunk.description%"
+              },
+              "keyword.switchport-port-security.aging-time": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.aging-time.description%"
+              },
+              "keyword.switchport-port-security.aging-type": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.aging-type.description%"
+              },
+              "keyword.switchport-port-security.aging-type-action": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.aging-type-action.description%"
+              },
+              "keyword.switchport-port-security.command": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.command.description%"
+              },
+              "keyword.switchport-port-security.mac-address": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.mac-address.description%"
+              },
+              "keyword.switchport-port-security.option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.option.description%"
+              },
+              "keyword.switchport-port-security.sticky": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.sticky.description%"
+              },
+              "keyword.switchport-port-security.violation": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.violation.description%"
+              },
+              "keyword.switchport-port-security.violation-action": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.violation-action.description%"
               },
               "keyword.vlan": {
                 "type": "string",

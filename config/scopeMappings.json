@@ -524,8 +524,48 @@
     "scope": "keyword.other.config-keyword.switchport-mode.dynamic"
   },
   {
+    "configKey": "keyword.switchport-mode.mode",
+    "scope": "keyword.other.config-keyword.switchport-mode.mode"
+  },
+  {
     "configKey": "keyword.switchport-mode.trunk",
     "scope": "keyword.other.config-keyword.switchport-mode.trunk"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.aging-time",
+    "scope": "keyword.other.config-keyword.switchport-port-security.aging-time"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.aging-type",
+    "scope": "keyword.other.config-keyword.switchport-port-security.aging-type"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.aging-type-action",
+    "scope": "keyword.other.config-keyword.switchport-port-security.aging-type-action"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.command",
+    "scope": "keyword.other.config-keyword.switchport-port-security.command"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.mac-address",
+    "scope": "keyword.other.config-keyword.switchport-port-security.mac-address"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.option",
+    "scope": "keyword.other.config-keyword.switchport-port-security.option"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.sticky",
+    "scope": "keyword.other.config-keyword.switchport-port-security.sticky"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.violation",
+    "scope": "keyword.other.config-keyword.switchport-port-security.violation"
+  },
+  {
+    "configKey": "keyword.switchport-port-security.violation-action",
+    "scope": "keyword.other.config-keyword.switchport-port-security.violation-action"
   },
   {
     "configKey": "keyword.vlan",

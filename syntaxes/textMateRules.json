@@ -836,6 +836,24 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.switchport-port-security.aging-type",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.aging-type-action",
+        "settings": {
+          "foreground": "#33df33"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.aging-time",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.vlan",
         "settings": {
           "foreground": "#33df33"

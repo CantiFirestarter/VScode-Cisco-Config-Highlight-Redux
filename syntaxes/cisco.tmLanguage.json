@@ -899,6 +899,18 @@
             {
               "name": "keyword.other.config-keyword.switchport-port-security.violation-action.cisco",
               "match": "(?i)(?<=\\sviolation\\s)(protect|restrict|shutdown)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.aging-type.cisco",
+              "match": "(?i)(?<=\\saging\\s)(type)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.aging-type-action.cisco",
+              "match": "(?i)(?<=\\stype\\s)(absolute|inactivity)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.aging-time.cisco",
+              "match": "(?i)(?<=\\saging\\s)(time)(?=\\s|$)"
             }
           ]
         }
