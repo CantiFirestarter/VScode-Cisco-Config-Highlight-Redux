@@ -459,8 +459,11 @@
           }
         },
         "acl-port-operators": {
-          "name": "keyword.other.acl.port-operator.cisco",
-          "match": "(?i)\\b(eq|gt|lt|neq|range)\\b"
+          "match": "(?i)^\\s*(?:(?:\\d+\\s+)?(?:permit|deny|dynamic)\\b.*?\\b(eq|gt|lt|neq|range)\\b|(?:ipv6\\s+)?(?:ip\\s+)?access-list\\b.*?\\b(eq|gt|lt|neq|range)\\b)",
+          "captures": {
+            "1": { "name": "keyword.other.acl.port-operator.cisco" },
+            "2": { "name": "keyword.other.acl.port-operator.cisco" }
+          }
         }
       }
     },
