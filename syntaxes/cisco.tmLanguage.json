@@ -17,6 +17,7 @@
     { "include": "#command_hostname" },
     { "include": "#numeric" },
     { "include": "#separator" },
+    { "include": "#switchport" },
     {
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
@@ -814,39 +815,100 @@
         }
       }
     },
+    "switchport": {
+      "patterns": [
+        {
+          "begin": "(?i)^\\s*(switchport)\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" }
+          },
+          "end": "$",
+          "patterns": [
+            { "include": "#switchport-port-security" },
+            { "include": "#switchport-keywords" }
+          ]
+        }
+      ],
+      "repository": {
+        "switchport-keywords": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.switchport-mode.mode.cisco",
+              "match": "(?i)(?<=\\s)(mode)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-mode.access.cisco",
+              "match": "(?i)(?<=\\s)(access|voice)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-mode.trunk.cisco",
+              "match": "(?i)(?<=\\s)(trunk)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-mode.dynamic.cisco",
+              "match": "(?i)(?<=\\s)(dynamic\\s+(?:auto|desirable))(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.allowed-native.cisco",
+              "match": "(?i)(?<=\\s)(allowed|native)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.add-remove.add.cisco",
+              "match": "(?i)(?<=\\s)(add)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.add-remove.remove.cisco",
+              "match": "(?i)(?<=\\s)(remove)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.add-remove.except.cisco",
+              "match": "(?i)(?<=\\s)(except)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.vlan.cisco",
+              "match": "(?i)(?<=\\s)(vlan)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.control-actions.cisco",
+              "match": "(?i)(?<=\\s)(nonegotiate)(?=\\s|$)"
+            }
+          ]
+        },
+        "switchport-port-security": {
+          "patterns": [
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.command.cisco",
+              "match": "(?i)(?<=\\s)(port-security)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.option.cisco",
+              "match": "(?i)(?<=\\s)(maximum|aging)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.mac-address.cisco",
+              "match": "(?i)(?<=\\s)(mac-address)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.sticky.cisco",
+              "match": "(?i)(?<=\\smac-address\\s)(sticky)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.violation.cisco",
+              "match": "(?i)(?<=\\s)(violation)(?=\\s|$)"
+            },
+            {
+              "name": "keyword.other.config-keyword.switchport-port-security.violation-action.cisco",
+              "match": "(?i)(?<=\\sviolation\\s)(protect|restrict|shutdown)(?=\\s|$)"
+            }
+          ]
+        }
+      }
+    },
     "keyword": {
       "patterns": [
         {
           "name": "keyword.other.config-keyword.vlan.cisco",
           "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1q)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.switchport-mode.access.cisco",
-          "match": "(?i)(^|\\s)(access)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.switchport-mode.trunk.cisco",
-          "match": "(?i)(^|\\s)(trunk)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.switchport-mode.dynamic.cisco",
-          "match": "(?i)(^|\\s)(dynamic\\s(auto|desirable))(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.add-remove.add.cisco",
-          "match": "(?i)(^|\\s)(add)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.add-remove.remove.cisco",
-          "match": "(?i)(^|\\s)(remove)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.add-remove.except.cisco",
-          "match": "(?i)(^|\\s)(except)(?=\\s|$)"
-        },
-        {
-          "name": "keyword.other.config-keyword.allowed-native.cisco",
-          "match": "(?i)(?<=trunk\\s)(allowed|native)(?=\\s|$)"
         },
         {
           "name": "keyword.other.config-keyword.any-all.any.cisco",
@@ -948,7 +1010,7 @@
             {
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
-              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|mode|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
             },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
@@ -958,7 +1020,7 @@
             {
               "comment": "Layer 2 Switching & Connectivity - Spanning Tree, CDP, Trunking, VLANs, MAC",
               "name": "keyword.other.config-keyword.network-protocols.layer2.cisco",
-              "match": "(?i)(^|\\s)(bpdufilter|bpduguard|broadcast|capability-change|cdp|chain|chassis-id|dot1Q|edge|flowcontrol|ingress|infrastructure|mac-address|membership-termination|neighbor|pvst|rapid-pvst|root|spanning-disabled|trunk|unicast-flooding)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(bpdufilter|bpduguard|broadcast|capability-change|cdp|chain|chassis-id|edge|flowcontrol|ingress|infrastructure|mac-address|membership-termination|neighbor|pvst|rapid-pvst|root|spanning-disabled|unicast-flooding)(?=\\b|$)"
             },
             {
               "comment": "Management Interfaces (VTY/Console) - Line Access, Sessions, Execution",

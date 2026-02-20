@@ -782,6 +782,12 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.switchport-mode.mode",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.switchport-mode.dynamic",
         "settings": {
           "foreground": "#9933ff"
@@ -791,6 +797,42 @@
         "scope": "keyword.other.config-keyword.switchport-mode.trunk",
         "settings": {
           "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.command",
+        "settings": {
+          "foreground": "#ff9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.option",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.mac-address",
+        "settings": {
+          "foreground": "#2e74b5"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.sticky",
+        "settings": {
+          "foreground": "#33df33"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.violation",
+        "settings": {
+          "foreground": "#ff3333"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.switchport-port-security.violation-action",
+        "settings": {
+          "foreground": "#ff3333"
         }
       },
       {
