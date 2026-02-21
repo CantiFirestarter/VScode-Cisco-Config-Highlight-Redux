@@ -290,6 +290,18 @@
         }
       },
       {
+        "scope": "entity.name.tag.ospf.area-id",
+        "settings": {
+          "foreground": "#95A5A6"
+        }
+      },
+      {
+        "scope": "entity.name.tag.ospf.process-id",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
         "scope": "entity.name.tag.config-string.domain-name",
         "settings": {
           "foreground": "#FFD700"
@@ -743,6 +755,18 @@
         "scope": "keyword.other.config-keyword.routing-protocols",
         "settings": {
           "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.command",
+        "settings": {
+          "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.option",
+        "settings": {
+          "foreground": "#9933ff"
         }
       },
       {

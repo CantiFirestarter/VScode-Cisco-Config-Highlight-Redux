@@ -320,6 +320,14 @@
     "scope": "entity.name.tag.ip-sla.track-id"
   },
   {
+    "configKey": "ospf.area-id",
+    "scope": "entity.name.tag.ospf.area-id"
+  },
+  {
+    "configKey": "ospf.process-id",
+    "scope": "entity.name.tag.ospf.process-id"
+  },
+  {
     "configKey": "vrf.vrf-name",
     "scope": "entity.name.tag.vrf.vrf-name"
   },
@@ -478,6 +486,14 @@
   {
     "configKey": "keyword.operational-states",
     "scope": "keyword.other.config-keyword.operational-states"
+  },
+  {
+    "configKey": "keyword.ospf.command",
+    "scope": "keyword.other.config-keyword.ospf.command"
+  },
+  {
+    "configKey": "keyword.ospf.option",
+    "scope": "keyword.other.config-keyword.ospf.option"
   },
   {
     "configKey": "keyword.permit-deny.deny",

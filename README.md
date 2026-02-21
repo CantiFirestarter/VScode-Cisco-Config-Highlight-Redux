@@ -126,7 +126,7 @@ Example `settings.json`:
 - **Override:** Set keys under `colors.*` to customize. These override defaults.
 - **Real-time:** Changes apply on save; or run "Cisco Config: Apply Token Colors" from the Command Palette.
 
-## Token Scopes List (Updated 1-23-26)
+## Token Scopes List (Updated 2-21-26)
 
 ```
 comment.block.banner
@@ -136,6 +136,10 @@ constant.numeric.ipv4-AD
 constant.numeric.ipv6-AD
 constant.numeric.hex
 constant.numeric.integer
+
+constant.other.arp-insp-val.src-mac
+constant.other.arp-insp-val.dst-mac
+constant.other.arp-insp-val.ip
 
 entity.name.class.interface.async
 entity.name.class.interface.bri
@@ -181,6 +185,8 @@ entity.name.tag.bgp.neighbor-peer-group.name
 entity.name.tag.bgp.peer-group.name
 entity.name.tag.bgp.peer-policy.name
 entity.name.tag.bgp.peer-session.name
+entity.name.tag.ospf.area-id
+entity.name.tag.ospf.process-id
 
 entity.name.tag.config-string.domain-name
 entity.name.tag.config-string.hostname
@@ -196,9 +202,10 @@ entity.name.tag.crypto.keyring.name
 
 entity.name.tag.group.qos.class-map.name
 entity.name.tag.group.qos.class.name
-entity.name.tag.group.security.object-group.name.name
+entity.name.tag.group.security.object-group.name
 entity.name.tag.group.qos.policy-map.name
 entity.name.tag.group.resource.pool.name
+entity.name.tag.group.resource.dhcp-server.name
 entity.name.tag.group.routing.prefix-list.name
 entity.name.tag.group.routing.route-map.name
 entity.name.tag.group.qos.service-policy.name
@@ -209,6 +216,16 @@ entity.name.tag.group.bgp.community.name
 entity.name.tag.vrf.vrf-name
 entity.other.vrf.definition
 entity.other.vrf.forwarding
+
+entity.name.tag.ip-sla.group-name
+entity.name.tag.ip-sla.logging
+entity.name.tag.ip-sla.monitor
+entity.name.tag.ip-sla.monitor-schedule
+entity.name.tag.ip-sla.reaction-configuration
+entity.name.tag.ip-sla.responder
+entity.name.tag.ip-sla.schedule
+entity.name.tag.ip-sla.sla-id
+entity.name.tag.ip-sla.track-id
 
 keyword.other.acl.access-list.type
 keyword.other.acl.access-class.type
@@ -253,16 +270,40 @@ keyword.other.config-keyword.config-commands
 keyword.other.config-keyword.operational-states
 keyword.other.config-keyword.control-actions
 keyword.other.config-keyword.advanced-options
+keyword.other.config-keyword.ospf.command
+keyword.other.config-keyword.ospf.option
 keyword.other.config-keyword.routing-protocols
 keyword.other.config-keyword.status.administratively-down
 keyword.other.config-keyword.status.deleted
 keyword.other.config-keyword.status.down
 keyword.other.config-keyword.status.up
 keyword.other.config-keyword.switchport-mode.access
+keyword.other.config-keyword.switchport-mode.mode
 keyword.other.config-keyword.switchport-mode.dynamic
 keyword.other.config-keyword.switchport-mode.trunk
+keyword.other.config-keyword.switchport-port-security.command
+keyword.other.config-keyword.switchport-port-security.option
+keyword.other.config-keyword.switchport-port-security.mac-address
+keyword.other.config-keyword.switchport-port-security.sticky
+keyword.other.config-keyword.switchport-port-security.violation
+keyword.other.config-keyword.switchport-port-security.violation-action
+keyword.other.config-keyword.switchport-port-security.aging-time
+keyword.other.config-keyword.switchport-port-security.aging-type
+keyword.other.config-keyword.switchport-port-security.aging-type-action
 keyword.other.config-keyword.vlan
-keyword.other.group.object-group.type
+keyword.other.group.security.object-group.type
+
+keyword.other.ip-sla.command
+keyword.other.ip-sla.group-schedule
+keyword.other.ip-sla.operation-type
+keyword.other.ip-sla.option
+keyword.other.ip-sla.reaction-option
+keyword.other.ip-sla.reaction-threshold
+keyword.other.ip-sla.reaction-type
+keyword.other.ip-sla.responder-type
+keyword.other.ip-sla.schedule-option
+keyword.other.ip-sla.track
+keyword.other.ip-sla.track-condition
 
 meta.function-call.arp-insp-val
 meta.function-call.command_hostname.config-if

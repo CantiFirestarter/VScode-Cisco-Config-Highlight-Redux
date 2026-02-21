@@ -136,6 +136,8 @@
   "configuration.properties.colors.keyword.switchport-port-security.sticky.description": "keyword.other.config-keyword.switchport-port-security.sticky",
   "configuration.properties.colors.keyword.switchport-port-security.violation.description": "keyword.other.config-keyword.switchport-port-security.violation",
   "configuration.properties.colors.keyword.switchport-port-security.violation-action.description": "keyword.other.config-keyword.switchport-port-security.violation-action",
+  "configuration.properties.colors.keyword.ospf.command.description": "keyword.other.config-keyword.ospf.command",
+  "configuration.properties.colors.keyword.ospf.option.description": "keyword.other.config-keyword.ospf.option",
 
   "_comment_colors_keyword_protocols": "Token Colors - Network Protocols",
   "configuration.properties.colors.keyword.network-protocols.security-aaa.description": "keyword.other.config-keyword.network-protocols.security-aaa",
@@ -248,5 +250,9 @@
   "configuration.properties.colors.ip-sla.schedule.description": "entity.name.tag.ip-sla.schedule",
   "configuration.properties.colors.ip-sla.sla-id.description": "entity.name.tag.ip-sla.sla-id",
   "configuration.properties.colors.ip-sla.group-schedule.description": "keyword.other.ip-sla.group-schedule",
-  "configuration.properties.colors.ip-sla.track.description": "keyword.other.ip-sla.track"
+  "configuration.properties.colors.ip-sla.track.description": "keyword.other.ip-sla.track",
+
+  "_comment_colors_ospf": "Token Colors - OSPF",
+  "configuration.properties.colors.ospf.area-id.description": "entity.name.tag.ospf.area-id",
+  "configuration.properties.colors.ospf.process-id.description": "entity.name.tag.ospf.process-id"
 }

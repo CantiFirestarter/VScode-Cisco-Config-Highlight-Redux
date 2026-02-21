@@ -93,6 +93,8 @@ def preserve_ordered_write(file_path, new_keys):
         "address": [],
         "arp-insp-val": [],
         "command_hostname": [],
+        "ospf": [],
+        "ip-sla": [],
         "numeric": [],
         "separator": [],
         "bgp": [],
@@ -140,6 +142,8 @@ def preserve_ordered_write(file_path, new_keys):
             "arp-insp-val": ("_comment_colors_arp", "ARP"),
             "command_hostname": ("_comment_colors_command", "Command Hostname"),
             "command-disable": ("_comment_colors_command_disable", "Command Disable"),
+            "ospf": ("_comment_colors_ospf", "OSPF"),
+            "ip-sla": ("_comment_colors_ip_sla", "IP SLA"),
         }
 
         # Special-case extended Groups if we detect group.qos.* keys

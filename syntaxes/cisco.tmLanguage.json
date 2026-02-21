@@ -3,7 +3,7 @@
   "name": "Cisco Config",
   "scopeName": "source.cisco",
   "patterns": [
-    { "include": "#unused_line" },
+    { "include": "#command-disable" },
     { "include": "#comment" },
     { "include": "#string" },
     { "include": "#group" },
@@ -22,10 +22,14 @@
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
     },
+    {
+      "comment": "ospf matching for process-id and area-id",
+      "include": "#ospf"
+    },
     { "include": "#keyword" }
   ],
   "repository": {
-    "unused_line": {
+    "command-disable": {
       "patterns": [{ "include": "#unused" }, { "include": "#default" }],
       "repository": {
         "unused": {
@@ -818,6 +822,77 @@
         }
       }
     },
+    "ospf": {
+      "patterns": [
+        { "include": "#router-ospf-process-id" },
+        { "include": "#interface-ospf-process-id" },
+        { "include": "#ospf-network-area" },
+        { "include": "#ospf-passive-interface" },
+        { "include": "#ospf-default-information" },
+        { "include": "#ospf-area-options" },
+        { "include": "#ospf-redistribute" },
+        { "include": "#ospf-interface-options" },
+        { "include": "#ospf-area-id" }
+      ],
+      "repository": {
+        "router-ospf-process-id": {
+          "match": "(?i)(?<=\\brouter\\s+ospf(?:v3)?\\s)(\\d+)\\b",
+          "name": "entity.name.tag.ospf.process-id.cisco"
+        },
+        "interface-ospf-process-id": {
+          "match": "(?i)(?<=\\b(?:ip|ipv6)\\s+ospf\\s)(\\d+)\\b",
+          "name": "entity.name.tag.ospf.process-id.cisco"
+        },
+        "ospf-network-area": {
+          "match": "(?i)(\\bnetwork\\b)(?:(?!\\barea\\b).)*?(\\barea\\b)(\\s+)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "2": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "4": { "name": "entity.name.tag.ospf.area-id.cisco" }
+          }
+        },
+        "ospf-passive-interface": {
+          "match": "(?i)(\\bpassive-interface\\b)(\\s+)(default|\\S+)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+          }
+        },
+        "ospf-default-information": {
+          "match": "(?i)(\\bdefault-information\\b)(\\s+)(originate)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+          }
+        },
+        "ospf-area-options": {
+          "match": "(?i)(\\barea\\b)(\\s+)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})(\\s+)(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "3": { "name": "entity.name.tag.ospf.area-id.cisco" },
+            "5": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+          }
+        },
+        "ospf-redistribute": {
+          "match": "(?i)(\\bredistribute\\b)(\\s+)(connected|static|bgp|eigrp|rip|isis|ospf|ospfv3)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+          }
+        },
+        "ospf-interface-options": {
+          "match": "(?i)(\\b(?:ip|ipv6)\\s+ospf\\b)(\\s+)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
+            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+          }
+        },
+        "ospf-area-id": {
+          "match": "(?i)(?<=\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
+          "name": "entity.name.tag.ospf.area-id.cisco"
+        }
+      }
+    },
     "switchport": {
       "patterns": [
         {
@@ -1025,7 +1100,7 @@
             {
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
-              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|mode|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
             },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",

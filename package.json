@@ -721,6 +721,16 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.operational-states.description%"
               },
+              "keyword.ospf.command": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.command.description%"
+              },
+              "keyword.ospf.option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.option.description%"
+              },
               "keyword.permit-deny.deny": {
                 "type": "string",
                 "format": "color",
@@ -855,6 +865,16 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.numeric.ipv6-AD.description%"
+              },
+              "ospf.area-id": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ospf.area-id.description%"
+              },
+              "ospf.process-id": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ospf.process-id.description%"
               },
               "separator": {
                 "type": "string",
