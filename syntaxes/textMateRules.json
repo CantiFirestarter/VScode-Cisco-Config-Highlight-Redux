@@ -950,6 +950,12 @@
         }
       },
       {
+        "scope": "keyword.other.ip-sla.reaction-threshold-type-value",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
         "scope": "keyword.other.ip-sla.reaction-threshold",
         "settings": {
           "foreground": "#00CED1"

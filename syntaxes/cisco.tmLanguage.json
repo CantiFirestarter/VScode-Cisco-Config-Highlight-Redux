@@ -472,7 +472,7 @@
           "match": "(?i)\\b(administratively-prohibited|alternate-address|conversion-error|datagram-conversion-error|domain-name-reply|domain-name-request|echo-reply|echo|information-reply|information-request|ipv6-i-am-here|ipv6-where-are-you|mask-reply|mask-request|mobile-host-redirect|mobile-redirect|mobile-registration-reply|mobile-registration-request|parameter-problem|photuris|redirect|router-advertisement|router-solicitation|skip|source-quench|time-exceeded|timestamp-reply|timestamp-request|traceroute|unreachable)(?=\\s|\\b|$)"
         },
         "acl-options": {
-          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|seq|sequence|time-range|timeout|tos|ttl)(?=\\s|$)",
+          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|seq|sequence|time-range|tos|ttl)(?=\\s|$)",
           "captures": {
             "2": { "name": "keyword.other.acl.option.cisco" }
           }
@@ -531,6 +531,7 @@
         { "include": "#ip-sla-operation-options" },
         { "include": "#ip-sla-schedule-options" },
         { "include": "#ip-sla-reaction-options" },
+        { "include": "#ip-sla-reaction-threshold-type-values" },
         { "include": "#ip-sla-reaction-thresholds" },
         { "include": "#ip-sla-reaction-types" }
       ],
@@ -613,27 +614,31 @@
           }
         },
         "ip-sla-operation-types": {
-          "match": "(?i)^\\s*(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|http|get-url|dns|dhcp|ftp|jitter|path-echo|ethernet|voip|mpls-lsp-ping|mpls-pseudowire)\\b",
+          "match": "(?i)(^|\\s)(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|get-url|dns|jitter|path-echo|voip|mpls-lsp-ping|mpls-pseudowire)(?=\\b|$)",
           "name": "keyword.other.ip-sla.operation-type.cisco"
         },
         "ip-sla-operation-options": {
-          "match": "(?i)^\\s*(control|data-size|dest-ipaddr|dest-port|dscp|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|threshold|timeout|tos|verify-data|vrf)\\b",
+          "match": "(?i)(^|\\s)(control|data-size|dest-ipaddr|dest-port|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|verify-data)(?=\\b|$)",
           "name": "keyword.other.ip-sla.option.cisco"
         },
         "ip-sla-schedule-options": {
-          "match": "(?i)\\b(ageout|life|recurring|start-time|forever|now|pending)\\b",
+          "match": "(?i)(^|\\s)(ageout|life|start-time|forever|now|pending)(?=\\b|$)",
           "name": "keyword.other.ip-sla.schedule-option.cisco"
         },
         "ip-sla-reaction-options": {
-          "match": "(?i)\\b(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger|none)\\b",
+          "match": "(?i)(^|\\s)(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-option.cisco"
         },
+        "ip-sla-reaction-threshold-type-values": {
+          "match": "(?i)(^|\\s)(immediate|consecutive|xofy|average)(?=\\b|$)",
+          "name": "keyword.other.ip-sla.reaction-threshold-type-value.cisco"
+        },
         "ip-sla-reaction-thresholds": {
-          "match": "(?i)\\b(rising|falling|delta)\\b",
+          "match": "(?i)(^|\\s)(rising|falling|delta)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-threshold.cisco"
         },
         "ip-sla-reaction-types": {
-          "match": "(?i)\\b(timeout|connection-loss|verify-error|packet-loss|jitter|latency)\\b",
+          "match": "(?i)(^|\\s)(connection-loss|verify-error|packet-loss|latency)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-type.cisco"
         }
       }
@@ -1141,7 +1146,7 @@
             {
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
-              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|mode|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|mode|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source(?!-)|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
             },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
