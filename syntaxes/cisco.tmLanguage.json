@@ -96,7 +96,9 @@
         "name": {
           "match": "(?i)(^|\\s)(name)\\s(\\S+)\\b",
           "captures": {
-            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "2": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
             "3": { "name": "entity.name.tag.config-string.name.cisco" }
           }
         },
@@ -418,9 +420,15 @@
         "access-list": {
           "match": "(?i)(ipv6\\s+)?(ip\\s+)?(access-list)\\s+(?:(extended|standard)\\s+)?(\\S+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.routing-protocols.cisco" },
-            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
-            "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": {
+              "name": "keyword.other.config-keyword.routing-protocols.cisco"
+            },
+            "2": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
+            "3": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
             "4": { "name": "keyword.other.acl.access-list.type.cisco" },
             "5": { "name": "entity.name.tag.acl.access-list.name.cisco" }
           }
@@ -428,8 +436,12 @@
         "access-class": {
           "match": "(?i)(ipv6\\s+)?(access-class)\\s+(\\S+)(?:\\s+(in|out))?\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.routing-protocols.cisco" },
-            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": {
+              "name": "keyword.other.config-keyword.routing-protocols.cisco"
+            },
+            "2": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
             "3": { "name": "entity.name.tag.acl.access-class.name.cisco" },
             "4": { "name": "keyword.other.acl.access-class.type.cisco" }
           }
@@ -437,8 +449,12 @@
         "access-group": {
           "match": "(?i)(ipv6\\s+)?((?:ip\\s+)?access-group)\\s+(\\S+)(?:\\s+(in|out))?\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.routing-protocols.cisco" },
-            "2": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "1": {
+              "name": "keyword.other.config-keyword.routing-protocols.cisco"
+            },
+            "2": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
             "3": { "name": "entity.name.tag.acl.access-group.name.cisco" },
             "4": { "name": "keyword.other.acl.access-group.type.cisco" }
           }
@@ -511,9 +527,12 @@
         { "include": "#ip-sla-logging" },
         { "include": "#ip-sla-responder" },
         { "include": "#track-ip-sla" },
-        { "include": "#ip-sla-operation-line" },
-        { "include": "#ip-sla-schedule-line" },
-        { "include": "#ip-sla-reaction-line" }
+        { "include": "#ip-sla-operation-types" },
+        { "include": "#ip-sla-operation-options" },
+        { "include": "#ip-sla-schedule-options" },
+        { "include": "#ip-sla-reaction-options" },
+        { "include": "#ip-sla-reaction-thresholds" },
+        { "include": "#ip-sla-reaction-types" }
       ],
       "repository": {
         "ip-sla-operation": {
@@ -559,7 +578,9 @@
           "match": "(?i)(?:^|\\s)(sla)\\s+(reaction-configuration)\\s+(\\d+)\\b",
           "captures": {
             "1": { "name": "keyword.other.ip-sla.command.cisco" },
-            "2": { "name": "entity.name.tag.ip-sla.reaction-configuration.cisco" },
+            "2": {
+              "name": "entity.name.tag.ip-sla.reaction-configuration.cisco"
+            },
             "3": { "name": "entity.name.tag.ip-sla.sla-id.cisco" }
           }
         },
@@ -583,19 +604,13 @@
           "captures": {
             "1": { "name": "keyword.other.ip-sla.track.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.track-id.cisco" },
-            "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
+            "3": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            },
             "4": { "name": "keyword.other.ip-sla.command.cisco" },
             "5": { "name": "entity.name.tag.ip-sla.sla-id.cisco" },
             "6": { "name": "keyword.other.ip-sla.track-condition.cisco" }
           }
-        },
-        "ip-sla-operation-line": {
-          "begin": "(?i)(?:^|\\s)(sla(?:\\s+monitor)?\\s+\\d+\\s*$)",
-          "end": "(?=^\\S|\\z)",
-          "patterns": [
-            { "include": "#ip-sla-operation-types" },
-            { "include": "#ip-sla-operation-options" }
-          ]
         },
         "ip-sla-operation-types": {
           "match": "(?i)^\\s*(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|http|get-url|dns|dhcp|ftp|jitter|path-echo|ethernet|voip|mpls-lsp-ping|mpls-pseudowire)\\b",
@@ -605,23 +620,9 @@
           "match": "(?i)^\\s*(control|data-size|dest-ipaddr|dest-port|dscp|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|threshold|timeout|tos|verify-data|vrf)\\b",
           "name": "keyword.other.ip-sla.option.cisco"
         },
-        "ip-sla-schedule-line": {
-          "begin": "(?i)(?:^|\\s)(sla\\s+(?:(?:monitor\\s+)?schedule\\s+\\d+|group\\s+schedule\\s+\\S+(?:\\s+\\d+)+)\\s)",
-          "end": "$",
-          "patterns": [{ "include": "#ip-sla-schedule-options" }]
-        },
         "ip-sla-schedule-options": {
           "match": "(?i)\\b(ageout|life|recurring|start-time|forever|now|pending)\\b",
           "name": "keyword.other.ip-sla.schedule-option.cisco"
-        },
-        "ip-sla-reaction-line": {
-          "begin": "(?i)(?:^|\\s)(sla\\s+reaction-configuration\\s+\\d+\\s)",
-          "end": "$",
-          "patterns": [
-            { "include": "#ip-sla-reaction-options" },
-            { "include": "#ip-sla-reaction-thresholds" },
-            { "include": "#ip-sla-reaction-types" }
-          ]
         },
         "ip-sla-reaction-options": {
           "match": "(?i)\\b(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger|none)\\b",
@@ -826,7 +827,9 @@
         "neighbor-remote-as": {
           "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(remote-as)(\\s+)(\\d+)\\b",
           "captures": {
-            "3": { "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco" },
+            "3": {
+              "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
+            },
             "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
             "7": { "name": "entity.name.tag.bgp.remote-as-number.cisco" }
           }
@@ -834,9 +837,13 @@
         "neighbor-route-map": {
           "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(route-map)(\\s+)(\\S+)(?:\\s+(in|out))?\\b",
           "captures": {
-            "3": { "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco" },
+            "3": {
+              "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
+            },
             "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
-            "7": { "name": "entity.name.tag.group.routing.route-map.name.cisco" },
+            "7": {
+              "name": "entity.name.tag.group.routing.route-map.name.cisco"
+            },
             "8": { "name": "keyword.other.acl.access-group.type.cisco" }
           }
         },
@@ -930,7 +937,9 @@
         {
           "begin": "(?i)^\\s*(switchport)\\b",
           "beginCaptures": {
-            "1": { "name": "keyword.other.config-keyword.config-commands.cisco" }
+            "1": {
+              "name": "keyword.other.config-keyword.config-commands.cisco"
+            }
           },
           "end": "$",
           "patterns": [
