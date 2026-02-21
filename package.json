@@ -2,7 +2,7 @@
   "name": "cisco-config-highlight-redux",
   "displayName": "Cisco Config Highlight: Redux",
   "description": "Cisco device configuration Syntax Highlighting for Visual Studio Code.",
-  "version": "0.7.70",
+  "version": "0.7.71",
   "publisher": "CantiFirestarter",
   "license": "MIT",
   "repository": {
