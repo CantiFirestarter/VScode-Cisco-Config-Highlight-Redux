@@ -280,19 +280,19 @@
       {
         "scope": "entity.name.tag.bgp.as-number",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
         "scope": "entity.name.tag.bgp.neighbor-peer-group.name",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
         "scope": "entity.name.tag.bgp.peer-group.name",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
@@ -310,7 +310,7 @@
       {
         "scope": "entity.name.tag.bgp.remote-as-number",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
@@ -322,7 +322,7 @@
       {
         "scope": "entity.name.tag.ospf.process-id",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
@@ -556,7 +556,7 @@
       {
         "scope": "keyword.other.acl.icmp-type",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
@@ -934,31 +934,31 @@
       {
         "scope": "keyword.other.ip-sla.operation-type",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
         "scope": "keyword.other.ip-sla.option",
         "settings": {
-          "foreground": "#C54B8C"
+          "foreground": "#08E8DE"
         }
       },
       {
         "scope": "keyword.other.ip-sla.reaction-option",
         "settings": {
-          "foreground": "#9933ff"
+          "foreground": "#FF9933"
         }
       },
       {
         "scope": "keyword.other.ip-sla.reaction-threshold-type-value",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
         "scope": "keyword.other.ip-sla.reaction-threshold",
         "settings": {
-          "foreground": "#00CED1"
+          "foreground": "#08E8DE"
         }
       },
       {
