@@ -576,13 +576,14 @@
           }
         },
         "track-ip-sla": {
-          "match": "(?i)^\\s*(track)\\s+(\\d+)\\s+(?:ip\\s+)?(sla)\\s+(\\d+)\\s*(reachability|state)?\\b",
+          "match": "(?i)^\\s*(track)\\s+(\\d+)\\s+(?:(ip)\\s+)?(sla)\\s+(\\d+)\\s*(reachability|state)?\\b",
           "captures": {
             "1": { "name": "keyword.other.ip-sla.track.cisco" },
             "2": { "name": "entity.name.tag.ip-sla.track-id.cisco" },
             "3": { "name": "keyword.other.config-keyword.config-commands.cisco" },
-            "4": { "name": "entity.name.tag.ip-sla.sla-id.cisco" },
-            "5": { "name": "keyword.other.ip-sla.track-condition.cisco" }
+            "4": { "name": "keyword.other.ip-sla.command.cisco" },
+            "5": { "name": "entity.name.tag.ip-sla.sla-id.cisco" },
+            "6": { "name": "keyword.other.ip-sla.track-condition.cisco" }
           }
         },
         "ip-sla-operation-line": {
