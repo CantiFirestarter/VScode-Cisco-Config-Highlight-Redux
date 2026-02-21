@@ -266,6 +266,24 @@
         }
       },
       {
+        "scope": "entity.name.tag.bgp.address-family.afi",
+        "settings": {
+          "foreground": "#FF355E"
+        }
+      },
+      {
+        "scope": "entity.name.tag.bgp.address-family.safi",
+        "settings": {
+          "foreground": "#95A5A6"
+        }
+      },
+      {
+        "scope": "entity.name.tag.bgp.as-number",
+        "settings": {
+          "foreground": "#00CED1"
+        }
+      },
+      {
         "scope": "entity.name.tag.bgp.neighbor-peer-group.name",
         "settings": {
           "foreground": "#00CED1"
@@ -287,6 +305,12 @@
         "scope": "entity.name.tag.bgp.peer-session.name",
         "settings": {
           "foreground": "#95A5A6"
+        }
+      },
+      {
+        "scope": "entity.name.tag.bgp.remote-as-number",
+        "settings": {
+          "foreground": "#00CED1"
         }
       },
       {
@@ -755,6 +779,18 @@
         "scope": "keyword.other.config-keyword.routing-protocols",
         "settings": {
           "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.command",
+        "settings": {
+          "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.option",
+        "settings": {
+          "foreground": "#9933ff"
         }
       },
       {

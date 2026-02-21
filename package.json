@@ -141,6 +141,21 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.arp-insp-val.description%"
               },
+              "bgp.address-family.afi": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.address-family.afi.description%"
+              },
+              "bgp.address-family.safi": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.address-family.safi.description%"
+              },
+              "bgp.as-number": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.as-number.description%"
+              },
               "bgp.neighbor-peer-group.name": {
                 "type": "string",
                 "format": "color",
@@ -160,6 +175,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.bgp.peer-session.name.description%"
+              },
+              "bgp.remote-as-number": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.bgp.remote-as-number.description%"
               },
               "command-disable.default": {
                 "type": "string",
@@ -635,6 +655,16 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.any-all.any.description%"
+              },
+              "keyword.bgp.command": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.command.description%"
+              },
+              "keyword.bgp.option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.option.description%"
               },
               "keyword.config-commands": {
                 "type": "string",

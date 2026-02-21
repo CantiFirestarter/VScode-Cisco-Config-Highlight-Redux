@@ -23,7 +23,6 @@
       "include": "#bgp"
     },
     {
-      "comment": "ospf matching for process-id and area-id",
       "include": "#ospf"
     },
     { "include": "#keyword" }
@@ -798,15 +797,48 @@
     },
     "bgp": {
       "patterns": [
+        { "include": "#router-bgp-as-number" },
+        { "include": "#bgp-address-family" },
         { "include": "#neighbor-peer-group" },
+        { "include": "#neighbor-remote-as" },
+        { "include": "#neighbor-route-map" },
         { "include": "#peer-session" },
         { "include": "#peer-policy" },
         { "include": "#peer-group" }
       ],
       "repository": {
+        "router-bgp-as-number": {
+          "match": "(?i)(?<=\\brouter\\s+bgp\\s)(\\d+)\\b",
+          "name": "entity.name.tag.bgp.as-number.cisco"
+        },
+        "bgp-address-family": {
+          "match": "(?i)(\\baddress-family\\b)(\\s+)(ipv4|ipv6|vpnv4|vpnv6|l2vpn)(?:\\s+(unicast|multicast|flowspec|evpn))?\\b",
+          "captures": {
+            "1": { "name": "keyword.other.config-keyword.bgp.command.cisco" },
+            "3": { "name": "entity.name.tag.bgp.address-family.afi.cisco" },
+            "4": { "name": "entity.name.tag.bgp.address-family.safi.cisco" }
+          }
+        },
         "neighbor-peer-group": {
           "match": "(?i)(?<=neighbor\\s)(\\S+)\\b",
           "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
+        },
+        "neighbor-remote-as": {
+          "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(remote-as)(\\s+)(\\d+)\\b",
+          "captures": {
+            "3": { "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco" },
+            "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
+            "7": { "name": "entity.name.tag.bgp.remote-as-number.cisco" }
+          }
+        },
+        "neighbor-route-map": {
+          "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(route-map)(\\s+)(\\S+)(?:\\s+(in|out))?\\b",
+          "captures": {
+            "3": { "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco" },
+            "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
+            "7": { "name": "entity.name.tag.group.routing.route-map.name.cisco" },
+            "8": { "name": "keyword.other.acl.access-group.type.cisco" }
+          }
         },
         "peer-session": {
           "match": "(?i)(?<=peer-session\\s)(\\S+)\\b",
@@ -1123,7 +1155,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.config-commands.cisco",
-              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class|client-identifier|configure|copy|description|device-tracking|diagnostic|dir|domain-lookup|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|router|rsa|rts|security|service-policy|service|server|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class|client-identifier|configure|copy|description|device-tracking|diagnostic|dir|distance|domain-lookup|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|neighbors|ntp|ok\\?|police|policy-map|power|process|reauth-period|redistribute|request|router|rsa|rts|security|service-policy|service|server|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
             }
           ]
         },
@@ -1139,7 +1171,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.control-actions.cisco",
-              "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|insertion|maximum|nonegotiate|optimize|on|on-success|passive|privilege|receive|relay|reload|ro|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(addon|activate|active|aging|allow|authenticate|authentication-key|auto-copy|auto-upgrade|binding|boot-start-marker|both|clean|commit|conform-action|complete|detail|desirable|enable|enabled|established|full|generate|insertion|maximum|nonegotiate|optimize|on|on-success|passive|privilege|receive|relay|reload|ro|run|rw|set|show|send-community|success|trust|transmit|trusted-key|update-source|verify|yes)(?=\\b|$)"
             }
           ]
         },

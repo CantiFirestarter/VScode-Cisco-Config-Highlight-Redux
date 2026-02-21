@@ -138,6 +138,8 @@
   "configuration.properties.colors.keyword.switchport-port-security.violation-action.description": "keyword.other.config-keyword.switchport-port-security.violation-action",
   "configuration.properties.colors.keyword.ospf.command.description": "keyword.other.config-keyword.ospf.command",
   "configuration.properties.colors.keyword.ospf.option.description": "keyword.other.config-keyword.ospf.option",
+  "configuration.properties.colors.keyword.bgp.command.description": "keyword.other.config-keyword.bgp.command",
+  "configuration.properties.colors.keyword.bgp.option.description": "keyword.other.config-keyword.bgp.option",
 
   "_comment_colors_keyword_protocols": "Token Colors - Network Protocols",
   "configuration.properties.colors.keyword.network-protocols.security-aaa.description": "keyword.other.config-keyword.network-protocols.security-aaa",
@@ -178,6 +180,10 @@
   "configuration.properties.colors.bgp.peer-session.name.description": "entity.name.tag.bgp.peer-session.name",
   "configuration.properties.colors.bgp.peer-policy.name.description": "entity.name.tag.bgp.peer-policy.name",
   "configuration.properties.colors.bgp.peer-group.name.description": "entity.name.tag.bgp.peer-group.name",
+  "configuration.properties.colors.bgp.address-family.afi.description": "entity.name.tag.bgp.address-family.afi",
+  "configuration.properties.colors.bgp.address-family.safi.description": "entity.name.tag.bgp.address-family.safi",
+  "configuration.properties.colors.bgp.as-number.description": "entity.name.tag.bgp.as-number",
+  "configuration.properties.colors.bgp.remote-as-number.description": "entity.name.tag.bgp.remote-as-number",
 
   "_comment_colors_groups": "Token Colors - Groups",
   "configuration.properties.colors.group.object-group.type.description": "keyword.other.group.object-group.type",

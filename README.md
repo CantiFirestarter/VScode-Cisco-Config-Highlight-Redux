@@ -182,9 +182,13 @@ entity.name.tag.acl.access-group.name
 entity.name.tag.acl.access-list.name
 
 entity.name.tag.bgp.neighbor-peer-group.name
+entity.name.tag.bgp.as-number
+entity.name.tag.bgp.address-family.afi
+entity.name.tag.bgp.address-family.safi
 entity.name.tag.bgp.peer-group.name
 entity.name.tag.bgp.peer-policy.name
 entity.name.tag.bgp.peer-session.name
+entity.name.tag.bgp.remote-as-number
 entity.name.tag.ospf.area-id
 entity.name.tag.ospf.process-id
 

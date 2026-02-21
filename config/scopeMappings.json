@@ -176,6 +176,18 @@
     "scope": "entity.name.tag.acl.access-list.name"
   },
   {
+    "configKey": "bgp.address-family.afi",
+    "scope": "entity.name.tag.bgp.address-family.afi"
+  },
+  {
+    "configKey": "bgp.address-family.safi",
+    "scope": "entity.name.tag.bgp.address-family.safi"
+  },
+  {
+    "configKey": "bgp.as-number",
+    "scope": "entity.name.tag.bgp.as-number"
+  },
+  {
     "configKey": "bgp.neighbor-peer-group.name",
     "scope": "entity.name.tag.bgp.neighbor-peer-group.name"
   },
@@ -190,6 +202,10 @@
   {
     "configKey": "bgp.peer-session.name",
     "scope": "entity.name.tag.bgp.peer-session.name"
+  },
+  {
+    "configKey": "bgp.remote-as-number",
+    "scope": "entity.name.tag.bgp.remote-as-number"
   },
   {
     "configKey": "config-string.domain-name",
@@ -418,6 +434,14 @@
   {
     "configKey": "keyword.any-all.any",
     "scope": "keyword.other.config-keyword.any-all.any"
+  },
+  {
+    "configKey": "keyword.bgp.command",
+    "scope": "keyword.other.config-keyword.bgp.command"
+  },
+  {
+    "configKey": "keyword.bgp.option",
+    "scope": "keyword.other.config-keyword.bgp.option"
   },
   {
     "configKey": "keyword.config-commands",
