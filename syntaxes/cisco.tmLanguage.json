@@ -456,7 +456,7 @@
           "match": "(?i)\\b(administratively-prohibited|alternate-address|conversion-error|datagram-conversion-error|domain-name-reply|domain-name-request|echo-reply|echo|information-reply|information-request|ipv6-i-am-here|ipv6-where-are-you|mask-reply|mask-request|mobile-host-redirect|mobile-redirect|mobile-registration-reply|mobile-registration-request|parameter-problem|photuris|redirect|router-advertisement|router-solicitation|skip|source-quench|time-exceeded|timestamp-reply|timestamp-request|traceroute|unreachable)(?=\\s|\\b|$)"
         },
         "acl-options": {
-          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|sequence|time-range|timeout|tos|ttl)(?=\\s|$)",
+          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|seq|sequence|time-range|timeout|tos|ttl)(?=\\s|$)",
           "captures": {
             "2": { "name": "keyword.other.acl.option.cisco" }
           }
@@ -1179,7 +1179,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.advanced-options.cisco",
-              "match": "(?i)(^|\\s)(address-family|allow-hint|autoconfig|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|extended|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-local|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(address-family|allow-hint|autoconfig|automatic|buffered|channel-misconfig|debugging|default-gateway|etherchannel|expanded|extended|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-local|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
             }
           ]
         },
