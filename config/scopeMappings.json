@@ -512,12 +512,44 @@
     "scope": "keyword.other.config-keyword.operational-states"
   },
   {
-    "configKey": "keyword.ospf.command",
-    "scope": "keyword.other.config-keyword.ospf.command"
+    "configKey": "keyword.ospf.area",
+    "scope": "keyword.other.config-keyword.ospf.area"
   },
   {
-    "configKey": "keyword.ospf.option",
-    "scope": "keyword.other.config-keyword.ospf.option"
+    "configKey": "keyword.ospf.area-option",
+    "scope": "keyword.other.config-keyword.ospf.area-option"
+  },
+  {
+    "configKey": "keyword.ospf.default-information",
+    "scope": "keyword.other.config-keyword.ospf.default-information"
+  },
+  {
+    "configKey": "keyword.ospf.interface-option",
+    "scope": "keyword.other.config-keyword.ospf.interface-option"
+  },
+  {
+    "configKey": "keyword.ospf.network.option",
+    "scope": "keyword.other.config-keyword.ospf.network.option"
+  },
+  {
+    "configKey": "keyword.ospf.originate",
+    "scope": "keyword.other.config-keyword.ospf.originate"
+  },
+  {
+    "configKey": "keyword.ospf.passive-interface",
+    "scope": "keyword.other.config-keyword.ospf.passive-interface"
+  },
+  {
+    "configKey": "keyword.ospf.passive-interface-option",
+    "scope": "keyword.other.config-keyword.ospf.passive-interface-option"
+  },
+  {
+    "configKey": "keyword.ospf.redistribute",
+    "scope": "keyword.other.config-keyword.ospf.redistribute"
+  },
+  {
+    "configKey": "keyword.ospf.redistribute-option",
+    "scope": "keyword.other.config-keyword.ospf.redistribute-option"
   },
   {
     "configKey": "keyword.permit-deny.deny",
@@ -638,6 +670,10 @@
   {
     "configKey": "ip-sla.reaction-threshold",
     "scope": "keyword.other.ip-sla.reaction-threshold"
+  },
+  {
+    "configKey": "ip-sla.reaction-threshold-type-value",
+    "scope": "keyword.other.ip-sla.reaction-threshold-type-value"
   },
   {
     "configKey": "ip-sla.reaction-type",

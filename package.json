@@ -576,6 +576,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.ip-sla.reaction-threshold.description%"
               },
+              "ip-sla.reaction-threshold-type-value": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.ip-sla.reaction-threshold-type-value.description%"
+              },
               "ip-sla.reaction-type": {
                 "type": "string",
                 "format": "color",
@@ -751,15 +756,55 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.operational-states.description%"
               },
-              "keyword.ospf.command": {
+              "keyword.ospf.area": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.ospf.command.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.area.description%"
               },
-              "keyword.ospf.option": {
+              "keyword.ospf.area-option": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.ospf.option.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.area-option.description%"
+              },
+              "keyword.ospf.default-information": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.default-information.description%"
+              },
+              "keyword.ospf.interface-option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.interface-option.description%"
+              },
+              "keyword.ospf.network.option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.network.option.description%"
+              },
+              "keyword.ospf.originate": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.originate.description%"
+              },
+              "keyword.ospf.passive-interface": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.passive-interface.description%"
+              },
+              "keyword.ospf.passive-interface-option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.passive-interface-option.description%"
+              },
+              "keyword.ospf.redistribute": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.redistribute.description%"
+              },
+              "keyword.ospf.redistribute-option": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.redistribute-option.description%"
               },
               "keyword.permit-deny.deny": {
                 "type": "string",

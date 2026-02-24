@@ -196,10 +196,18 @@
   "configuration.properties.colors.keyword.switchport-port-security.sticky.description": "keyword.other.config-keyword.switchport-port-security.sticky",
   "configuration.properties.colors.keyword.switchport-port-security.violation.description": "keyword.other.config-keyword.switchport-port-security.violation",
   "configuration.properties.colors.keyword.switchport-port-security.violation-action.description": "keyword.other.config-keyword.switchport-port-security.violation-action",
-  "configuration.properties.colors.keyword.ospf.command.description": "keyword.other.config-keyword.ospf.command",
-  "configuration.properties.colors.keyword.ospf.option.description": "keyword.other.config-keyword.ospf.option",
   "configuration.properties.colors.keyword.bgp.command.description": "keyword.other.config-keyword.bgp.command",
   "configuration.properties.colors.keyword.bgp.option.description": "keyword.other.config-keyword.bgp.option",
+  "configuration.properties.colors.keyword.ospf.area.description": "keyword.other.config-keyword.ospf.area",
+  "configuration.properties.colors.keyword.ospf.area-option.description": "keyword.other.config-keyword.ospf.area-option",
+  "configuration.properties.colors.keyword.ospf.default-information.description": "keyword.other.config-keyword.ospf.default-information",
+  "configuration.properties.colors.keyword.ospf.interface-option.description": "keyword.other.config-keyword.ospf.interface-option",
+  "configuration.properties.colors.keyword.ospf.network.option.description": "keyword.other.config-keyword.ospf.network.option",
+  "configuration.properties.colors.keyword.ospf.originate.description": "keyword.other.config-keyword.ospf.originate",
+  "configuration.properties.colors.keyword.ospf.passive-interface.description": "keyword.other.config-keyword.ospf.passive-interface",
+  "configuration.properties.colors.keyword.ospf.passive-interface-option.description": "keyword.other.config-keyword.ospf.passive-interface-option",
+  "configuration.properties.colors.keyword.ospf.redistribute.description": "keyword.other.config-keyword.ospf.redistribute",
+  "configuration.properties.colors.keyword.ospf.redistribute-option.description": "keyword.other.config-keyword.ospf.redistribute-option",
 
   "_comment_colors_other": "Token Colors - Other",
   "configuration.properties.colors.ip-sla.group-name.description": "entity.name.tag.ip-sla.group-name",
@@ -226,6 +234,9 @@
 
   "_comment_colors_ospf": "Token Colors - OSPF",
   "configuration.properties.colors.ospf.area-id.description": "entity.name.tag.ospf.area-id",
-  "configuration.properties.colors.ospf.process-id.description": "entity.name.tag.ospf.process-id"
+  "configuration.properties.colors.ospf.process-id.description": "entity.name.tag.ospf.process-id",
+
+  "_comment_colors_ip_sla": "Token Colors - IP SLA",
+  "configuration.properties.colors.ip-sla.reaction-threshold-type-value.description": "keyword.other.ip-sla.reaction-threshold-type-value"
 }
   
