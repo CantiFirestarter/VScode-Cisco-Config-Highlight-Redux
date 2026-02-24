@@ -946,7 +946,9 @@
           "end": "$",
           "patterns": [
             { "include": "#switchport-port-security" },
-            { "include": "#switchport-keywords" }
+            { "include": "#switchport-keywords" },
+            { "include": "#numeric" },
+            { "include": "#separator" }
           ]
         }
       ],
