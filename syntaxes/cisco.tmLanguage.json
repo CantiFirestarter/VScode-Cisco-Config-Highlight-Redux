@@ -478,10 +478,8 @@
           }
         },
         "acl-port-operators": {
-          "match": "(?i)(^|\\s)(eq|gt|lt|neq|range)(?=\\s|$)",
-          "captures": {
-            "2": { "name": "keyword.other.acl.port-operator.cisco" }
-          }
+          "match": "(?i)(\\b(eq|gt|lt|neq|range)\\b)",
+          "name": "keyword.other.acl.port-operator.cisco"
         }
       }
     },
@@ -870,7 +868,7 @@
       "patterns": [
         { "include": "#router-ospf-process-id" },
         { "include": "#interface-ospf-process-id" },
-        { "include": "#ospf-network-area" },
+        { "include": "#ospf-area" },
         { "include": "#ospf-passive-interface" },
         { "include": "#ospf-default-information" },
         { "include": "#ospf-area-options" },
@@ -887,49 +885,48 @@
           "match": "(?i)(?<=\\b(?:ip|ipv6)\\s+ospf\\s)(\\d+)\\b",
           "name": "entity.name.tag.ospf.process-id.cisco"
         },
-        "ospf-network-area": {
-          "match": "(?i)(\\bnetwork\\b)(?:(?!\\barea\\b).)*?(\\barea\\b)(\\s+)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
-          "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "2": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "4": { "name": "entity.name.tag.ospf.area-id.cisco" }
-          }
+        "ospf-area": {
+          "match": "(?i)(?<=\\s)(area)(?=\\s|$)",
+          "name": "keyword.other.config-keyword.ospf.area.cisco"
+        },
+        "ospf-network": {
+          "match": "(?i)(?<=\\bospf\\snetwork\\b)(broadcast|non-broadcast|point-to-multipoint|point-to-point)\\b",
+          "name": "keyword.other.config-keyword.ospf.network.option.cisco"
         },
         "ospf-passive-interface": {
           "match": "(?i)(\\bpassive-interface\\b)(\\s+)(default|\\S+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+            "1": { "name": "keyword.other.config-keyword.ospf.passive-interface.cisco" },
+            "3": {
+              "name": "keyword.other.config-keyword.ospf.passive-interface-option.cisco"
+            }
           }
         },
         "ospf-default-information": {
-          "match": "(?i)(\\bdefault-information\\b)(\\s+)(originate)\\b",
+          "match": "(?i)(^|\\s)(default-information)(\\s+)(originate)(?=\\s|$)",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+            "2": {
+              "name": "keyword.other.config-keyword.ospf.default-information.cisco"
+            },
+            "4": { "name": "keyword.other.config-keyword.ospf.originate.cisco" }
           }
         },
         "ospf-area-options": {
-          "match": "(?i)(\\barea\\b)(\\s+)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})(\\s+)(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",
-          "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "3": { "name": "entity.name.tag.ospf.area-id.cisco" },
-            "5": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
-          }
+          "match": "(?i)(?<=\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\s+(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",
+          "name": "keyword.other.config-keyword.ospf.area-option.cisco"
         },
         "ospf-redistribute": {
-          "match": "(?i)(\\bredistribute\\b)(\\s+)(connected|static|bgp|eigrp|rip|isis|ospf|ospfv3)\\b",
+          "match": "(?i)(?<=\\bredistribute\\s)(connected|static|bgp|eigrp|rip|isis|ospf|ospfv3)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
+            "1": { "name": "keyword.other.config-keyword.ospf.redistribute.cisco" },
+            "3": {
+              "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
+            }
           }
         },
         "ospf-interface-options": {
-          "match": "(?i)(\\b(?:ip|ipv6)\\s+ospf\\b)(\\s+)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
-          "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.command.cisco" },
-            "3": { "name": "keyword.other.config-keyword.ospf.option.cisco" }
-          }
+          "match": "(?i)(?<=\\bospf\\s)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
+          "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
         },
         "ospf-area-id": {
           "match": "(?i)(?<=\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
@@ -950,8 +947,6 @@
           "patterns": [
             { "include": "#switchport-port-security" },
             { "include": "#switchport-keywords" }
-            { "include": "#numeric" },
-            { "include": "#separator" }
           ]
         }
       ],

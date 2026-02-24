@@ -316,7 +316,7 @@
       {
         "scope": "entity.name.tag.ospf.area-id",
         "settings": {
-          "foreground": "#95A5A6"
+          "foreground": "#00CC99"
         }
       },
       {
@@ -794,15 +794,63 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.ospf.command",
+        "scope": "keyword.other.config-keyword.ospf.area",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.area-option",
         "settings": {
           "foreground": "#d633d6"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.ospf.option",
+        "scope": "keyword.other.config-keyword.ospf.default-information",
+        "settings": {
+          "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.interface-option",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.network.option",
+        "settings": {
+          "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.originate",
         "settings": {
           "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.passive-interface",
+        "settings": {
+          "foreground": "#0047AB"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.passive-interface-option",
+        "settings": {
+          "foreground": "#772953"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.redistribute",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.redistribute-option",
+        "settings": {
+          "foreground": "#d633d6"
         }
       },
       {
