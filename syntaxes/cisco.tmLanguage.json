@@ -12,6 +12,7 @@
     { "include": "#acl" },
     { "include": "#crypto" },
     { "include": "#ip_sla" },
+    { "include": "#hsrp" },
     { "include": "#address" },
     { "include": "#arp_insp_val" },
     { "include": "#command_hostname" },
@@ -640,6 +641,49 @@
           "name": "keyword.other.ip-sla.reaction-type.cisco"
         }
       }
+    },
+    "hsrp": {
+      "patterns": [
+        {
+          "begin": "(?i)^\\s*(standby)\\s+(\\d+)\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.other.hsrp.command.cisco" },
+            "2": { "name": "entity.name.tag.hsrp.group-number.cisco" }
+          },
+          "end": "$",
+          "name": "meta.function-call.hsrp.cisco",
+          "patterns": [
+            { "include": "#string"},
+            { "include": "#address"},
+            { "include": "#numeric" },
+            { "include": "#separator" },
+            {
+              "match": "(?i)\\bpriority\\s+\\d+\\b",
+              "name": "constant.numeric.hsrp.priority.cisco"
+            },
+            {
+              "match": "(?i)\\bno\\s+preempt\\b|\\bpreempt\\b",
+              "name": "keyword.other.hsrp.option.cisco"
+            },
+            {
+              "match": "(?i)\\btimers\\s+\\d+\\s+\\d+\\b",
+              "name": "constant.other.hsrp.timers.cisco"
+            },
+            {
+              "match": "(?i)\\bauthentication\\s+\"?\\S+\"?\\b",
+              "name": "string.other.hsrp.authentication.cisco"
+            },
+            {
+              "match": "(?i)\\bversion\\s+\\d+\\b",
+              "name": "keyword.other.hsrp.version.cisco"
+            },
+            {
+              "match": "(?i)\\btrack\\s+\\S+(?:\\s+\\d+)?\\b",
+              "name": "entity.other.hsrp.track.cisco"
+            }
+          ]
+        }
+      ]
     },
     "address": {
       "patterns": [
