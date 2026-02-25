@@ -314,6 +314,12 @@
         }
       },
       {
+        "scope": "entity.name.tag.hsrp.group-number",
+        "settings": {
+          "foreground": "#00FFEF"
+        }
+      },
+      {
         "scope": "entity.name.tag.ospf.area-id",
         "settings": {
           "foreground": "#00CC99"
@@ -970,7 +976,37 @@
       {
         "scope": "keyword.other.hsrp.authentication",
         "settings": {
+          "foreground": "#FF3333"
+        }
+      },
+      {
+        "scope": "keyword.other.hsrp.preempt",
+        "settings": {
           "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.hsrp.priority",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.hsrp.standby",
+        "settings": {
+          "foreground": "#FF3333"
+        }
+      },
+      {
+        "scope": "keyword.other.hsrp.timers",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
+        "scope": "keyword.other.hsrp.version",
+        "settings": {
+          "foreground": "#D33682"
         }
       },
       {

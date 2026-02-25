@@ -296,6 +296,10 @@
     "scope": "entity.name.tag.group.traffic.traffic-filter.name"
   },
   {
+    "configKey": "hsrp.group-number",
+    "scope": "entity.name.tag.hsrp.group-number"
+  },
+  {
     "configKey": "ip-sla.group-name",
     "scope": "entity.name.tag.ip-sla.group-name"
   },
@@ -646,6 +650,30 @@
   {
     "configKey": "group.object-group.type",
     "scope": "keyword.other.group.object-group.type"
+  },
+  {
+    "configKey": "hsrp.authentication",
+    "scope": "keyword.other.hsrp.authentication"
+  },
+  {
+    "configKey": "hsrp.preempt",
+    "scope": "keyword.other.hsrp.preempt"
+  },
+  {
+    "configKey": "hsrp.priority",
+    "scope": "keyword.other.hsrp.priority"
+  },
+  {
+    "configKey": "hsrp.standby",
+    "scope": "keyword.other.hsrp.standby"
+  },
+  {
+    "configKey": "hsrp.timers",
+    "scope": "keyword.other.hsrp.timers"
+  },
+  {
+    "configKey": "hsrp.version",
+    "scope": "keyword.other.hsrp.version"
   },
   {
     "configKey": "ip-sla.command",

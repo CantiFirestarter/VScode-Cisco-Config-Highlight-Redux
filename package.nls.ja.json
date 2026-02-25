@@ -237,6 +237,15 @@
   "configuration.properties.colors.ospf.process-id.description": "entity.name.tag.ospf.process-id",
 
   "_comment_colors_ip_sla": "Token Colors - IP SLA",
-  "configuration.properties.colors.ip-sla.reaction-threshold-type-value.description": "keyword.other.ip-sla.reaction-threshold-type-value"
+  "configuration.properties.colors.ip-sla.reaction-threshold-type-value.description": "keyword.other.ip-sla.reaction-threshold-type-value",
+
+  "_comment_colors_hsrp": "Token Colors - HSRP",
+  "configuration.properties.colors.hsrp.group-number.description": "entity.name.tag.hsrp.group-number",
+  "configuration.properties.colors.hsrp.authentication.description": "keyword.other.hsrp.authentication",
+  "configuration.properties.colors.hsrp.preempt.description": "keyword.other.hsrp.preempt",
+  "configuration.properties.colors.hsrp.priority.description": "keyword.other.hsrp.priority",
+  "configuration.properties.colors.hsrp.standby.description": "keyword.other.hsrp.standby",
+  "configuration.properties.colors.hsrp.timers.description": "keyword.other.hsrp.timers",
+  "configuration.properties.colors.hsrp.version.description": "keyword.other.hsrp.version"
 }
   

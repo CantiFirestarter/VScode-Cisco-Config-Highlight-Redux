@@ -346,6 +346,41 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.traffic.traffic-filter.name.description%"
               },
+              "hsrp.authentication": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.authentication.description%"
+              },
+              "hsrp.group-number": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.group-number.description%"
+              },
+              "hsrp.preempt": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.preempt.description%"
+              },
+              "hsrp.priority": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.priority.description%"
+              },
+              "hsrp.standby": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.standby.description%"
+              },
+              "hsrp.timers": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.timers.description%"
+              },
+              "hsrp.version": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.version.description%"
+              },
               "interface.app": {
                 "type": "string",
                 "format": "color",
