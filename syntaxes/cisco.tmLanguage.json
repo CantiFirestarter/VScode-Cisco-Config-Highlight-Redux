@@ -653,10 +653,11 @@
           "end": "$",
           "name": "meta.function-call.hsrp.cisco",
           "patterns": [
-            { "include": "#string"},
-            { "include": "#address"},
+            { "include": "#string" },
+            { "include": "#address" },
             { "include": "#numeric" },
             { "include": "#separator" },
+            { "include": "#config-commands" },
             {
               "match": "(?i)\\bpriority\\s+\\d+\\b",
               "name": "constant.numeric.hsrp.priority.cisco"
