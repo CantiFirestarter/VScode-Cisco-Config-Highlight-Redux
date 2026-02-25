@@ -998,6 +998,12 @@
         }
       },
       {
+        "scope": "keyword.other.hsrp.track",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
         "scope": "keyword.other.hsrp.timers",
         "settings": {
           "foreground": "#FF9900"

@@ -376,6 +376,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.hsrp.timers.description%"
               },
+              "hsrp.track": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.track.description%"
+              },
               "hsrp.version": {
                 "type": "string",
                 "format": "color",

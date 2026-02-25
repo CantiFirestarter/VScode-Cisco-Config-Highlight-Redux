@@ -672,6 +672,10 @@
     "scope": "keyword.other.hsrp.timers"
   },
   {
+    "configKey": "hsrp.track",
+    "scope": "keyword.other.hsrp.track"
+  },
+  {
     "configKey": "hsrp.version",
     "scope": "keyword.other.hsrp.version"
   },

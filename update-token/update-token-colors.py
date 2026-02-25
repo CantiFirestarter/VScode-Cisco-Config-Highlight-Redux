@@ -101,6 +101,7 @@ def preserve_ordered_write(file_path, new_keys):
         "bgp": [],
         "ospf": [],
         "keyword": [],
+        "keyword-groups": [],
         "other": [],
     }
 

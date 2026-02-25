@@ -23,10 +23,9 @@
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
     },
-    {
-      "include": "#ospf"
-    },
-    { "include": "#keyword" }
+    { "include": "#ospf" },
+    { "include": "#keyword" },
+    { "include": "#keyword-groups" }
   ],
   "repository": {
     "command-disable": {
@@ -645,18 +644,18 @@
     "hsrp": {
       "patterns": [
         {
-          "begin": "(?i)^\\s*(standby)\\b",
+          "begin": "(?i)^\\s*(standby)(?:\\s+(\\d+))?\\b",
           "beginCaptures": {
             "1": { "name": "keyword.other.hsrp.standby.cisco" },
             "2": { "name": "entity.name.tag.hsrp.group-number.cisco" }
           },
           "end": "$",
-          "name": "meta.function-call.hsrp.cisco",
           "patterns": [
             { "include": "#string" },
             { "include": "#address" },
             { "include": "#numeric" },
             { "include": "#separator" },
+            { "include": "#shutdown" },
             { "include": "#config-commands" },
             {
               "match": "(?i)(?<=standby)\\s+(\\d+)\\b",
@@ -685,6 +684,10 @@
             {
               "match": "(?i)\\btrack\\b",
               "name": "keyword.other.hsrp.track.cisco"
+            },
+            {
+              "match": "(?i)\\bdecrement\\b",
+              "name": "keyword.other.hsrp.decrement.cisco"
             }
           ]
         }
@@ -1090,95 +1093,106 @@
     },
     "keyword": {
       "patterns": [
-        {
+        { "include": "vlan" },
+        { "include": "any-all" },
+        { "include": "permit-deny" },
+        { "include": "status" },
+        { "include": "match-any-all" },
+        { "include": "in-out" },
+        { "include": "input-output" },
+        { "include": "inside-outside" },
+        { "include": "shutdown" },
+        { "include": "remark" }
+      ],
+      "repository": {
+        "vlan": {
           "name": "keyword.other.config-keyword.vlan.cisco",
           "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1q)(?=\\s|$)"
         },
-        {
+        "any": {
           "name": "keyword.other.config-keyword.any-all.any.cisco",
           "match": "(?i)(^|\\s)(any)(?=\\s|$)"
         },
-        {
+        "all": {
           "name": "keyword.other.config-keyword.any-all.all.cisco",
           "match": "(?i)(^|\\s)(all)(?=\\s|$)"
         },
-        {
+        "permit": {
           "name": "keyword.other.config-keyword.permit-deny.permit.cisco",
           "match": "(?i)(^|\\s)(permit)(?=\\s|$)"
         },
-        {
+        "deny": {
           "name": "keyword.other.config-keyword.permit-deny.deny.cisco",
           "match": "(?i)(^|\\s)(deny)(?=\\s|$)"
         },
-        {
+        "up": {
           "name": "keyword.other.config-keyword.status.up.cisco",
           "match": "(?i)(^|\\s)(up)(?=\\s|$)"
         },
-        {
+        "down": {
           "name": "keyword.other.config-keyword.status.down.cisco",
           "match": "(?i)(^|\\s)(down)(?=\\s|$)"
         },
-        {
+        "deleted": {
           "name": "keyword.other.config-keyword.status.deleted.cisco",
           "match": "(?i)(^|\\s)(deleted)(?=\\s|$)"
         },
-        {
+        "administratively-down": {
           "name": "keyword.other.config-keyword.status.administratively-down.cisco",
           "match": "(?i)(^|\\s)(administratively(-down)?)(?=\\s|$)"
         },
-        {
+        "match-any": {
           "name": "keyword.other.config-keyword.match.any.cisco",
           "match": "(?i)(^|\\s)(match-(any))(?=\\s|$)"
         },
-        {
+        "match-all": {
           "name": "keyword.other.config-keyword.match.all.cisco",
           "match": "(?i)(^|\\s)(match-(all))(?=\\s|$)"
         },
-        {
+        "in": {
           "name": "keyword.other.config-keyword.in-out.in.cisco",
           "match": "(?i)(^|\\s)(in)(?=\\s|$)"
         },
-        {
+        "out": {
           "name": "keyword.other.config-keyword.in-out.out.cisco",
           "match": "(?i)(^|\\s)(out)(?=\\s|$)"
         },
-        {
+        "input": {
           "name": "keyword.other.config-keyword.input-output.input.cisco",
           "match": "(?i)(^|\\s)(input)(?=\\s|$)"
         },
-        {
+        "output": {
           "name": "keyword.other.config-keyword.input-output.output.cisco",
           "match": "(?i)(^|\\s)(output)(?=\\s|$)"
         },
-        {
+        "inside": {
           "name": "keyword.other.config-keyword.inside-outside.inside.cisco",
           "match": "(?i)(^|\\s)(inside)(?=\\s|$)"
         },
-        {
+        "outside": {
           "name": "keyword.other.config-keyword.inside-outside.outside.cisco",
           "match": "(?i)(^|\\s)(outside)(?=\\s|$)"
         },
-        {
+        "shutdown": {
           "name": "keyword.other.config-keyword.shutdown.cisco",
           "match": "(?i)(^|\\s)(shutdown)(?=\\b|$)"
         },
-        {
+        "remark": {
           "name": "keyword.other.config-keyword.remark.cisco",
           "match": "(?i)(^|\\s)(remark)(?=\\b|$)"
-        },
-        { "include": "#keyword-groups" }
+        }
+      }
+    },
+    "keyword-groups": {
+      "patterns": [
+        { "include": "#network-protocols" },
+        { "include": "#config-commands" },
+        { "include": "#operational-states" },
+        { "include": "#control-actions" },
+        { "include": "#advanced-options" },
+        { "include": "#routing-protocols" }
       ],
       "repository": {
-        "keyword-groups": {
-          "patterns": [
-            { "include": "#network-protocols" },
-            { "include": "#config-commands" },
-            { "include": "#operational-states" },
-            { "include": "#control-actions" },
-            { "include": "#advanced-options" },
-            { "include": "#routing-protocols" }
-          ]
-        },
         "network-protocols": {
           "patterns": [
             {

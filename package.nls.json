@@ -280,5 +280,6 @@
   "configuration.properties.colors.hsrp.priority.description": "keyword.other.hsrp.priority",
   "configuration.properties.colors.hsrp.standby.description": "keyword.other.hsrp.standby",
   "configuration.properties.colors.hsrp.timers.description": "keyword.other.hsrp.timers",
-  "configuration.properties.colors.hsrp.version.description": "keyword.other.hsrp.version"
+  "configuration.properties.colors.hsrp.version.description": "keyword.other.hsrp.version",
+  "configuration.properties.colors.hsrp.track.description": "keyword.other.hsrp.track"
 }
