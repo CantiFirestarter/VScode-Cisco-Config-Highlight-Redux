@@ -7,7 +7,7 @@
     { "include": "#comment" },
     { "include": "#string" },
     { "include": "#group" },
-    { "include": "#interface_type" },
+    { "include": "#interface" },
     { "include": "#vrf" },
     { "include": "#acl" },
     { "include": "#crypto" },
@@ -216,7 +216,7 @@
         }
       }
     },
-    "interface_type": {
+    "interface": {
       "patterns": [
         { "include": "#app" },
         { "include": "#service-engine" },

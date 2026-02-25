@@ -90,14 +90,16 @@ def preserve_ordered_write(file_path, new_keys):
         "vrf": [],
         "acl": [],
         "crypto": [],
+        "ip-sla": [],
+        "hsrp": [],
         "address": [],
         "arp-insp-val": [],
         "command_hostname": [],
-        "ospf": [],
-        "ip-sla": [],
         "numeric": [],
         "separator": [],
+        "switchport": [],
         "bgp": [],
+        "ospf": [],
         "keyword": [],
         "other": [],
     }
@@ -144,6 +146,9 @@ def preserve_ordered_write(file_path, new_keys):
             "command-disable": ("_comment_colors_command_disable", "Command Disable"),
             "ospf": ("_comment_colors_ospf", "OSPF"),
             "ip-sla": ("_comment_colors_ip_sla", "IP SLA"),
+            "hsrp": ("_comment_colors_hsrp", "HSRP"),
+            "switchport": ("_comment_colors_switchport", "Switchport"),
+            "other": ("_comment_colors_other", "Other"),
         }
 
         # Special-case extended Groups if we detect group.qos.* keys

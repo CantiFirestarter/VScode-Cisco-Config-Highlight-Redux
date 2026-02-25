@@ -968,6 +968,12 @@
         }
       },
       {
+        "scope": "keyword.other.hsrp.authentication",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
         "scope": "keyword.other.ip-sla.command",
         "settings": {
           "foreground": "#FF6700"
