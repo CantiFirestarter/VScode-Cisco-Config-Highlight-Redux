@@ -647,7 +647,7 @@
         {
           "begin": "(?i)^\\s*(standby)\\s+(\\d+)\\b",
           "beginCaptures": {
-            "1": { "name": "keyword.other.hsrp.command.cisco" },
+            "1": { "name": "keyword.other.hsrp.standby.cisco" },
             "2": { "name": "entity.name.tag.hsrp.group-number.cisco" }
           },
           "end": "$",
@@ -659,28 +659,28 @@
             { "include": "#separator" },
             { "include": "#config-commands" },
             {
-              "match": "(?i)\\bpriority\\s+\\d+\\b",
-              "name": "constant.numeric.hsrp.priority.cisco"
+              "match": "(?i)\\bpriority\\b",
+              "name": "keyword.other.hsrp.priority.cisco"
             },
             {
               "match": "(?i)\\bno\\s+preempt\\b|\\bpreempt\\b",
-              "name": "keyword.other.hsrp.option.cisco"
+              "name": "keyword.other.hsrp.preempt.cisco"
             },
             {
-              "match": "(?i)\\btimers\\s+\\d+\\s+\\d+\\b",
-              "name": "constant.other.hsrp.timers.cisco"
+              "match": "(?i)\\btimers\\b",
+              "name": "keyword.other.hsrp.timers.cisco"
             },
             {
-              "match": "(?i)\\bauthentication\\s+\"?\\S+\"?\\b",
-              "name": "string.other.hsrp.authentication.cisco"
+              "match": "(?i)\\bauthentication\\b",
+              "name": "keyword.other.hsrp.authentication.cisco"
             },
             {
-              "match": "(?i)\\bversion\\s+\\d+\\b",
+              "match": "(?i)\\bversion\\b",
               "name": "keyword.other.hsrp.version.cisco"
             },
             {
-              "match": "(?i)\\btrack\\s+\\S+(?:\\s+\\d+)?\\b",
-              "name": "entity.other.hsrp.track.cisco"
+              "match": "(?i)\\btrack\\b",
+              "name": "keyword.other.hsrp.track.cisco"
             }
           ]
         }
