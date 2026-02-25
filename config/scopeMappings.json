@@ -656,6 +656,10 @@
     "scope": "keyword.other.hsrp.authentication"
   },
   {
+    "configKey": "hsrp.decrement",
+    "scope": "keyword.other.hsrp.decrement"
+  },
+  {
     "configKey": "hsrp.preempt",
     "scope": "keyword.other.hsrp.preempt"
   },

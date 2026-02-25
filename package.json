@@ -351,6 +351,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.hsrp.authentication.description%"
               },
+              "hsrp.decrement": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.decrement.description%"
+              },
               "hsrp.group-number": {
                 "type": "string",
                 "format": "color",
