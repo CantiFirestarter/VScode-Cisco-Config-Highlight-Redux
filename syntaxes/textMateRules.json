@@ -980,6 +980,12 @@
         }
       },
       {
+        "scope": "keyword.other.hsrp.decrement",
+        "settings": {
+          "foreground": "#FF9900"
+        }
+      },
+      {
         "scope": "keyword.other.hsrp.preempt",
         "settings": {
           "foreground": "#FF9900"
