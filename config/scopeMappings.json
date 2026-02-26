@@ -660,6 +660,10 @@
     "scope": "keyword.other.hsrp.decrement"
   },
   {
+    "configKey": "hsrp.ip",
+    "scope": "keyword.other.hsrp.ip"
+  },
+  {
     "configKey": "hsrp.preempt",
     "scope": "keyword.other.hsrp.preempt"
   },

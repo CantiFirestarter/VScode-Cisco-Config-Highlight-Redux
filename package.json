@@ -361,6 +361,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.hsrp.group-number.description%"
               },
+              "hsrp.ip": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.hsrp.ip.description%"
+              },
               "hsrp.preempt": {
                 "type": "string",
                 "format": "color",
