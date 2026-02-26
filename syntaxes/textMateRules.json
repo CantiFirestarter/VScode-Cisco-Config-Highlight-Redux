@@ -704,7 +704,7 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.inside-outside.outside",
+        "scope": "keyword.other.config-keyword.outside",
         "settings": {
           "foreground": "#E52B50"
         }

@@ -1155,11 +1155,11 @@
           "match": "(?i)(^|\\s)(administratively(-down)?)(?=\\s|$)"
         },
         "match-any": {
-          "name": "keyword.other.config-keyword.match.any.cisco",
+          "name": "keyword.other.config-keyword.match-any.cisco",
           "match": "(?i)(^|\\s)(match-(any))(?=\\s|$)"
         },
         "match-all": {
-          "name": "keyword.other.config-keyword.match.all.cisco",
+          "name": "keyword.other.config-keyword.match-all.cisco",
           "match": "(?i)(^|\\s)(match-(all))(?=\\s|$)"
         },
         "in": {
