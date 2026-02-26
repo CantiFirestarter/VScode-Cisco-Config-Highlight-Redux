@@ -81,7 +81,7 @@
           "name": "entity.name.tag.config-string.hostname.cisco"
         },
         "domain-name": {
-          "match": "(?i)(^|\\b)(domain-name|domain\\sname)\\s(\\S+)\\b",
+          "match": "(?i)(^|\\s)(domain-name|domain\\sname)\\s(\\S+)\\b",
           "captures": {
             "2": {
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco"
@@ -94,7 +94,7 @@
           "name": "entity.name.tag.config-string.username.cisco"
         },
         "name": {
-          "match": "(?i)(^|\\b)(name)\\s(\\S+)\\b",
+          "match": "(?i)(^|\\s)(name)\\s(\\S+)\\b",
           "captures": {
             "2": {
               "name": "keyword.other.config-keyword.config-commands.cisco"
@@ -472,7 +472,7 @@
           "match": "(?i)\\b(administratively-prohibited|alternate-address|conversion-error|datagram-conversion-error|domain-name-reply|domain-name-request|echo-reply|echo|information-reply|information-request|ipv6-i-am-here|ipv6-where-are-you|mask-reply|mask-request|mobile-host-redirect|mobile-redirect|mobile-registration-reply|mobile-registration-request|parameter-problem|photuris|redirect|router-advertisement|router-solicitation|skip|source-quench|time-exceeded|timestamp-reply|timestamp-request|traceroute|unreachable)(?=\\s|\\b|$)"
         },
         "acl-options": {
-          "match": "(?i)(^|\\b)(dynamic|evaluate|log|option|packet-length|precedence|reflect|seq|sequence|time-range|tos|ttl)(?=\\s|$)",
+          "match": "(?i)(^|\\s)(dynamic|evaluate|log|option|packet-length|precedence|reflect|seq|sequence|time-range|tos|ttl)(?=\\s|$)",
           "captures": {
             "2": { "name": "keyword.other.acl.option.cisco" }
           }
@@ -612,31 +612,31 @@
           }
         },
         "ip-sla-operation-types": {
-          "match": "(?i)(^|\\b)(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|get-url|dns|jitter|path-echo|voip|mpls-lsp-ping|mpls-pseudowire)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(icmp-echo|icmp-path-echo|udp-echo|udp-jitter|tcp-connect|get-url|dns|jitter|path-echo|voip|mpls-lsp-ping|mpls-pseudowire)(?=\\b|$)",
           "name": "keyword.other.ip-sla.operation-type.cisco"
         },
         "ip-sla-operation-options": {
-          "match": "(?i)(^|\\b)(control|data-size|dest-ipaddr|dest-port|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|verify-data)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(control|data-size|dest-ipaddr|dest-port|frequency|history|hours-of-statistics-kept|num-packets|owner|request-data-size|source-interface|source-ip|source-port|tag|verify-data)(?=\\b|$)",
           "name": "keyword.other.ip-sla.option.cisco"
         },
         "ip-sla-schedule-options": {
-          "match": "(?i)(^|\\b)(ageout|life|start-time|forever|now|pending)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(ageout|life|start-time|forever|now|pending)(?=\\b|$)",
           "name": "keyword.other.ip-sla.schedule-option.cisco"
         },
         "ip-sla-reaction-options": {
-          "match": "(?i)(^|\\b)(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(react|threshold-type|action-type|trigger-only|trap-only|trap-and-trigger)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-option.cisco"
         },
         "ip-sla-reaction-threshold-type-values": {
-          "match": "(?i)(^|\\b)(immediate|consecutive|xofy|average)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(immediate|consecutive|xofy|average)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-threshold-type-value.cisco"
         },
         "ip-sla-reaction-thresholds": {
-          "match": "(?i)(^|\\b)(rising|falling|delta)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(rising|falling|delta)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-threshold.cisco"
         },
         "ip-sla-reaction-types": {
-          "match": "(?i)(^|\\b)(connection-loss|verify-error|packet-loss|latency)(?=\\b|$)",
+          "match": "(?i)(^|\\s)(connection-loss|verify-error|packet-loss|latency)(?=\\b|$)",
           "name": "keyword.other.ip-sla.reaction-type.cisco"
         }
       }
@@ -955,7 +955,7 @@
           }
         },
         "ospf-default-information": {
-          "match": "(?i)(^|\\b)(default-information)(\\s+)(originate)(?=\\s|$)",
+          "match": "(?i)(^|\\s)(default-information)(\\s+)(originate)(?=\\s|$)",
           "captures": {
             "2": {
               "name": "keyword.other.config-keyword.ospf.default-information.cisco"
@@ -1107,79 +1107,79 @@
       "repository": {
         "vlan": {
           "name": "keyword.other.config-keyword.vlan.cisco",
-          "match": "(?i)(^|\\b)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1q)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(protocol-vlan|mac-vlan|dot1q-tunnel|dot1q)(?=\\s|$)"
         },
         "any": {
           "name": "keyword.other.config-keyword.any-all.any.cisco",
-          "match": "(?i)(^|\\b)(any)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(any)(?=\\s|$)"
         },
         "all": {
           "name": "keyword.other.config-keyword.any-all.all.cisco",
-          "match": "(?i)(^|\\b)(all)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(all)(?=\\s|$)"
         },
         "permit": {
           "name": "keyword.other.config-keyword.permit-deny.permit.cisco",
-          "match": "(?i)(^|\\b)(permit)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(permit)(?=\\s|$)"
         },
         "deny": {
           "name": "keyword.other.config-keyword.permit-deny.deny.cisco",
-          "match": "(?i)(^|\\b)(deny)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(deny)(?=\\s|$)"
         },
         "up": {
           "name": "keyword.other.config-keyword.status.up.cisco",
-          "match": "(?i)(^|\\b)(up)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(up)(?=\\s|$)"
         },
         "down": {
           "name": "keyword.other.config-keyword.status.down.cisco",
-          "match": "(?i)(^|\\b)(down)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(down)(?=\\s|$)"
         },
         "deleted": {
           "name": "keyword.other.config-keyword.status.deleted.cisco",
-          "match": "(?i)(^|\\b)(deleted)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(deleted)(?=\\s|$)"
         },
         "administratively-down": {
           "name": "keyword.other.config-keyword.status.administratively-down.cisco",
-          "match": "(?i)(^|\\b)(administratively(-down)?)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(administratively(-down)?)(?=\\s|$)"
         },
         "match-any": {
           "name": "keyword.other.config-keyword.match.any.cisco",
-          "match": "(?i)(^|\\b)(match-(any))(?=\\s|$)"
+          "match": "(?i)(^|\\s)(match-(any))(?=\\s|$)"
         },
         "match-all": {
           "name": "keyword.other.config-keyword.match.all.cisco",
-          "match": "(?i)(^|\\b)(match-(all))(?=\\s|$)"
+          "match": "(?i)(^|\\s)(match-(all))(?=\\s|$)"
         },
         "in": {
           "name": "keyword.other.config-keyword.in-out.in.cisco",
-          "match": "(?i)(^|\\b)(in)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(in)(?=\\s|$)"
         },
         "out": {
           "name": "keyword.other.config-keyword.in-out.out.cisco",
-          "match": "(?i)(^|\\b)(out)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(out)(?=\\s|$)"
         },
         "input": {
           "name": "keyword.other.config-keyword.input-output.input.cisco",
-          "match": "(?i)(^|\\b)(input)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(input)(?=\\s|$)"
         },
         "output": {
           "name": "keyword.other.config-keyword.input-output.output.cisco",
-          "match": "(?i)(^|\\b)(output)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(output)(?=\\s|$)"
         },
         "inside": {
           "name": "keyword.other.config-keyword.inside-outside.inside.cisco",
-          "match": "(?i)(^|\\b)(inside)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(inside)(?=\\s|$)"
         },
         "outside": {
           "name": "keyword.other.config-keyword.inside-outside.outside.cisco",
-          "match": "(?i)(^|\\b)(outside)(?=\\s|$)"
+          "match": "(?i)(^|\\s)(outside)(?=\\s|$)"
         },
         "shutdown": {
           "name": "keyword.other.config-keyword.shutdown.cisco",
-          "match": "(?i)(^|\\b)(shutdown)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(shutdown)(?=\\b|$)"
         },
         "remark": {
           "name": "keyword.other.config-keyword.remark.cisco",
-          "match": "(?i)(^|\\b)(remark)(?=\\b|$)"
+          "match": "(?i)(^|\\s)(remark)(?=\\b|$)"
         }
       }
     },
