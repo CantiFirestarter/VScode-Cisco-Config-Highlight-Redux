@@ -691,25 +691,30 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.add-remove.remove.description%"
               },
+              "keyword.administratively-down": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.administratively-down.description%"
+              },
               "keyword.advanced-options": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.advanced-options.description%"
+              },
+              "keyword.all": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.all.description%"
               },
               "keyword.allowed-native": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.allowed-native.description%"
               },
-              "keyword.any-all.all": {
+              "keyword.any": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.any-all.all.description%"
-              },
-              "keyword.any-all.any": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.any-all.any.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.any.description%"
               },
               "keyword.bgp.command": {
                 "type": "string",
@@ -731,45 +736,50 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.control-actions.description%"
               },
-              "keyword.in-out.in": {
+              "keyword.deleted": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.in-out.in.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.deleted.description%"
               },
-              "keyword.in-out.out": {
+              "keyword.deny": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.in-out.out.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.deny.description%"
               },
-              "keyword.input-output.input": {
+              "keyword.down": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.input-output.input.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.down.description%"
               },
-              "keyword.input-output.output": {
+              "keyword.in": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.input-output.output.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.in.description%"
               },
-              "keyword.inside-outside.inside": {
+              "keyword.input": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.inside-outside.inside.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.input.description%"
+              },
+              "keyword.inside": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.inside.description%"
               },
               "keyword.inside-outside.outside": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.inside-outside.outside.description%"
               },
-              "keyword.match.all": {
+              "keyword.match-all": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.match.all.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.match-all.description%"
               },
-              "keyword.match.any": {
+              "keyword.match-any": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.match.any.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.match-any.description%"
               },
               "keyword.network-protocols.ip-routing": {
                 "type": "string",
@@ -856,15 +866,20 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.ospf.redistribute-option.description%"
               },
-              "keyword.permit-deny.deny": {
+              "keyword.out": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.permit-deny.deny.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.out.description%"
               },
-              "keyword.permit-deny.permit": {
+              "keyword.output": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.permit-deny.permit.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.output.description%"
+              },
+              "keyword.permit": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.permit.description%"
               },
               "keyword.remark": {
                 "type": "string",
@@ -880,26 +895,6 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.shutdown.description%"
-              },
-              "keyword.status.administratively-down": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.status.administratively-down.description%"
-              },
-              "keyword.status.deleted": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.status.deleted.description%"
-              },
-              "keyword.status.down": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.status.down.description%"
-              },
-              "keyword.status.up": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.status.up.description%"
               },
               "keyword.switchport-mode.access": {
                 "type": "string",
@@ -965,6 +960,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.switchport-port-security.violation-action.description%"
+              },
+              "keyword.up": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.up.description%"
               },
               "keyword.vlan": {
                 "type": "string",

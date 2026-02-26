@@ -424,20 +424,24 @@
     "scope": "keyword.other.config-keyword.add-remove.remove"
   },
   {
+    "configKey": "keyword.administratively-down",
+    "scope": "keyword.other.config-keyword.administratively-down"
+  },
+  {
     "configKey": "keyword.advanced-options",
     "scope": "keyword.other.config-keyword.advanced-options"
+  },
+  {
+    "configKey": "keyword.all",
+    "scope": "keyword.other.config-keyword.all"
   },
   {
     "configKey": "keyword.allowed-native",
     "scope": "keyword.other.config-keyword.allowed-native"
   },
   {
-    "configKey": "keyword.any-all.all",
-    "scope": "keyword.other.config-keyword.any-all.all"
-  },
-  {
-    "configKey": "keyword.any-all.any",
-    "scope": "keyword.other.config-keyword.any-all.any"
+    "configKey": "keyword.any",
+    "scope": "keyword.other.config-keyword.any"
   },
   {
     "configKey": "keyword.bgp.command",
@@ -456,36 +460,40 @@
     "scope": "keyword.other.config-keyword.control-actions"
   },
   {
-    "configKey": "keyword.in-out.in",
-    "scope": "keyword.other.config-keyword.in-out.in"
+    "configKey": "keyword.deleted",
+    "scope": "keyword.other.config-keyword.deleted"
   },
   {
-    "configKey": "keyword.in-out.out",
-    "scope": "keyword.other.config-keyword.in-out.out"
+    "configKey": "keyword.deny",
+    "scope": "keyword.other.config-keyword.deny"
   },
   {
-    "configKey": "keyword.input-output.input",
-    "scope": "keyword.other.config-keyword.input-output.input"
+    "configKey": "keyword.down",
+    "scope": "keyword.other.config-keyword.down"
   },
   {
-    "configKey": "keyword.input-output.output",
-    "scope": "keyword.other.config-keyword.input-output.output"
+    "configKey": "keyword.in",
+    "scope": "keyword.other.config-keyword.in"
   },
   {
-    "configKey": "keyword.inside-outside.inside",
-    "scope": "keyword.other.config-keyword.inside-outside.inside"
+    "configKey": "keyword.input",
+    "scope": "keyword.other.config-keyword.input"
+  },
+  {
+    "configKey": "keyword.inside",
+    "scope": "keyword.other.config-keyword.inside"
   },
   {
     "configKey": "keyword.inside-outside.outside",
     "scope": "keyword.other.config-keyword.inside-outside.outside"
   },
   {
-    "configKey": "keyword.match.all",
-    "scope": "keyword.other.config-keyword.match.all"
+    "configKey": "keyword.match-all",
+    "scope": "keyword.other.config-keyword.match-all"
   },
   {
-    "configKey": "keyword.match.any",
-    "scope": "keyword.other.config-keyword.match.any"
+    "configKey": "keyword.match-any",
+    "scope": "keyword.other.config-keyword.match-any"
   },
   {
     "configKey": "keyword.network-protocols.ip-routing",
@@ -556,12 +564,16 @@
     "scope": "keyword.other.config-keyword.ospf.redistribute-option"
   },
   {
-    "configKey": "keyword.permit-deny.deny",
-    "scope": "keyword.other.config-keyword.permit-deny.deny"
+    "configKey": "keyword.out",
+    "scope": "keyword.other.config-keyword.out"
   },
   {
-    "configKey": "keyword.permit-deny.permit",
-    "scope": "keyword.other.config-keyword.permit-deny.permit"
+    "configKey": "keyword.output",
+    "scope": "keyword.other.config-keyword.output"
+  },
+  {
+    "configKey": "keyword.permit",
+    "scope": "keyword.other.config-keyword.permit"
   },
   {
     "configKey": "keyword.remark",
@@ -574,22 +586,6 @@
   {
     "configKey": "keyword.shutdown",
     "scope": "keyword.other.config-keyword.shutdown"
-  },
-  {
-    "configKey": "keyword.status.administratively-down",
-    "scope": "keyword.other.config-keyword.status.administratively-down"
-  },
-  {
-    "configKey": "keyword.status.deleted",
-    "scope": "keyword.other.config-keyword.status.deleted"
-  },
-  {
-    "configKey": "keyword.status.down",
-    "scope": "keyword.other.config-keyword.status.down"
-  },
-  {
-    "configKey": "keyword.status.up",
-    "scope": "keyword.other.config-keyword.status.up"
   },
   {
     "configKey": "keyword.switchport-mode.access",
@@ -642,6 +638,10 @@
   {
     "configKey": "keyword.switchport-port-security.violation-action",
     "scope": "keyword.other.config-keyword.switchport-port-security.violation-action"
+  },
+  {
+    "configKey": "keyword.up",
+    "scope": "keyword.other.config-keyword.up"
   },
   {
     "configKey": "keyword.vlan",
