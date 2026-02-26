@@ -662,6 +662,10 @@
               "name": "entity.name.tag.hsrp.group-number.cisco"
             },
             {
+              "match": "(?i)\\bip\\b",
+              "name": "keyword.other.hsrp.ip.cisco"
+            },
+            {
               "match": "(?i)\\bpriority\\b",
               "name": "keyword.other.hsrp.priority.cisco"
             },

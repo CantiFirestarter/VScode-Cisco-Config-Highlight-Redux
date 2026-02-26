@@ -986,6 +986,12 @@
         }
       },
       {
+        "scope": "keyword.other.hsrp.ip",
+        "settings": {
+          "foreground": "#3333FF"
+        }
+      },
+      {
         "scope": "keyword.other.hsrp.preempt",
         "settings": {
           "foreground": "#FF9900"
