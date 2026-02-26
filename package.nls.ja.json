@@ -156,7 +156,6 @@
   "configuration.properties.colors.keyword.allowed-native.description": "keyword.other.config-keyword.allowed-native",
   "configuration.properties.colors.keyword.config-commands.description": "keyword.other.config-keyword.config-commands",
   "configuration.properties.colors.keyword.control-actions.description": "keyword.other.config-keyword.control-actions",
-  "configuration.properties.colors.keyword.inside-outside.outside.description": "keyword.other.config-keyword.inside-outside.outside",
   "configuration.properties.colors.keyword.network-protocols.ip-routing.description": "keyword.other.config-keyword.network-protocols.ip-routing",
   "configuration.properties.colors.keyword.network-protocols.layer2.description": "keyword.other.config-keyword.network-protocols.layer2",
   "configuration.properties.colors.keyword.network-protocols.mgmt-interfaces.description": "keyword.other.config-keyword.network-protocols.mgmt-interfaces",
@@ -208,6 +207,7 @@
   "configuration.properties.colors.keyword.output.description": "keyword.other.config-keyword.output",
   "configuration.properties.colors.keyword.permit.description": "keyword.other.config-keyword.permit",
   "configuration.properties.colors.keyword.up.description": "keyword.other.config-keyword.up",
+  "configuration.properties.colors.keyword.outside.description": "keyword.other.config-keyword.outside",
 
   "_comment_colors_other": "Token Colors - Other",
   "configuration.properties.colors.ip-sla.group-name.description": "entity.name.tag.ip-sla.group-name",

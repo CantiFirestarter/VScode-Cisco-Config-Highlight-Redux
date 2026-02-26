@@ -766,11 +766,6 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.inside.description%"
               },
-              "keyword.inside-outside.outside": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.inside-outside.outside.description%"
-              },
               "keyword.match-all": {
                 "type": "string",
                 "format": "color",
@@ -875,6 +870,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.output.description%"
+              },
+              "keyword.outside": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.outside.description%"
               },
               "keyword.permit": {
                 "type": "string",

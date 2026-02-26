@@ -484,10 +484,6 @@
     "scope": "keyword.other.config-keyword.inside"
   },
   {
-    "configKey": "keyword.inside-outside.outside",
-    "scope": "keyword.other.config-keyword.inside-outside.outside"
-  },
-  {
     "configKey": "keyword.match-all",
     "scope": "keyword.other.config-keyword.match-all"
   },
@@ -570,6 +566,10 @@
   {
     "configKey": "keyword.output",
     "scope": "keyword.other.config-keyword.output"
+  },
+  {
+    "configKey": "keyword.outside",
+    "scope": "keyword.other.config-keyword.outside"
   },
   {
     "configKey": "keyword.permit",
