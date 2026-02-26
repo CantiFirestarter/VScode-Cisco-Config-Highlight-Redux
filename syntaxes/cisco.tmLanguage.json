@@ -1097,16 +1097,16 @@
     },
     "keyword": {
       "patterns": [
-        { "include": "vlan" },
-        { "include": "any-all" },
-        { "include": "permit-deny" },
-        { "include": "status" },
-        { "include": "match-any-all" },
-        { "include": "in-out" },
-        { "include": "input-output" },
-        { "include": "inside-outside" },
-        { "include": "shutdown" },
-        { "include": "remark" }
+        { "include": "#vlan" },
+        { "include": "#any-all" },
+        { "include": "#permit-deny" },
+        { "include": "#status" },
+        { "include": "#match-any-all" },
+        { "include": "#in-out" },
+        { "include": "#input-output" },
+        { "include": "#inside-outside" },
+        { "include": "#shutdown" },
+        { "include": "#remark" }
       ],
       "repository": {
         "vlan": {
