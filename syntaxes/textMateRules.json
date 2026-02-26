@@ -650,13 +650,13 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.any-all.all",
+        "scope": "keyword.other.config-keyword.all",
         "settings": {
           "foreground": "#33DF33"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.any-all.any",
+        "scope": "keyword.other.config-keyword.any",
         "settings": {
           "foreground": "#33DF33"
         }
@@ -674,31 +674,31 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.in-out.in",
+        "scope": "keyword.other.config-keyword.in",
         "settings": {
           "foreground": "#33DF33"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.in-out.out",
+        "scope": "keyword.other.config-keyword.out",
         "settings": {
           "foreground": "#FF3333"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.input-output.input",
+        "scope": "keyword.other.config-keyword.input",
         "settings": {
           "foreground": "#0BDA51"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.input-output.output",
+        "scope": "keyword.other.config-keyword.output",
         "settings": {
           "foreground": "#E52B50"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.inside-outside.inside",
+        "scope": "keyword.other.config-keyword.inside",
         "settings": {
           "foreground": "#0BDA51"
         }
@@ -710,13 +710,13 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.match.all",
+        "scope": "keyword.other.config-keyword.match-all",
         "settings": {
           "foreground": "#BB86FC"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.match.any",
+        "scope": "keyword.other.config-keyword.match-any",
         "settings": {
           "foreground": "#BB86FC"
         }
@@ -764,13 +764,13 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.permit-deny.deny",
+        "scope": "keyword.other.config-keyword.deny",
         "settings": {
           "foreground": "#ff3333"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.permit-deny.permit",
+        "scope": "keyword.other.config-keyword.permit",
         "settings": {
           "foreground": "#9933ff"
         }
@@ -866,25 +866,25 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.status.administratively-down",
+        "scope": "keyword.other.config-keyword.administratively-down",
         "settings": {
           "foreground": "#C0392B"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.status.deleted",
+        "scope": "keyword.other.config-keyword.deleted",
         "settings": {
           "foreground": "#696969"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.status.down",
+        "scope": "keyword.other.config-keyword.down",
         "settings": {
           "foreground": "#FF3131"
         }
       },
       {
-        "scope": "keyword.other.config-keyword.status.up",
+        "scope": "keyword.other.config-keyword.up",
         "settings": {
           "foreground": "#32CD32"
         }
