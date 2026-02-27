@@ -278,12 +278,6 @@
         }
       },
       {
-        "scope": "entity.name.tag.bgp.as-number",
-        "settings": {
-          "foreground": "#08E8DE"
-        }
-      },
-      {
         "scope": "entity.name.tag.bgp.neighbor-peer-group.name",
         "settings": {
           "foreground": "#08E8DE"
@@ -443,12 +437,6 @@
         "scope": "entity.name.tag.group.routing.prefix-list.name",
         "settings": {
           "foreground": "#FF355E"
-        }
-      },
-      {
-        "scope": "entity.name.tag.group.routing.route-map.name",
-        "settings": {
-          "foreground": "#1E90FF"
         }
       },
       {
@@ -662,6 +650,36 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.bgp.address-family",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.neighbor",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.peer-group",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.peer-policy",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.bgp.peer-session",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.config-commands",
         "settings": {
           "foreground": "#3333ff"
@@ -785,18 +803,6 @@
         "scope": "keyword.other.config-keyword.routing-protocols",
         "settings": {
           "foreground": "#d633d6"
-        }
-      },
-      {
-        "scope": "keyword.other.config-keyword.bgp.command",
-        "settings": {
-          "foreground": "#d633d6"
-        }
-      },
-      {
-        "scope": "keyword.other.config-keyword.bgp.option",
-        "settings": {
-          "foreground": "#9933ff"
         }
       },
       {

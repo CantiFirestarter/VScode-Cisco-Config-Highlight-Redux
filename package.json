@@ -151,11 +151,6 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.bgp.address-family.safi.description%"
               },
-              "bgp.as-number": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.bgp.as-number.description%"
-              },
               "bgp.neighbor-peer-group.name": {
                 "type": "string",
                 "format": "color",
@@ -330,11 +325,6 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.routing.prefix-list.name.description%"
-              },
-              "group.routing.route-map.name": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.group.routing.route-map.name.description%"
               },
               "group.security.object-group.name": {
                 "type": "string",
@@ -716,15 +706,30 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.any.description%"
               },
-              "keyword.bgp.command": {
+              "keyword.bgp.address-family": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.bgp.command.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.address-family.description%"
               },
-              "keyword.bgp.option": {
+              "keyword.bgp.neighbor": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.bgp.option.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.neighbor.description%"
+              },
+              "keyword.bgp.peer-group": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.peer-group.description%"
+              },
+              "keyword.bgp.peer-policy": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.peer-policy.description%"
+              },
+              "keyword.bgp.peer-session": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.peer-session.description%"
               },
               "keyword.config-commands": {
                 "type": "string",

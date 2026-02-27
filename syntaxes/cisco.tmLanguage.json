@@ -13,6 +13,7 @@
     { "include": "#crypto" },
     { "include": "#ip_sla" },
     { "include": "#hsrp" },
+    { "include": "#ospf" },
     { "include": "#address" },
     { "include": "#arp_insp_val" },
     { "include": "#command_hostname" },
@@ -23,7 +24,6 @@
       "comment": "bgp must be placed after address. {neighbor [peer-group-name or ip-address]}",
       "include": "#bgp"
     },
-    { "include": "#ospf" },
     { "include": "#keyword" },
     { "include": "#keyword-groups" }
   ],
@@ -697,6 +697,81 @@
         }
       ]
     },
+    "ospf": {
+      "patterns": [
+        { "include": "#router-ospf-process-id" },
+        { "include": "#interface-ospf-process-id" },
+        { "include": "#ospf-area" },
+        { "include": "#ospf-area-id" },
+        { "include": "#ospf-passive-interface" },
+        { "include": "#ospf-default-information" },
+        { "include": "#ospf-redistribute" },
+        { "include": "#ospf-interface-options" },
+        { "include": "#ospf-network-options" },
+        { "include": "#ospf-area-options" }
+      ],
+      "repository": {
+        "router-ospf-process-id": {
+          "match": "(?i)(?<=\\brouter\\s+ospf(?:v2|v3)?\\s.*?)(\\d+)\\b",
+          "name": "entity.name.tag.ospf.process-id.cisco"
+        },
+        "interface-ospf-process-id": {
+          "match": "(?i)(?<=\\b(?:ip|ipv6)\\s+ospf\\s.*?)(\\d+)\\b",
+          "name": "entity.name.tag.ospf.process-id.cisco"
+        },
+        "ospf-area": {
+          "match": "(?i)(\\barea\\s)",
+          "name": "keyword.other.config-keyword.ospf.area.cisco"
+        },
+        "ospf-area-id": {
+          "match": "(?i)(?<=\\barea\\s.*?)((?<!/)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3}))\\b",
+          "name": "entity.name.tag.ospf.area-id.cisco"
+        },
+        "ospf-passive-interface": {
+          "match": "(?i)(\\bpassive-interface\\b)(\\s+)(default|\\S+)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.other.config-keyword.ospf.passive-interface.cisco"
+            },
+            "3": {
+              "name": "keyword.other.config-keyword.ospf.passive-interface-option.cisco"
+            }
+          }
+        },
+        "ospf-default-information": {
+          "match": "(?i)(^|\\s)(default-information)(\\s+)(originate)(?=\\s|$)",
+          "captures": {
+            "2": {
+              "name": "keyword.other.config-keyword.ospf.default-information.cisco"
+            },
+            "4": { "name": "keyword.other.config-keyword.ospf.originate.cisco" }
+          }
+        },
+        "ospf-redistribute": {
+          "match": "(?i)(?<=\\bredistribute\\s.*?)(bgp|connected|eigrp|isis|ospf|ospfv3|rip|static|subnets)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.other.config-keyword.ospf.redistribute.cisco"
+            },
+            "3": {
+              "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
+            }
+          }
+        },
+        "ospf-interface-options": {
+          "match": "(?i)(?<=\\bospf\\s.*?)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
+          "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
+        },
+        "ospf-network-options": {
+          "match": "(?i)(?<=\\bospf\\snetwork\\b.*?)(broadcast|non-broadcast|point-to-multipoint|point-to-point)\\b",
+          "name": "keyword.other.config-keyword.ospf.network.option.cisco"
+        },
+        "ospf-area-options": {
+          "match": "(?i)(?<=(\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3}).*?)(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",
+          "name": "keyword.other.config-keyword.ospf.area-option.cisco"
+        }
+      }
+    },
     "address": {
       "patterns": [
         { "include": "#mac" },
@@ -857,137 +932,64 @@
     },
     "bgp": {
       "patterns": [
-        { "include": "#router-bgp-as-number" },
         { "include": "#bgp-address-family" },
         { "include": "#neighbor-peer-group" },
-        { "include": "#neighbor-remote-as" },
-        { "include": "#neighbor-route-map" },
         { "include": "#peer-session" },
         { "include": "#peer-policy" },
         { "include": "#peer-group" }
       ],
       "repository": {
-        "router-bgp-as-number": {
-          "match": "(?i)(?<=\\brouter\\s+bgp\\s)(\\d+)\\b",
-          "name": "entity.name.tag.bgp.as-number.cisco"
-        },
         "bgp-address-family": {
-          "match": "(?i)(\\baddress-family\\b)(\\s+)(ipv4|ipv6|vpnv4|vpnv6|l2vpn)(?:\\s+(unicast|multicast|flowspec|evpn))?\\b",
+          "match": "(?i)(\\baddress-family\\s.*?)(ipv4|ipv6|vpnv4|vpnv6|l2vpn)(unicast|multicast|flowspec|evpn)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.bgp.command.cisco" },
-            "3": { "name": "entity.name.tag.bgp.address-family.afi.cisco" },
-            "4": { "name": "entity.name.tag.bgp.address-family.safi.cisco" }
+            "1": {
+              "name": "keyword.other.config-keyword.bgp.address-family.cisco"
+            },
+            "2": { "name": "entity.name.tag.bgp.address-family.afi.cisco" },
+            "3": { "name": "entity.name.tag.bgp.address-family.safi.cisco" }
           }
         },
         "neighbor-peer-group": {
-          "match": "(?i)(?<=neighbor\\s)(\\S+)\\b",
-          "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
-        },
-        "neighbor-remote-as": {
-          "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(remote-as)(\\s+)(\\d+)\\b",
+          "match": "(?i)(\\bneighbor\\s+)(\\S+)\\b",
           "captures": {
-            "3": {
+            "1": { "name": "keyword.other.config-keyword.bgp.neighbor.cisco" },
+            "2": {
               "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
-            },
-            "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
-            "7": { "name": "entity.name.tag.bgp.remote-as-number.cisco" }
-          }
-        },
-        "neighbor-route-map": {
-          "match": "(?i)(\\bneighbor\\b)(\\s+)(\\S+)(\\s+)(route-map)(\\s+)(\\S+)(?:\\s+(in|out))?\\b",
-          "captures": {
-            "3": {
-              "name": "entity.name.tag.bgp.neighbor-peer-group.name.cisco"
-            },
-            "5": { "name": "keyword.other.config-keyword.bgp.option.cisco" },
-            "7": {
-              "name": "entity.name.tag.group.routing.route-map.name.cisco"
-            },
-            "8": { "name": "keyword.other.acl.access-group.type.cisco" }
+            }
           }
         },
         "peer-session": {
-          "match": "(?i)(?<=peer-session\\s)(\\S+)\\b",
-          "name": "entity.name.tag.bgp.peer-session.name.cisco"
+          "match": "(?i)(\\bpeer-session\\s)(\\S+)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.other.config-keyword.bgp.peer-session.cisco"
+            },
+            "2": {
+              "name": "entity.name.tag.bgp.peer-session.name.cisco"
+            }
+          }
         },
         "peer-policy": {
-          "match": "(?i)(?<=peer-policy\\s)(\\S+)\\b",
-          "name": "entity.name.tag.bgp.peer-policy.name.cisco"
+          "match": "(?i)(\\bpeer-policy\\s)(\\S+)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.other.config-keyword.bgp.peer-policy.cisco"
+            },
+            "2": {
+              "name": "entity.name.tag.bgp.peer-policy.name.cisco"
+            }
+          }
         },
         "peer-group": {
-          "match": "(?i)(?<=peer-group\\s)(\\S+)\\b",
-          "name": "entity.name.tag.bgp.peer-group.name.cisco"
-        }
-      }
-    },
-    "ospf": {
-      "patterns": [
-        { "include": "#router-ospf-process-id" },
-        { "include": "#interface-ospf-process-id" },
-        { "include": "#ospf-area" },
-        { "include": "#ospf-area-id" },
-        { "include": "#ospf-passive-interface" },
-        { "include": "#ospf-default-information" },
-        { "include": "#ospf-redistribute" },
-        { "include": "#ospf-interface-options" },
-        { "include": "#ospf-network-options" },
-        { "include": "#ospf-area-options" }
-      ],
-      "repository": {
-        "router-ospf-process-id": {
-          "match": "(?i)(?<=\\brouter\\s+ospf(?:v3)?\\s)(\\d+)\\b",
-          "name": "entity.name.tag.ospf.process-id.cisco"
-        },
-        "interface-ospf-process-id": {
-          "match": "(?i)(?<=\\b(?:ip|ipv6)\\s+ospf\\s)(\\d+)\\b",
-          "name": "entity.name.tag.ospf.process-id.cisco"
-        },
-        "ospf-area": {
-          "match": "(?i)(?<=\\b)(area)(?=\\s|$)",
-          "name": "keyword.other.config-keyword.ospf.area.cisco"
-        },
-        "ospf-area-id": {
-          "match": "(?i)(?<=\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
-          "name": "entity.name.tag.ospf.area-id.cisco"
-        },
-        "ospf-passive-interface": {
-          "match": "(?i)(\\bpassive-interface\\b)(\\s+)(default|\\S+)\\b",
+          "match": "(?i)(\\bpeer-group\\s)(\\S+)\\b",
           "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.passive-interface.cisco" },
-            "3": {
-              "name": "keyword.other.config-keyword.ospf.passive-interface-option.cisco"
-            }
-          }
-        },
-        "ospf-default-information": {
-          "match": "(?i)(^|\\s)(default-information)(\\s+)(originate)(?=\\s|$)",
-          "captures": {
-            "2": {
-              "name": "keyword.other.config-keyword.ospf.default-information.cisco"
+            "1": {
+              "name": "keyword.other.config-keyword.bgp.peer-group.cisco"
             },
-            "4": { "name": "keyword.other.config-keyword.ospf.originate.cisco" }
-          }
-        },
-        "ospf-redistribute": {
-          "match": "(?i)(?<=\\bredistribute\\s)(connected|static|bgp|eigrp|rip|isis|ospf|ospfv3)\\b",
-          "captures": {
-            "1": { "name": "keyword.other.config-keyword.ospf.redistribute.cisco" },
-            "3": {
-              "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
+            "2": {
+              "name": "entity.name.tag.bgp.peer-group.name.cisco"
             }
           }
-        },
-        "ospf-interface-options": {
-          "match": "(?i)(?<=\\bospf\\s)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
-          "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
-        },
-        "ospf-network-options": {
-          "match": "(?i)(?<=\\bospf\\snetwork\\b)(broadcast|non-broadcast|point-to-multipoint|point-to-point)\\b",
-          "name": "keyword.other.config-keyword.ospf.network.option.cisco"
-        },
-        "ospf-area-options": {
-          "match": "(?i)(?<=\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3})\\s+(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",
-          "name": "keyword.other.config-keyword.ospf.area-option.cisco"
         }
       }
     },
@@ -1222,12 +1224,12 @@
             {
               "comment": "IP Services & Routing - DHCP, DNS, Routing, NAT, QoS, Network Services",
               "name": "keyword.other.config-keyword.network-protocols.ip-routing.cisco",
-              "match": "(?i)(^|\\s)(action|address|admission|advertise-v2|arp|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|eq|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|map|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|route-cache|router-id|route-map|route|routing|rp|source(?!-)|static|subnet-zero|summary-address|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(action|address-family|address|admission|advertise-v2|aggregate-address|arp|as-set|attach-policy|bootpc|bootps|cef|classless|cs4|default-router|destination|dhcp|dns-server|domain-name|domain|ebgp-multihop|eq|excluded-address|forward-protocol|general-prefix|h-node|helper-address|host|icmp|inside|irb|iso|lease|local-preference|map|mask|nat|nat-transparency|netbios-dgm|netbios-ns|netbios-name-server|netbios-node-type|network|next-hop-self|next-hop|pool|prefix|priority|proxy-arp|qos|ra|ratelimit|redirects|remote-as|route-cache|router-id|route-map|route|routing|rp|source(?!-)|static|subnet-zero|summary-address|summary-only|summary|traffic-filter|tracking|translation|translations|type|udp-encaps|udp-port|udp|unicast-routing|unreachables|weight)(?=\\b|$)"
             },
             {
               "comment": "System Management & Logging - Syslog, SNMP, NetFlow, Config, Timers, Resources",
               "name": "keyword.other.config-keyword.network-protocols.system-logging.cisco",
-              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|nde-address|netflow|new-model|newinfo|object-group|object|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|secondary|section|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|syslog|tcp-timeout|threshold|time|timeout|timezone|traps|transport|tries|update|update-calendar|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(access-log|age|allocation|ascending|auto|auto-sync|begin|bootup|brief|cache|change|coldstart|compress-config|config|config-copy|contact|cor|counters|country|datetime|dead-criteria|debug|device|dial-peer|entity|entries|exclude|extended|extendable|fallback|file|finrst-timeout|flash|flow|flow-aggregation|flow-export|group|include|included|level|linkdown|linkup|list|local|localtime|location|logging|log-neighbor-changes|log|main-cpu|max|mgmt|min-length|minimal|missing|mode|modulus|nde-address|netflow|new-model|newinfo|object-group|object|open|optional|pad|page|prefer|preempt|primary|range|recovery|recurring|redundancy|resource|run|secondary|section|send-community|send|service-type|session-id|snmptrap|sso|start-stop|subject-name|switch-over|synchronization|syslog|tcp-timeout|threshold|time|timers|timeout|timezone|traps|transport|tries|update-calendar|update-source|update|uptime|usage|v3|version|view|voice|vsa|warmstart|wildcard|window-size|write)(?=\\b|$)"
             },
             {
               "comment": "Layer 2 Switching & Connectivity - Spanning Tree, CDP, Trunking, VLANs, MAC",
@@ -1253,7 +1255,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.operational-states.cisco",
-              "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exit|exit-address-family|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|running-config|session-timeout|shutdown|standby|startup-config|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(boot-end-marker|cause|clear|crashinfo|delete|down|drop|end|error|erase|exception|exceed-action|exit-address-family|exit|expired|failure|gbic-invalid|ignore|inactive|inactivity|limit|max-fail|misconfig|none|off|on-failure|out|outside|removal|removed|reset|restrict|running-config|session-timeout|shutdown|standby|startup-config|stop-record|system-shutdown|theft|timeout|unassigned|unset|validate|violation|zeroize)(?=\\b|$)"
             }
           ]
         },

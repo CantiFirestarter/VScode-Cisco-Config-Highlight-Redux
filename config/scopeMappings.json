@@ -184,10 +184,6 @@
     "scope": "entity.name.tag.bgp.address-family.safi"
   },
   {
-    "configKey": "bgp.as-number",
-    "scope": "entity.name.tag.bgp.as-number"
-  },
-  {
     "configKey": "bgp.neighbor-peer-group.name",
     "scope": "entity.name.tag.bgp.neighbor-peer-group.name"
   },
@@ -282,10 +278,6 @@
   {
     "configKey": "group.routing.prefix-list.name",
     "scope": "entity.name.tag.group.routing.prefix-list.name"
-  },
-  {
-    "configKey": "group.routing.route-map.name",
-    "scope": "entity.name.tag.group.routing.route-map.name"
   },
   {
     "configKey": "group.security.object-group.name",
@@ -444,12 +436,24 @@
     "scope": "keyword.other.config-keyword.any"
   },
   {
-    "configKey": "keyword.bgp.command",
-    "scope": "keyword.other.config-keyword.bgp.command"
+    "configKey": "keyword.bgp.address-family",
+    "scope": "keyword.other.config-keyword.bgp.address-family"
   },
   {
-    "configKey": "keyword.bgp.option",
-    "scope": "keyword.other.config-keyword.bgp.option"
+    "configKey": "keyword.bgp.neighbor",
+    "scope": "keyword.other.config-keyword.bgp.neighbor"
+  },
+  {
+    "configKey": "keyword.bgp.peer-group",
+    "scope": "keyword.other.config-keyword.bgp.peer-group"
+  },
+  {
+    "configKey": "keyword.bgp.peer-policy",
+    "scope": "keyword.other.config-keyword.bgp.peer-policy"
+  },
+  {
+    "configKey": "keyword.bgp.peer-session",
+    "scope": "keyword.other.config-keyword.bgp.peer-session"
   },
   {
     "configKey": "keyword.config-commands",
