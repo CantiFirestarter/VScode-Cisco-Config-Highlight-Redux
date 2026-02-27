@@ -226,6 +226,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.comment.line.description%"
               },
+              "comment.numeric.asn-nn": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.comment.numeric.asn-nn.description%"
+              },
               "config-string.domain-name": {
                 "type": "string",
                 "format": "color",
@@ -266,10 +271,20 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.crypto.isakmp-profile.name.description%"
               },
+              "crypto.keyring": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.keyring.description%"
+              },
               "crypto.keyring.name": {
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.crypto.keyring.name.description%"
+              },
+              "crypto.transform-set": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.crypto.transform-set.description%"
               },
               "crypto.transform-set.name": {
                 "type": "string",
@@ -311,6 +326,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.resource.dhcp-server.name.description%"
               },
+              "group.resource.policy-list": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.resource.policy-list.description%"
+              },
               "group.resource.policy-list.name": {
                 "type": "string",
                 "format": "color",
@@ -320,6 +340,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.group.resource.pool.name.description%"
+              },
+              "group.routing.prefix-list": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.group.routing.prefix-list.description%"
               },
               "group.routing.prefix-list.name": {
                 "type": "string",
@@ -706,16 +731,6 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.any.description%"
               },
-              "keyword.bgp.address-family": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.bgp.address-family.description%"
-              },
-              "keyword.bgp.neighbor": {
-                "type": "string",
-                "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.bgp.neighbor.description%"
-              },
               "keyword.bgp.peer-group": {
                 "type": "string",
                 "format": "color",
@@ -886,6 +901,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.permit.description%"
               },
+              "keyword.profile": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.profile.description%"
+              },
               "keyword.remark": {
                 "type": "string",
                 "format": "color",
@@ -1045,6 +1065,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.vrf.forwarding.description%"
+              },
+              "vrf.rd": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.rd.description%"
               },
               "vrf.vrf-name": {
                 "type": "string",

@@ -20,6 +20,7 @@
   "_comment_colors_comments": "Token Colors - Comments",
   "configuration.properties.colors.comment.banner.description": "comment.block.banner",
   "configuration.properties.colors.comment.line.description": "comment.line.config",
+  "configuration.properties.colors.comment.numeric.asn-nn.description": "comment.numeric.asn-nn",
 
   "_comment_colors_interfaces": "Token Colors - Interfaces",
   "configuration.properties.colors.interface.app.description": "entity.name.class.interface.app",
@@ -62,6 +63,7 @@
   "configuration.properties.colors.vrf.vrf-name.description": "entity.name.tag.vrf.vrf-name",
   "configuration.properties.colors.vrf.definition.description": "entity.other.vrf.definition",
   "configuration.properties.colors.vrf.forwarding.description": "entity.other.vrf.forwarding",
+  "configuration.properties.colors.vrf.rd.description": "entity.name.tag.vrf.rd",
 
   "_comment_colors_strings": "Token Colors - Strings",
   "configuration.properties.colors.string.description.description": "string.other.description",
@@ -89,6 +91,8 @@
   "configuration.properties.colors.group.object-group.type.description": "keyword.other.group.object-group.type",
   "configuration.properties.colors.group.security.object-group.name.description": "entity.name.tag.group.security.object-group.name",
   "configuration.properties.colors.group.resource.dhcp-server.name.description": "entity.name.tag.group.resource.dhcp-server.name",
+  "configuration.properties.colors.group.resource.policy-list.description": "keyword.other.group.resource.policy-list",
+  "configuration.properties.colors.group.routing.prefix-list.description": "keyword.other.group.routing.prefix-list",
 
   "_comment_colors_acl": "Token Colors - ACL",
   "configuration.properties.colors.acl.access-class.name.description": "entity.name.tag.acl.access-class.name",
@@ -109,6 +113,8 @@
   "configuration.properties.colors.crypto.isakmp-profile.name.description": "entity.name.tag.crypto.isakmp-profile.name",
   "configuration.properties.colors.crypto.keyring.name.description": "entity.name.tag.crypto.keyring.name",
   "configuration.properties.colors.crypto.transform-set.name.description": "entity.name.tag.crypto.transform-set.name",
+  "configuration.properties.colors.crypto.keyring.description": "keyword.other.crypto.keyring",
+  "configuration.properties.colors.crypto.transform-set.description": "keyword.other.crypto.transform-set",
 
   "_comment_colors_addresses": "Token Colors - Addresses",
   "configuration.properties.colors.address.cidr.description": "keyword.other.address.cidr",
@@ -204,11 +210,10 @@
   "configuration.properties.colors.keyword.permit.description": "keyword.other.config-keyword.permit",
   "configuration.properties.colors.keyword.up.description": "keyword.other.config-keyword.up",
   "configuration.properties.colors.keyword.outside.description": "keyword.other.config-keyword.outside",
-  "configuration.properties.colors.keyword.bgp.address-family.description": "keyword.other.config-keyword.bgp.address-family",
-  "configuration.properties.colors.keyword.bgp.neighbor.description": "keyword.other.config-keyword.bgp.neighbor",
   "configuration.properties.colors.keyword.bgp.peer-group.description": "keyword.other.config-keyword.bgp.peer-group",
   "configuration.properties.colors.keyword.bgp.peer-policy.description": "keyword.other.config-keyword.bgp.peer-policy",
   "configuration.properties.colors.keyword.bgp.peer-session.description": "keyword.other.config-keyword.bgp.peer-session",
+  "configuration.properties.colors.keyword.profile.description": "keyword.other.config-keyword.profile",
 
   "_comment_colors_other": "Token Colors - Other",
   "configuration.properties.colors.ip-sla.group-name.description": "entity.name.tag.ip-sla.group-name",

@@ -8,6 +8,10 @@
     "scope": "comment.line.config"
   },
   {
+    "configKey": "comment.numeric.asn-nn",
+    "scope": "comment.numeric.asn-nn"
+  },
+  {
     "configKey": "numeric.hex",
     "scope": "constant.numeric.hex"
   },
@@ -340,6 +344,10 @@
     "scope": "entity.name.tag.ospf.process-id"
   },
   {
+    "configKey": "vrf.rd",
+    "scope": "entity.name.tag.vrf.rd"
+  },
+  {
     "configKey": "vrf.vrf-name",
     "scope": "entity.name.tag.vrf.vrf-name"
   },
@@ -434,14 +442,6 @@
   {
     "configKey": "keyword.any",
     "scope": "keyword.other.config-keyword.any"
-  },
-  {
-    "configKey": "keyword.bgp.address-family",
-    "scope": "keyword.other.config-keyword.bgp.address-family"
-  },
-  {
-    "configKey": "keyword.bgp.neighbor",
-    "scope": "keyword.other.config-keyword.bgp.neighbor"
   },
   {
     "configKey": "keyword.bgp.peer-group",
@@ -580,6 +580,10 @@
     "scope": "keyword.other.config-keyword.permit"
   },
   {
+    "configKey": "keyword.profile",
+    "scope": "keyword.other.config-keyword.profile"
+  },
+  {
     "configKey": "keyword.remark",
     "scope": "keyword.other.config-keyword.remark"
   },
@@ -652,8 +656,24 @@
     "scope": "keyword.other.config-keyword.vlan"
   },
   {
+    "configKey": "crypto.keyring",
+    "scope": "keyword.other.crypto.keyring"
+  },
+  {
+    "configKey": "crypto.transform-set",
+    "scope": "keyword.other.crypto.transform-set"
+  },
+  {
     "configKey": "group.object-group.type",
     "scope": "keyword.other.group.object-group.type"
+  },
+  {
+    "configKey": "group.resource.policy-list",
+    "scope": "keyword.other.group.resource.policy-list"
+  },
+  {
+    "configKey": "group.routing.prefix-list",
+    "scope": "keyword.other.group.routing.prefix-list"
   },
   {
     "configKey": "hsrp.authentication",
