@@ -14,6 +14,12 @@
         }
       },
       {
+        "scope": "comment.numeric.asn-nn",
+        "settings": {
+          "foreground": "#2e74b5"
+        }
+      },
+      {
         "scope": "constant.numeric.hex",
         "settings": {
           "foreground": "#2e74b5"
@@ -274,7 +280,7 @@
       {
         "scope": "entity.name.tag.bgp.address-family.safi",
         "settings": {
-          "foreground": "#95A5A6"
+          "foreground": "#0095B6"
         }
       },
       {
@@ -298,7 +304,7 @@
       {
         "scope": "entity.name.tag.bgp.peer-session.name",
         "settings": {
-          "foreground": "#95A5A6"
+          "foreground": "#0095B6"
         }
       },
       {
@@ -530,6 +536,12 @@
         }
       },
       {
+        "scope": "entity.name.tag.vrf.rd",
+        "settings": {
+          "foreground": "#FF4500"
+        }
+      },
+      {
         "scope": "keyword.other.acl.access-class.type",
         "settings": {
           "foreground": "#33DF33"
@@ -647,18 +659,6 @@
         "scope": "keyword.other.config-keyword.any",
         "settings": {
           "foreground": "#33DF33"
-        }
-      },
-      {
-        "scope": "keyword.other.config-keyword.bgp.address-family",
-        "settings": {
-          "foreground": "#FF9933"
-        }
-      },
-      {
-        "scope": "keyword.other.config-keyword.bgp.neighbor",
-        "settings": {
-          "foreground": "#FF9933"
         }
       },
       {
@@ -791,6 +791,12 @@
         "scope": "keyword.other.config-keyword.permit",
         "settings": {
           "foreground": "#9933ff"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.profile",
+        "settings": {
+          "foreground": "#FF4E50"
         }
       },
       {
@@ -980,6 +986,18 @@
         }
       },
       {
+        "scope": "keyword.other.crypto.keyring",
+        "settings": {
+          "foreground": "#3CD070"
+        }
+      },
+      {
+        "scope": "keyword.other.crypto.transform-set",
+        "settings": {
+          "foreground": "#3CD070"
+        }
+      },
+      {
         "scope": "keyword.other.hsrp.authentication",
         "settings": {
           "foreground": "#FF3333"
@@ -1109,6 +1127,18 @@
         "scope": "keyword.other.group.object-group.type",
         "settings": {
           "foreground": "#5F9EA0"
+        }
+      },
+      {
+        "scope": "keyword.other.group.routing.prefix-list",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
+        "scope": "keyword.other.group.resource.policy-list",
+        "settings": {
+          "foreground": "#FF9933"
         }
       },
       {
