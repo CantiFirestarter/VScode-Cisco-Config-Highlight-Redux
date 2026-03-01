@@ -1328,7 +1328,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.advanced-options.cisco",
-              "match": "(?i)(^|\\s)(address-family|allow-hint|autoconfig|automatic|bandwidth|buffered|channel-misconfig|debugging|default-gateway|etherchannel|expanded|extended|fair-queue|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-down|link-local|link-up|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|path-mtu-discovery|priority|portfast|provision|renumber|route-target|scrypt|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(address-family|allow-hint|autoconfig|automatic|bandwidth|buffered|channel-misconfig|debugging|default-gateway|etherchannel|expanded|extended|fair-queue|general-keys|if-authenticated|inspection|interval|sequence-interval|sequence-number|IPDT_POLICY|label|link-down|link-local|link-up|link|lookup|managed-config-flag|md5|motd|mtu|negotiation|no-autoconfig|option|other-config-flag|packet|path-mtu-discovery|priority|portfast|provision|renumber|route-target|scrypt|selective-ack|smart|snooping|standard|sticky|stopbits|terminal|transparent)(?=\\b|$)"
             }
           ]
         },
