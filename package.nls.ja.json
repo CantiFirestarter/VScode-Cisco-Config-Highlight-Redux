@@ -64,6 +64,7 @@
   "configuration.properties.colors.vrf.definition.description": "entity.other.vrf.definition",
   "configuration.properties.colors.vrf.forwarding.description": "entity.other.vrf.forwarding",
   "configuration.properties.colors.vrf.rd.description": "entity.name.tag.vrf.rd",
+  "configuration.properties.colors.vrf.import-export.description": "entity.name.tag.vrf.import-export",
 
   "_comment_colors_strings": "Token Colors - Strings",
   "configuration.properties.colors.string.description.description": "string.other.description",

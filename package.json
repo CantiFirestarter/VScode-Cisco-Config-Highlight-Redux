@@ -1066,6 +1066,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.vrf.forwarding.description%"
               },
+              "vrf.import-export": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.vrf.import-export.description%"
+              },
               "vrf.rd": {
                 "type": "string",
                 "format": "color",

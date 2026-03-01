@@ -542,6 +542,12 @@
         }
       },
       {
+        "scope": "entity.name.tag.vrf.import-export",
+        "settings": {
+          "foreground": "#43B3AE"
+        }
+      },
+      {
         "scope": "keyword.other.acl.access-class.type",
         "settings": {
           "foreground": "#33DF33"

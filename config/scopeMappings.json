@@ -344,6 +344,10 @@
     "scope": "entity.name.tag.ospf.process-id"
   },
   {
+    "configKey": "vrf.import-export",
+    "scope": "entity.name.tag.vrf.import-export"
+  },
+  {
     "configKey": "vrf.rd",
     "scope": "entity.name.tag.vrf.rd"
   },
