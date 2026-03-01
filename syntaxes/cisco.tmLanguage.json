@@ -406,7 +406,11 @@
       }
     },
     "vrf": {
-      "patterns": [{ "include": "#vrf-declaration" }, { "include": "#vrf-rd" }],
+      "patterns": [
+        { "include": "#vrf-declaration" },
+        { "include": "#vrf-rd" },
+        { "include": "#vrf-import-export" }
+      ],
       "repository": {
         "vrf-declaration": {
           "match": "(?i)(?:^|\\s)(vrf)\\s(?:(forwarding)|(definition))?\\s?(\\S+)",
@@ -743,6 +747,7 @@
         { "include": "#ospf-default-information" },
         { "include": "#ospf-redistribute" },
         { "include": "#ospf-interface-options" },
+        { "include": "#ospf-auto-cost-options" },
         { "include": "#ospf-network-options" },
         { "include": "#ospf-area-options" }
       ],
@@ -797,6 +802,17 @@
         "ospf-interface-options": {
           "match": "(?i)(?<=\\bospf\\s.*?)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
           "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
+        },
+        "ospf-auto-cost-options": {
+          "match": "(?i)(\\bauto-?cost\\s)(reference-bandwidth)\\b",
+          "captures": {
+            "1": {
+              "name": "keyword.other.config-keyword.ospf.auto-cost.cisco"
+            },
+            "2": {
+              "name": "keyword.other.config-keyword.ospf.reference-bandwidth.cisco"
+            }
+          }
         },
         "ospf-network-options": {
           "match": "(?i)(?<=\\bospf\\snetwork\\b.*?)(broadcast|non-broadcast|point-to-multipoint|point-to-point)\\b",

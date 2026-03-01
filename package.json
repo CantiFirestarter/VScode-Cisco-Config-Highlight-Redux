@@ -841,6 +841,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.ospf.area-option.description%"
               },
+              "keyword.ospf.auto-cost": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.auto-cost.description%"
+              },
               "keyword.ospf.default-information": {
                 "type": "string",
                 "format": "color",
@@ -880,6 +885,11 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.ospf.redistribute-option.description%"
+              },
+              "keyword.ospf.reference-bandwidth": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.reference-bandwidth.description%"
               },
               "keyword.out": {
                 "type": "string",

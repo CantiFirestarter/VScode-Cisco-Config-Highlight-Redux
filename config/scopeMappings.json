@@ -536,6 +536,10 @@
     "scope": "keyword.other.config-keyword.ospf.area-option"
   },
   {
+    "configKey": "keyword.ospf.auto-cost",
+    "scope": "keyword.other.config-keyword.ospf.auto-cost"
+  },
+  {
     "configKey": "keyword.ospf.default-information",
     "scope": "keyword.other.config-keyword.ospf.default-information"
   },
@@ -566,6 +570,10 @@
   {
     "configKey": "keyword.ospf.redistribute-option",
     "scope": "keyword.other.config-keyword.ospf.redistribute-option"
+  },
+  {
+    "configKey": "keyword.ospf.reference-bandwidth",
+    "scope": "keyword.other.config-keyword.ospf.reference-bandwidth"
   },
   {
     "configKey": "keyword.out",

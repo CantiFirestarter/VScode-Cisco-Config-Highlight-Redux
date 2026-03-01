@@ -544,7 +544,7 @@
       {
         "scope": "entity.name.tag.vrf.import-export",
         "settings": {
-          "foreground": "#43B3AE"
+          "foreground": "#FF7F50"
         }
       },
       {
@@ -830,6 +830,12 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.ospf.auto-cost",
+        "settings": {
+          "foreground": "#9933ff"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.ospf.default-information",
         "settings": {
           "foreground": "#d633d6"
@@ -873,6 +879,12 @@
       },
       {
         "scope": "keyword.other.config-keyword.ospf.redistribute-option",
+        "settings": {
+          "foreground": "#d633d6"
+        }
+      },
+      {
+        "scope": "keyword.other.config-keyword.ospf.reference-bandwidth",
         "settings": {
           "foreground": "#d633d6"
         }
