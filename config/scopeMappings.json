@@ -536,6 +536,10 @@
     "scope": "keyword.other.config-keyword.ospf.area-option"
   },
   {
+    "configKey": "keyword.ospf.authentication-type",
+    "scope": "keyword.other.config-keyword.ospf.authentication-type"
+  },
+  {
     "configKey": "keyword.ospf.auto-cost",
     "scope": "keyword.other.config-keyword.ospf.auto-cost"
   },
@@ -814,6 +818,14 @@
   {
     "configKey": "string.description",
     "scope": "string.other.description"
+  },
+  {
+    "configKey": "string.ospf.authentication-key",
+    "scope": "string.other.ospf.authentication-key"
+  },
+  {
+    "configKey": "string.ospf.key-chain",
+    "scope": "string.other.ospf.key-chain"
   },
   {
     "configKey": "string.password",

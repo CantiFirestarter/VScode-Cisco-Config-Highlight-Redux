@@ -111,7 +111,7 @@
           "name": "string.other.password.cisco"
         },
         "secret": {
-          "match": "(?i)(?<=secret\\s)(?:\\d+\\s)?(\\S+)$",
+          "match": "(?i)(^|\\s)(?<=secret\\s)(?:\\d+\\s)?(\\S+)$",
           "name": "string.other.secret.cisco"
         },
         "banner": {
@@ -743,12 +743,15 @@
         { "include": "#interface-ospf-process-id" },
         { "include": "#ospf-area" },
         { "include": "#ospf-area-id" },
+        { "include": "#ospf-authentication-key" },
+        { "include": "#ospf-key-chain" },
         { "include": "#ospf-passive-interface" },
         { "include": "#ospf-default-information" },
         { "include": "#ospf-redistribute" },
+        { "include": "#ospf-auto-cost" },
         { "include": "#ospf-interface-options" },
-        { "include": "#ospf-auto-cost-options" },
         { "include": "#ospf-network-options" },
+        { "include": "#ospf-authentication-options" },
         { "include": "#ospf-area-options" }
       ],
       "repository": {
@@ -767,6 +770,14 @@
         "ospf-area-id": {
           "match": "(?i)(?<=\\barea\\s.*?)((?<!/)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3}))\\b",
           "name": "entity.name.tag.ospf.area-id.cisco"
+        },
+        "ospf-authentication-key": {
+          "match": "(?i)(\\bauthentication-key\\s)(?:\\d+\\s)?(\\S+)$",
+          "name": "string.other.ospf.authentication-key.cisco"
+        },
+        "ospf-key-chain": {
+          "match": "(?i)(\\bkey-chain\\s)(?:\\d+\\s)?(\\S+)$",
+          "name": "string.other.ospf.key-chain.cisco"
         },
         "ospf-passive-interface": {
           "match": "(?i)(\\bpassive-interface\\b)(\\s+)(default|\\S+)\\b",
@@ -799,11 +810,7 @@
             }
           }
         },
-        "ospf-interface-options": {
-          "match": "(?i)(?<=\\bospf\\s.*?)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication|message-digest-key|mtu-ignore)\\b",
-          "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
-        },
-        "ospf-auto-cost-options": {
+        "ospf-auto-cost": {
           "match": "(?i)(\\bauto-?cost\\s)(reference-bandwidth)\\b",
           "captures": {
             "1": {
@@ -814,9 +821,17 @@
             }
           }
         },
+        "ospf-interface-options": {
+          "match": "(?i)(?<=\\bospf\\s.*?)(cost|priority|hello-interval|dead-interval|retransmit-interval|transmit-delay|network|authentication-key|authentication|message-digest-key|mtu-ignore)\\b",
+          "name": "keyword.other.config-keyword.ospf.interface-option.cisco"
+        },
         "ospf-network-options": {
           "match": "(?i)(?<=\\bospf\\snetwork\\b.*?)(broadcast|non-broadcast|point-to-multipoint|point-to-point)\\b",
           "name": "keyword.other.config-keyword.ospf.network.option.cisco"
+        },
+        "ospf-authentication-options": {
+          "match": "(?i)(?<=\\bospf\\sauthentication\\s)(null|message-digest|key-chain)\\b",
+          "name": "keyword.other.config-keyword.ospf.authentication-option.cisco"
         },
         "ospf-area-options": {
           "match": "(?i)(?<=(\\barea\\s)(\\d+|(?:\\d{1,3}\\.){3}\\d{1,3}).*?)(authentication|stub|nssa|totally-stubby|range|virtual-link)\\b",

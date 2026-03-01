@@ -153,6 +153,7 @@
   "configuration.properties.colors.keyword.profile.description": "keyword.other.config-keyword.profile",
   "configuration.properties.colors.keyword.ospf.auto-cost.description": "keyword.other.config-keyword.ospf.auto-cost",
   "configuration.properties.colors.keyword.ospf.reference-bandwidth.description": "keyword.other.config-keyword.ospf.reference-bandwidth",
+  "configuration.properties.colors.keyword.ospf.authentication-type.description": "keyword.other.config-keyword.ospf.authentication-type",
 
   "_comment_colors_keyword_protocols": "Token Colors - Network Protocols",
   "configuration.properties.colors.keyword.network-protocols.security-aaa.description": "keyword.other.config-keyword.network-protocols.security-aaa",
@@ -182,6 +183,8 @@
   "configuration.properties.colors.string.remark.description": "string.other.remark",
   "configuration.properties.colors.string.password.description": "string.other.password",
   "configuration.properties.colors.string.secret.description": "string.other.secret",
+  "configuration.properties.colors.string.ospf.authentication-key.description": "string.other.ospf.authentication-key",
+  "configuration.properties.colors.string.ospf.key-chain.description": "string.other.ospf.key-chain",
 
   "_comment_colors_config_strings": "Token Colors - Config Strings",
   "configuration.properties.colors.config-string.hostname.description": "entity.name.tag.config-string.hostname",

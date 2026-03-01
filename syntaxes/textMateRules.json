@@ -836,6 +836,12 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.ospf.authentication-type",
+        "settings": {
+          "foreground": "#FF4466"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.ospf.default-information",
         "settings": {
           "foreground": "#d633d6"
@@ -1223,6 +1229,18 @@
         "scope": "string.other.description",
         "settings": {
           "foreground": "#FF6363"
+        }
+      },
+      {
+        "scope": "string.other.ospf.authentication-key",
+        "settings": {
+          "foreground": "#00FF7F"
+        }
+      },
+      {
+        "scope": "string.other.ospf.key-chain",
+        "settings": {
+          "foreground": "#00FF7F"
         }
       },
       {

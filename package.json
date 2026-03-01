@@ -841,6 +841,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.ospf.area-option.description%"
               },
+              "keyword.ospf.authentication-type": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.authentication-type.description%"
+              },
               "keyword.ospf.auto-cost": {
                 "type": "string",
                 "format": "color",
@@ -1045,6 +1050,16 @@
                 "type": "string",
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.string.description.description%"
+              },
+              "string.ospf.authentication-key": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.ospf.authentication-key.description%"
+              },
+              "string.ospf.key-chain": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.string.ospf.key-chain.description%"
               },
               "string.password": {
                 "type": "string",
