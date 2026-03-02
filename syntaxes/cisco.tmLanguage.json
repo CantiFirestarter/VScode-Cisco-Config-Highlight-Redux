@@ -1286,7 +1286,7 @@
             {
               "comment": "Security & Identity (AAA) - Authentication, Authorization, Crypto, Certificates, Keys",
               "name": "keyword.other.config-keyword.network-protocols.security-aaa.cisco",
-              "match": "(?i)(^|\\s)(aaa_server|acct-port|aes-ccm|auth-proxy|auth-port|auth|authenticate-fail|authentication-server|authentication|authorization|block-unknown-source|certificate|ciphers|crypto|deauthenticate|enrollment|identity|ipsec|key-management|key|login|password-encryption|passwords|password|pki|port-security|pre-shared-key|radius|secret|secure-server|self-signed|selfsigned|subscriber-loop-control|tacacs\\+|tacacs)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(aaa_server|acct-port|aes-ccm|auth-proxy|auth-port|auth|authenticate-fail|authentication-server|authentication(?!-)|authorization|block-unknown-source|certificate|ciphers|crypto|deauthenticate|enrollment|identity|ipsec|key-management|key(?!-)|login|password-encryption|passwords|password|pki|port-security|pre-shared-key|radius|secret|secure-server|self-signed|selfsigned|subscriber-loop-control|tacacs\\+|tacacs)(?=\\b|$)"
             },
             {
               "comment": "Wireless Networking (Dot11 & SSID) - 802.11, Access Points, Wireless Security",

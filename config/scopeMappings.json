@@ -536,8 +536,8 @@
     "scope": "keyword.other.config-keyword.ospf.area-option"
   },
   {
-    "configKey": "keyword.ospf.authentication-type",
-    "scope": "keyword.other.config-keyword.ospf.authentication-type"
+    "configKey": "keyword.ospf.authentication-option",
+    "scope": "keyword.other.config-keyword.ospf.authentication-option"
   },
   {
     "configKey": "keyword.ospf.auto-cost",

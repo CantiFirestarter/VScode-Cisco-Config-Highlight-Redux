@@ -836,7 +836,7 @@
         }
       },
       {
-        "scope": "keyword.other.config-keyword.ospf.authentication-type",
+        "scope": "keyword.other.config-keyword.ospf.authentication-option",
         "settings": {
           "foreground": "#FF4466"
         }

@@ -841,10 +841,10 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.ospf.area-option.description%"
               },
-              "keyword.ospf.authentication-type": {
+              "keyword.ospf.authentication-option": {
                 "type": "string",
                 "format": "color",
-                "markdownDescription": "%configuration.properties.colors.keyword.ospf.authentication-type.description%"
+                "markdownDescription": "%configuration.properties.colors.keyword.ospf.authentication-option.description%"
               },
               "keyword.ospf.auto-cost": {
                 "type": "string",

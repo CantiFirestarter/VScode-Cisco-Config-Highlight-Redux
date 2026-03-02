@@ -153,7 +153,7 @@
   "configuration.properties.colors.keyword.profile.description": "keyword.other.config-keyword.profile",
   "configuration.properties.colors.keyword.ospf.auto-cost.description": "keyword.other.config-keyword.ospf.auto-cost",
   "configuration.properties.colors.keyword.ospf.reference-bandwidth.description": "keyword.other.config-keyword.ospf.reference-bandwidth",
-  "configuration.properties.colors.keyword.ospf.authentication-type.description": "keyword.other.config-keyword.ospf.authentication-type",
+  "configuration.properties.colors.keyword.ospf.authentication-option.description": "keyword.other.config-keyword.ospf.authentication-option",
 
   "_comment_colors_keyword_protocols": "Token Colors - Network Protocols",
   "configuration.properties.colors.keyword.network-protocols.security-aaa.description": "keyword.other.config-keyword.network-protocols.security-aaa",
