@@ -756,7 +756,7 @@
       ],
       "repository": {
         "router-ospf-process-id": {
-          "match": "(?i)(?<=\\brouter\\s+ospf(?:v2|v3)?\\s.*?)(\\d+)\\b",
+          "match": "(?i)(?<=\\brouter\\s+ospf(?:v3)?\\s.*?)(\\d+)\\b",
           "name": "entity.name.tag.ospf.process-id.cisco"
         },
         "interface-ospf-process-id": {
