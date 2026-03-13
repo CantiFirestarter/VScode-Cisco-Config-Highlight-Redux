@@ -1351,7 +1351,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.routing-protocols.cisco",
-              "match": "(?i)(^|\\s)(all|auto-summary|bgp|default|dscp|echo(?!-)|eigrp|fragments|ftp-data|ftp|gopher|http|ident|imap|ipv4|ipv6|isakmp|isis|lacp|log-input|nntp|ospf|ospfv2|ospfv3|pagp|ping|pop3|rip|scp|snmp-server|snmp|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(all|auto-summary|bgp(?!-)|default|dscp|echo(?!-)|eigrp|fragments|ftp-data|ftp|gopher|http|ident|imap|ipv4|ipv6|isakmp|isis|lacp|log-input|nntp|ospf|ospfv2|ospfv3|pagp|ping|pop3|rip|scp|snmp-server|snmp|smtp|sonet|ssh|telnet|tcp|tftp|www)(?=\\b|$)"
             }
           ]
         }
