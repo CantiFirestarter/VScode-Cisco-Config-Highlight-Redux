@@ -731,6 +731,11 @@
                 "format": "color",
                 "markdownDescription": "%configuration.properties.colors.keyword.any.description%"
               },
+              "keyword.bgp.address-family": {
+                "type": "string",
+                "format": "color",
+                "markdownDescription": "%configuration.properties.colors.keyword.bgp.address-family.description%"
+              },
               "keyword.bgp.peer-group": {
                 "type": "string",
                 "format": "color",

@@ -448,6 +448,10 @@
     "scope": "keyword.other.config-keyword.any"
   },
   {
+    "configKey": "keyword.bgp.address-family",
+    "scope": "keyword.other.config-keyword.bgp.address-family"
+  },
+  {
     "configKey": "keyword.bgp.peer-group",
     "scope": "keyword.other.config-keyword.bgp.peer-group"
   },

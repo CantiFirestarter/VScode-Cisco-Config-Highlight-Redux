@@ -220,6 +220,7 @@
   "configuration.properties.colors.keyword.ospf.auto-cost.description": "keyword.other.config-keyword.ospf.auto-cost",
   "configuration.properties.colors.keyword.ospf.reference-bandwidth.description": "keyword.other.config-keyword.ospf.reference-bandwidth",
   "configuration.properties.colors.keyword.ospf.authentication-option.description": "keyword.other.config-keyword.ospf.authentication-option",
+  "configuration.properties.colors.keyword.bgp.address-family.description": "keyword.other.config-keyword.bgp.address-family",
 
   "_comment_colors_other": "Token Colors - Other",
   "configuration.properties.colors.ip-sla.group-name.description": "entity.name.tag.ip-sla.group-name",
