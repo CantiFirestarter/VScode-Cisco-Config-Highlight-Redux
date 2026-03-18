@@ -772,11 +772,11 @@
           "name": "entity.name.tag.ospf.area-id.cisco"
         },
         "ospf-authentication-key": {
-          "match": "(?i)(\\bauthentication-key\\s)(?:\\d+\\s)?(\\S+)$",
+          "match": "(?i)(?<=\\bauthentication-key\\s)(?:\\d+\\s)?(\\S+)$",
           "name": "string.other.ospf.authentication-key.cisco"
         },
         "ospf-key-chain": {
-          "match": "(?i)(\\bkey-chain\\s)(?:\\d+\\s)?(\\S+)$",
+          "match": "(?i)(?<=\\bkey-chain\\s.*?)(?:\\d+\\s)?(\\S+)$",
           "name": "string.other.ospf.key-chain.cisco"
         },
         "ospf-passive-interface": {
@@ -800,13 +800,18 @@
           }
         },
         "ospf-redistribute": {
-          "match": "(?i)(\\bredistribute\\s+)(bgp|connected|eigrp|isis|ospf|ospfv3|rip|static|subnets)\\b",
+          "match": "(?i)(\\bredistribute\\s+)([^\\r\\n]+)$",
           "captures": {
             "1": {
               "name": "keyword.other.config-keyword.ospf.redistribute"
             },
             "2": {
-              "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
+              "patterns": [
+                {
+                  "match": "(?i)\\b(bgp|connected|eigrp|isis|ospf|ospfv3|rip|static|subnets)\\b",
+                  "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
+                }
+              ]
             }
           }
         },
@@ -1322,7 +1327,7 @@
           "patterns": [
             {
               "name": "keyword.other.config-keyword.config-commands.cisco",
-              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class(?!-)|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|protocols|reauth-period|redistribute|request|route-map|router|rsa|rts|security|service-policy|service(?!-)|server|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
+              "match": "(?i)(^|\\s)(aaa|access-class|access-list|algorithm|algorithm-type|autostate|banner|boot|bpdu|broadcast-key|bridge-group|bridge|channel-group|channel-protocol|channel|class-map|class(?!-)|client-identifier|configure|copy|default-router|description|device-tracking|diagnostic|dir|dns-server|domain-lookup|dot11|dot1x|duplex|encryption|encapsulation|errdisable|hostname|input|int|install|interface|IP-Address|ip|lease|line|lldp|license|match|mbssid|method|mls|mpls|name|nd|netbios-name-server|netbios-node-type|neighbors|ntp|ok\\?|police|policy-map|power|process|protocols|reauth-period|request|route-map|router|rsa|rts|security|service-policy|service(?!-)|server|sntp|software|spanning-tree|speed|storm-control|stackwise-virtual|sync|switch|switchport|tacacs-server|udld|vtp|wlccp|wr|world-mode|username|vrf)(?=\\b|$)"
             }
           ]
         },
