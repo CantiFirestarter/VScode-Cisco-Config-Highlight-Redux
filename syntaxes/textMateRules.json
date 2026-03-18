@@ -668,6 +668,12 @@
         }
       },
       {
+        "scope": "keyword.other.config-keyword.bgp.address-family",
+        "settings": {
+          "foreground": "#FF9933"
+        }
+      },
+      {
         "scope": "keyword.other.config-keyword.bgp.peer-group",
         "settings": {
           "foreground": "#FF9933"

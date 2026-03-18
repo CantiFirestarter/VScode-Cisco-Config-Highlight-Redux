@@ -800,12 +800,12 @@
           }
         },
         "ospf-redistribute": {
-          "match": "(?i)(?<=\\bredistribute\\s.*?)(bgp|connected|eigrp|isis|ospf|ospfv3|rip|static|subnets)\\b",
+          "match": "(?i)(\\bredistribute\\s+)(bgp|connected|eigrp|isis|ospf|ospfv3|rip|static|subnets)\\b",
           "captures": {
             "1": {
-              "name": "keyword.other.config-keyword.ospf.redistribute.cisco"
+              "name": "keyword.other.config-keyword.ospf.redistribute"
             },
-            "3": {
+            "2": {
               "name": "keyword.other.config-keyword.ospf.redistribute-option.cisco"
             }
           }
@@ -1015,10 +1015,13 @@
       ],
       "repository": {
         "bgp-address-family": {
-          "match": "(?i)(?<=address-family)\\s(ipv4|ipv6|vpnv4|vpnv6|l2vpn)\\s(unicast|multicast|flowspec|evpn)\\b",
+          "match": "(?i)(\\baddress-family\\s+)(ipv4|ipv6|vpnv4|vpnv6|l2vpn)(?:\\s+(unicast|multicast|flowspec|evpn))?\\b",
           "captures": {
-            "1": { "name": "entity.name.tag.bgp.address-family.afi.cisco" },
-            "2": { "name": "entity.name.tag.bgp.address-family.safi.cisco" }
+            "1": {
+              "name": "keyword.other.config-keyword.bgp.address-family.cisco"
+            },
+            "2": { "name": "entity.name.tag.bgp.address-family.afi.cisco" },
+            "3": { "name": "entity.name.tag.bgp.address-family.safi.cisco" }
           }
         },
         "neighbor-peer-group": {
