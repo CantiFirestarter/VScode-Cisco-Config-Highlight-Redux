@@ -274,13 +274,13 @@
       {
         "scope": "entity.name.tag.bgp.address-family.afi",
         "settings": {
-          "foreground": "#FF355E"
+          "foreground": "#FF43A4"
         }
       },
       {
         "scope": "entity.name.tag.bgp.address-family.safi",
         "settings": {
-          "foreground": "#0095B6"
+          "foreground": "#00BFFF"
         }
       },
       {
